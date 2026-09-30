@@ -25,6 +25,9 @@ __pycache__/
 Thumbs.db
 .DS_Store
 
+# Original observation videos stay local; retain source metadata and selected frames separately.
+/observations/videos/
+
 # BEGIN observation permissions (generated from observations/catalog.json)
 /observations/documents/njupt/README.md
 /observations/documents/njupt/campus-gallery.html
