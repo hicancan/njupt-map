@@ -7043,6 +7043,934 @@
       "bytes": 8552,
       "sha256": "b451d0d5ec30e76d06a8665056556ae0763836ee2b5e155ed94f6a9dcc84950d",
       "status": "available"
+    },
+    "bilibili-BV1PqDQB2Epk": {
+      "id": "bilibili-BV1PqDQB2Epk",
+      "local_path": "observations/videos/bilibili/南邮研究生日常/南京邮电大学仙林校区长啥样？一镜到底，带你认识走进南邮不迷路！.mp4",
+      "kind": "videos",
+      "bytes": 63387346,
+      "sha256": "842fa3b781830cc1590b89e567232a6f1826113a9db81d623dfedddb82deb7c9",
+      "photo_taken_at": null,
+      "published_at": "2026-04-12T16:35:03+08:00",
+      "retrieved_at": "2026-09-30T10:42:28.870126+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "南京邮电大学仙林校区长啥样？一镜到底，带你认识走进南邮不迷路！",
+      "url": "https://www.bilibili.com/video/BV1PqDQB2Epk",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1PqDQB2Epk",
+        "aid": 116390811928102,
+        "cid": 37444452372,
+        "page": 1
+      },
+      "creator": {
+        "name": "南邮二极管学长",
+        "uid": 476177244
+      },
+      "collection_title": "南邮研究生日常",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1PqDQB2Epk",
+        "publication_unix": 1775982903,
+        "verified_at": "2026-09-30T18:33:15.7696778+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 164.2,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "30/1",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 0,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1pRj3zAEXG": {
+      "id": "bilibili-BV1pRj3zAEXG",
+      "local_path": "observations/videos/bilibili/南京校园航拍！_ 南京邮电大学 _ 4K.mp4",
+      "kind": "videos",
+      "bytes": 46065275,
+      "sha256": "a7d040c6807817a62bcd44d4f58445192a43ebcc36419ab7a6008ef23dfa1e33",
+      "photo_taken_at": null,
+      "published_at": "2025-05-25T22:51:14+08:00",
+      "retrieved_at": "2026-09-30T10:42:28.894936+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "南京校园航拍！| 南京邮电大学 | 4K",
+      "url": "https://www.bilibili.com/video/BV1pRj3zAEXG",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1pRj3zAEXG",
+        "aid": 114569007599233,
+        "cid": 30149577648,
+        "page": 1
+      },
+      "creator": {
+        "name": "freedom去旅行",
+        "uid": 499034608
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1pRj3zAEXG",
+        "publication_unix": 1748184674,
+        "verified_at": "2026-09-30T18:34:59.8541137+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 83.452426,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "2503000/83433",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1YA1kBnEE7": {
+      "id": "bilibili-BV1YA1kBnEE7",
+      "local_path": "observations/videos/bilibili/南京邮电大学校园介绍/南京邮电大学【仙林校区】云参观.mp4",
+      "kind": "videos",
+      "bytes": 57620875,
+      "sha256": "1ceafb2041cfc26a2cb1aaef83d71c8a5f3954984cb60f1953037ead7df79dc7",
+      "photo_taken_at": null,
+      "published_at": "2025-11-05T19:00:00+08:00",
+      "retrieved_at": "2026-09-30T10:42:28.925009+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "南京邮电大学【仙林校区】云参观",
+      "url": "https://www.bilibili.com/video/BV1YA1kBnEE7",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1YA1kBnEE7",
+        "aid": 115489808390094,
+        "cid": 33681312690,
+        "page": 1
+      },
+      "creator": {
+        "name": "南京邮电电子通信考研",
+        "uid": 383206292
+      },
+      "collection_title": "南京邮电大学校园介绍",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1YA1kBnEE7",
+        "publication_unix": 1762340400,
+        "verified_at": "2026-09-30T18:35:01.3875381+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 130.101429,
+        "width": 960,
+        "height": 544,
+        "frame_rate": "1951000/65033",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1T3RaBqE7c": {
+      "id": "bilibili-BV1T3RaBqE7c",
+      "local_path": "observations/videos/bilibili/论南邮仙林校区新装修的图书馆有多豪华.mp4",
+      "kind": "videos",
+      "bytes": 11360209,
+      "sha256": "a470147e9ec596d5a8f506ae768234c7ba25c41e3177814fae56df12424cdfc0",
+      "photo_taken_at": null,
+      "published_at": "2026-05-07T17:30:00+08:00",
+      "retrieved_at": "2026-09-30T10:42:28.932521+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "论南邮仙林校区新装修的图书馆有多豪华",
+      "url": "https://www.bilibili.com/video/BV1T3RaBqE7c",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1T3RaBqE7c",
+        "aid": 116530465477020,
+        "cid": 38147198008,
+        "page": 1
+      },
+      "creator": {
+        "name": "南京邮电电子通信考研",
+        "uid": 383206292
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1T3RaBqE7c",
+        "publication_unix": 1778146200,
+        "verified_at": "2026-09-30T18:33:16.9160072+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 45.766625,
+        "width": 1280,
+        "height": 720,
+        "frame_rate": "7328000/366133",
+        "nominal_frame_rate": "20/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1Y2XvBpE86": {
+      "id": "bilibili-BV1Y2XvBpE86",
+      "local_path": "observations/videos/bilibili/南邮研究生日常/带大家看看南京邮电大学仙林校区第二食堂.mp4",
+      "kind": "videos",
+      "bytes": 18818667,
+      "sha256": "125273cbe1ccaee4c234b27f11ca5b854ab4194fab132e9a43b36a3fbb09d77a",
+      "photo_taken_at": null,
+      "published_at": "2026-03-30T22:56:49+08:00",
+      "retrieved_at": "2026-09-30T10:42:28.942537+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "带大家看看南京邮电大学仙林校区第二食堂",
+      "url": "https://www.bilibili.com/video/BV1Y2XvBpE86",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1Y2XvBpE86",
+        "aid": 116318703453730,
+        "cid": 37103472016,
+        "page": 1
+      },
+      "creator": {
+        "name": "南邮二极管学长",
+        "uid": 476177244
+      },
+      "collection_title": "南邮研究生日常",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1Y2XvBpE86",
+        "publication_unix": 1774882609,
+        "verified_at": "2026-09-30T18:33:18.4471043+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 63.924308,
+        "width": 1280,
+        "height": 720,
+        "frame_rate": "30/1",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV118QgBPEMk": {
+      "id": "bilibili-BV118QgBPEMk",
+      "local_path": "observations/videos/bilibili/南邮研究生日常/南京邮电大学仙林校区新宿舍和食堂应该马上就投入使用啦，新柚子们，一起期待吧！.mp4",
+      "kind": "videos",
+      "bytes": 7239397,
+      "sha256": "5871c5ffeb4427c78917ecd277dbd8bb109df80f0522391b91cd5da84e74bce9",
+      "photo_taken_at": null,
+      "published_at": "2026-04-15T14:05:00+08:00",
+      "retrieved_at": "2026-09-30T10:42:28.947040+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "南京邮电大学仙林校区新宿舍和食堂应该马上就投入使用啦，新柚子们，一起期待吧！",
+      "url": "https://www.bilibili.com/video/BV118QgBPEMk",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV118QgBPEMk",
+        "aid": 116402505712130,
+        "cid": 37499437098,
+        "page": 1
+      },
+      "creator": {
+        "name": "南邮二极管学长",
+        "uid": 476177244
+      },
+      "collection_title": "南邮研究生日常",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV118QgBPEMk",
+        "publication_unix": 1776233100,
+        "verified_at": "2026-09-30T18:33:19.7599275+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 13.537007,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "406000/13533",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 0,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1KG3v6gEUY": {
+      "id": "bilibili-BV1KG3v6gEUY",
+      "local_path": "observations/videos/bilibili/南邮仙林新宿舍！所有人，感受！.mp4",
+      "kind": "videos",
+      "bytes": 26526726,
+      "sha256": "47fc3f43269c9f24dafabb3dbb1e4e5bbfebea3313ae3250a397d9f8136401cb",
+      "photo_taken_at": null,
+      "published_at": "2026-07-28T17:07:07+08:00",
+      "retrieved_at": "2026-09-30T10:42:28.961060+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "南邮仙林新宿舍！所有人，感受！",
+      "url": "https://www.bilibili.com/video/BV1KG3v6gEUY",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1KG3v6gEUY",
+        "aid": 116996788455349,
+        "cid": 40374108350,
+        "page": 1
+      },
+      "creator": {
+        "name": "DaLI南邮控制考研",
+        "uid": 3546970429852116
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1KG3v6gEUY",
+        "publication_unix": 1785229627,
+        "verified_at": "2026-09-30T18:35:02.0561732+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 49.830023,
+        "width": 1080,
+        "height": 1920,
+        "frame_rate": "2385600/79661",
+        "nominal_frame_rate": "30000/1001",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 0,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1TL4y1a7nJ": {
+      "id": "bilibili-BV1TL4y1a7nJ",
+      "local_path": "observations/videos/bilibili/仲夏南邮｜等风来，等你来！.mp4",
+      "kind": "videos",
+      "bytes": 75058549,
+      "sha256": "b210b9c101f4e757044eaa6789d48ca57dab01eddfeb1e9117526dbc9c42cf91",
+      "photo_taken_at": null,
+      "published_at": "2021-09-08T21:44:40+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.001750+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "仲夏南邮｜等风来，等你来！",
+      "url": "https://www.bilibili.com/video/BV1TL4y1a7nJ",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1TL4y1a7nJ",
+        "aid": 847969892,
+        "cid": 404958794,
+        "page": 1
+      },
+      "creator": {
+        "name": "南京邮电大学",
+        "uid": 670512696
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1TL4y1a7nJ",
+        "publication_unix": 1631108680,
+        "verified_at": "2026-09-30T18:35:03.2258761+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 203.797,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "25/1",
+        "nominal_frame_rate": "25/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1bN41177FV": {
+      "id": "bilibili-BV1bN41177FV",
+      "local_path": "observations/videos/bilibili/飞越大学/苏/飞越南京邮电大学仙林校区一镜到底.mp4",
+      "kind": "videos",
+      "bytes": 81082147,
+      "sha256": "05123891d9ab0484abb764a034a58b227552757dc274f793ee4b4c2daecb8de7",
+      "photo_taken_at": null,
+      "published_at": "2023-11-30T02:18:22+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.044863+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "飞越南京邮电大学仙林校区一镜到底·南邮·航拍深秋美丽校园",
+      "url": "https://www.bilibili.com/video/BV1bN41177FV",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1bN41177FV",
+        "aid": 494062126,
+        "cid": 1348500783,
+        "page": 1
+      },
+      "creator": {
+        "name": "旅拍者园子",
+        "uid": 229870258
+      },
+      "collection_title": "飞越大学",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1bN41177FV",
+        "publication_unix": 1701281902,
+        "verified_at": "2026-09-30T18:33:21.6057622+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 234.939274,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "3523000/117433",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1S3411H7VX": {
+      "id": "bilibili-BV1S3411H7VX",
+      "local_path": "observations/videos/bilibili/高校航拍，南京邮电大学仙林校区航拍（上条视频的4k版本）.mp4",
+      "kind": "videos",
+      "bytes": 92126613,
+      "sha256": "a4f3cd0f20a3b6e5a6ee484d012565f2de54db417688802320837f64060b1241",
+      "photo_taken_at": null,
+      "published_at": "2022-04-06T23:23:55+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.095158+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "高校航拍，南京邮电大学仙林校区航拍（上条视频的4k版本）",
+      "url": "https://www.bilibili.com/video/BV1S3411H7VX",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1S3411H7VX",
+        "aid": 425446150,
+        "cid": 569209801,
+        "page": 1
+      },
+      "creator": {
+        "name": "廬山煙雨",
+        "uid": 449542911
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1S3411H7VX",
+        "publication_unix": 1649258635,
+        "verified_at": "2026-09-30T18:33:22.8267996+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 268.166599,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "30/1",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1aj411m7PU": {
+      "id": "bilibili-BV1aj411m7PU",
+      "local_path": "observations/videos/bilibili/【穿越南邮】梦想“邮”此启航！.mp4",
+      "kind": "videos",
+      "bytes": 45930371,
+      "sha256": "9cb6cec5af1b0c0392c915a896dbeaa637bb7acdf794f52d4daf93fab8227c48",
+      "photo_taken_at": null,
+      "published_at": "2023-07-01T17:30:02+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.120211+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "【穿越南邮】梦想“邮”此启航！",
+      "url": "https://www.bilibili.com/video/BV1aj411m7PU",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1aj411m7PU",
+        "aid": 445397368,
+        "cid": 1181492855,
+        "page": 1
+      },
+      "creator": {
+        "name": "南京邮电大学",
+        "uid": 670512696
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1aj411m7PU",
+        "publication_unix": 1688203802,
+        "verified_at": "2026-09-30T18:35:04.1051306+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 132.565,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "25/1",
+        "nominal_frame_rate": "25/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1v841187oD": {
+      "id": "bilibili-BV1v841187oD",
+      "local_path": "observations/videos/bilibili/航拍南邮.mp4",
+      "kind": "videos",
+      "bytes": 52387761,
+      "sha256": "065e7b40be23ff0ab814b41594cbb23f8660b53e96333feb4add0c5aa857b44c",
+      "photo_taken_at": null,
+      "published_at": "2022-11-14T17:47:52+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.148132+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "航拍南邮",
+      "url": "https://www.bilibili.com/video/BV1v841187oD",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1v841187oD",
+        "aid": 220109084,
+        "cid": 891424138,
+        "page": 1
+      },
+      "creator": {
+        "name": "L-emo-on",
+        "uid": 500388470
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1v841187oD",
+        "publication_unix": 1668419272,
+        "verified_at": "2026-09-30T18:33:24.0393798+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 144.474127,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "4333000/144433",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1wh411z7pw": {
+      "id": "bilibili-BV1wh411z7pw",
+      "local_path": "observations/videos/bilibili/【高校航拍】南京邮电大学(仙林校区)航拍短片.mp4",
+      "kind": "videos",
+      "bytes": 20522075,
+      "sha256": "d4d065daca01416af3fbdf0bba6b32f3cb1ee31621783695815e79463d25ba48",
+      "photo_taken_at": null,
+      "published_at": "2021-07-29T10:00:19+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.159947+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "【高校航拍】南京邮电大学(仙林校区)航拍短片",
+      "url": "https://www.bilibili.com/video/BV1wh411z7pw",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1wh411z7pw",
+        "aid": 206892749,
+        "cid": 378073841,
+        "page": 1
+      },
+      "creator": {
+        "name": "六年如初",
+        "uid": 277904089
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1wh411z7pw",
+        "publication_unix": 1627524019,
+        "verified_at": "2026-09-30T18:35:04.7725903+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 58.606939,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "1756000/58533",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1934y1g7zT": {
+      "id": "bilibili-BV1934y1g7zT",
+      "local_path": "observations/videos/bilibili/南京仙林大学城航拍/南京仙林大学城航拍之南京邮电大学.mp4",
+      "kind": "videos",
+      "bytes": 117174565,
+      "sha256": "03ebb3c0661846cde41621431fdbb8ea3a1800aaf1ff94bb7619071d966d3a54",
+      "photo_taken_at": null,
+      "published_at": "2023-10-17T13:42:24+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.224495+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "南京仙林大学城航拍之南京邮电大学",
+      "url": "https://www.bilibili.com/video/BV1934y1g7zT",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1934y1g7zT",
+        "aid": 832274504,
+        "cid": 1302091612,
+        "page": 1
+      },
+      "creator": {
+        "name": "因林而在-JJ20",
+        "uid": 486047804
+      },
+      "collection_title": "南京仙林大学城航拍",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1934y1g7zT",
+        "publication_unix": 1697521344,
+        "verified_at": "2026-09-30T18:35:05.9058670+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 370.066,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "5551000/185033",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV11Y41177ci": {
+      "id": "bilibili-BV11Y41177ci",
+      "local_path": "observations/videos/bilibili/【春意满邮】你见过自行车背后的南邮春景吗？.mp4",
+      "kind": "videos",
+      "bytes": 92136627,
+      "sha256": "b34b3ad6d2281ac9671acf91fdb64463b5328f8c59d56fce14395062fe69d293",
+      "photo_taken_at": null,
+      "published_at": "2022-04-06T00:32:09+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.275855+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "【春意满邮】你见过自行车背后的南邮春景吗？",
+      "url": "https://www.bilibili.com/video/BV11Y41177ci",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV11Y41177ci",
+        "aid": 255448814,
+        "cid": 568411419,
+        "page": 1
+      },
+      "creator": {
+        "name": "南京邮电大学",
+        "uid": 670512696
+      },
+      "collection_title": "",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV11Y41177ci",
+        "publication_unix": 1649176329,
+        "verified_at": "2026-09-30T18:35:06.7767155+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 262.527667,
+        "width": 2576,
+        "height": 1080,
+        "frame_rate": "3937000/131233",
+        "nominal_frame_rate": "30/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
+    },
+    "bilibili-BV1jD4y1z7Zu": {
+      "id": "bilibili-BV1jD4y1z7Zu",
+      "local_path": "observations/videos/bilibili/直播回放/【云游校园】小南小邮带你逛南邮之仙林校区.mp4",
+      "kind": "videos",
+      "bytes": 945596287,
+      "sha256": "212e6b3f421b862b3f62f7232f0bfbb6b695dcfa36fd0011cb91ccfb475601b3",
+      "photo_taken_at": null,
+      "published_at": "2022-09-08T12:18:17+08:00",
+      "retrieved_at": "2026-09-30T10:42:29.795776+00:00",
+      "status": "available",
+      "redistribution": {
+        "license": "unknown",
+        "status": "local_only",
+        "reason": "Third-party downloaded video; redistribution permission has not been established. Selected frames inherit source permission."
+      },
+      "source_name": "【云游校园】小南小邮带你逛南邮之仙林校区",
+      "url": "https://www.bilibili.com/video/BV1jD4y1z7Zu",
+      "platform": "bilibili",
+      "platform_identifiers": {
+        "bvid": "BV1jD4y1z7Zu",
+        "aid": 730286210,
+        "cid": 826915797,
+        "page": 1
+      },
+      "creator": {
+        "name": "南京邮电大学",
+        "uid": 670512696
+      },
+      "collection_title": "直播回放",
+      "metadata_verification": {
+        "status": "verified",
+        "method": "Exact downloader BV/CID matched to public Bilibili original-page or view-API video metadata",
+        "url": "https://www.bilibili.com/video/BV1jD4y1z7Zu",
+        "publication_unix": 1662610697,
+        "verified_at": "2026-09-30T18:33:25.3788958+08:00",
+        "matches_downloader_cache": true
+      },
+      "capture_time": {
+        "status": "unknown",
+        "value": null,
+        "reason": "Publication date is not filming date; no explicit capture date established"
+      },
+      "campus_scope": {
+        "status": "unreviewed",
+        "segments": [],
+        "reason": "Classify Xianlin, Sanpailou or mixed footage by specific shot; title alone does not establish every segment"
+      },
+      "technical": {
+        "duration_seconds": 2679.594333,
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "64309000/2679541",
+        "nominal_frame_rate": "24/1",
+        "codec": "h264"
+      },
+      "platform_no_reprint": 1,
+      "selection_status": "awaiting_shot_review"
     }
   }
 }
