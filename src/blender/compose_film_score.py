@@ -369,9 +369,9 @@ def main() -> None:
 
 文件：`njupt_campus_original_score_35s.wav` 是 48 kHz / 24 bit / 双声道母带；`.m4a` 是 320 kbps AAC 试听版。时长 35.000 秒，96 BPM，14 小节，建议 0、5、10、15、20、25、30、35 秒作为镜头节点。片尾在 33.6 秒后平滑淡出。
 
-可在本校园宣传片及用户的后续剪辑中使用、修改。作者不引入额外署名要求。未做第三方曲库的相似性检索或版权登记。
+本原创配乐按项目的 CC BY 4.0 许可分发，署名为 `hicancan / njupt-map`，可在许可条件下使用和修改。未做第三方曲库的相似性检索或版权登记。
 
-复现：在项目根目录运行 `.venv/Scripts/python.exe src/blender/compose_film_score.py`。依赖已有 numpy 与 FFmpeg，固定随机种子。实际响度及峰值见 `build/checks/film_audio_validation.json`。
+复现：在项目根目录运行 `uv run python src/blender/compose_film_score.py`。依赖已有 numpy 与 FFmpeg，固定随机种子。生成候选写入 `build/media/audio/`，确认后只接纳 WAV 母带为正式源稿；AAC 试听编码留在 build。实际响度及峰值见 `build/checks/film_audio_validation.json`。
 '''
     (args.output / '原创配乐说明.md').write_text(license_text, encoding='utf-8')
     print(json.dumps({'passed': valid, 'wav': str(normalized), 'duration': probe['format']['duration'],
