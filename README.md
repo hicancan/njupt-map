@@ -42,6 +42,10 @@
 
 两个工程使用共同对象 ID。GeoPackage 保存投影坐标，Blender 使用校园局部米制坐标；位置变化通过显式转换同步，轮廓变化先检查差异，保留精修模型。
 
+## 浏览器轻量运行时
+
+使用 `uv run python -m src.runtime.export` 从唯一 GeoPackage 派生全校 129 个建筑的米制轮廓、轻量 GLB、分栋加载资产和带来源/散列的语义清单。它保留原生 Blender 作者源，不将推定高度、示意室内或未知占用当作实测事实。详见 [运行时发布合同](docs/runtime.md)。
+
 ## 获取与打开
 
 正式 `.blend`、`.gpkg`、贴图和媒体使用 Git LFS。安装 Git LFS 后获取完整工程：
@@ -70,6 +74,7 @@ njupt-map/
 ├── src/
 │   ├── observations/      采集、视频候选预览、正式选帧与观测检查
 │   ├── map/               空间读取、导出与检查
+│   ├── runtime/           可重建浏览器资产与语义发布
 │   ├── sync/              共同 ID、坐标与变化检查
 │   └── blender/           建模工具、渲染、影片与便携导出
 ├── tests/                 必要的不变量和同步测试
