@@ -29,6 +29,7 @@ Thumbs.db
 /observations/videos/
 
 # BEGIN observation permissions (generated from observations/catalog.json)
+/observations/documents/library-official-floor-layout.html
 /observations/documents/njupt/README.md
 /observations/documents/njupt/campus-gallery.html
 /observations/documents/njupt/canteen4_structure_2025.html
@@ -170,6 +171,10 @@ Thumbs.db
 /observations/images/derived/round-aerial-detail.png
 /observations/images/derived/round-front-detail.png
 /observations/images/derived/round-official-2011.jpg
+/observations/images/library-official-floor-02.jpg
+/observations/images/library-official-floor-03.jpg
+/observations/images/library-official-floor-04.jpg
+/observations/images/library-official-floor-05.jpg
 /observations/images/njupt/canteen4_structure_2025_image_00.jpg
 /observations/images/njupt/construction_article_216691_image_00.jpg
 /observations/images/njupt/construction_article_235284_image_00.jpg

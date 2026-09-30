@@ -2174,7 +2174,12 @@
         "library-36-steps",
         "library-procurement-2024",
         "library-property-2021",
-        "map-2017"
+        "map-2017",
+        "library-official-floor-layout",
+        "library-official-floor-02",
+        "library-official-floor-03",
+        "library-official-floor-04",
+        "library-official-floor-05"
       ],
       "floorplans": [],
       "assertions": [
@@ -2231,6 +2236,18 @@
             "gallery-19",
             "guide-2020-13"
           ]
+        },
+        {
+          "feature": "Library floors 2–5: paired reading wings, central circulation and atrium, report hall and study rooms",
+          "source_ids": [
+            "library-official-floor-layout",
+            "library-official-floor-02",
+            "library-official-floor-03",
+            "library-official-floor-04",
+            "library-official-floor-05"
+          ],
+          "status": "observed_in_official_drawings",
+          "note": "Drawing date unknown; current refurbishment video is an independent observation; pose and scale registration remain approximate."
         }
       ],
       "unknowns": [

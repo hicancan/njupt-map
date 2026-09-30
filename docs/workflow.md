@@ -31,12 +31,24 @@ uv run python -m src.sync
 ```powershell
 $blenderExe = 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe'
 & $blenderExe --background --factory-startup --python-exit-code 1 --python src/blender/build_campus.py -- --preview
-& $blenderExe --background --factory-startup --python-exit-code 1 --python src/blender/export_portable_blend.py
+& $blenderExe --background --factory-startup --python-exit-code 1 --python src/blender/export_portable_blend.py -- --temp-dir D:/Temp/codex/njupt-map-export
 ```
 
 预览从已保存的校园源稿渲染。便携导出写入 build/blender/njupt-map.blend，不修改校园或单栋源稿。公开导出只打包允许分发的通用资产，不打包受限楼层图。
 
 需要程序生成候选校园时，使用 build_campus.py 的显式 `--assemble --output build/blender/candidate.blend`。既有建筑继续作为作者源稿链接；缺失建筑只生成到 build。新成果须明确接纳进原生工程，生成脚本不默认覆盖源稿。
+
+全校园细节与室内的当前设计位于 `projects/blender/design/`，显式应用工具为 `src/blender/author_campus.py`。它要求最新地图导出，只有 `--apply` 和明确的作用范围一起出现才会保存源稿。已有室内默认受保护，批量作者工具不能替代后续手工精修。静帧渲染使用 `src/blender/render_quality.py`，室内查看、作用范围和命令见 [Blender 工程与影片](blender.md)。
+
+发布前检查原生引用与源稿保护：
+
+```powershell
+& $blenderExe --background --factory-startup --python-exit-code 1 --python src/blender/checks/validate_native.py
+& $blenderExe --background --factory-startup --python-exit-code 1 --python src/blender/checks/validate_interiors.py -- --authored
+uv run python -m src.sync
+```
+
+便携导出验证重新打开后的建筑身份、引用和受限原图保护，同时检查导出没有改写作者工程。任务临时目录仅用于导出过程中间文件；验证路径位于 `D:/Temp/codex/` 后清理。正式便携成果保存在 `build/`，发布为 Release 附件。
 
 ## 影片
 

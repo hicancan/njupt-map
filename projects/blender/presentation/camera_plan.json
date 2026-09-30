@@ -9,29 +9,29 @@
       "id": "01",
       "name": "从南门启程",
       "duration": 5,
-      "intent": "Gentle left-to-right crane frames the open stone gateway, official calligraphic gold name, paired columns and adjoining campus buildings.",
-      "risk": "Refined gate reaches z22.1. Camera backed away and lens widened to43mm, with target raised to11.8–12m so the new lettering stays in-frame. Minimum camera z31; no forward crossing of the gateway. Confirm all three storyboard frames after rebuild.",
+      "intent": "Slow lateral crane frames the physical calligraphic namewall and reflecting basin, with the high open gateway behind.",
+      "risk": "New ground-scale namewall and entry clearance; verify pool, letters and upper gateway at all three sampled poses.",
       "start_location": [
-        122,
-        -718,
-        31
+        130,
+        -760,
+        6
       ],
       "end_location": [
-        145,
-        -706,
-        33
+        143,
+        -756,
+        8
       ],
       "start_target": [
-        132,
-        -643,
-        11.8
+        137,
+        -725,
+        4
       ],
       "end_target": [
-        131,
-        -638,
-        12
+        137,
+        -724,
+        5
       ],
-      "lens": 43,
+      "lens": 32,
       "roll_deg": 0,
       "fstop": 8
     },
@@ -127,31 +127,31 @@
     },
     {
       "id": "05",
-      "name": "学科群像",
+      "name": "新宿舍组团",
       "duration": 5,
-      "intent": "Northbound lateral track follows the pale yellow academic buildings, local orange entrance frames and connecting upper volumes from the wooded eastern side.",
-      "risk": "Ding hill terrain is inferred rather than surveyed. Camera z65–69 remains above the modeled hill and canopy. Keep the academic fronts readable; verify trees do not fill the entire foreground.",
+      "intent": "Short lateral crane within the clear K courtyard reveals the low red glazed entrance, flanking dormitory facades and open roof frame.",
+      "risk": "Camera rays checked against every mapped footprint; roof-frame pair and entry dimensions remain inferred. Keep both ends and the low entrance in frame.",
       "start_location": [
-        20,
-        35,
-        69
+        -278,
+        325,
+        6
       ],
       "end_location": [
-        5,
-        94,
-        65
+        -268.3,
+        328.6,
+        8
       ],
       "start_target": [
-        -115,
-        78,
-        8
+        -281.6,
+        349.8,
+        9
       ],
       "end_target": [
-        -112,
-        115,
-        8
+        -281.6,
+        349.8,
+        10
       ],
-      "lens": 48,
+      "lens": 22,
       "roll_deg": 0,
       "fstop": 8
     },
@@ -218,6 +218,6 @@
   ],
   "fps": 24,
   "duration": 35,
-  "revision": "2026-09-30 landmarks and recovered old gym",
+  "revision": "Current campus-wide detail and interiors",
   "on_screen_copy_policy": "njupt-map brand and campus name only; no explanatory digital-campus labels. Preserve the existing closing map attribution."
 }

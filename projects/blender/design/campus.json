@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "scope": "Current authored campus components; dimensions and placements inferred from observations and checked against the editable map. These are modelling decisions, not surveyed map facts.",
+  "south_namewall": {
+    "component_id": "njupt_south_gate_low_namewall",
+    "anchor_ids": ["osm_way_224938858", "osm_way_224938894"],
+    "offset_m": [0.2, -3.0],
+    "wall_width_m": 12.6,
+    "wall_depth_m": 0.9,
+    "wall_height_m": 1.92,
+    "pool_width_m": 13.0,
+    "pool_length_m": 9.6,
+    "sources": ["bilibili-BV1PqDQB2Epk-frame-pts-000000128000", "official-name-vector"],
+    "interpretation": "The low grey name wall and reflecting pool lie between the two low gatehouses. They are independent of the high open gateway further north. Metre dimensions are inferred and constrained by the current map's paired road clearances. Official calligraphic outlines provide actual letter geometry.",
+    "confidence": "observed_appearance_inferred_dimensions_and_placement"
+  },
+  "k_roof_connection": {
+    "component_id": "njupt_k_roof_connection",
+    "anchor_ids": ["njupt_k_dormitory_02", "njupt_k_dormitory_03"],
+    "roof_height_fraction": 0.988,
+    "open_frame_depth_m": 10.0,
+    "main_beam_depth_m": 0.58,
+    "cross_beam_spacing_m": 0.78,
+    "entry_lobby_width_m": 6.0,
+    "entry_lobby_height_m": 4.25,
+    "entry_lobby_floor_m": 0.72,
+    "sources": ["bilibili-BV1KG3v6gEUY-frame-pts-000000688152", "k-plan", "k_inspection_20260901_full_image_00_original"],
+    "interpretation": "The 42.9995-second video view shows a roof-height open structural span with closely spaced transverse members, with a low red glazed entrance below. An enclosed elevated glazed walkway and traversable upper floor are not visible. Model pair 02/03 is the current plausible placement at the east end of the aligned three-building row; published building numbers remain unregistered. The endpoints are computed from the live map polygons rather than copied coordinates.",
+    "confidence": "observed_open_frame_type_inferred_pair_and_dimensions"
+  },
+  "ground_detail_rules": {
+    "component_id": "njupt_campus_ground_details",
+    "road_drain_spacing_m": 38.0,
+    "tactile_width_m": 0.30,
+    "hedge_spacing_m": 30.0,
+    "max_hedge_clusters": 190,
+    "max_parking_cars": 48,
+    "max_bicycle_bays": 12,
+    "bicycles_per_bay": 5,
+    "lake_reed_spacing_m": 19.0,
+    "max_lake_reed_patches": 110,
+    "sources": ["osm-osm_map_20260930", "bilibili-BV1KG3v6gEUY-frame-pts-000000784322"],
+    "interpretation": "Roadside tactile paving and drain type are visible in the K exterior video. Whole-campus distribution, generic car/bicycle designs, exact quantities, planting species, crosswalks and refuse bins are inferred details. Geometry is derived from current mapped roads, parking polygons, building edges and lake banks; building, water, sports and exclusion footprints are protected.",
+    "confidence": "mapped_distribution_inferred_detail"
+  }
+}

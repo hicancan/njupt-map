@@ -1,54 +1,79 @@
 {
   "schema_version": 1,
   "target_state": "2026-09-30",
-  "scope": "Observation-to-model review; no automatic mesh replacement",
+  "scope": "Observations compared with the current editable native sources; authored reconstruction and unresolved registration remain separate.",
   "native_review": {
-    "method": "Blender 5.2 read-only object/vertex inventory and source hash comparison; no rendering or saving",
+    "method": "Blender 5.2 read-only inventory of current source objects, campus component IDs, interior source-plan floors and video-zone metadata; SHA-256 compared with the formal building catalog. No source rendering or saving and no validation reports used as world facts.",
     "files": [
       {
         "path": "projects/blender/campus.blend",
-        "sha256": "87cacc3cb521f84b8ea4af3428daece4d55acabf3aecc72bd4c767f2759ed755"
+        "sha256": "5d36bc75177e4625760e29337d0038c43fecfcf3aebcd303b01be3e9d1357f61"
       },
       {
         "path": "projects/blender/buildings/njupt_k_dormitory_01.blend",
-        "sha256": "d989821338d6dddf0d557292a1205bc0cbc9255c0c654197d8c2decc9dccd3ce"
+        "sha256": "f6090886def5a6bef54ce15d130dd62152604d423eda78c66a452217fea0c2e4"
       },
       {
         "path": "projects/blender/buildings/njupt_k_dormitory_02.blend",
-        "sha256": "5f45eea395f35a9638ad81fac72ceddd0dae0f114c33f49237e4aaf90da29d21"
+        "sha256": "3c51ae090d4835ef584b5a6c2dd8241ebeec470486f4c5641d44a0983e73ed42"
       },
       {
         "path": "projects/blender/buildings/njupt_k_dormitory_03.blend",
-        "sha256": "d23d3c8b8a2622276735e449789583a837ce4d2693dea0f8c0e43868deebce2d"
+        "sha256": "1b91839eea267f4b1dece71159841852f03dddfca8e3cd650e75161450b1d267"
       },
       {
         "path": "projects/blender/buildings/njupt_k_dormitory_04.blend",
-        "sha256": "5f54343039f7c37f22618a3fdaf5fe2d126332df2c6f4ac6cb6019df1025fa7c"
+        "sha256": "85b71e4ffff8bdb46b0fad5aeae64e5d546f78d7a58852cef873603df3c1475a"
       },
       {
         "path": "projects/blender/buildings/njupt_k_dormitory_05.blend",
-        "sha256": "2c129183b5ed3da96ae391dbc6e8ec8ed70701c0bd97c3f13fae6c07821b97a7"
+        "sha256": "1ea2dbdb5608f641c224f2da48be00c0ef8e5a77d0fa0cf7282ddc01b5001427"
       },
       {
         "path": "projects/blender/buildings/njupt_k_dormitory_06.blend",
-        "sha256": "340b018711891cb4f7c428b610ed2ee24e3a1ec2e6c9891c92300b4b01d1da70"
+        "sha256": "ffaed52d60b9b48f9c52cc60113a21658aead34cc4e56948bbc043d1271ddf84"
       },
       {
         "path": "projects/blender/buildings/osm_way_1454085437.blend",
-        "sha256": "9ff3e139b0f4a8e61cc31f054fa547f3a0837788beb085b3467b2a1b26db171c"
+        "sha256": "d400065dd47218ddc6320f42644a36c31395425d09b6002a95e50b353f5dec09"
+      },
+      {
+        "path": "projects/blender/buildings/osm_way_223859810.blend",
+        "sha256": "282e5ff8c0d755bfab216cb8668d0ee7b666ceaebc100942cf400d07ce572b87"
+      },
+      {
+        "path": "projects/blender/buildings/osm_way_223859784.blend",
+        "sha256": "c3367d95235bc2554b190da9ee104a2fea70484d8e452b84817bd07a1d707fb1"
+      },
+      {
+        "path": "projects/blender/buildings/osm_way_223699451.blend",
+        "sha256": "4d85d709316bfe5fa227d1f397a399484210425eb6f5259e2803e862eb99ae0f"
+      },
+      {
+        "path": "projects/blender/buildings/osm_way_223699456.blend",
+        "sha256": "53873222b3b9bfe5e6f3c449fe7a886764e2a9f3be38c16fe5de85b9c9861e5f"
+      },
+      {
+        "path": "projects/blender/buildings/osm_way_155434036.blend",
+        "sha256": "1157865cdec39574eeefd5e60cfa81e27952c150716aeed48df2000f19da5789"
+      },
+      {
+        "path": "projects/blender/buildings/osm_way_223699452.blend",
+        "sha256": "3e979f91a4e5f855252fff3137a4310037087f605b7929839b8bd004ba2667b0"
       }
     ],
     "limitations": [
-      "模型参数不是实测尺寸。",
-      "视频单体尚未与K模型序号配准；存在缺漏不代表已求得替代网格。"
+      "模型参数、设施布置与构件位置包含作者推定，不是实测尺寸。",
+      "K视频中的实际楼号仍未与模型01–06序号完成注册；当前02/03配对是作者安排。",
+      "原生构件与房间记录已经建立，不等于照片覆盖完整、控制点标定完成或运行数据数字孪生。"
     ]
   },
   "findings": [
     {
       "id": "new_dorm_high_connector",
       "priority": 1,
-      "status": "confirmed_geometry_difference_with_unregistered_pair",
-      "label": "新宿舍高位跨栋连接体",
+      "status": "authored_component_with_inferred_pair_and_dimensions",
+      "label": "新宿舍屋顶开放高跨与低位红色入口",
       "asset_ids": [
         "njupt_k_dormitory_01",
         "njupt_k_dormitory_02",
@@ -67,38 +92,46 @@
           "segment_id": "bilibili-BV118QgBPEMk-s002"
         }
       ],
-      "observed": "两片外部画面可见高位横向体块跨越两栋楼间；现有6个K原生资产没有该类跨栋构件。",
+      "observed": "当前外部片段可见屋顶高度的开放跨栋框架、密排横梁与低位红色玻璃入口；施工片段保留结构线索，不能代表当前场地外观。",
       "native_check": {
         "asset_count": 6,
         "objects_per_asset": {
-          "njupt_k_dormitory_01": 3,
-          "njupt_k_dormitory_02": 3,
-          "njupt_k_dormitory_03": 3,
-          "njupt_k_dormitory_04": 3,
-          "njupt_k_dormitory_05": 3,
-          "njupt_k_dormitory_06": 3
+          "njupt_k_dormitory_01": 33,
+          "njupt_k_dormitory_02": 33,
+          "njupt_k_dormitory_03": 33,
+          "njupt_k_dormitory_04": 33,
+          "njupt_k_dormitory_05": 33,
+          "njupt_k_dormitory_06": 33
         },
-        "max_elevated_outside_footprint_m": {
-          "njupt_k_dormitory_01": 1.77,
-          "njupt_k_dormitory_02": 1.77,
-          "njupt_k_dormitory_03": 1.77,
-          "njupt_k_dormitory_04": 1.77,
-          "njupt_k_dormitory_05": 1.77,
-          "njupt_k_dormitory_06": 2.17
-        },
-        "elevated_vertices_outside_3m": 0,
-        "campus_instances_match_source": true
+        "component_id": "njupt_k_roof_connection",
+        "component_source": "projects/blender/campus.blend",
+        "component_anchor_ids": [
+          "njupt_k_dormitory_02",
+          "njupt_k_dormitory_03"
+        ],
+        "component_design_source": "projects/blender/design/campus.json",
+        "component_mesh_objects": [
+          "K组团_屋顶高跨_开放主梁与密排横梁",
+          "K组团_屋顶高跨_两端结构连接座",
+          "K组团_低红入口_板体与地坪",
+          "K组团_低红入口_独立玻璃门窗",
+          "K组团_低红入口_分格门框与扶手",
+          "K组团_低红入口_五级前台阶"
+        ],
+        "placement_status": "authored_inference_not_surveyed",
+        "high_connection_type": "open_roof_frame_without_authored_upper_occupied_floor"
       },
       "uncertainties": [
-        "具体连接两端与模型序号未匹配；结构用途、可通行性、精确高度未确认。",
+        "实际楼号与模型序号未匹配；当前02/03两端配对、高度与尺寸仍是作者推定。",
+        "画面没有确认高跨可通行或具有封闭上层楼面；开放结构的具体用途与连接节点尺寸未知。",
         "4月施工态不能直接复用于当前场地。"
       ],
-      "next_action": "对齐官方竣工照片、设计图和视频视点，确定组团单体与两端位置，再精修当前原生工程。"
+      "next_action": "继续以可注册的竣工图、楼号与新视点修正当前02/03配对和构件尺度，并精修已有开放高跨及入口节点。"
     },
     {
       "id": "south_gate_parts",
       "priority": 1,
-      "status": "identity_disambiguation",
+      "status": "separate_native_components_authored_with_inferred_registration",
       "label": "南门低位校名水景、门卫房与高位门廊分开维护",
       "asset_ids": [
         "osm_way_1454085437",
@@ -111,16 +144,34 @@
           "segment_id": "bilibili-BV1PqDQB2Epk-s002"
         }
       ],
-      "observed": "视频前景低矮校名水景与后方跨鼎新大道高门廊是不同构件。原生高门廊已有实体框架、细柱和6个曲线立体字形。",
+      "observed": "视频前景低矮校名水景、两侧门卫房与后方跨鼎新大道高门廊是不同构件；高门廊的实体框架与校名应独立于前景低校名墙。",
       "uncertainties": [
-        "低位校名构件还没有单独地图身份；本次局部对象清单未识别到它，不能据此宣称合并网格中绝对不存在。"
+        "低校名墙与水池的位置、尺度及石材细节按门卫房与当前地图近似推定，尚未进行实测控制点注册。"
       ],
-      "next_action": "用门卫房与主轴作空间参照注册前景构件，逐面核对现有校园网格，完成有依据的细节精修。"
+      "next_action": "用后续近景、主轴视点与尺度参照校准已建低校名墙、水池和门卫房关系，并继续修正已有实体细节。",
+      "native_check": {
+        "high_gateway_asset_id": "osm_way_1454085437",
+        "high_gateway_objects": 10,
+        "component_id": "njupt_south_gate_low_namewall",
+        "component_source": "projects/blender/campus.blend",
+        "component_anchor_ids": [
+          "osm_way_224938858",
+          "osm_way_224938894"
+        ],
+        "component_design_source": "projects/blender/design/campus.json",
+        "component_mesh_objects": [
+          "南门_低校名墙_实体石壁与完整池体",
+          "南门_低校名墙_反射水面",
+          "南门_门卫房前石材广场_接缝铺装"
+        ],
+        "physical_calligraphy_curve_count": 6,
+        "placement_status": "authored_inference_not_surveyed"
+      }
     },
     {
       "id": "library_interior",
       "priority": 1,
-      "status": "observed_interior_layout_unregistered",
+      "status": "official_plan_and_video_informed_interiors_authored_with_inferred_registration",
       "label": "图书馆新版内部空间与两个自习区",
       "asset_ids": [
         "osm_way_223859810"
@@ -155,18 +206,88 @@
           "segment_id": "bilibili-BV1T3RaBqE7c-s007"
         }
       ],
-      "observed": "入口、接待、开放学习区、门内白吊顶房、蓝绿长条自习区、另一端出口、候坐椅、餐饮与窗边座位分别标注。",
+      "observed": "视频分别支持入口接待、开放学习区、门内白吊顶房、蓝绿长条自习区、另一端出口、候坐椅、餐饮与窗边座位的外观及局部顺序；官方二至五层布局图提供层号、房间标签、阅览翼与中庭关系。",
       "uncertainties": [
-        "蓝绿自习区字幕提及二楼，但未见转层；楼层保留未知。",
-        "白吊顶房仅从门口可见，没有进入。",
-        "没有尺寸、完整隔墙平面或房间号。"
+        "蓝绿自习区字幕提及二楼，但未见转层；该空间及其他未确认视频空间的观测楼层保留未知，当前模型的一层安排是作者推定。",
+        "白吊顶房仅从门口可见，没有进入；隐藏隔墙和内部尺度仍含推定。",
+        "官方布局图的方向和米制尺度为近似注册，不是实测施工图；视频装修与官方房间号尚未逐一匹配。"
       ],
-      "next_action": "与当前楼层平面进行控制点注册；按已确认空间关系建立内部结构，再补足尺寸与隐藏区域。"
+      "next_action": "继续把新视点、明确楼层和可用尺度参照绑定到已建房间与视频空间，修正当前层号安排、隔墙、家具和隐藏区域。",
+      "additional_source_ids": [
+        "library-official-floor-02",
+        "library-official-floor-03",
+        "library-official-floor-04",
+        "library-official-floor-05"
+      ],
+      "native_check": {
+        "source": "projects/blender/buildings/osm_way_223859810.blend",
+        "design_source": "projects/blender/design/interiors.json",
+        "modeled_floors": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "official_plan_floors": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "official_plan_source_ids": [
+          "library-official-floor-02",
+          "library-official-floor-03",
+          "library-official-floor-04",
+          "library-official-floor-05"
+        ],
+        "official_plan_registration": "inferred_metric_registration_of_official_diagram",
+        "authored_video_zone_ids": [
+          "blue_green_study",
+          "waiting_lounge",
+          "white_ceiling_study",
+          "entry_reception",
+          "coffee_bakery",
+          "window_seating"
+        ],
+        "video_zone_assignment": [
+          {
+            "id": "entry_reception",
+            "observed_floor": 1,
+            "authored_floor": 1
+          },
+          {
+            "id": "white_ceiling_study",
+            "observed_floor": null,
+            "authored_floor": 1
+          },
+          {
+            "id": "blue_green_study",
+            "observed_floor": null,
+            "authored_floor": 1
+          },
+          {
+            "id": "waiting_lounge",
+            "observed_floor": null,
+            "authored_floor": 1
+          },
+          {
+            "id": "coffee_bakery",
+            "observed_floor": null,
+            "authored_floor": 1
+          },
+          {
+            "id": "window_seating",
+            "observed_floor": null,
+            "authored_floor": 1
+          }
+        ]
+      }
     },
     {
       "id": "dining2_interior",
       "priority": 1,
-      "status": "observed_interior_layout_unregistered",
+      "status": "video_informed_facilities_authored_with_inferred_registration",
       "label": "第二食堂两层局部布局",
       "asset_ids": [
         "osm_way_223859784"
@@ -191,10 +312,29 @@
       ],
       "observed": "按发布者楼层字幕区分两层大厅、餐档、服务区与可见楼梯口。",
       "uncertainties": [
-        "未拍实际上下楼；不建立两层之间的已验证通行边。",
-        "餐档经营名称易变化，不能视为长期建筑事实。"
+        "未拍实际上下楼；模型已有楼梯，但不能把其作者布置记成视频确认的两层通行关系。",
+        "视频只提供一、二层局部外观；原生工程按当前地图建立的其他楼层与设施布置仍是推定。",
+        "餐档经营名称易变化，不能视为长期建筑事实；精确柱网、餐档尺度和出入口位置尚未注册。"
       ],
-      "next_action": "获取可用平面与尺度参照，先注册柱网、楼梯和出入口，再建桌椅、顶棚与局部设施。"
+      "next_action": "继续以平面图与可用尺度参照修正已建桌椅、餐档、顶棚、柱网、楼梯及入口，使其从当前推定布局演进为更准确的空间注册。",
+      "native_check": {
+        "source": "projects/blender/buildings/osm_way_223859784.blend",
+        "design_source": "projects/blender/design/interiors.json",
+        "modeled_floor_count": 3,
+        "video_reported_floors": [
+          1,
+          2
+        ],
+        "facility_layout_status": "authored_inference_within_current_map_footprint",
+        "authored_facilities": [
+          "餐桌与座椅",
+          "餐档台面与服务面板",
+          "柱体",
+          "吊顶灯具",
+          "楼梯与服务面板",
+          "外墙内衬与窗格"
+        ]
+      }
     },
     {
       "id": "entrance_2",
@@ -217,8 +357,8 @@
     {
       "id": "teaching_interior",
       "priority": 2,
-      "status": "historical_context_only",
-      "label": "教学中庭及走廊保留历史语境",
+      "status": "registered_plan_interiors_authored_with_unassigned_historical_video_context",
+      "label": "教学楼来源轮廓已注册，历史中庭视频单体仍待识别",
       "asset_ids": [],
       "source_refs": [
         {
@@ -236,10 +376,55 @@
       ],
       "observed": "历史导览中可见教学中庭、底层走廊及走向室外的连续通道。",
       "uncertainties": [
-        "没有唯一教几楼号。",
-        "2022画面不作为2026内部装修输入；已有23张教学楼平面图仍须逐层注册。"
+        "历史视频没有唯一教几楼号，因此保留空的该视频asset_ids，不把剪辑位置当作当前单栋身份。",
+        "2022画面不作为2026内部装修输入；23张来源楼层图与564个来源房间轮廓已近似注册到原生工程，尺度、门洞、家具与未观测细节仍含推定。"
       ],
-      "next_action": "以已有教学楼平面图和明确的共同建筑ID进行注册，历史视频只作待核对的空间线索。"
+      "next_action": "用明确楼号、新观测及尺度参照继续校正已注册楼层和房间；只有确认历史视频单体身份后，才把其中空间线索绑定到具体教学楼。",
+      "additional_source_ids": [
+        "plan-xianlin-jiao-1-floor-01-evacuation-plan",
+        "plan-xianlin-jiao-1-floor-02-evacuation-plan",
+        "plan-xianlin-jiao-1-floor-03-evacuation-plan",
+        "plan-xianlin-jiao-1-floor-04-evacuation-plan",
+        "plan-xianlin-jiao-1-floor-05-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-01-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-02-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-03-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-04-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-05-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-06-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-01-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-02-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-03-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-04-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-05-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-06-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-01-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-02-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-03-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-04-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-05-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-06-evacuation-plan"
+      ],
+      "native_check": {
+        "authored_asset_ids": [
+          "osm_way_223699451",
+          "osm_way_223699456",
+          "osm_way_155434036",
+          "osm_way_223699452"
+        ],
+        "source_directory": "projects/blender/buildings/",
+        "design_source": "projects/blender/design/interiors.json",
+        "registered_plan_floor_count": 23,
+        "registered_source_room_outline_records": 564,
+        "registration_status": "approximate_not_surveyed",
+        "historical_video_single_building_binding": "unresolved",
+        "registered_floor_counts_by_asset": {
+          "osm_way_223699451": 5,
+          "osm_way_223699456": 6,
+          "osm_way_155434036": 6,
+          "osm_way_223699452": 6
+        }
+      }
     }
   ]
 }

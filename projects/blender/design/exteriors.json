@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "purpose": "Current additive exterior authoring rules. Map footprints, placement, heights and identities are read from the current spatial source; native pane positions are read from authored meshes.",
+  "dimension_status": "Millimetre details and service layouts are architectural reconstruction estimates, not survey measurements.",
+  "glass_gasket_m": 0.012,
+  "door_height_m": 2.55,
+  "handrail_height_m": 1.05,
+  "profiles": {
+    "regular": {"rainwater": true, "entrance": true, "roof_services": true},
+    "teaching": {"rainwater": true, "entrance": true, "roof_services": true},
+    "dorm": {"rainwater": true, "entrance": true, "roof_services": true},
+    "dining": {"rainwater": true, "entrance": true, "roof_services": true},
+    "passage": {"rainwater": true, "entrance": false, "roof_services": false},
+    "landmark": {"rainwater": false, "entrance": false, "roof_services": false},
+    "gate": {"rainwater": false, "entrance": false, "roof_services": false},
+    "stand": {"rainwater": false, "entrance": false, "roof_services": false}
+  },
+  "principles": [
+    "Preserve authored silhouette and all existing non-owned mesh objects.",
+    "Glazing seals and opening hardware use existing native pane geometry, rather than regenerating a second facade rhythm.",
+    "Roof services fit within the solid footprint and current upper-volume roof datum.",
+    "New entry orientation is an inferred nearest-road choice, checked against nearby map obstacles.",
+    "Open gates and stands receive relevant anchor or seating details; they never receive a generic building envelope.",
+    "Observation images remain external inputs; no third-party pixels are embedded in these materials."
+  ]
+}

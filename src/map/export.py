@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 
@@ -13,6 +14,7 @@ from .store import ROOT, SOURCE, load_campus
 
 
 def export(source: Path = SOURCE, output: Path = ROOT / "build/map"):
+    source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
     data = load_campus(source)
     output.mkdir(parents=True, exist_ok=True)
     (output / "campus.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -33,6 +35,14 @@ def export(source: Path = SOURCE, output: Path = ROOT / "build/map"):
                              "geometry": mapping(transform(wgs, geom))})
         (output / f"{layer}.geojson").write_text(json.dumps({"type": "FeatureCollection", "name": layer,
                     "features": features}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if hashlib.sha256(source.read_bytes()).hexdigest() != source_hash:
+        raise RuntimeError('Spatial source changed during export; retry after editing finishes')
+    (output/'export.json').write_text(json.dumps({
+        'source_file_sha256': source_hash,
+        'campus_json_sha256': hashlib.sha256((output/'campus.json').read_bytes()).hexdigest(),
+        'dataset_sha256': data['metadata']['dataset_sha256'],
+        'note': 'Dataset hash describes semantic data; source file hash describes the physical GeoPackage.'
+    }, indent=2)+'\n', encoding='utf8')
     return data
 
 

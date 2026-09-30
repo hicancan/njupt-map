@@ -133,6 +133,60 @@ def viewport_signature():
             'view3d_areas':records}
 
 
+def add_interior_controls():
+    """Embed inspection controls that also work without the source repository."""
+    block=bpy.data.texts.get('View interior.py') or bpy.data.texts.new('View interior.py')
+    block.use_fake_user=True
+    block.clear()
+    block.write('''# Portable interior inspection. Edit these three settings, then Run Script.
+ASSET_ID = 'osm_way_223859810'  # Library; common IDs are saved on building instances.
+FLOOR = 3
+CEILINGS = False
+import bpy, json
+scene=bpy.context.scene
+instance=next(o for o in scene.objects if o.get('asset_id')==ASSET_ID and o.instance_collection)
+collection=instance.instance_collection
+interior=next(c for c in collection.children if c.get('njupt_editable_interiors'))
+inside=set(interior.all_objects)
+for ob in list(collection.all_objects):
+    if ob not in inside:
+        if ob.get('interior_previous_hide_render') is None:
+            ob['interior_previous_hide_render']=ob.hide_render
+            ob['interior_previous_hide_viewport']=ob.hide_viewport
+        ob.hide_render=True;ob.hide_viewport=True
+interior.hide_render=False;interior.hide_viewport=False
+for fl in list(interior.children):
+    fl.hide_render=int(fl['floor'])!=FLOOR;fl.hide_viewport=int(fl['floor'])!=FLOOR
+    for ob in list(fl.objects):
+        if ob.get('interior_role')=='ceiling':ob.hide_render=not CEILINGS;ob.hide_viewport=not CEILINGS
+specs=json.loads(interior['camera_specs'])
+view=next((s for s in specs if s['floor']==FLOOR),next(s for s in specs if s['id']=='cutaway'))
+native=next(o for o in interior.all_objects if o.type=='CAMERA' and o.get('asset_id')==ASSET_ID and o.get('interior_camera_id')==view['id'])
+camera=bpy.data.objects.get('Interior inspection')
+if camera is None:
+    camera=bpy.data.objects.new('Interior inspection',native.data.copy());scene.collection.objects.link(camera)
+camera.data.lens=native.data.lens
+camera.matrix_world=instance.matrix_world @ native.matrix_world
+delta=next(c['z_m'] for c in interior.children if int(c['floor'])==FLOOR)-next(c['z_m'] for c in interior.children if int(c['floor'])==view['floor'])
+camera.location.z+=delta
+scene.camera=camera
+for area in getattr(bpy.context.screen,'areas',[]):
+    if area.type=='VIEW_3D':area.spaces.active.region_3d.view_perspective='CAMERA'
+# Restore the exterior: run the second text block, Restore exterior.py.
+''')
+    restore=bpy.data.texts.get('Restore exterior.py') or bpy.data.texts.new('Restore exterior.py')
+    restore.use_fake_user=True;restore.clear()
+    restore.write('''import bpy
+for col in bpy.data.collections:
+    if col.get('njupt_editable_interiors'):col.hide_render=True;col.hide_viewport=False
+for ob in list(bpy.data.objects):
+    if ob.get('interior_previous_hide_render') is not None:
+        ob.hide_render=bool(ob['interior_previous_hide_render']);ob.hide_viewport=bool(ob['interior_previous_hide_viewport'])
+        del ob['interior_previous_hide_render'];del ob['interior_previous_hide_viewport']
+bpy.context.scene.camera=bpy.data.objects['01_全校鸟瞰']
+''')
+
+
 def verify_scene(expected_ids, original_scene_metadata, original_asset_metadata,
                  original_tree_signature, floorplans_expected, original_viewport=None):
     scene = bpy.context.scene
@@ -292,6 +346,14 @@ def main():
                 local = destination.collections[0]
                 if not local or local.library:
                     raise RuntimeError(f'Append did not produce local collection: {asset_id}')
+                for interior in local.children:
+                    if not interior.get('njupt_editable_interiors'):continue
+                    specs=json.loads(interior['camera_specs'])
+                    for spec in specs:
+                        matches=[camera for camera in interior.all_objects if camera.type=='CAMERA' and camera.get('asset_id')==asset_id and camera.get('interior_camera_id')==spec['id']]
+                        if len(matches)!=1:raise RuntimeError(f'Interior camera identity mismatch: {asset_id}/{spec["id"]}')
+                        spec['name']=matches[0].name
+                    interior['camera_specs']=json.dumps(specs,ensure_ascii=False)
                 loaded[key] = local
             obj.instance_collection = loaded[key]
             appended_records.append({'id': asset_id, 'source_file': str(source),
@@ -336,6 +398,7 @@ def main():
                 'source_master': 'projects/blender/campus.blend',
                 'editable_local_collections': len(loaded), 'packed_cc0_textures': True,
                 'optional_research_images_embedded': False}, ensure_ascii=False)
+        add_interior_controls()
         before_save = verify_scene(expected_ids, original_scene_metadata, original_asset_metadata,
                                    original_tree_signature, args.expected_floorplans, original_viewport)
         if before_save['errors']:
