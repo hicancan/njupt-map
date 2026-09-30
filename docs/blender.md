@@ -131,12 +131,14 @@ blender --background --factory-startup --python-exit-code 1 --python src/blender
 完成 840 帧后合成 35 秒成片，并检查规格和时间连续性：
 
 ```powershell
-uv run python src/blender/edit_campus_film.py --wav projects/blender/presentation/audio/njupt_campus_original_score_35s.wav
+uv run python src/blender/edit_campus_film.py --wav projects/blender/presentation/audio/njupt_campus_original_score_35s.wav --readme-gif
 uv run python src/blender/checks/validate_media.py --frames
 uv run python src/blender/checks/audit_film_temporal.py
 ```
 
 成片写入 `build/media/njupt-map.mp4`。产品标题由 `projects/blender/presentation/` 下的当前标题源稿维护。
+
+显式添加 `--readme-gif` 后，脚本在成片成功编码后，用两遍 FFmpeg 从完整 MP4 生成 640 × 360、10 fps、最多 192 色、无限循环的完整 35 秒动图。调色板和候选 GIF 放在 `build/media/`；Pillow 逐帧解码并核对 350 个采样帧、累计 35 秒与原 MP4 散列，再替换 `README.assets/film.gif`。检查记录写入 `build/checks/film/readme-gif.json`。不带此选项仅编码影片，不更新 README 动图。
 
 ## 显式组装候选影片
 

@@ -1,12 +1,15 @@
 """Finish the campus film from numbered renders and the original stereo score.
 
-Run with project Python; only standard-library modules are required. FFmpeg does
-the actual media processing. No shell interpolation and no font redistribution.
+Run with project Python. FFmpeg processes the media; the optional complete
+README GIF is decoded and checked with Pillow before replacing the display
+asset. No shell interpolation and no font redistribution.
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import math
 from pathlib import Path
 import re
 import shutil
@@ -83,6 +86,99 @@ def check_frames(pattern: str, start: int, count: int) -> None:
         raise FileNotFoundError(f"Missing {len(missing)} source frames; first indices: {missing[:12]}")
 
 
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def make_readme_gif(video: Path, ffmpeg: str, *, publish: bool = True,
+                    output: Path | None = None, report_path: Path | None = None) -> dict:
+    """Convert all 35 seconds in two streaming passes; validate before publishing.
+
+    ``publish=False`` keeps the candidate and report inside build/ for a smoke
+    run without replacing the README asset or modifying the input MP4.
+    """
+    from PIL import Image
+
+    video = video.resolve()
+    output = (output or ROOT / "build/media/njupt-map-readme.gif").resolve()
+    report_path = (report_path or ROOT / "build/checks/film/readme-gif.json").resolve()
+    if not output.is_relative_to((ROOT / "build/media").resolve()) or output.suffix.lower() != ".gif":
+        raise ValueError("GIF candidates must be .gif files inside build/media/.")
+    if not report_path.is_relative_to((ROOT / "build/checks/film").resolve()):
+        raise ValueError("GIF check reports must be inside build/checks/film/.")
+    probe = shutil.which("ffprobe")
+    if not probe:
+        raise FileNotFoundError("ffprobe is required to verify the complete GIF input.")
+    video_sha = sha256(video)
+    probe_command = [probe, "-v", "error", "-select_streams", "v:0", "-show_entries",
+                     "stream=duration,width,height,nb_frames", "-of", "json", str(video)]
+    inspected = json.loads(subprocess.check_output(probe_command, text=True, encoding="utf8"))
+    duration = float(inspected["streams"][0]["duration"])
+    if not math.isfinite(duration) or abs(duration - 35.) > .01:
+        raise ValueError(f"The complete README GIF requires a 35-second film; input is {duration} seconds.")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    palette = output.with_name(output.stem + "-palette.png")
+    sampling = "fps=10,scale=640:360:flags=lanczos"
+    commands = [
+        [ffmpeg, "-hide_banner", "-loglevel", "error", "-y", "-threads", "2",
+         "-i", str(video), "-filter_threads", "2", "-vf",
+         sampling + ",palettegen=max_colors=192:stats_mode=diff", "-frames:v", "1",
+         "-update", "1", str(palette)],
+        [ffmpeg, "-hide_banner", "-loglevel", "error", "-y", "-threads", "2",
+         "-i", str(video), "-i", str(palette), "-filter_complex_threads", "2",
+         "-filter_complex", "[0:v]" + sampling + "[sampled];[sampled][1:v]"
+         "paletteuse=dither=bayer:bayer_scale=3:diff_mode=rectangle[gif]",
+         "-map", "[gif]", "-an", "-loop", "0", "-final_delay", "10", str(output)],
+    ]
+    for command in commands:
+        subprocess.run(command, check=True)
+    milliseconds = 0
+    with Image.open(output) as image:
+        size, frames, loop = list(image.size), image.n_frames, image.info.get("loop")
+        for frame in range(frames):
+            image.seek(frame)
+            image.load()
+            milliseconds += image.info.get("duration", 0)
+    gif_duration = milliseconds / 1000
+    if (size != [640, 360] or frames != 350 or loop != 0
+            or abs(gif_duration - 35.) > .01):
+        raise ValueError(f"Complete GIF check failed: {size}, {frames} frames, {gif_duration}s, loop={loop}.")
+    if sha256(video) != video_sha:
+        raise ValueError("Input MP4 changed during GIF conversion; README was not replaced.")
+    gif_sha = sha256(output)
+    target = ROOT / "README.assets/film.gif"
+    if publish:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        partial = target.with_suffix(".gif.partial")
+        shutil.copyfile(output, partial)
+        if sha256(partial) != gif_sha:
+            raise ValueError("GIF copy failed verification; README was not replaced.")
+        partial.replace(target)
+
+    def reference(path):
+        return path.relative_to(ROOT).as_posix() if path.is_relative_to(ROOT) else str(path)
+
+    report = {"status": "pass", "video": reference(video), "video_sha256": video_sha,
+              "gif": reference(target if publish else output), "gif_sha256": gif_sha,
+              "candidate": reference(output), "palette": reference(palette),
+              "bytes": output.stat().st_size, "resolution": size, "fps": 10,
+              "frames": frames, "expected_sample_frames": 350,
+              "duration_seconds": gif_duration, "source_duration_seconds": duration,
+              "full_duration": True, "loop": loop, "max_palette_colors": 192,
+              "all_frames_decoded": True, "source_mp4_unchanged": True,
+              "readme_replaced": publish, "probe_command": probe_command,
+              "conversion_commands": commands,
+              "sampling": "Complete input, 0.0–35.0 seconds at 10 fps; no excerpt or time limit."}
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
+    print("README_GIF_PASS " + json.dumps(report, ensure_ascii=False), flush=True)
+    return report
+
+
 def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -102,9 +198,12 @@ def main() -> None:
     parser.add_argument("--generate-titles", action="store_true", help="Generate candidate titles in build/ instead of using the authored source")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--smoke-test", action="store_true", help="Use a generated color source, no campus frames/GPU needed")
+    parser.add_argument("--readme-gif", action="store_true", help="After encoding, validate and replace the full 35-second README GIF.")
     args = parser.parse_args()
     if args.duration <= 1 or args.fps <= 0:
         raise ValueError("Duration must exceed 1 second and fps must be positive")
+    if args.readme_gif and abs(args.duration - 35.) > .01:
+        raise ValueError("--readme-gif requires the complete 35-second film.")
     total_frames = round(args.duration * args.fps)
     subtitle = (make_titles(args.duration, args.clean) if args.generate_titles else
                 TITLE_DIR / ('campus_clean.ass' if args.clean else 'campus_promo.ass'))
@@ -169,6 +268,8 @@ def main() -> None:
         report["ffprobe"] = json.loads(result.stdout)
     report["status"] = "encoded"
     args.output.with_suffix(".encoding.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    if args.readme_gif:
+        make_readme_gif(args.output, args.ffmpeg)
 
 
 if __name__ == "__main__":

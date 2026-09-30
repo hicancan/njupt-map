@@ -2,23 +2,43 @@
 
 南京邮电大学仙林校区的二维地图与 Blender 三维校园工程。持续整理现实校园的观测，在统一空间基准上维护地图、建筑与场景。
 
-[![njupt-map 宣传片预览](README.assets/film.gif)](https://github.com/hicancan/njupt-map/releases/download/v0.1.0/njupt-map.mp4)
+[![njupt-map 完整35秒宣传片](README.assets/film.gif)](https://github.com/hicancan/njupt-map/releases/download/v0.2.0/njupt-map.mp4)
 
-**[观看 / 下载完整宣传片](https://github.com/hicancan/njupt-map/releases/download/v0.1.0/njupt-map.mp4)** · 35 秒 · 1920 × 1080 · 24 fps · 原创配乐。上方为 12 秒动图预览。
+**[观看 / 下载完整宣传片](https://github.com/hicancan/njupt-map/releases/download/v0.2.0/njupt-map.mp4)** · 35 秒 · 1920 × 1080 · 24 fps · 原创配乐。上方为完整 35 秒动图。
 
-[下载便携 Blender 场景](https://github.com/hicancan/njupt-map/releases/download/v0.1.0/njupt-map.blend) · [打开发布页](https://github.com/hicancan/njupt-map/releases/latest)
+[下载便携 Blender 场景](https://github.com/hicancan/njupt-map/releases/download/v0.2.0/njupt-map.blend) · [打开发布页](https://github.com/hicancan/njupt-map/releases/tag/v0.2.0)
 
 ## 两个持续演进的工程
 
 | 工程 | 正式源稿 | 负责什么 |
 | --- | --- | --- |
 | 地图 | `projects/map/campus.qgs`、`campus.gpkg` | 地理坐标、校园边界、建筑基底、道路、水面与共同空间参数 |
-| 三维校园 | `projects/blender/campus.blend`、`buildings/` | 129 个建筑资产、立面和门头、材质、景观、灯光与相机 |
-| 宣传片 | `projects/blender/presentation/film.blend` | 运镜、动画与原创配乐源稿 |
+| 三维校园 | `projects/blender/campus.blend`、`buildings/` | 129 个建筑资产、外观与室内、材质、景观、灯光与相机；`presentation/` 维护影片源稿 |
 
 ![仙林校园二维地图](README.assets/map.png)
 
 ![校园宣传片静帧](README.assets/cover.jpg)
+
+![南门实体校名墙与水景](README.assets/gate.jpg)
+
+![图书馆蓝绿自习区](README.assets/library-inside.jpg)
+
+![图书馆三层布局剖切](README.assets/library-cutaway.jpg)
+
+<details>
+<summary>更多建筑与室内细节</summary>
+
+![图书馆外观](README.assets/library.jpg)
+
+![K 组团开放高跨与低入口](README.assets/k-group.jpg)
+
+![食堂内部](README.assets/canteen-inside.jpg)
+
+![宿舍内部](README.assets/dorm-inside.jpg)
+
+</details>
+
+以上为当前 Blender 工程的原生渲染。[下载 13 张 4K 渲染图](https://github.com/hicancan/njupt-map/releases/download/v0.2.0/njupt-map-4k-renders.zip)。
 
 两个工程使用共同对象 ID。GeoPackage 保存投影坐标，Blender 使用校园局部米制坐标；位置变化通过显式转换同步，轮廓变化先检查差异，保留精修模型。
 
@@ -34,7 +54,7 @@ git lfs pull
 ```
 
 - **QGIS**：打开 `projects/map/campus.qgs`，直接编辑同目录的 `campus.gpkg`。当前工程在 QGIS 4.2 验证。
-- **Blender**：用 Blender 5.2 LTS 打开 `projects/blender/campus.blend`。单栋建筑位于 `projects/blender/buildings/`；主场景链接它们。
+- **Blender**：用 Blender 5.2 LTS 打开 `projects/blender/campus.blend`。单栋建筑位于 `projects/blender/buildings/`；主场景链接它们。室内按楼层组织，查看方式见 [室内与剖切](docs/blender.md#查看室内与剖切)。
 - **影片**：打开 `projects/blender/presentation/film.blend`。已有成片可从上方直接获取。
 
 保持目录关系一起移动；工程使用相对引用。便携场景适合快速查看，长期编辑使用仓库内的分栋工程。
@@ -46,7 +66,7 @@ njupt-map/
 ├── observations/          原始观测、精选图像、来源目录与对象绑定
 ├── projects/
 │   ├── map/               QGIS 工程与唯一可编辑的校园空间数据库
-│   └── blender/           校园源稿、分栋资产、材质与影片源稿
+│   └── blender/           校园源稿、分栋资产、材质、设计输入与影片源稿
 ├── src/
 │   ├── observations/      采集、视频候选预览、正式选帧与观测检查
 │   ├── map/               空间读取、导出与检查
@@ -59,6 +79,8 @@ njupt-map/
 ```
 
 **Architecture as ontology. Invariants over ceremony.** 每类成果只有一个正式维护位置；Git/LFS 承担历史，工作目录只保留当前实现。
+
+`projects/blender/design/` 保存当前三维设计输入：已审阅的房间轮廓、特定空间的解释和细节尺寸。共同的建筑位置、基底、楼层与高度仍由 GeoPackage 维护。代码负责应用与检查这些输入，已保存的网格可以继续在 Blender 中独立精修。
 
 ## 检查与继续完善
 
@@ -103,9 +125,25 @@ uv run python -m src.observations.review_export
 
 生成的 `build/review/index.html` 可在本地浏览时间段、原视频、地图父对象和精选帧；该页面引用本地媒体。[审查方法与继续维护](docs/video-review.md)。
 
-## 当前还原程度
+## 当前建模范围与精度
 
-已有 129 个可编辑建筑资产，包含主要地标、教学楼、宿舍、场地和景观。23 张教学楼原始楼层图保留为本地可选参考；房间隔墙尚未逐一建模。
+三维工程以 129 个建筑资产为主体，维护主要地标、教学楼、宿舍、场地和景观。全校园细节设计包含窗框密封与五金、入口、屋面设施、雨水管，以及道路、停车、植被和校园部件。南门低校名墙与水池是独立实体，校名使用书法轮廓几何；K 组团的高跨连接按可见开放结构设计。
+
+室内采用三个层次的来源：23 张教学楼楼层图的已审阅房间轮廓、[图书馆官方二至五层布局图](https://lib.njupt.edu.cn/_t83/lcbj/list.htm)，以及视频中的图书馆与食堂内部外观。其他未观测空间继续按建筑用途设计。房间轮廓、家具、楼梯、设施和查看相机进入分栋 `.blend`，成为可编辑作者成果；外观渲染默认隐藏室内层，避免增加整校园渲染负担。
+
+本轮已保存全部 129 个资产的细化成果：
+
+| 作者工程内容 | 数量 |
+| --- | ---: |
+| 室内楼层集合 | 636 |
+| 房间轮廓设计记录，包含大量推定 | 8,496 |
+| 家具模块，包含大量推定 | 35,546 |
+| 教学楼来源楼层 / 已审阅来源房间轮廓 | 23 / 564 |
+| 实际用于室内建模的官方图书馆楼层布局 | 4 |
+
+这些是模型内容统计，房间和家具数量不代表校园实测数量。室内原生检查遍历全部 129 个资产，检查查看相机、楼层与开洞记录、脚本保存及源文件未改写。
+
+图书馆视频中的蓝绿自习室、白顶房间、等候区和咖啡空间分别维护。未确认拍摄楼层的空间，其当前模型楼层属于设计安排；官方楼层图提供的房间用途与层号单独记录。
 
 | 外观观测覆盖 | 资产数 |
 | --- | ---: |
@@ -114,7 +152,7 @@ uv run python -m src.observations.review_export
 | 有校园或同类建筑参考 | 71 |
 | 主要依赖地图，尚无匹配立面照片 | 22 |
 
-尺寸、隐藏立面、树种和局部细节仍有推定。渲染展示当前模型，空间精度通过后续控制点、实测尺寸和观测校准继续提高。当前未接入设备或实时运营数据。
+观测支持房间标签、外观与空间关系；图像到米制坐标的配准、隐藏立面、家具尺寸、服务设施、树种和未拍摄室内仍含推定。K 高跨的构造类型有画面支持，具体楼栋配对与尺度属于当前推定。渲染展示当前作者工程；地图对齐、参考来源和源稿保护分别检查，后续观测继续修正模型。当前未接入设备或实时运营数据。
 
 ## 来源与许可
 
