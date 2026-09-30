@@ -163,7 +163,7 @@ def verify_bundle(root):
 
 
 def export_native(python, output, source=SOURCE, asset_ids=None, timeout_s=180,
-                  max_rss_bytes=1500*1024**2, min_available_bytes=3500*1024**2):
+                  max_rss_bytes=1500*1024**2, min_available_bytes=3500*1024**2, pause_file=None):
     output = Path(output).resolve()
     source = Path(source).resolve()
     if ROOT == output or (ROOT in output.parents and not (ROOT/'build').resolve() in output.parents):
@@ -194,6 +194,10 @@ def export_native(python, output, source=SOURCE, asset_ids=None, timeout_s=180,
         stage.mkdir()
         descriptors = []
         for aid in selected:
+            if pause_file is not None and Path(pause_file).exists():
+                print(json.dumps({'status':'paused_between_assets','next_asset_id':aid}),flush=True)
+                while Path(pause_file).exists():
+                    time.sleep(.5)
             building = buildings[aid]
             relative = f'buildings/{aid}.glb'
             request = {'asset_id':aid, 'source':str(sources[aid]), 'source_sha256':catalog[aid]['sha256'],
@@ -267,8 +271,9 @@ if __name__ == '__main__':
     parser.add_argument('--source',type=Path,default=SOURCE)
     parser.add_argument('--asset-id',action='append')
     parser.add_argument('--timeout-s',type=float,default=180)
+    parser.add_argument('--pause-file',type=Path,help='Pause safely between assets while this coordinator-owned file exists')
     parser.add_argument('--max-rss-mib',type=int,default=1500)
     parser.add_argument('--min-available-mib',type=int,default=3500)
     args = parser.parse_args()
     export_native(args.bpy_python,args.output,args.source,args.asset_id,args.timeout_s,
-                  args.max_rss_mib*1024**2,args.min_available_mib*1024**2)
+                  args.max_rss_mib*1024**2,args.min_available_mib*1024**2,args.pause_file)

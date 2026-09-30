@@ -196,7 +196,7 @@ def extract(request):
         'base_vertices':base_vertices, 'runtime_vertices':sum(r['runtime_vertices'] for r in reports),
         'interior_objects_excluded':len(excluded), 'identity_meshes_excluded':len(identity_excluded),
         'non_mesh_objects_excluded':len([o for o in collection.all_objects if o not in excluded and o.type != 'MESH']),
-        'materials':len(materials), 'blender_version':bpy.app.version_string, 'objects':reports,
+        'materials':len(writer.doc['materials']), 'source_material_slots':len(materials), 'blender_version':bpy.app.version_string, 'objects':reports,
         'material_policy':'Preserve authored base PBR values; approximate procedural shaders without textures',
         'geometry_policy':'Preserve base exterior mesh and split normals; omit all interior data, fonts and render modifiers',
         'accuracy_note':'Authored/source-informed and inferred appearance; not surveyed or BIM-accurate'}

@@ -87,4 +87,13 @@ class MeshWriter:
         return index
 
     def finish(self):
+        # Remove unused source slots/fallbacks without changing material order or appearance.
+        used=sorted({primitive['material'] for mesh in self.doc['meshes']
+                     for primitive in mesh['primitives']})
+        if used != list(range(len(self.doc['materials']))):
+            remap={old:new for new,old in enumerate(used)}
+            self.doc['materials']=[self.doc['materials'][old] for old in used]
+            for mesh in self.doc['meshes']:
+                for primitive in mesh['primitives']:
+                    primitive['material']=remap[primitive['material']]
         return encode_glb(self.doc, self.binary)

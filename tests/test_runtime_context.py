@@ -64,6 +64,13 @@ class ContextContracts(unittest.TestCase):
         campus['roads'][0].pop('width')
         with self.assertRaisesRegex(ValueError,'source width'):context_products(campus)
 
+    def test_unused_materials_are_removed_with_assignments_preserved(self):
+        writer=MeshWriter([{'name':'unused'},{'name':'authored-blue'},{'name':'fallback'}])
+        writer.add_mesh('sample',[0,0,0,1,0,0,0,1,0],[0,0,1]*3,[(1,[0,1,2])],{})
+        doc,_=parse_glb(writer.finish())
+        self.assertEqual(doc['materials'],[{'name':'authored-blue'}])
+        self.assertEqual(doc['meshes'][0]['primitives'][0]['material'],0)
+
     def test_mesh_writer_rejects_incomplete_or_nonfinite_values(self):
         writer=MeshWriter([])
         for value in ([0.,1.],[0.,float('nan'),0.]):
