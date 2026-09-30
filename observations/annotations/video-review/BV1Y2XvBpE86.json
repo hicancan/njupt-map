@@ -1,0 +1,1146 @@
+{
+  "schema_version": 1,
+  "source_id": "bilibili-BV1Y2XvBpE86",
+  "source_sha256": "125273cbe1ccaee4c234b27f11ca5b854ab4194fab132e9a43b36a3fbb09d77a",
+  "duration_seconds": 63.924308,
+  "target_state": "2026-09-30",
+  "review": {
+    "method": "完整时长1秒格点、阈值场景变化及邻帧的全部contact sheets逐页视觉审查；重要招牌与构造追加原分辨率复核。",
+    "sampling_seconds": 1,
+    "scene_threshold": 0.22,
+    "seen_sheet_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "sampled_frames_reviewed": 349,
+    "full_frame_manual_review": false,
+    "semantic_boundary_precision": "明确硬切采用源PTS；连续拍摄的地点变化按语义分段，通常约1秒精度；阈值cut中大量快速摇摄误报未当真实转场。",
+    "limitations": [
+      "不是逐视频全部原始帧的人工审查；1秒网格和cut邻帧覆盖全时长。",
+      "未进行相机标定、三维重建或像素到地图的几何配准。",
+      "accepted仅表示当前候选观测，发表时间不是拍摄时间，几何尺寸尚未实测。"
+    ],
+    "full_resolution_detail_times_seconds": [
+      1,
+      16,
+      40
+    ],
+    "final_manifest_sha256": "514bd5e0a5a02ae6025069dacccd038b4847c521868286156a0e3e40815680dc"
+  },
+  "temporal_assessment": {
+    "published_at": "2026-03-30T22:56:49+08:00",
+    "capture_time": "unknown",
+    "latest_possible_capture_time": "2026-03-30T22:56:49+08:00",
+    "current_validity": "candidate_requires_component_level_verification"
+  },
+  "segments": [
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s001",
+      "start_seconds": 0.0,
+      "end_seconds": 4.4,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂正立面及前广场",
+      "space_type": "outdoor_entrance",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.forecourt"
+      ],
+      "observed_features": [
+        "可读“第二食堂”字牌",
+        "大面积网格玻璃幕墙、浅色框架、屋檐下深色肋板",
+        "中间两组宽门洞/平直台阶和铺装广场"
+      ],
+      "basis": "1秒原图清楚字牌；形态与已有二食堂位置相符",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        1.0,
+        3.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        1.0,
+        3.0
+      ],
+      "review_frame_pts_seconds": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        4.167,
+        4.2,
+        4.233,
+        4.267,
+        4.3,
+        4.333,
+        4.367
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000016000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000048000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s002",
+      "start_seconds": 4.4,
+      "end_seconds": 7.933,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂一楼烘焙店侧",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor1.hall",
+        "xianlin.dining2.floor1.bakery"
+      ],
+      "observed_features": [
+        "通汉斯烘焙柜台、透明展示柜",
+        "旁侧开放通道和餐饮窗口、外露吊顶管线"
+      ],
+      "basis": "作者字幕称一楼最北边，镜头直接显示商店侧通道",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        6.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.dining2.floor1.hall",
+          "to_place_id": "xianlin.dining2.floor1.bakery",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "柜台与开放通道同画面可见，未记录外门到此的连续路线"
+        }
+      ],
+      "uncertainties": [
+        "没有拍摄从前场进入一楼的过程，不能跨cut建立该路线",
+        "品牌只作时态观测"
+      ],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        6.0
+      ],
+      "review_frame_pts_seconds": [
+        4.4,
+        4.433,
+        4.467,
+        4.5,
+        5.0,
+        6.0,
+        7.0,
+        7.833,
+        7.867,
+        7.9
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000096000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s003",
+      "start_seconds": 7.933,
+      "end_seconds": 12.0,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂一楼餐具回收/窗口与用餐空间",
+      "space_type": "indoor_dining",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor1.hall",
+        "xianlin.dining2.floor1.counter_row"
+      ],
+      "observed_features": [
+        "餐具回收标牌、桌椅、立柱、低隔断和台灯"
+      ],
+      "basis": "同段镜头内可见座位区与窗口列",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        9.0,
+        11.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.dining2.floor1.hall",
+          "to_place_id": "xianlin.dining2.floor1.counter_row",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "餐桌区与窗口前通道同镜头"
+        }
+      ],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        9.0,
+        11.0
+      ],
+      "review_frame_pts_seconds": [
+        7.933,
+        7.967,
+        8.0,
+        8.033,
+        9.0,
+        10.0,
+        11.0,
+        11.833,
+        11.867,
+        11.9,
+        11.933,
+        11.967
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000144000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000176000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s004",
+      "start_seconds": 12.0,
+      "end_seconds": 17.633,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂一楼主要用餐大厅",
+      "space_type": "indoor_dining",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor1.hall",
+        "xianlin.dining2.floor1.counter_row"
+      ],
+      "observed_features": [
+        "木色桌面、分离式椅子、六边形灯带",
+        "亮色窗口招牌、浅色柱网、暴露蓝色风管"
+      ],
+      "basis": "16秒原分辨率完整检查桌椅/柱/灯/档口关系",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        16.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.dining2.floor1.hall",
+          "to_place_id": "xianlin.dining2.floor1.counter_row",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "开敞排桌与档口相邻"
+        }
+      ],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        16.0
+      ],
+      "review_frame_pts_seconds": [
+        12.0,
+        12.033,
+        12.067,
+        12.1,
+        12.133,
+        12.167,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0,
+        17.533,
+        17.567,
+        17.6
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000256000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s005",
+      "start_seconds": 17.633,
+      "end_seconds": 20.5,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂一楼另一窗口侧座位区",
+      "space_type": "indoor_dining",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor1.hall",
+        "xianlin.dining2.floor1.counter_row"
+      ],
+      "observed_features": [
+        "低木色桌椅、绿墙/圆形装饰、窗边服务档口"
+      ],
+      "basis": "一楼章节延续，但此前有cut，只形成局部相邻关系",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        19.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        19.0
+      ],
+      "review_frame_pts_seconds": [
+        17.633,
+        17.667,
+        17.7,
+        17.733,
+        18.0,
+        19.0,
+        20.0,
+        20.4,
+        20.433,
+        20.467
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000304000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s006",
+      "start_seconds": 20.5,
+      "end_seconds": 26.033,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂一楼营养快餐/徐州烩饭档",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor1.counter_row"
+      ],
+      "observed_features": [
+        "绿色连续招牌、白色长柜台、透明挡板与菜单屏"
+      ],
+      "basis": "镜头平移可见连续长柜台；品牌经营可能变化",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        22.0,
+        25.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        22.0,
+        25.0
+      ],
+      "review_frame_pts_seconds": [
+        20.5,
+        20.533,
+        20.567,
+        20.6,
+        21.0,
+        22.0,
+        23.0,
+        24.0,
+        25.0,
+        25.633,
+        25.667,
+        25.7,
+        25.733,
+        25.767,
+        25.8,
+        25.833,
+        25.867,
+        25.9,
+        25.933,
+        25.967,
+        26.0
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000352000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000400000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s007",
+      "start_seconds": 26.033,
+      "end_seconds": 32.133,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂一楼麻辣烫、小面等窗口列",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor1.counter_row"
+      ],
+      "observed_features": [
+        "连续服务窗口、绿色竖向瓷砖带",
+        "白色几何灯带、矩形桌椅"
+      ],
+      "basis": "作者一楼叙述及窗口连续画面；cut不形成与上一柜台的连通",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        29.0,
+        31.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        29.0,
+        31.0
+      ],
+      "review_frame_pts_seconds": [
+        26.033,
+        26.067,
+        26.1,
+        26.133,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        32.033,
+        32.067,
+        32.1
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000464000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000496000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s008",
+      "start_seconds": 32.133,
+      "end_seconds": 34.933,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂一楼饮品档侧通道",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor1.drinks",
+        "xianlin.dining2.floor1.hall"
+      ],
+      "observed_features": [
+        "奶茶招牌、立柱、横排金属架、窗口旁座位"
+      ],
+      "basis": "字幕明确一楼奶茶店，局部开敞通道与座位同镜头",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        33.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.dining2.floor1.drinks",
+          "to_place_id": "xianlin.dining2.floor1.hall",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "柜台附近通道与餐桌可见"
+        }
+      ],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        33.0
+      ],
+      "review_frame_pts_seconds": [
+        32.133,
+        32.167,
+        32.2,
+        32.233,
+        33.0,
+        34.0,
+        34.3,
+        34.333,
+        34.367,
+        34.4,
+        34.433,
+        34.467,
+        34.5,
+        34.533,
+        34.567,
+        34.6,
+        34.633,
+        34.667,
+        34.7,
+        34.733,
+        34.767,
+        34.8,
+        34.833,
+        34.867,
+        34.9
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000528000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s009",
+      "start_seconds": 34.933,
+      "end_seconds": 35.067,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "unresolved",
+      "place_label": "字幕过渡黑帧",
+      "space_type": "non_spatial",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [],
+      "observed_features": [],
+      "basis": "画面完全黑，保留时间线但不形成地点观测",
+      "confidence": 0.9,
+      "exclusion_reason": "黑帧无空间内容",
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        35.0
+      ],
+      "review_frame_pts_seconds": [
+        34.933,
+        34.967,
+        35.0,
+        35.033
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s010",
+      "start_seconds": 35.067,
+      "end_seconds": 39.4,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂一楼便利店及相邻餐档",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor1.market",
+        "xianlin.dining2.floor1.hall"
+      ],
+      "observed_features": [
+        "便利店货架、餐档、桌椅和室内绿植"
+      ],
+      "basis": "画面字幕称旁边小超市，窗口与商店共用开敞前场",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        36.0,
+        38.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.dining2.floor1.market",
+          "to_place_id": "xianlin.dining2.floor1.hall",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "可见货架入口与桌椅区共享通道"
+        }
+      ],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        36.0,
+        38.0
+      ],
+      "review_frame_pts_seconds": [
+        35.067,
+        35.1,
+        35.133,
+        35.167,
+        36.0,
+        36.333,
+        36.367,
+        36.4,
+        36.433,
+        36.467,
+        36.5,
+        36.533,
+        36.567,
+        36.6,
+        37.0,
+        38.0,
+        39.0,
+        39.133,
+        39.167,
+        39.2,
+        39.233,
+        39.267,
+        39.3,
+        39.333,
+        39.367
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000576000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000608000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s011",
+      "start_seconds": 39.4,
+      "end_seconds": 47.7,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂二楼用餐大厅、餐具回收和楼梯上端",
+      "space_type": "indoor_dining",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor2.hall",
+        "xianlin.dining2.floor2.stairs_visible",
+        "xianlin.dining2.floor2.counter_row"
+      ],
+      "observed_features": [
+        "蓝色支架长桌凳、绿色椅子和高脚座位",
+        "白/灰柱子、圆环吊灯、暴露吊顶",
+        "餐具回收处后方可见楼梯栏杆"
+      ],
+      "basis": "字幕“到了二楼”；40秒原图可见楼梯上端但未拍楼层间通行",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        40.0,
+        43.0,
+        46.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.dining2.floor2.hall",
+          "to_place_id": "xianlin.dining2.floor2.counter_row",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "连续摇摄展示大厅与档口"
+        },
+        {
+          "from_place_id": "xianlin.dining2.floor2.hall",
+          "to_place_id": "xianlin.dining2.floor2.stairs_visible",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "楼梯口与大厅同画面，未验证下端"
+        }
+      ],
+      "uncertainties": [
+        "一楼到二楼通过cut切换，不能断言拍摄者走哪一部楼梯",
+        "没有两层平面配准"
+      ],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        40.0,
+        43.0,
+        46.0
+      ],
+      "review_frame_pts_seconds": [
+        39.4,
+        39.433,
+        39.467,
+        39.5,
+        40.0,
+        40.033,
+        40.067,
+        40.1,
+        40.133,
+        40.167,
+        40.2,
+        40.233,
+        40.267,
+        40.3,
+        40.333,
+        40.367,
+        40.4,
+        40.433,
+        40.467,
+        40.5,
+        40.533,
+        40.567,
+        40.6,
+        40.633,
+        40.667,
+        40.7,
+        40.733,
+        40.767,
+        40.8,
+        40.833,
+        40.867,
+        40.9,
+        40.933,
+        40.967,
+        41.0,
+        41.033,
+        41.067,
+        41.1,
+        41.133,
+        41.167,
+        41.2,
+        41.233,
+        41.267,
+        41.3,
+        41.333,
+        41.367,
+        41.4,
+        41.433,
+        41.467,
+        41.5,
+        41.533,
+        41.567,
+        41.6,
+        41.633,
+        41.667,
+        41.7,
+        41.733,
+        41.767,
+        41.8,
+        41.833,
+        41.867,
+        41.9,
+        41.933,
+        41.967,
+        42.0,
+        42.033,
+        42.067,
+        42.1,
+        42.133,
+        42.167,
+        42.2,
+        42.233,
+        42.267,
+        42.3,
+        42.333,
+        42.367,
+        42.4,
+        42.433,
+        42.467,
+        42.5,
+        42.533,
+        42.567,
+        42.6,
+        42.633,
+        42.667,
+        42.7,
+        42.733,
+        43.0,
+        44.0,
+        45.0,
+        46.0,
+        46.967,
+        47.0,
+        47.033,
+        47.067,
+        47.1,
+        47.133,
+        47.167,
+        47.2,
+        47.233,
+        47.467,
+        47.5,
+        47.533,
+        47.567,
+        47.6,
+        47.633,
+        47.667
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000640000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000688000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000736000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s012",
+      "start_seconds": 47.7,
+      "end_seconds": 50.233,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂二楼楼梯口旁饮品档",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor2.drinks",
+        "xianlin.dining2.floor2.hall"
+      ],
+      "observed_features": [
+        "亮绿色饮品招牌、柱子、日照明亮的长排桌凳"
+      ],
+      "basis": "作者字幕二楼楼梯口；同镜头饮品档旁座位通道可见",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        49.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.dining2.floor2.drinks",
+          "to_place_id": "xianlin.dining2.floor2.hall",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "同画面开敞通道"
+        }
+      ],
+      "uncertainties": [
+        "字幕称楼梯口，本段未拍楼梯，不能新增精确楼梯相对坐标"
+      ],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        49.0
+      ],
+      "review_frame_pts_seconds": [
+        47.7,
+        47.733,
+        47.767,
+        47.8,
+        48.0,
+        49.0,
+        50.0,
+        50.133,
+        50.167,
+        50.2
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000784000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s013",
+      "start_seconds": 50.233,
+      "end_seconds": 55.333,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂二楼自选菜等窗口列",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor2.counter_row",
+        "xianlin.dining2.floor2.hall"
+      ],
+      "observed_features": [
+        "绿色/黄/红招牌、长服务柜台",
+        "亮色桌凳、几何吊灯和浅色立柱"
+      ],
+      "basis": "二楼章节及真实连续摇摄窗口与大厅",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        52.0,
+        54.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        52.0,
+        54.0
+      ],
+      "review_frame_pts_seconds": [
+        50.233,
+        50.267,
+        50.3,
+        50.333,
+        51.0,
+        52.0,
+        53.0,
+        54.0,
+        55.0,
+        55.233,
+        55.267,
+        55.3
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000832000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000864000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s014",
+      "start_seconds": 55.333,
+      "end_seconds": 59.8,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂二楼另一档口列与木色座位",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor2.counter_row"
+      ],
+      "observed_features": [
+        "较深木色桌椅和低隔断",
+        "沿墙连续档口、外露灯具/通风管"
+      ],
+      "basis": "同一二楼段；切换后不能据次序恢复完整平面",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        57.0,
+        59.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        57.0,
+        59.0
+      ],
+      "review_frame_pts_seconds": [
+        55.333,
+        55.367,
+        55.4,
+        55.433,
+        56.0,
+        57.0,
+        58.0,
+        59.0,
+        59.033,
+        59.067,
+        59.1,
+        59.133,
+        59.167,
+        59.2,
+        59.233,
+        59.267,
+        59.3,
+        59.7,
+        59.733,
+        59.767
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000912000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000944000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s015",
+      "start_seconds": 59.8,
+      "end_seconds": 63.6,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "第二食堂二楼结束摇摄",
+      "space_type": "indoor_dining",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.dining2.floor2.hall",
+        "xianlin.dining2.floor2.counter_row"
+      ],
+      "observed_features": [
+        "桌椅与档口排列、柱网和回收/服务窗口"
+      ],
+      "basis": "连续摇摄直到结束黑帧",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        61.0,
+        63.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_223859784"
+      ],
+      "reference_frame_pts_seconds": [
+        61.0,
+        63.0
+      ],
+      "review_frame_pts_seconds": [
+        59.8,
+        59.833,
+        59.867,
+        59.9,
+        59.933,
+        59.967,
+        60.0,
+        60.033,
+        60.067,
+        60.1,
+        60.133,
+        60.167,
+        61.0,
+        62.0,
+        62.267,
+        62.3,
+        62.333,
+        62.367,
+        62.4,
+        62.433,
+        62.467,
+        62.5,
+        62.533,
+        62.567,
+        62.6,
+        62.633,
+        62.667,
+        62.7,
+        62.733,
+        62.767,
+        62.8,
+        62.833,
+        62.867,
+        62.9,
+        62.933,
+        62.967,
+        63.0,
+        63.167,
+        63.2,
+        63.233,
+        63.267,
+        63.3,
+        63.333,
+        63.367,
+        63.4,
+        63.433,
+        63.467,
+        63.5,
+        63.533,
+        63.567
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000976000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000001008000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1Y2XvBpE86-s016",
+      "start_seconds": 63.6,
+      "end_seconds": 63.924308,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "unresolved",
+      "place_label": "结束黑帧",
+      "space_type": "non_spatial",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [],
+      "observed_features": [],
+      "basis": "黑色结束画面仅有字幕，无新空间",
+      "confidence": 0.9,
+      "exclusion_reason": "结束黑帧无空间内容",
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        63.7
+      ],
+      "review_frame_pts_seconds": [
+        63.6,
+        63.633,
+        63.667,
+        63.7
+      ]
+    }
+  ]
+}

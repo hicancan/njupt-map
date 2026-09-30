@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "target_state": "2026-09-30",
+  "scope": "Observation-to-model review; no automatic mesh replacement",
+  "native_review": {
+    "method": "Blender 5.2 read-only object/vertex inventory and source hash comparison; no rendering or saving",
+    "files": [
+      {
+        "path": "projects/blender/campus.blend",
+        "sha256": "87cacc3cb521f84b8ea4af3428daece4d55acabf3aecc72bd4c767f2759ed755"
+      },
+      {
+        "path": "projects/blender/buildings/njupt_k_dormitory_01.blend",
+        "sha256": "d989821338d6dddf0d557292a1205bc0cbc9255c0c654197d8c2decc9dccd3ce"
+      },
+      {
+        "path": "projects/blender/buildings/njupt_k_dormitory_02.blend",
+        "sha256": "5f45eea395f35a9638ad81fac72ceddd0dae0f114c33f49237e4aaf90da29d21"
+      },
+      {
+        "path": "projects/blender/buildings/njupt_k_dormitory_03.blend",
+        "sha256": "d23d3c8b8a2622276735e449789583a837ce4d2693dea0f8c0e43868deebce2d"
+      },
+      {
+        "path": "projects/blender/buildings/njupt_k_dormitory_04.blend",
+        "sha256": "5f54343039f7c37f22618a3fdaf5fe2d126332df2c6f4ac6cb6019df1025fa7c"
+      },
+      {
+        "path": "projects/blender/buildings/njupt_k_dormitory_05.blend",
+        "sha256": "2c129183b5ed3da96ae391dbc6e8ec8ed70701c0bd97c3f13fae6c07821b97a7"
+      },
+      {
+        "path": "projects/blender/buildings/njupt_k_dormitory_06.blend",
+        "sha256": "340b018711891cb4f7c428b610ed2ee24e3a1ec2e6c9891c92300b4b01d1da70"
+      },
+      {
+        "path": "projects/blender/buildings/osm_way_1454085437.blend",
+        "sha256": "9ff3e139b0f4a8e61cc31f054fa547f3a0837788beb085b3467b2a1b26db171c"
+      }
+    ],
+    "limitations": [
+      "模型参数不是实测尺寸。",
+      "视频单体尚未与K模型序号配准；存在缺漏不代表已求得替代网格。"
+    ]
+  },
+  "findings": [
+    {
+      "id": "new_dorm_high_connector",
+      "priority": 1,
+      "status": "confirmed_geometry_difference_with_unregistered_pair",
+      "label": "新宿舍高位跨栋连接体",
+      "asset_ids": [
+        "njupt_k_dormitory_01",
+        "njupt_k_dormitory_02",
+        "njupt_k_dormitory_03",
+        "njupt_k_dormitory_04",
+        "njupt_k_dormitory_05",
+        "njupt_k_dormitory_06"
+      ],
+      "source_refs": [
+        {
+          "source_id": "bilibili-BV1KG3v6gEUY",
+          "segment_id": "bilibili-BV1KG3v6gEUY-s005"
+        },
+        {
+          "source_id": "bilibili-BV118QgBPEMk",
+          "segment_id": "bilibili-BV118QgBPEMk-s002"
+        }
+      ],
+      "observed": "两片外部画面可见高位横向体块跨越两栋楼间；现有6个K原生资产没有该类跨栋构件。",
+      "native_check": {
+        "asset_count": 6,
+        "objects_per_asset": {
+          "njupt_k_dormitory_01": 3,
+          "njupt_k_dormitory_02": 3,
+          "njupt_k_dormitory_03": 3,
+          "njupt_k_dormitory_04": 3,
+          "njupt_k_dormitory_05": 3,
+          "njupt_k_dormitory_06": 3
+        },
+        "max_elevated_outside_footprint_m": {
+          "njupt_k_dormitory_01": 1.77,
+          "njupt_k_dormitory_02": 1.77,
+          "njupt_k_dormitory_03": 1.77,
+          "njupt_k_dormitory_04": 1.77,
+          "njupt_k_dormitory_05": 1.77,
+          "njupt_k_dormitory_06": 2.17
+        },
+        "elevated_vertices_outside_3m": 0,
+        "campus_instances_match_source": true
+      },
+      "uncertainties": [
+        "具体连接两端与模型序号未匹配；结构用途、可通行性、精确高度未确认。",
+        "4月施工态不能直接复用于当前场地。"
+      ],
+      "next_action": "对齐官方竣工照片、设计图和视频视点，确定组团单体与两端位置，再精修当前原生工程。"
+    },
+    {
+      "id": "south_gate_parts",
+      "priority": 1,
+      "status": "identity_disambiguation",
+      "label": "南门低位校名水景、门卫房与高位门廊分开维护",
+      "asset_ids": [
+        "osm_way_1454085437",
+        "osm_way_224938858",
+        "osm_way_224938894"
+      ],
+      "source_refs": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk",
+          "segment_id": "bilibili-BV1PqDQB2Epk-s002"
+        }
+      ],
+      "observed": "视频前景低矮校名水景与后方跨鼎新大道高门廊是不同构件。原生高门廊已有实体框架、细柱和6个曲线立体字形。",
+      "uncertainties": [
+        "低位校名构件还没有单独地图身份；本次局部对象清单未识别到它，不能据此宣称合并网格中绝对不存在。"
+      ],
+      "next_action": "用门卫房与主轴作空间参照注册前景构件，逐面核对现有校园网格，完成有依据的细节精修。"
+    },
+    {
+      "id": "library_interior",
+      "priority": 1,
+      "status": "observed_interior_layout_unregistered",
+      "label": "图书馆新版内部空间与两个自习区",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "source_refs": [
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c",
+          "segment_id": "bilibili-BV1T3RaBqE7c-s001"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c",
+          "segment_id": "bilibili-BV1T3RaBqE7c-s002"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c",
+          "segment_id": "bilibili-BV1T3RaBqE7c-s003"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c",
+          "segment_id": "bilibili-BV1T3RaBqE7c-s004"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c",
+          "segment_id": "bilibili-BV1T3RaBqE7c-s005"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c",
+          "segment_id": "bilibili-BV1T3RaBqE7c-s006"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c",
+          "segment_id": "bilibili-BV1T3RaBqE7c-s007"
+        }
+      ],
+      "observed": "入口、接待、开放学习区、门内白吊顶房、蓝绿长条自习区、另一端出口、候坐椅、餐饮与窗边座位分别标注。",
+      "uncertainties": [
+        "蓝绿自习区字幕提及二楼，但未见转层；楼层保留未知。",
+        "白吊顶房仅从门口可见，没有进入。",
+        "没有尺寸、完整隔墙平面或房间号。"
+      ],
+      "next_action": "与当前楼层平面进行控制点注册；按已确认空间关系建立内部结构，再补足尺寸与隐藏区域。"
+    },
+    {
+      "id": "dining2_interior",
+      "priority": 1,
+      "status": "observed_interior_layout_unregistered",
+      "label": "第二食堂两层局部布局",
+      "asset_ids": [
+        "osm_way_223859784"
+      ],
+      "source_refs": [
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86",
+          "segment_id": "bilibili-BV1Y2XvBpE86-s002"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86",
+          "segment_id": "bilibili-BV1Y2XvBpE86-s003"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86",
+          "segment_id": "bilibili-BV1Y2XvBpE86-s011"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86",
+          "segment_id": "bilibili-BV1Y2XvBpE86-s012"
+        }
+      ],
+      "observed": "按发布者楼层字幕区分两层大厅、餐档、服务区与可见楼梯口。",
+      "uncertainties": [
+        "未拍实际上下楼；不建立两层之间的已验证通行边。",
+        "餐档经营名称易变化，不能视为长期建筑事实。"
+      ],
+      "next_action": "获取可用平面与尺度参照，先注册柱网、楼梯和出入口，再建桌椅、顶棚与局部设施。"
+    },
+    {
+      "id": "entrance_2",
+      "priority": 2,
+      "status": "unresolved_identity",
+      "label": "入口2楼梯不等于2层",
+      "asset_ids": [],
+      "source_refs": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk",
+          "segment_id": "bilibili-BV1PqDQB2Epk-s022"
+        }
+      ],
+      "observed": "字牌指入口编号；楼梯具体所属建筑尚未确认。",
+      "uncertainties": [
+        "不能仅据剪辑位置绑定活动中心、青春剧场或体育馆。"
+      ],
+      "next_action": "通过连续视野、楼号及地图形体匹配确认单体，再绑定该入口。"
+    },
+    {
+      "id": "teaching_interior",
+      "priority": 2,
+      "status": "historical_context_only",
+      "label": "教学中庭及走廊保留历史语境",
+      "asset_ids": [],
+      "source_refs": [
+        {
+          "source_id": "bilibili-BV1jD4y1z7Zu",
+          "segment_id": "s007"
+        },
+        {
+          "source_id": "bilibili-BV1jD4y1z7Zu",
+          "segment_id": "s008"
+        },
+        {
+          "source_id": "bilibili-BV1jD4y1z7Zu",
+          "segment_id": "s009"
+        }
+      ],
+      "observed": "历史导览中可见教学中庭、底层走廊及走向室外的连续通道。",
+      "uncertainties": [
+        "没有唯一教几楼号。",
+        "2022画面不作为2026内部装修输入；已有23张教学楼平面图仍须逐层注册。"
+      ],
+      "next_action": "以已有教学楼平面图和明确的共同建筑ID进行注册，历史视频只作待核对的空间线索。"
+    }
+  ]
+}

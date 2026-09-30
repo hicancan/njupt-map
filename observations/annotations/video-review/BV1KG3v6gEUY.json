@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "source_id": "bilibili-BV1KG3v6gEUY",
+  "source_sha256": "47fc3f43269c9f24dafabb3dbb1e4e5bbfebea3313ae3250a397d9f8136401cb",
+  "duration_seconds": 49.830023,
+  "target_state": "2026-09-30",
+  "review": {
+    "method": "完整时长1秒格点、阈值场景变化及邻帧的全部contact sheets逐页视觉审查；重要招牌与构造追加原分辨率复核。",
+    "sampling_seconds": 1,
+    "scene_threshold": 0.22,
+    "seen_sheet_pages": [
+      1
+    ],
+    "sampled_frames_reviewed": 50,
+    "full_frame_manual_review": false,
+    "semantic_boundary_precision": "明确硬切采用源PTS；连续拍摄的地点变化按语义分段，通常约1秒精度；阈值cut中大量快速摇摄误报未当真实转场。",
+    "limitations": [
+      "不是逐视频全部原始帧的人工审查；1秒网格和cut邻帧覆盖全时长。",
+      "未进行相机标定、三维重建或像素到地图的几何配准。",
+      "accepted仅表示当前候选观测，发表时间不是拍摄时间，几何尺寸尚未实测。"
+    ],
+    "full_resolution_detail_times_seconds": [
+      15,
+      38,
+      48
+    ],
+    "final_manifest_sha256": "a7d863dcd039971f26d99d42a750b4b539d166ed3967be54473363b9ff750314"
+  },
+  "temporal_assessment": {
+    "published_at": "2026-07-28T17:07:07+08:00",
+    "capture_time": "unknown",
+    "latest_possible_capture_time": "2026-07-28T17:07:07+08:00",
+    "current_validity": "stable_exterior_candidate_only",
+    "visible_state": "外立面完成、近路景观完成但建筑区域有围栏；无入住/室内证据",
+    "reason": "7月发表上限早于官方8月底交付，因此入口使用状态、围栏和临时封闭不作为当前事实；完成立面/台阶/路段可作为候选待交付后图片核对。",
+    "corroborating_source_ids": [
+      "k_inspection_20260901_full"
+    ]
+  },
+  "segments": [
+    {
+      "id": "bilibili-BV1KG3v6gEUY-s001",
+      "start_seconds": 0.0,
+      "end_seconds": 12,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "K组团连续步行路段A及宿舍侧立面",
+      "space_type": "outdoor_road",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.k_group.walk_a"
+      ],
+      "observed_features": [
+        "红灰宿舍侧立面、深灰横层带",
+        "路边矩形石铺装、盲道/排水格栅、栽植小树和浅灰栏墙",
+        "多楼连续阳台立面"
+      ],
+      "basis": "整条视频无检测切镜头，连续步行/摇摄；外观与K官方组团资料匹配",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        2.0035625,
+        6.010625,
+        10.01775
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "具体楼号、方向、精确路段坐标未确认",
+        "围栏只作拍摄时状态，不采纳为当前边界"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        2.0035625,
+        6.010625,
+        10.01775
+      ],
+      "review_frame_pts_seconds": [
+        0.0,
+        1.00175,
+        2.0035625,
+        3.0053125,
+        4.007125,
+        5.008875,
+        6.010625,
+        7.0124375,
+        8.0141875,
+        9.0159375,
+        10.01775,
+        11.0195
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000032057",
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000096170",
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000160284"
+      ]
+    },
+    {
+      "id": "bilibili-BV1KG3v6gEUY-s002",
+      "start_seconds": 12,
+      "end_seconds": 19,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "K组团低层红色玻璃门厅A、台阶和坡道",
+      "space_type": "outdoor_entrance",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.k_group.walk_a",
+        "xianlin.k_group.entry_a.steps",
+        "xianlin.k_group.entry_a.door"
+      ],
+      "observed_features": [
+        "红色竖向窗间立板，落地玻璃双门",
+        "数级宽大浅色台阶，侧面坡道和金属扶手",
+        "台阶侧木色坐凳/挡墙，入口前人行铺装"
+      ],
+      "basis": "15秒原图确认台阶、门洞、坡道；连续从路边观察到同一入口前场",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        15.026625,
+        17.030125
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.k_group.walk_a",
+          "to_place_id": "xianlin.k_group.entry_a.steps",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "同镜头可见道路边人行铺装到台阶的连续地面"
+        },
+        {
+          "from_place_id": "xianlin.k_group.entry_a.steps",
+          "to_place_id": "xianlin.k_group.entry_a.door",
+          "relation": "leads_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "台阶上平台通到玻璃门；没有开门或进入"
+        }
+      ],
+      "uncertainties": [
+        "门厅功能和楼号未知，不能猜成宿舍公共大厅或食堂",
+        "入口实际开放状态未确认"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        15.026625,
+        17.030125
+      ],
+      "review_frame_pts_seconds": [
+        12.0213125,
+        13.0230625,
+        14.0248125,
+        15.026625,
+        16.028375,
+        17.030125,
+        18.0319375
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000240426",
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000272482"
+      ]
+    },
+    {
+      "id": "bilibili-BV1KG3v6gEUY-s003",
+      "start_seconds": 19,
+      "end_seconds": 29,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "入口侧转入K组团道路B、庭院绿地",
+      "space_type": "outdoor_road",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.k_group.walk_a",
+        "xianlin.k_group.walk_b"
+      ],
+      "observed_features": [
+        "红灰低层门厅侧面和较高宿舍端墙",
+        "红色砖人行道、弯曲绿地、树木、路缘和排水口"
+      ],
+      "basis": "视频连续从入口侧沿道路移动，未进入内部",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        23.007375,
+        27.0145
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.k_group.walk_a",
+          "to_place_id": "xianlin.k_group.walk_b",
+          "relation": "walked_connection",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "同一连续步行视频沿外部道路经过入口侧面"
+        }
+      ],
+      "uncertainties": [
+        "未测定相机姿态和路线长度"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        23.007375,
+        27.0145
+      ],
+      "review_frame_pts_seconds": [
+        19.0003125,
+        20.0020625,
+        21.003875,
+        22.005625,
+        23.007375,
+        24.0091875,
+        25.0109375,
+        26.01275,
+        27.0145,
+        28.01625
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000368118",
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000432232"
+      ]
+    },
+    {
+      "id": "bilibili-BV1KG3v6gEUY-s004",
+      "start_seconds": 29,
+      "end_seconds": 40,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "K组团道路B与另一门厅/庭院B外部",
+      "space_type": "outdoor_courtyard",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.k_group.walk_b",
+        "xianlin.k_group.courtyard_b"
+      ],
+      "observed_features": [
+        "路旁庭院平台、多级台阶、低层红色门厅",
+        "草坡和植树支撑、外墙浅色栏杆、路灯"
+      ],
+      "basis": "连续步行并摇摄道路另一侧庭院；38秒原图确认台阶和宿舍玻璃/阳台",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        34.0269375,
+        38.000625
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.k_group.walk_b",
+          "to_place_id": "xianlin.k_group.courtyard_b",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "道路边人行步道与庭院台阶相接可见，未进入任何门"
+        }
+      ],
+      "uncertainties": [
+        "庭院B是否与入口A为同一庭院不能凭短视频唯一确定"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        34.0269375,
+        38.000625
+      ],
+      "review_frame_pts_seconds": [
+        29.0180625,
+        30.0198125,
+        31.021625,
+        32.023375,
+        33.025125,
+        34.0269375,
+        35.0286875,
+        36.0304375,
+        37.03225,
+        38.000625,
+        39.002375
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000544431",
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000608010"
+      ]
+    },
+    {
+      "id": "bilibili-BV1KG3v6gEUY-s005",
+      "start_seconds": 40,
+      "end_seconds": 49.830023,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "K组团跨栋高位连接体、多层阳台与道路B后段",
+      "space_type": "outdoor_building",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.k_group.walk_b",
+        "xianlin.k_group.courtyard_b"
+      ],
+      "observed_features": [
+        "两栋楼之间近最高层封闭连接体",
+        "红色层间框、连续灰色水平板带和竖向浅色阳台栏杆",
+        "路旁宽台阶/坡道、门厅侧植树和景观垃圾桶"
+      ],
+      "basis": "连续镜头；48秒原图可见跨栋构造与周边路径，未进入室内",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        43.0095,
+        48.018375,
+        49.020125
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "没有宿舍房间、走廊、卫生间等内部画面",
+        "空中连接体的通行功能及具体单体对应未确认",
+        "完工后使用状态以官方8月底交付资料为准"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        43.0095,
+        48.018375,
+        49.020125
+      ],
+      "review_frame_pts_seconds": [
+        40.0041875,
+        41.0059375,
+        42.0076875,
+        43.0095,
+        44.01125,
+        45.0130625,
+        46.0148125,
+        47.0165625,
+        48.018375,
+        49.020125
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000688152",
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000768294",
+        "bilibili-BV1KG3v6gEUY-frame-pts-000000784322"
+      ]
+    }
+  ],
+  "corroborating_sources": [
+    {
+      "id": "k_inspection_20260901_full",
+      "url": "https://jjc.njupt.edu.cn/2026/0901/c6572a307767/page.htm",
+      "published_at": "2026-09-01",
+      "event_date": "2026-08-27",
+      "verified_at": "2026-09-30",
+      "live_verification": "PowerShell Invoke-WebRequest HTTP200; title and paragraph verified; web tool could not open page",
+      "claim": "学生宿舍K组团6栋、474间标准宿舍和6间无障碍宿舍，2800余床，8月底交付使用。"
+    }
+  ],
+  "corroborating_source_ids": [
+    "k_inspection_20260901_full"
+  ]
+}

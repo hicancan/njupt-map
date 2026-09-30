@@ -80,6 +80,29 @@ uv run python -m src.sync
 
 [架构与不变量](docs/architecture.md) · [编辑、同步与导出](docs/workflow.md) · [观测采集与来源](docs/observations.md) · [Blender 与影片](docs/blender.md)
 
+## 视频观测审查
+
+已完成本地 16 个 Bilibili 视频的全时长审查：81 分 46 秒，7,108 个候选帧、118 页时间线，整理为 373 个连续地点片段。短视频采用 1 秒网格，长导览采用 2 秒网格，并复查画面变化邻帧及重要原分辨率细节；这不代表每个原始视频帧都经过人工识别。
+
+| 本批结果 | 数量 |
+| --- | ---: |
+| 当前仙林候选片段 | 42 |
+| 历史、其他校区及无效片段排除 | 302 |
+| 地点或现状待核实片段 | 29 |
+| 正式原分辨率精选帧 | 91 |
+| 有具体片段来源的空间关系 | 57 |
+
+三牌楼、锁金村和历史施工画面已分别标记。2025 素材的当前状态未核实；2026 发表日期也不当作拍摄日期。图书馆和第二食堂新增内部空间标签；没有拍到的上下楼、房间号和精确入口位置保留未知。视频标签关联到 26 个现有建筑对象，其中 16 个有当前候选片段；组团共现不能代表各栋完整外观覆盖。
+
+正式记录在 `observations/annotations/video-review/`，空间关系在 `observations/bindings/topology.json`，模型差异在 `observations/annotations/model-findings.json`。地点节点包含来源特定的待定位空间；父对象对应不等于相机标定、房间坐标或测绘精度。原视频与权限未明的精选帧保持本地，公共仓库提供元数据和引用。
+
+```powershell
+uv run python -m src.observations.review_export --validate
+uv run python -m src.observations.review_export
+```
+
+生成的 `build/review/index.html` 可在本地浏览时间段、原视频、地图父对象和精选帧；该页面引用本地媒体。[审查方法与继续维护](docs/video-review.md)。
+
 ## 当前还原程度
 
 已有 129 个可编辑建筑资产，包含主要地标、教学楼、宿舍、场地和景观。23 张教学楼原始楼层图保留为本地可选参考；房间隔墙尚未逐一建模。

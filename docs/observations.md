@@ -5,14 +5,15 @@
 ## 加入新资料
 
 ```powershell
-uv run python -m src.observations ingest 'D:\capture\campus.mp4' --id campus-walk --kind videos --license owned
-uv run python -m src.observations preview-video --source-id campus-walk --interval 5
-uv run python -m src.observations select-frame --source-id campus-walk --at 12.5 --asset-id osm_way_223699451 --reason '教1入口和北侧窗列清晰可见'
+uv run python -m src.observations ingest 'D:\capture\campus.mp4' --id campus-walk --kind videos --license CC-BY-4.0
+uv run python -m src.observations.video_review --source-id campus-walk
+# 完成 observations/annotations/video-review/ 中的完整时间线与明确选帧后
+uv run python -m src.observations.curate_video --source-id campus-walk
 uv run python -m src.observations.validate --hashes
 uv run python -m src.observations export-ignore --write
 ```
 
-只有用户拥有且愿意按项目许可公开的素材才用 owned。第三方资料未声明分发许可时使用 unknown，保留本地。正式选帧继承原视频的许可和来源关系。
+只有用户拥有且明确愿意按 CC BY 4.0 公开的素材才用 CC-BY-4.0。第三方资料未声明分发许可时使用 unknown，保留本地。正式选帧继承原视频的许可和来源关系。
 
 候选预览进入 build/processing/observations。审查清晰度、遮挡、重复程度、对象和方向后，将有效帧正式入库，并保存时间点与筛选原因。原视频继续保留。
 

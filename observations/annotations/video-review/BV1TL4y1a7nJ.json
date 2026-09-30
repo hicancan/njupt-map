@@ -1,0 +1,2123 @@
+{
+  "source_id": "bilibili-BV1TL4y1a7nJ",
+  "source_sha256": "b210b9c101f4e757044eaa6789d48ca57dab01eddfeb1e9117526dbc9c42cf91",
+  "duration_seconds": 203.797,
+  "published_at": "2021-09-08T21:44:40+08:00",
+  "filming_date": null,
+  "temporal_basis": "发表日期是素材拍摄时间的上界，不是拍摄日期；未获得原始拍摄日期。2021–2023发表素材按本阶段要求排除于当前建模集。",
+  "review": {
+    "method": "人工查看全部按源PTS顺序排列的联系表页面，逐区段判读校区、可辨地标、室内外与年代适用性；仅对明确标识补查原分辨率和官网",
+    "sampling": {
+      "interval_seconds": 1.0,
+      "scene_threshold": 0.22,
+      "near_cut_seconds": 0.12,
+      "method": "Full sequential decode, source-PTS grid and scene-change union; second sequential pass for cut neighbours",
+      "limitations": "Threshold scene detection and sparse frames are review aids, not proof that all visual changes or places were identified"
+    },
+    "seen_sheet_pages": [
+      {
+        "path": "BV1TL4y1a7nJ/sheet-001.jpg",
+        "first_frame_index": 0,
+        "last_frame_index": 63,
+        "start_pts_seconds": 0.0,
+        "end_pts_seconds": 35.0
+      },
+      {
+        "path": "BV1TL4y1a7nJ/sheet-002.jpg",
+        "first_frame_index": 64,
+        "last_frame_index": 127,
+        "start_pts_seconds": 36.0,
+        "end_pts_seconds": 63.28
+      },
+      {
+        "path": "BV1TL4y1a7nJ/sheet-003.jpg",
+        "first_frame_index": 128,
+        "last_frame_index": 191,
+        "start_pts_seconds": 63.32,
+        "end_pts_seconds": 91.36
+      },
+      {
+        "path": "BV1TL4y1a7nJ/sheet-004.jpg",
+        "first_frame_index": 192,
+        "last_frame_index": 255,
+        "start_pts_seconds": 91.4,
+        "end_pts_seconds": 108.4
+      },
+      {
+        "path": "BV1TL4y1a7nJ/sheet-005.jpg",
+        "first_frame_index": 256,
+        "last_frame_index": 319,
+        "start_pts_seconds": 108.44,
+        "end_pts_seconds": 129.72
+      },
+      {
+        "path": "BV1TL4y1a7nJ/sheet-006.jpg",
+        "first_frame_index": 320,
+        "last_frame_index": 383,
+        "start_pts_seconds": 129.76,
+        "end_pts_seconds": 161.2
+      },
+      {
+        "path": "BV1TL4y1a7nJ/sheet-007.jpg",
+        "first_frame_index": 384,
+        "last_frame_index": 447,
+        "start_pts_seconds": 161.24,
+        "end_pts_seconds": 183.44
+      },
+      {
+        "path": "BV1TL4y1a7nJ/sheet-008.jpg",
+        "first_frame_index": 448,
+        "last_frame_index": 500,
+        "start_pts_seconds": 183.48,
+        "end_pts_seconds": 203.0
+      }
+    ],
+    "candidate_frames_seen": 501,
+    "seen_original_resolution_detail_frames": [
+      {
+        "path": "BV1TL4y1a7nJ/detail-0000121000.jpg",
+        "source_pts_seconds": 121.0
+      },
+      {
+        "path": "BV1TL4y1a7nJ/detail-0000124000.jpg",
+        "source_pts_seconds": 124.0
+      },
+      {
+        "path": "BV1TL4y1a7nJ/detail-0000130000.jpg",
+        "source_pts_seconds": 130.0
+      },
+      {
+        "path": "BV1TL4y1a7nJ/detail-0000181000.jpg",
+        "source_pts_seconds": 181.0
+      }
+    ],
+    "limitations": [
+      "全部候选帧已在联系表上看过，不等同于原视频每个30fps帧均经语义识别。1秒网格和切镜头邻帧仍可能漏掉阈值未检测到的短插入。",
+      "联系表缩略帧240×135，未能辨读的门牌、楼号和室内标识明确保留未知；没有使用自动语音转写。",
+      "时间段是语义地点区段，可能包含同一地点的多次剪辑；边界取人工判读的切点或网格附近时间，精度不能等同逐帧镜头标注。",
+      "没有做摄影测量、相机标定、尺度求解或实测，画面不能直接给出可靠三维尺寸或楼层高度。",
+      "剪辑前后相邻不证明地点空间相邻。空中的连续飞行仅支持可见地物共现与方位，不能单独证明地面道路可通行。",
+      "最后一个视频帧至容器结束的短尾部按最后画面类归类；音频尾长不提供额外视觉信息。",
+      "第三方视频和提取图片的公开再分发权利未确认，仍限本地审查。"
+    ],
+    "full_frame_manual_review": false,
+    "final_manifest_sha256": "eafad9a7139c77c1de7557eaf890a762a28242ba9b9dec6608a32205c3a3955d"
+  },
+  "segments": [
+    {
+      "start_seconds": 0.0,
+      "end_seconds": 6.0,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仲夏宣传片标题",
+      "place_ids": [],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "non_spatial",
+      "observed_connections": [],
+      "observed_features": [
+        "片名",
+        "黑场/图形"
+      ],
+      "basis": "标题不提供可配准场所。",
+      "confidence": 0.99,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。本段是标题、片尾、黑场或非场所特写，没有可配准空间信息。",
+      "uncertainties": [
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s001",
+      "reference_frame_pts_seconds": [
+        0.0,
+        3.0,
+        5.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 6.0,
+      "end_seconds": 15.28,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林圆楼与中博湖夏季湖景",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s002"
+      ],
+      "asset_ids": [
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "圆楼弧形立面",
+        "湖面",
+        "荷花",
+        "垂柳"
+      ],
+      "basis": "圆楼独特体量与湖岸共现，确定仙林。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_223859823",
+          "display_name": "中博湖",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s002",
+      "reference_frame_pts_seconds": [
+        6.0,
+        11.0,
+        15.16
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        15.16,
+        15.2,
+        15.24
+      ],
+      "map_object_ids": [
+        "osm_way_223859823",
+        "osm_way_224950590"
+      ]
+    },
+    {
+      "start_seconds": 15.28,
+      "end_seconds": 24.44,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "山林亭子俯视",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s003"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "密林",
+        "林间亭",
+        "石阶/路径"
+      ],
+      "basis": "山林景观无可读唯一地标，未把亭子定名。",
+      "confidence": 0.56,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "没有证明此山林亭子与仙林鼎山相同。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s003",
+      "reference_frame_pts_seconds": [
+        15.4,
+        20.0,
+        24.28
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        15.28,
+        15.32,
+        15.36,
+        15.4,
+        16.0,
+        17.0,
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0,
+        24.0,
+        24.28,
+        24.32,
+        24.36,
+        24.4
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 24.44,
+      "end_seconds": 24.84,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "黑场转场",
+      "place_ids": [],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "non_spatial",
+      "observed_connections": [],
+      "observed_features": [
+        "黑场"
+      ],
+      "basis": "没有空间信息。",
+      "confidence": 0.99,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。本段是标题、片尾、黑场或非场所特写，没有可配准空间信息。",
+      "uncertainties": [
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s004",
+      "reference_frame_pts_seconds": [
+        24.52,
+        24.72
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        24.44,
+        24.48,
+        24.52,
+        24.72,
+        24.76,
+        24.8
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 24.84,
+      "end_seconds": 34.48,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林南门与教学主轴航拍",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s005",
+        "observed.BV1TL4y1a7nJ.label.c39cbf55d644",
+        "observed.BV1TL4y1a7nJ.label.087cc18aecc1"
+      ],
+      "asset_ids": [
+        "osm_way_1454085437"
+      ],
+      "map_feature_ids": [
+        "map-feature-c0c46fab7fac5ffdbae1"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [
+        {
+          "from_place_id": "observed.BV1TL4y1a7nJ.label.c39cbf55d644",
+          "to_place_id": "observed.BV1TL4y1a7nJ.label.087cc18aecc1",
+          "relation": "visible_spatial_relation",
+          "description": "门内教学组团与纵向道路同框",
+          "basis": "continuous_shot",
+          "confidence": 0.98,
+          "notes": "仅局部视觉关系，未校准尺度；不是从剪辑相邻推出。"
+        }
+      ],
+      "observed_features": [
+        "金色校名",
+        "旗杆",
+        "横梁门柱",
+        "内侧教学楼群"
+      ],
+      "basis": "南门和教学主轴同框可识别。",
+      "confidence": 0.98,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s005",
+      "reference_frame_pts_seconds": [
+        25.0,
+        30.0,
+        34.36
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        24.84,
+        24.88,
+        24.92,
+        24.96,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        33.0,
+        34.0,
+        34.36,
+        34.4,
+        34.44
+      ],
+      "map_object_ids": [
+        "osm_way_1454085437"
+      ]
+    },
+    {
+      "start_seconds": 34.48,
+      "end_seconds": 42.4,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "中博湖荷花、柳岸与圆楼",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s006"
+      ],
+      "asset_ids": [
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "荷花",
+        "湖边树",
+        "圆楼",
+        "湖岸铺装"
+      ],
+      "basis": "圆楼独特形制确定湖泊组团。",
+      "confidence": 0.94,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_223859823",
+          "display_name": "中博湖",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s006",
+      "reference_frame_pts_seconds": [
+        34.6,
+        38.6,
+        42.28
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        34.48,
+        34.52,
+        34.56,
+        34.6,
+        35.0,
+        36.0,
+        37.0,
+        38.0,
+        38.6,
+        38.64,
+        38.68,
+        38.72,
+        38.76,
+        38.8,
+        38.84,
+        39.0,
+        40.0,
+        41.0,
+        42.0,
+        42.28,
+        42.32,
+        42.36
+      ],
+      "map_object_ids": [
+        "osm_way_223859823",
+        "osm_way_224950590"
+      ]
+    },
+    {
+      "start_seconds": 42.4,
+      "end_seconds": 45.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "中博湖喷泉与教学楼侧景",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s007"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "喷泉",
+        "湖面",
+        "教学楼背侧"
+      ],
+      "basis": "湖区与仙林教学区共现，不凭喷泉认定精确位置。",
+      "confidence": 0.86,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "喷泉是否保留和工作状态未核验。"
+      ],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_223859823",
+          "display_name": "中博湖",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s007",
+      "reference_frame_pts_seconds": [
+        42.52,
+        44.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        42.4,
+        42.44,
+        42.48,
+        42.52,
+        43.0,
+        44.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859823"
+      ]
+    },
+    {
+      "start_seconds": 45.0,
+      "end_seconds": 48.28,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "教学楼内院",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s008"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "内院",
+        "教学楼外廊",
+        "多层墙体"
+      ],
+      "basis": "仙林教学组团形制可辨，楼号不可读。",
+      "confidence": 0.81,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "具体教学楼和内院对象未绑定。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s008",
+      "reference_frame_pts_seconds": [
+        45.0,
+        47.0,
+        48.16
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        45.0,
+        46.0,
+        47.0,
+        48.0,
+        48.16,
+        48.2,
+        48.24
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 48.28,
+      "end_seconds": 53.68,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "圆楼玻璃弧面与临湖连廊",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s009",
+        "observed.BV1TL4y1a7nJ.label.d1b5605629e7",
+        "observed.BV1TL4y1a7nJ.label.13075331fe9d"
+      ],
+      "asset_ids": [
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [
+        {
+          "from_place_id": "observed.BV1TL4y1a7nJ.label.d1b5605629e7",
+          "to_place_id": "observed.BV1TL4y1a7nJ.label.13075331fe9d",
+          "relation": "visible_spatial_relation",
+          "description": "局部连廊贴近圆楼；入口通行仍未证明",
+          "basis": "continuous_shot",
+          "confidence": 0.95,
+          "notes": "仅局部视觉关系，未校准尺度；不是从剪辑相邻推出。"
+        }
+      ],
+      "observed_features": [
+        "弧形窗带",
+        "圆楼墙体",
+        "临湖有盖连廊"
+      ],
+      "basis": "圆楼可识别，连廊局部结构可观察。",
+      "confidence": 0.95,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_223859823",
+          "display_name": "中博湖",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s009",
+      "reference_frame_pts_seconds": [
+        48.4,
+        51.0,
+        53.56
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        48.28,
+        48.32,
+        48.36,
+        48.4,
+        49.0,
+        50.0,
+        51.0,
+        52.0,
+        53.0,
+        53.56,
+        53.6,
+        53.64
+      ],
+      "map_object_ids": [
+        "osm_way_223859823",
+        "osm_way_224950590"
+      ]
+    },
+    {
+      "start_seconds": 53.68,
+      "end_seconds": 59.12,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "教学区屋顶与道路",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s010"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "连排教学内院",
+        "主轴",
+        "屋顶"
+      ],
+      "basis": "组团可辨；不分别猜楼号。",
+      "confidence": 0.85,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s010",
+      "reference_frame_pts_seconds": [
+        53.76,
+        56.0,
+        59.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        53.68,
+        53.72,
+        53.76,
+        54.0,
+        55.0,
+        56.0,
+        57.0,
+        58.0,
+        59.0,
+        59.04,
+        59.08
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 59.12,
+      "end_seconds": 63.32,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林图书馆外立面与屋顶",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s011"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "图书馆入口",
+        "大屋檐",
+        "屋顶",
+        "窗格"
+      ],
+      "basis": "图书馆形制唯一匹配。",
+      "confidence": 0.98,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s011",
+      "reference_frame_pts_seconds": [
+        59.24,
+        61.0,
+        63.2
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        59.12,
+        59.16,
+        59.2,
+        59.24,
+        60.0,
+        61.0,
+        62.0,
+        63.0,
+        63.2,
+        63.24,
+        63.28
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 63.32,
+      "end_seconds": 72.92,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "学生骑行校园路段",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s012"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "学生",
+        "自行车",
+        "路树",
+        "铺装"
+      ],
+      "basis": "可见校园道路使用状态，但无唯一路牌。",
+      "confidence": 0.62,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "具体路段及校区未从人/树/铺装唯一识别；不从剪辑推断。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s012",
+      "reference_frame_pts_seconds": [
+        63.4,
+        68.0,
+        72.8
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        63.32,
+        63.36,
+        63.4,
+        64.0,
+        65.0,
+        66.0,
+        67.0,
+        68.0,
+        69.0,
+        70.0,
+        71.0,
+        72.0,
+        72.8,
+        72.84,
+        72.88
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 72.92,
+      "end_seconds": 81.96,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "学生草坪活动",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s013"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "草坪",
+        "学生",
+        "树",
+        "休憩"
+      ],
+      "basis": "草坪局部没有唯一建筑标识。",
+      "confidence": 0.6,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "不把所有草坪特写归为图书馆草坪。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s013",
+      "reference_frame_pts_seconds": [
+        73.04,
+        77.0,
+        81.84
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        72.92,
+        72.96,
+        73.0,
+        73.04,
+        74.0,
+        75.0,
+        76.0,
+        77.0,
+        78.0,
+        79.0,
+        80.0,
+        81.0,
+        81.84,
+        81.88,
+        81.92
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 81.96,
+      "end_seconds": 84.32,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林图书馆大草坪",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s014"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "图书馆后景",
+        "大草坪",
+        "学生活动"
+      ],
+      "basis": "图书馆特征立面确认草坪位置。",
+      "confidence": 0.94,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s014",
+      "reference_frame_pts_seconds": [
+        82.08,
+        83.0,
+        84.2
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        81.96,
+        82.0,
+        82.04,
+        82.08,
+        83.0,
+        84.0,
+        84.2,
+        84.24,
+        84.28
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 84.32,
+      "end_seconds": 91.48,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林院系楼红门廊",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s015"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "米色院系楼",
+        "红色门框",
+        "入口台阶"
+      ],
+      "basis": "仙林学院区建筑风格可辨，但无法唯一指认。",
+      "confidence": 0.77,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "具体学院或文科楼尚不确认。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s015",
+      "reference_frame_pts_seconds": [
+        84.44,
+        88.0,
+        91.36
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        84.32,
+        84.36,
+        84.4,
+        84.44,
+        85.0,
+        86.0,
+        86.08,
+        86.12,
+        86.16,
+        86.2,
+        86.24,
+        86.28,
+        87.0,
+        88.0,
+        89.0,
+        89.04,
+        89.08,
+        89.12,
+        89.16,
+        89.2,
+        89.24,
+        89.28,
+        90.0,
+        91.0,
+        91.36,
+        91.4,
+        91.44
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 91.48,
+      "end_seconds": 93.88,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林院系组团航拍",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s016"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "米色红色楼群",
+        "庭院",
+        "道路"
+      ],
+      "basis": "仙林院系建筑组团大尺度布局一致。",
+      "confidence": 0.84,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "各单楼身份和路段待单独标识确认。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s016",
+      "reference_frame_pts_seconds": [
+        91.56,
+        93.0,
+        93.76
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        91.48,
+        91.52,
+        91.56,
+        92.0,
+        93.0,
+        93.76,
+        93.8,
+        93.84
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 93.88,
+      "end_seconds": 95.72,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林大学生活动中心",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s017"
+      ],
+      "asset_ids": [
+        "osm_way_223944209"
+      ],
+      "map_feature_ids": [
+        "map-feature-0074058d3d7e5c4ddef9"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "大学生活动中心字幕",
+        "多层场馆",
+        "广场"
+      ],
+      "basis": "画面标题与场馆形制相互支持。",
+      "confidence": 0.93,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s017",
+      "reference_frame_pts_seconds": [
+        94.0,
+        95.0,
+        95.6
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        93.88,
+        93.92,
+        93.96,
+        94.0,
+        95.0,
+        95.6,
+        95.64,
+        95.68
+      ],
+      "map_object_ids": [
+        "osm_way_223944209"
+      ]
+    },
+    {
+      "start_seconds": 95.72,
+      "end_seconds": 98.84,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林北区运动场看台",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s018"
+      ],
+      "asset_ids": [
+        "osm_way_223859802"
+      ],
+      "map_feature_ids": [
+        "map-feature-650746df0a966446b8ac"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "北区大看台",
+        "椭圆跑道",
+        "运动场"
+      ],
+      "basis": "看台屋顶和运动场布局可辨。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_225104362",
+          "display_name": "北区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s018",
+      "reference_frame_pts_seconds": [
+        95.84,
+        97.0,
+        98.72
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        95.72,
+        95.76,
+        95.8,
+        95.84,
+        96.0,
+        97.0,
+        98.0,
+        98.72,
+        98.76,
+        98.8
+      ],
+      "map_object_ids": [
+        "osm_way_223859802",
+        "osm_way_225104362"
+      ]
+    },
+    {
+      "start_seconds": 98.84,
+      "end_seconds": 101.08,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林旧体育馆",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s019"
+      ],
+      "asset_ids": [
+        "osm_way_223944208"
+      ],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "蓝色屋顶",
+        "体育馆立面",
+        "五环"
+      ],
+      "basis": "旧馆外形明确，不能作为新体育馆样式。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_223944208",
+          "display_name": "体育馆（旧馆）",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s019",
+      "reference_frame_pts_seconds": [
+        99.0,
+        100.0,
+        100.96
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        98.84,
+        98.88,
+        98.92,
+        99.0,
+        100.0,
+        100.96,
+        101.0,
+        101.04
+      ],
+      "map_object_ids": [
+        "osm_way_223944208"
+      ]
+    },
+    {
+      "start_seconds": 101.08,
+      "end_seconds": 103.52,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "波特兰学院建筑外部",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s020"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "波特兰学院标题",
+        "学院入口",
+        "米色外墙"
+      ],
+      "basis": "字幕说明场所用途，具体校内建筑对象尚未匹配。",
+      "confidence": 0.81,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "不凭学院名直接绑定某一map建筑ID。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s020",
+      "reference_frame_pts_seconds": [
+        101.2,
+        102.0,
+        103.4
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        101.08,
+        101.12,
+        101.16,
+        101.2,
+        102.0,
+        103.0,
+        103.4,
+        103.44,
+        103.48
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 103.52,
+      "end_seconds": 105.32,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "校训景墙",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s021"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "厚德",
+        "弘毅",
+        "求是",
+        "笃行",
+        "景墙"
+      ],
+      "basis": "校训字墙可辨，具体墙体位置/校区未唯一确认。",
+      "confidence": 0.62,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "学校校训不是校区坐标依据。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s021",
+      "reference_frame_pts_seconds": [
+        103.64,
+        104.0,
+        105.2
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        103.52,
+        103.56,
+        103.6,
+        103.64,
+        104.0,
+        105.0,
+        105.2,
+        105.24,
+        105.28
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 105.32,
+      "end_seconds": 108.44,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "教学柱廊走廊",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s022"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "柱列",
+        "长廊",
+        "玻璃门窗"
+      ],
+      "basis": "典型外廊空间，缺少可读楼号。",
+      "confidence": 0.6,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "不将此前院系建筑与长廊相连。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s022",
+      "reference_frame_pts_seconds": [
+        105.44,
+        107.0,
+        108.32
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        105.32,
+        105.36,
+        105.4,
+        105.44,
+        106.0,
+        107.0,
+        108.0,
+        108.32,
+        108.36,
+        108.4
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 108.44,
+      "end_seconds": 110.72,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "教学楼外部楼梯/上层平台",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s023"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "外楼梯",
+        "开放平台",
+        "墙窗"
+      ],
+      "basis": "建筑局部可见但具体楼未确认。",
+      "confidence": 0.58,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "楼层及梯段连接未确认。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s023",
+      "reference_frame_pts_seconds": [
+        108.56,
+        110.0,
+        110.6
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        108.44,
+        108.48,
+        108.52,
+        108.56,
+        109.0,
+        110.0,
+        110.6,
+        110.64,
+        110.68
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 110.72,
+      "end_seconds": 118.08,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "树冠、旗帜和长椅黄昏组镜",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s024"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "树冠",
+        "校内旗帜",
+        "长椅",
+        "夕阳"
+      ],
+      "basis": "景观 montage 没有唯一地标。",
+      "confidence": 0.5,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "多次剪辑，不建立任何道路关系。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s024",
+      "reference_frame_pts_seconds": [
+        110.84,
+        114.8,
+        117.96
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        110.72,
+        110.76,
+        110.8,
+        110.84,
+        111.0,
+        112.0,
+        113.0,
+        113.04,
+        113.08,
+        113.12,
+        113.16,
+        113.2,
+        114.0,
+        114.8,
+        114.84,
+        114.88,
+        114.92,
+        114.96,
+        115.0,
+        115.04,
+        116.0,
+        117.0,
+        117.96,
+        118.0,
+        118.04
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 118.08,
+      "end_seconds": 123.68,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼老篮球场",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s025"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "林荫覆盖篮球场",
+        "红绿球场",
+        "字幕南邮三牌楼校区老球场"
+      ],
+      "basis": "原分辨率121秒明确字幕，校区确定三牌楼。",
+      "confidence": 0.99,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s025",
+      "reference_frame_pts_seconds": [
+        118.2,
+        121.0,
+        123.56
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        118.08,
+        118.12,
+        118.16,
+        118.2,
+        119.0,
+        120.0,
+        121.0,
+        122.0,
+        123.0,
+        123.56,
+        123.6,
+        123.64
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 123.68,
+      "end_seconds": 129.84,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼眼镜湖与湖边猫/连廊",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s026"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "荷塘",
+        "石栏",
+        "眼镜湖字幕",
+        "湖边连廊与猫"
+      ],
+      "basis": "124秒原分辨率字幕明确眼镜湖为南邮三牌楼校区人工湖。",
+      "confidence": 0.99,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [
+        "猫和连廊的局部不构成仙林中博湖参照。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s026",
+      "reference_frame_pts_seconds": [
+        123.8,
+        127.0,
+        129.72
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        123.68,
+        123.72,
+        123.76,
+        123.8,
+        124.0,
+        125.0,
+        125.6,
+        125.64,
+        125.68,
+        125.72,
+        125.76,
+        125.8,
+        125.84,
+        126.0,
+        127.0,
+        128.0,
+        129.0,
+        129.72,
+        129.76,
+        129.8
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 129.84,
+      "end_seconds": 149.64,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼运动场、林荫路与读书长廊",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s027"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "红色跑道",
+        "小篮球场",
+        "梧桐林荫大道",
+        "有盖紫藤读书长廊"
+      ],
+      "basis": "130秒原分辨率明确三牌楼校区；各后续画面字幕/旧校园形制一致。",
+      "confidence": 0.97,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [
+        "编辑组镜不把运动场、林荫路与长廊接成可通行路线。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s027",
+      "reference_frame_pts_seconds": [
+        130.0,
+        140.0,
+        149.52
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        129.84,
+        129.88,
+        129.92,
+        129.96,
+        130.0,
+        131.0,
+        132.0,
+        133.0,
+        134.0,
+        135.0,
+        136.0,
+        137.0,
+        138.0,
+        139.0,
+        140.0,
+        141.0,
+        142.0,
+        143.0,
+        144.0,
+        145.0,
+        146.0,
+        147.0,
+        148.0,
+        149.0,
+        149.52,
+        149.56,
+        149.6
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 149.64,
+      "end_seconds": 158.76,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼班车站点",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s028"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "班车站点牌",
+        "道路",
+        "旧校园建筑"
+      ],
+      "basis": "画面班车站/三牌楼章节字幕支持该校区。",
+      "confidence": 0.94,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s028",
+      "reference_frame_pts_seconds": [
+        149.76,
+        154.0,
+        158.64
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        149.64,
+        149.68,
+        149.72,
+        149.76,
+        150.0,
+        151.0,
+        152.0,
+        153.0,
+        154.0,
+        154.48,
+        154.52,
+        154.56,
+        154.6,
+        154.64,
+        154.68,
+        154.72,
+        155.0,
+        156.0,
+        157.0,
+        158.0,
+        158.64,
+        158.68,
+        158.72
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 158.76,
+      "end_seconds": 168.28,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼综合科研/通信楼组团",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s029"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "高层白色楼",
+        "密集城市后景",
+        "三牌楼章节"
+      ],
+      "basis": "建筑与城市背景及字幕支持三牌楼，不属仙林组团。",
+      "confidence": 0.94,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [
+        "具体楼名不在缩略画面确认。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s029",
+      "reference_frame_pts_seconds": [
+        158.88,
+        164.0,
+        168.16
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        158.76,
+        158.8,
+        158.84,
+        158.88,
+        159.0,
+        160.0,
+        161.0,
+        161.04,
+        161.08,
+        161.12,
+        161.16,
+        161.2,
+        161.24,
+        162.0,
+        163.0,
+        164.0,
+        165.0,
+        166.0,
+        167.0,
+        168.0,
+        168.16,
+        168.2,
+        168.24
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 168.28,
+      "end_seconds": 170.68,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼人物雕像",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s030"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "人物雕像",
+        "城市背景",
+        "校园广场"
+      ],
+      "basis": "三牌楼段落内可辨雕像/旧校区环境，地名字幕支持。",
+      "confidence": 0.9,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [
+        "雕像名未确认。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s030",
+      "reference_frame_pts_seconds": [
+        168.4,
+        169.0,
+        170.56
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        168.28,
+        168.32,
+        168.36,
+        168.4,
+        169.0,
+        170.0,
+        170.56,
+        170.6,
+        170.64
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 170.68,
+      "end_seconds": 173.84,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼教学楼",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s031"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "多层白色楼",
+        "教学楼字幕",
+        "旧校园密集布局"
+      ],
+      "basis": "字幕与旧城建筑形制一致。",
+      "confidence": 0.95,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s031",
+      "reference_frame_pts_seconds": [
+        170.8,
+        172.0,
+        173.72
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        170.68,
+        170.72,
+        170.76,
+        170.8,
+        171.0,
+        172.0,
+        173.0,
+        173.72,
+        173.76,
+        173.8
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 173.84,
+      "end_seconds": 177.84,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼图书馆",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s032"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "红色墙",
+        "大LIBRARY字",
+        "图书馆字幕"
+      ],
+      "basis": "图书馆形制明显与仙林不同，字幕处于三牌楼章节。",
+      "confidence": 0.98,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s032",
+      "reference_frame_pts_seconds": [
+        174.0,
+        176.0,
+        177.72
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        173.84,
+        173.88,
+        173.92,
+        173.96,
+        174.0,
+        175.0,
+        176.0,
+        177.0,
+        177.72,
+        177.76,
+        177.8
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 177.84,
+      "end_seconds": 180.36,
+      "campus": "sanpailou",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "三牌楼校园门前/城市界面",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s033"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "校园门区",
+        "城市街景",
+        "旧校区广场"
+      ],
+      "basis": "旧校区组团及字幕仍为三牌楼，无仙林门头。",
+      "confidence": 0.92,
+      "exclusion_reason": "画面为三牌楼校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s033",
+      "reference_frame_pts_seconds": [
+        178.0,
+        179.0,
+        180.24
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        177.84,
+        177.88,
+        177.92,
+        177.96,
+        178.0,
+        179.0,
+        180.0,
+        180.24,
+        180.28,
+        180.32
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 180.36,
+      "end_seconds": 187.52,
+      "campus": "other",
+      "status": "excluded",
+      "eligibility": "excluded_other_campus",
+      "place_label": "锁金村校区门头与城区航拍",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s034"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "锁金村校区门墙字",
+        "锁金村字幕",
+        "门卫",
+        "停车",
+        "密集城区"
+      ],
+      "basis": "181秒原分辨率字幕和门墙同时明确锁金村校区。",
+      "confidence": 0.99,
+      "exclusion_reason": "画面为其他校区，不属于仙林；且是2021–2023发表的历史素材。",
+      "uncertainties": [
+        "明确不是仙林或三牌楼，不能绑定两个校区的任何建筑。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s034",
+      "reference_frame_pts_seconds": [
+        180.48,
+        184.0,
+        187.4
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        180.36,
+        180.4,
+        180.44,
+        180.48,
+        181.0,
+        182.0,
+        183.0,
+        183.24,
+        183.28,
+        183.32,
+        183.36,
+        183.4,
+        183.44,
+        183.48,
+        184.0,
+        185.0,
+        186.0,
+        187.0,
+        187.4,
+        187.44,
+        187.48
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 187.52,
+      "end_seconds": 192.92,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "管理学院标识与周年宣传牌",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s035"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "管理学院名称",
+        "周年活动牌",
+        "建筑局部"
+      ],
+      "basis": "能识别机构标识，但机构名不是校区唯一定位。",
+      "confidence": 0.58,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "可能延续锁金村片段，但没有在此区段看到足够地点标识；不凭剪辑延续直接认定。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s035",
+      "reference_frame_pts_seconds": [
+        187.6,
+        190.04,
+        192.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        187.52,
+        187.56,
+        187.6,
+        188.0,
+        189.0,
+        189.8,
+        189.84,
+        189.88,
+        189.92,
+        189.96,
+        190.0,
+        190.04,
+        191.0,
+        192.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 192.92,
+      "end_seconds": 197.76,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "办公室/书籍窗景",
+      "place_ids": [
+        "observed.BV1TL4y1a7nJ.s036"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "indoor",
+      "observed_connections": [],
+      "observed_features": [
+        "办公室窗",
+        "书籍",
+        "室内物品"
+      ],
+      "basis": "没有可读校区、楼号和房间号。",
+      "confidence": 0.5,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "uncertainties": [
+        "不能把该办公室绑定管理学院或锁金村某楼。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。",
+        "除可辨建筑外，具体房间、楼层、入口与内部连续拓扑未确认，不能直接建立地图室内节点。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s036",
+      "reference_frame_pts_seconds": [
+        193.08,
+        195.0,
+        197.64
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        192.92,
+        192.96,
+        193.0,
+        193.04,
+        193.08,
+        193.12,
+        193.16,
+        194.0,
+        195.0,
+        196.0,
+        197.0,
+        197.64,
+        197.68,
+        197.72
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 197.76,
+      "end_seconds": 203.797,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "片尾字幕",
+      "place_ids": [],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "non_spatial",
+      "observed_connections": [],
+      "observed_features": [
+        "字幕",
+        "黑场",
+        "片尾字"
+      ],
+      "basis": "片尾无可配准校园空间。",
+      "confidence": 0.99,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。本段是标题、片尾、黑场或非场所特写，没有可配准空间信息。",
+      "uncertainties": [
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1TL4y1a7nJ-s037",
+      "reference_frame_pts_seconds": [
+        197.88,
+        201.0,
+        203.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        197.76,
+        197.8,
+        197.84,
+        197.88,
+        198.0,
+        199.0,
+        200.0,
+        201.0,
+        201.6,
+        201.64,
+        201.68,
+        201.72,
+        201.76,
+        201.8,
+        201.84,
+        202.0,
+        203.0
+      ],
+      "map_object_ids": []
+    }
+  ],
+  "validation": {
+    "continuous_timeline": true,
+    "source_hash_matches_catalog": true,
+    "references_validated_against_current_map_and_asset_catalog": true,
+    "formal_place_registration": "not performed in this build review; empty place_ids and observed_connections are intentional"
+  },
+  "schema_version": 1,
+  "target_state": "2026-09-30"
+}

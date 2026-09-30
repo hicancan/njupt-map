@@ -1,0 +1,605 @@
+{
+  "source_id": "bilibili-BV1pRj3zAEXG",
+  "source_sha256": "a7d040c6807817a62bcd44d4f58445192a43ebcc36419ab7a6008ef23dfa1e33",
+  "duration_seconds": 83.452426,
+  "published_at": "2025-05-25T22:51:14+08:00",
+  "filming_date": null,
+  "temporal_basis": "发表日期是素材拍摄时间的上界，不是拍摄日期；未获得原始拍摄日期。2025发表素材尚未逐地交叉核验2026现状，不视为已确认的当前观测。",
+  "review": {
+    "method": "人工查看全部按源PTS顺序排列的联系表页面，逐区段判读校区、可辨地标、室内外与年代适用性；仅对明确标识补查原分辨率和官网",
+    "sampling": {
+      "interval_seconds": 1.0,
+      "scene_threshold": 0.22,
+      "near_cut_seconds": 0.12,
+      "method": "Full sequential decode, source-PTS grid and scene-change union; second sequential pass for cut neighbours",
+      "limitations": "Threshold scene detection and sparse frames are review aids, not proof that all visual changes or places were identified"
+    },
+    "seen_sheet_pages": [
+      {
+        "path": "BV1pRj3zAEXG/sheet-001.jpg",
+        "first_frame_index": 0,
+        "last_frame_index": 63,
+        "start_pts_seconds": 0.0,
+        "end_pts_seconds": 43.0
+      },
+      {
+        "path": "BV1pRj3zAEXG/sheet-002.jpg",
+        "first_frame_index": 64,
+        "last_frame_index": 110,
+        "start_pts_seconds": 44.0,
+        "end_pts_seconds": 83.0
+      }
+    ],
+    "candidate_frames_seen": 111,
+    "seen_original_resolution_detail_frames": [],
+    "limitations": [
+      "全部候选帧已在联系表上看过，不等同于原视频每个30fps帧均经语义识别。1秒网格和切镜头邻帧仍可能漏掉阈值未检测到的短插入。",
+      "联系表缩略帧240×135，未能辨读的门牌、楼号和室内标识明确保留未知；没有使用自动语音转写。",
+      "时间段是语义地点区段，可能包含同一地点的多次剪辑；边界取人工判读的切点或网格附近时间，精度不能等同逐帧镜头标注。",
+      "没有做摄影测量、相机标定、尺度求解或实测，画面不能直接给出可靠三维尺寸或楼层高度。",
+      "剪辑前后相邻不证明地点空间相邻。空中的连续飞行仅支持可见地物共现与方位，不能单独证明地面道路可通行。",
+      "最后一个视频帧至容器结束的短尾部按最后画面类归类；音频尾长不提供额外视觉信息。",
+      "第三方视频和提取图片的公开再分发权利未确认，仍限本地审查。"
+    ],
+    "full_frame_manual_review": false,
+    "final_manifest_sha256": "bcd7e30d469e5181d016d8d11feb4b7692c1add5ef4def01afbc24a98c7e6180"
+  },
+  "segments": [
+    {
+      "start_seconds": 0.0,
+      "end_seconds": 0.1,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "片头校园航拍与叠字",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s001"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "教学楼群",
+        "图书馆远景",
+        "片头文字"
+      ],
+      "basis": "极短片头仍有校园全景，但没有新增局部信息。",
+      "confidence": 0.75,
+      "exclusion_reason": null,
+      "uncertainties": [
+        "极短片头不作为尺度/拓扑依据。",
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "current_state_unverified",
+      "id": "bilibili-BV1pRj3zAEXG-s001",
+      "reference_frame_pts_seconds": [
+        0.0,
+        0.033,
+        0.067
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        0.0,
+        0.033,
+        0.067
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 0.1,
+      "end_seconds": 8.7,
+      "campus": "unknown",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "三树草坪与景观座椅俯视",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s002"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "草坪",
+        "三棵树冠",
+        "弧形景观/座椅",
+        "铺装"
+      ],
+      "basis": "只有景观局部，无唯一地标，保留校区未知。",
+      "confidence": 0.5,
+      "exclusion_reason": null,
+      "uncertainties": [
+        "不能仅凭标题定为图书馆草坪；具体地点未注册。",
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。",
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "current_state_unverified",
+      "id": "bilibili-BV1pRj3zAEXG-s002",
+      "reference_frame_pts_seconds": [
+        0.2,
+        4.0,
+        8.6
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        0.1,
+        0.133,
+        0.167,
+        0.2,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        8.6,
+        8.633,
+        8.667
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 8.7,
+      "end_seconds": 17.0,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "校园山林与亭子航拍",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s003"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "茂密树冠",
+        "林间亭",
+        "院系楼远景"
+      ],
+      "basis": "周边组团有仙林特征，但亭子名和所在山未确认。",
+      "confidence": 0.77,
+      "exclusion_reason": null,
+      "uncertainties": [
+        "暂不绑定鼎山或亭子对象。",
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "current_state_unverified",
+      "id": "bilibili-BV1pRj3zAEXG-s003",
+      "reference_frame_pts_seconds": [
+        8.8,
+        13.0,
+        16.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        8.7,
+        8.733,
+        8.767,
+        8.8,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 17.0,
+      "end_seconds": 32.667,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "圆楼、中博湖与教学楼环视",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s004",
+        "observed.BV1pRj3zAEXG.label.a04bdd714657",
+        "observed.BV1pRj3zAEXG.label.c95ee72ad890"
+      ],
+      "asset_ids": [
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [
+        {
+          "from_place_id": "observed.BV1pRj3zAEXG.label.a04bdd714657",
+          "to_place_id": "observed.BV1pRj3zAEXG.label.c95ee72ad890",
+          "relation": "visible_spatial_relation",
+          "description": "圆楼紧邻湖岸；教学楼群与湖同时可见",
+          "basis": "continuous_shot",
+          "confidence": 0.97,
+          "notes": "仅局部视觉关系，未校准尺度；不是从剪辑相邻推出。"
+        }
+      ],
+      "observed_features": [
+        "圆形楼体",
+        "湖面",
+        "连排教学内院",
+        "临水道路"
+      ],
+      "basis": "圆楼和中博湖为唯一地标，缓慢环视呈现共现关系。",
+      "confidence": 0.97,
+      "exclusion_reason": null,
+      "uncertainties": [
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_223859823",
+          "display_name": "中博湖",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "current_state_unverified",
+      "id": "bilibili-BV1pRj3zAEXG-s004",
+      "reference_frame_pts_seconds": [
+        17.0,
+        25.0,
+        32.567
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        17.0,
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0,
+        24.0,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        32.567,
+        32.6,
+        32.633
+      ],
+      "map_object_ids": [
+        "osm_way_223859823",
+        "osm_way_224950590"
+      ]
+    },
+    {
+      "start_seconds": 32.667,
+      "end_seconds": 41.0,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "图书馆与I LOVE NJUPT草坪",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s005",
+        "observed.BV1pRj3zAEXG.label.266e6cb77079",
+        "observed.BV1pRj3zAEXG.label.e6641c78fcc2"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [
+        {
+          "from_place_id": "observed.BV1pRj3zAEXG.label.266e6cb77079",
+          "to_place_id": "observed.BV1pRj3zAEXG.label.e6641c78fcc2",
+          "relation": "visible_spatial_relation",
+          "description": "草坪位于可见图书馆立面前方",
+          "basis": "continuous_shot",
+          "confidence": 0.98,
+          "notes": "仅局部视觉关系，未校准尺度；不是从剪辑相邻推出。"
+        }
+      ],
+      "observed_features": [
+        "图书馆前檐",
+        "大草坪",
+        "I LOVE NJUPT文字景观"
+      ],
+      "basis": "图书馆立面与草坪装置同框，地点明确；2026是否已变尚未核验。",
+      "confidence": 0.98,
+      "exclusion_reason": null,
+      "uncertainties": [
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "current_state_unverified",
+      "id": "bilibili-BV1pRj3zAEXG-s005",
+      "reference_frame_pts_seconds": [
+        32.767,
+        37.0,
+        40.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        32.667,
+        32.7,
+        32.733,
+        32.767,
+        33.0,
+        34.0,
+        35.0,
+        36.0,
+        37.0,
+        38.0,
+        39.0,
+        40.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 41.0,
+      "end_seconds": 44.0,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "教学楼屋顶与主轴远景",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s006"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "教学内院",
+        "主轴",
+        "图书馆及远端地块"
+      ],
+      "basis": "组团匹配仙林教学区，不进行单栋楼号猜测。",
+      "confidence": 0.87,
+      "exclusion_reason": null,
+      "uncertainties": [
+        "主轴道路具体ID和楼号未逐栋确认。",
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "current_state_unverified",
+      "id": "bilibili-BV1pRj3zAEXG-s006",
+      "reference_frame_pts_seconds": [
+        41.0,
+        42.0,
+        43.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        41.0,
+        42.0,
+        43.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 44.0,
+      "end_seconds": 61.667,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "教学区航拍含未完工裸地地块",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s007"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "教学屋顶",
+        "校园主轴",
+        "远端大片裸地/施工区"
+      ],
+      "basis": "该区段背景中明显施工地形与未完成校园用地，不能当当前最终完成形态。",
+      "confidence": 0.89,
+      "exclusion_reason": "画面可见未完工/裸地施工状态，未获当前一致性确认，明确排除为当前完成形态的参照。",
+      "uncertainties": [
+        "施工地块身份及完成时间未核实；不可据裸地补建当前建筑。",
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "excluded",
+      "id": "bilibili-BV1pRj3zAEXG-s007",
+      "reference_frame_pts_seconds": [
+        44.0,
+        53.0,
+        61.567
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        44.0,
+        45.0,
+        46.0,
+        47.0,
+        48.0,
+        49.0,
+        50.0,
+        51.0,
+        52.0,
+        53.0,
+        54.0,
+        55.0,
+        56.0,
+        57.0,
+        58.0,
+        59.0,
+        60.0,
+        61.0,
+        61.567,
+        61.6,
+        61.633
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 61.667,
+      "end_seconds": 71.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "草坪与山林步道、施工地块远景",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s008"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "绿地",
+        "林间路",
+        "远端裸地",
+        "湖面局部"
+      ],
+      "basis": "航拍可见景观与施工地块共存，当前地形/绿化一致性未核实。",
+      "confidence": 0.83,
+      "exclusion_reason": "画面可见未完工/裸地施工状态，未获当前一致性确认，明确排除为当前完成形态的参照。",
+      "uncertainties": [
+        "具体山丘与步道名称未知，背景施工明确排除现状。",
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "excluded",
+      "id": "bilibili-BV1pRj3zAEXG-s008",
+      "reference_frame_pts_seconds": [
+        61.767,
+        66.0,
+        70.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        61.667,
+        61.7,
+        61.733,
+        61.767,
+        62.0,
+        63.0,
+        64.0,
+        65.0,
+        66.0,
+        67.0,
+        68.0,
+        69.0,
+        70.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 71.0,
+      "end_seconds": 81.0,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "教学区与山丘全景",
+      "place_ids": [
+        "observed.BV1pRj3zAEXG.s009"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "教学楼群",
+        "树冠",
+        "校园道路",
+        "全景"
+      ],
+      "basis": "主区校园形态可辨，缺少路牌及当前状态交叉核验。",
+      "confidence": 0.84,
+      "exclusion_reason": null,
+      "uncertainties": [
+        "2025发表仅给出拍摄时间上界；需与2026图像交叉确认外观、植被、施工和标识是否已改变。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "current_state_unverified",
+      "id": "bilibili-BV1pRj3zAEXG-s009",
+      "reference_frame_pts_seconds": [
+        71.0,
+        76.0,
+        80.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        71.0,
+        72.0,
+        73.0,
+        74.0,
+        75.0,
+        76.0,
+        77.0,
+        78.0,
+        79.0,
+        80.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 81.0,
+      "end_seconds": 83.452426,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "unresolved",
+      "place_label": "片尾字幕黑场",
+      "place_ids": [],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "non_spatial",
+      "observed_connections": [],
+      "observed_features": [
+        "致谢/字幕",
+        "黑底"
+      ],
+      "basis": "无可配准空间信息。",
+      "confidence": 0.99,
+      "exclusion_reason": "无校园空间画面。",
+      "uncertainties": [
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "excluded",
+      "id": "bilibili-BV1pRj3zAEXG-s010",
+      "reference_frame_pts_seconds": [
+        81.0,
+        82.0,
+        83.0
+      ],
+      "selected_frame_pts_seconds": [],
+      "review_frame_pts_seconds": [
+        81.0,
+        82.0,
+        83.0
+      ],
+      "map_object_ids": []
+    }
+  ],
+  "validation": {
+    "continuous_timeline": true,
+    "source_hash_matches_catalog": true,
+    "references_validated_against_current_map_and_asset_catalog": true,
+    "formal_place_registration": "not performed in this build review; empty place_ids and observed_connections are intentional"
+  },
+  "schema_version": 1,
+  "target_state": "2026-09-30"
+}

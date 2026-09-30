@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "source_id": "bilibili-BV118QgBPEMk",
+  "source_sha256": "5871c5ffeb4427c78917ecd277dbd8bb109df80f0522391b91cd5da84e74bce9",
+  "duration_seconds": 13.537007,
+  "target_state": "2026-09-30",
+  "review": {
+    "method": "完整时长1秒格点、阈值场景变化及邻帧的全部contact sheets逐页视觉审查；重要招牌与构造追加原分辨率复核。",
+    "sampling_seconds": 1,
+    "scene_threshold": 0.22,
+    "seen_sheet_pages": [
+      1
+    ],
+    "sampled_frames_reviewed": 19,
+    "full_frame_manual_review": false,
+    "semantic_boundary_precision": "明确硬切采用源PTS；连续拍摄的地点变化按语义分段，通常约1秒精度；阈值cut中大量快速摇摄误报未当真实转场。",
+    "limitations": [
+      "不是逐视频全部原始帧的人工审查；1秒网格和cut邻帧覆盖全时长。",
+      "未进行相机标定、三维重建或像素到地图的几何配准。",
+      "accepted仅表示当前候选观测，发表时间不是拍摄时间，几何尺寸尚未实测。"
+    ],
+    "full_resolution_detail_times_seconds": [
+      7,
+      11
+    ],
+    "final_manifest_sha256": "84a9493bba684aa9c1e0a419ab8730da0fd20531e899f9114bab9f035f66e172"
+  },
+  "temporal_assessment": {
+    "published_at": "2026-04-15T14:05:00+08:00",
+    "capture_time": "unknown",
+    "latest_possible_capture_time": "2026-04-15T14:05:00+08:00",
+    "current_validity": "excluded_as_current_site_state",
+    "visible_state": "围挡/施工或未交付阶段",
+    "reason": "视频在2026年4月发表，上限早于官方8月底交付；围挡和入口环境不可作为9月30日当前状态",
+    "stable_geometry_note": "建筑立面可作为历史辅助几何观测，但不进入当前候选集合；需与8月后资料交叉核验。",
+    "corroborating_source_ids": [
+      "k_inspection_20260901_full"
+    ]
+  },
+  "segments": [
+    {
+      "id": "bilibili-BV118QgBPEMk-s001",
+      "start_seconds": 0.0,
+      "end_seconds": 4.5,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "K组团红灰宿舍立面，未交付时期",
+      "space_type": "outdoor_building",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV118QgBPEMk.s001"
+      ],
+      "observed_features": [
+        "浅灰框架、深灰水平层带、红色两层框",
+        "多层连续阳台、外部道路/花树和白色施工围挡"
+      ],
+      "basis": "画面形态与K组团官方照片一致；来源4月发布早于8月底交付",
+      "confidence": 0.9,
+      "exclusion_reason": "当前场地参考排除：围挡/未交付历史状态；稳定立面仅允许作辅助历史比对",
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [
+        "具体K单体楼号不明",
+        "拍摄日未知"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        2.0,
+        4.0
+      ],
+      "review_frame_pts_seconds": [
+        0.0,
+        0.033,
+        0.067,
+        0.1,
+        0.133,
+        0.167,
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ]
+    },
+    {
+      "id": "bilibili-BV118QgBPEMk-s002",
+      "start_seconds": 4.5,
+      "end_seconds": 9.5,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "K组团高位跨栋连接体和低层红色玻璃门厅",
+      "space_type": "outdoor_building",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV118QgBPEMk.s002"
+      ],
+      "observed_features": [
+        "最高层近屋檐的跨栋空中连接体，连续浅灰面板和黑色檐下肋",
+        "低层红色条状体和玻璃入口",
+        "两侧多层栏杆/阳台和其他宿舍背景"
+      ],
+      "basis": "7秒原分辨率明确可见跨空连接构造；具体连接哪两栋尚未配准",
+      "confidence": 0.9,
+      "exclusion_reason": "当前场地参考排除：4月未交付阶段；构造信息仅作历史辅助并需投用后确认",
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [
+        "空中连接体是否通行廊道未确认，不能写为可通行连接",
+        "不将6个模型序号猜成实际两栋"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        7.0,
+        9.0
+      ],
+      "review_frame_pts_seconds": [
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0
+      ]
+    },
+    {
+      "id": "bilibili-BV118QgBPEMk-s003",
+      "start_seconds": 9.5,
+      "end_seconds": 13.537007,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "K组团第四食堂方向多高度体块，未交付时期",
+      "space_type": "outdoor_building",
+      "asset_ids": [
+        "njupt_k_dining_04"
+      ],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV118QgBPEMk.s003"
+      ],
+      "observed_features": [
+        "较高矩形竖窗体与低层长灰色屋面体组合",
+        "浅色立面、红色窗间框、树冠遮挡和施工围挡"
+      ],
+      "basis": "官方K组团/第四食堂整体照片与本段多高度体块相符；只能绑定组团第四食堂，不指定宿舍楼",
+      "confidence": 0.78,
+      "exclusion_reason": "拍摄场地仍是投用前阶段，不作为当前景观状态",
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [
+        "第四食堂识别需补反向视角配准",
+        "字幕把全体叫宿舍不应替代建筑功能核验"
+      ],
+      "map_object_ids": [
+        "njupt_k_dining_04"
+      ],
+      "reference_frame_pts_seconds": [
+        11.0,
+        13.0
+      ],
+      "review_frame_pts_seconds": [
+        10.0,
+        11.0,
+        12.0,
+        13.0
+      ]
+    }
+  ],
+  "corroborating_sources": [
+    {
+      "id": "k_inspection_20260901_full",
+      "url": "https://jjc.njupt.edu.cn/2026/0901/c6572a307767/page.htm",
+      "published_at": "2026-09-01",
+      "event_date": "2026-08-27",
+      "verified_at": "2026-09-30",
+      "live_verification": "PowerShell Invoke-WebRequest HTTP200; title and paragraph verified; web tool could not open page",
+      "claim": "学生宿舍K组团6栋、474间标准宿舍和6间无障碍宿舍，2800余床，8月底交付使用。"
+    }
+  ],
+  "corroborating_source_ids": [
+    "k_inspection_20260901_full",
+    "k_complete_20260901_full"
+  ]
+}

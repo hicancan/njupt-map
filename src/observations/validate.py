@@ -58,6 +58,8 @@ def validate(*, hashes: bool = False, strict_local: bool = False, public: bool =
                     errors.append(f"Selected frame lacks a curation reason: {sid}")
                 if rights.get("status") == "allowed" and parent.get("redistribution", {}).get("status") != "allowed":
                     errors.append(f"Derived frame may not broaden source redistribution: {sid}")
+                if lineage.get("source_sha256") != parent.get("sha256"):
+                    errors.append(f"Selected frame parent hash differs: {sid}")
     bindings = read(BINDINGS)["bindings"]
     seen = set()
     for binding in bindings:
@@ -89,6 +91,11 @@ def validate(*, hashes: bool = False, strict_local: bool = False, public: bool =
     for group in groups:
         for sid in set(group.get("source_ids", [])) - sources.keys():
             errors.append(f"Unknown group source: {group['id']}: {sid}")
+    if (ROOT / "observations/annotations/video-review").is_dir() or any(
+        source.get("kind") == "videos" and source.get("platform") == "bilibili" for source in sources.values()
+    ):
+        from .review_export import validate_review_sources
+        errors.extend(validate_review_sources(root=ROOT))
     return {"valid": not errors, "source_count": len(sources), "asset_binding_count": len(bindings),
             "unavailable_source_ids": unavailable, "omitted_local_only_source_ids": local_only_missing, "errors": errors}
 

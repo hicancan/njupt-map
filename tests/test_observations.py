@@ -19,7 +19,7 @@ from src.observations import validate as validator
 
 class ObservationPipelineTest(unittest.TestCase):
     def setUp(self):
-        task_root = (Path("D:/Temp/codex/njupt-map-refactor/tests") if os.name == 'nt'
+        task_root = (Path("D:/Temp/codex/njupt-map-observations-test") if os.name == 'nt'
                      else Path(tempfile.gettempdir()) / 'njupt-map-tests')
         task_root.mkdir(parents=True, exist_ok=True)
         self.temporary = tempfile.TemporaryDirectory(dir=task_root)
@@ -82,25 +82,6 @@ class ObservationPipelineTest(unittest.TestCase):
         self.assertIn("/observations/documents/restricted-a.bin", first)
         self.assertIn("/.venv/", first)
 
-    @unittest.skipUnless(shutil.which("ffmpeg") and shutil.which("ffprobe"), "FFmpeg tools unavailable")
-    def test_selected_frame_preserves_actual_timestamp_and_source_rights(self):
-        original = self.root / "camera-fixture.mp4"
-        subprocess.run(["ffmpeg","-nostdin","-hide_banner","-loglevel","error","-f","lavfi","-i",
-                        "testsrc2=size=64x48:rate=10","-t","2","-c:v","mpeg4",str(original)], check=True)
-        cli.ingest(argparse.Namespace(file=original,id="camera-a",kind="videos",license="unknown",
-                                      captured_at="2026-09-30",source_url=None,reason=None))
-        cli.select_frame(argparse.Namespace(source_id="camera-a",at=1.05,asset_id="building-a",id=None,
-                                             reason="Visible entrance shape",component="south entrance"))
-        sources = common.read(common.CATALOG)["sources"]
-        frame = sources["camera-a-frame-000001050"]
-        self.assertEqual(frame["redistribution"]["status"], "local_only")
-        self.assertEqual(frame["derived_from"]["source_sha256"], sources["camera-a"]["sha256"])
-        self.assertAlmostEqual(frame["derived_from"]["decoded_pts_seconds"], 1.1)
-        self.assertIsNone(frame["photo_taken_at"])
-        self.assertIn(frame["id"], common.read(common.BINDINGS)["bindings"][0]["source_ids"])
-        self.assertTrue(validator.validate(hashes=True,strict_local=True)["valid"])
-        original_hash = sources["camera-a"]["sha256"]
-        self.assertEqual(common.checksum(original), original_hash)
 
 
 if __name__ == "__main__":

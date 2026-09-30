@@ -1,0 +1,799 @@
+{
+  "schema_version": 1,
+  "source_id": "bilibili-BV1T3RaBqE7c",
+  "source_sha256": "a470147e9ec596d5a8f506ae768234c7ba25c41e3177814fae56df12424cdfc0",
+  "duration_seconds": 45.766625,
+  "target_state": "2026-09-30",
+  "review": {
+    "method": "完整时长1秒格点、阈值场景变化及邻帧的全部contact sheets逐页视觉审查；重要招牌与构造追加原分辨率复核。",
+    "sampling_seconds": 1,
+    "scene_threshold": 0.22,
+    "seen_sheet_pages": [
+      1,
+      2,
+      3
+    ],
+    "sampled_frames_reviewed": 164,
+    "full_frame_manual_review": false,
+    "semantic_boundary_precision": "明确硬切采用源PTS；连续拍摄的地点变化按语义分段，通常约1秒精度；阈值cut中大量快速摇摄误报未当真实转场。",
+    "limitations": [
+      "不是逐视频全部原始帧的人工审查；1秒网格和cut邻帧覆盖全时长。",
+      "未进行相机标定、三维重建或像素到地图的几何配准。",
+      "accepted仅表示当前候选观测，发表时间不是拍摄时间，几何尺寸尚未实测。"
+    ],
+    "full_resolution_detail_times_seconds": [
+      9,
+      24,
+      30,
+      43
+    ],
+    "additional_exact_pts_high_resolution_review": [
+      {
+        "decoded_pts": 336555,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 21.0346875,
+        "pts_milliseconds": 21035,
+        "path": "detail-0000021035.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 21.0
+      },
+      {
+        "decoded_pts": 352543,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 22.0339375,
+        "pts_milliseconds": 22034,
+        "path": "detail-0000022034.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 22.0
+      },
+      {
+        "decoded_pts": 368532,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 23.03325,
+        "pts_milliseconds": 23033,
+        "path": "detail-0000023033.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 23.0
+      },
+      {
+        "decoded_pts": 384520,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 24.0325,
+        "pts_milliseconds": 24033,
+        "path": "detail-0000024033.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 24.0
+      },
+      {
+        "decoded_pts": 400508,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 25.03175,
+        "pts_milliseconds": 25032,
+        "path": "detail-0000025032.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 25.0
+      },
+      {
+        "decoded_pts": 416497,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 26.0310625,
+        "pts_milliseconds": 26031,
+        "path": "detail-0000026031.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 26.0
+      },
+      {
+        "decoded_pts": 560392,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 35.0245,
+        "pts_milliseconds": 35025,
+        "path": "detail-0000035025.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 35.0
+      },
+      {
+        "decoded_pts": 576380,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 36.02375,
+        "pts_milliseconds": 36024,
+        "path": "detail-0000036024.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 36.0
+      },
+      {
+        "decoded_pts": 592369,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 37.0230625,
+        "pts_milliseconds": 37023,
+        "path": "detail-0000037023.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 37.0
+      },
+      {
+        "decoded_pts": 608357,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 38.0223125,
+        "pts_milliseconds": 38022,
+        "path": "detail-0000038022.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 38.0
+      },
+      {
+        "decoded_pts": 624345,
+        "time_base": "1/16000",
+        "decoded_pts_seconds": 39.0215625,
+        "pts_milliseconds": 39022,
+        "path": "detail-0000039022.jpg",
+        "scene_score": null,
+        "requested_timestamp_seconds": 39.0
+      }
+    ],
+    "correction_notes": [
+      "23.5–35.5秒包含门内白吊顶房和旁侧蓝绿自习区，不能合为一个房间",
+      "楼层由一楼改unknown；25–29秒字幕提二楼不是已确认画面楼层",
+      "35.5–39.5秒是另一端出口，不是返回入端",
+      "窗边桌椅另设节点，与金属候坐椅不合并"
+    ],
+    "final_manifest_sha256": "801c442bcd7e2a18f1b154e5087bb5b2361b094c2331103a9ee438db0df2d4c0",
+    "final_sheet_reverification": {
+      "reason": "Earlier intermediate count 161 was stale; all current three rendered sheets visually rechecked before correcting to 164.",
+      "total_candidates": 164,
+      "sheets": [
+        {
+          "path": "sheet-001.jpg",
+          "first_frame_index": 0,
+          "last_frame_index": 63,
+          "start_pts_seconds": 0.0,
+          "end_pts_seconds": 39.7210625,
+          "sha256": "13d454dae871fb2ff167154278332140a0ce30b7e311ffac298f7258c169d4d0"
+        },
+        {
+          "path": "sheet-002.jpg",
+          "first_frame_index": 64,
+          "last_frame_index": 127,
+          "start_pts_seconds": 39.7710625,
+          "end_pts_seconds": 43.61825,
+          "sha256": "5dd23698d35b7dd038b09ea81ade0e089f598ef22ac1169ababee0cf115afe27"
+        },
+        {
+          "path": "sheet-003.jpg",
+          "first_frame_index": 128,
+          "last_frame_index": 163,
+          "start_pts_seconds": 43.6681875,
+          "end_pts_seconds": 45.4169375,
+          "sha256": "bac1e87c134759c5faa8712e06b85fc815f311d0d3123b83606bb3c5964e26e9"
+        }
+      ],
+      "manual_all_original_frames_reviewed": false,
+      "result": "All 164 current candidates seen; previous semantic corrections remain applicable."
+    },
+    "root_final_sheet_recheck": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "candidates": 164,
+      "method": "Visual inspection of every final sheet after the room/floor corrections"
+    }
+  },
+  "temporal_assessment": {
+    "published_at": "2026-05-07T17:30:00+08:00",
+    "capture_time": "unknown",
+    "latest_possible_capture_time": "2026-05-07T17:30:00+08:00",
+    "current_validity": "candidate_requires_component_level_verification",
+    "floor1_basis": {
+      "description": "南邮仙林校区图书馆一楼进行了新装修，新设立了多个自习室座位",
+      "source_url": "https://www.bilibili.com/video/BV1T3RaBqE7c",
+      "published_at": "2026-05-07T17:30:00+08:00",
+      "claim_type": "uploader_description_not_surveyed"
+    }
+  },
+  "segments": [
+    {
+      "id": "bilibili-BV1T3RaBqE7c-s001",
+      "start_seconds": 0.0,
+      "end_seconds": 7,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "图书馆数智里玻璃入口正面",
+      "space_type": "outdoor_entrance",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "place_ids": [
+        "xianlin.library.new_entrance"
+      ],
+      "observed_features": [
+        "清楚“图书馆”字样、玻璃雨棚",
+        "数智里 AI SPACE/学生发展支持中心入口",
+        "浅色门框、室外台阶/铺装和伞具"
+      ],
+      "basis": "招牌明确图书馆；连续推进并与图书馆唯一建筑匹配；描述称仙林一楼",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        2.0485,
+        6.045625
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "入口朝向尚未几何配准"
+      ],
+      "reference_frame_pts_seconds": [
+        2.0485,
+        6.045625
+      ],
+      "review_frame_pts_seconds": [
+        0.0,
+        1.04925,
+        2.0485,
+        3.04775,
+        4.0470625,
+        5.0463125,
+        6.045625
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000032776",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000096730"
+      ]
+    },
+    {
+      "id": "bilibili-BV1T3RaBqE7c-s002",
+      "start_seconds": 7,
+      "end_seconds": 15,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "玻璃入口进入学生发展支持中心大厅",
+      "space_type": "indoor_reception",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "place_ids": [
+        "xianlin.library.new_entrance",
+        "xianlin.library.support_reception",
+        "xianlin.library.open_study"
+      ],
+      "observed_features": [
+        "玻璃双开门、曲线白色接待台",
+        "格栅/镂空背景、圆形吊灯、浅木色柱",
+        "入口右侧或后侧开放学习区、软座和绿植"
+      ],
+      "basis": "连续镜头跟随人物穿过玻璃门并转入大厅，没有把cut当门厅连接",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        9.0434375,
+        12.04125,
+        14.03975
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.library.new_entrance",
+          "to_place_id": "xianlin.library.support_reception",
+          "relation": "entered_through",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "连续穿门进入接待大厅"
+        },
+        {
+          "from_place_id": "xianlin.library.support_reception",
+          "to_place_id": "xianlin.library.open_study",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "大厅镜头连续向旁侧开放学习区移动"
+        }
+      ],
+      "uncertainties": [],
+      "reference_frame_pts_seconds": [
+        9.0434375,
+        12.04125,
+        14.03975
+      ],
+      "review_frame_pts_seconds": [
+        7.044875,
+        8.044125,
+        9.0434375,
+        10.0426875,
+        11.0419375,
+        12.04125,
+        13.0405,
+        14.03975
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000144695",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000192660",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000224636"
+      ]
+    },
+    {
+      "id": "bilibili-BV1T3RaBqE7c-s003",
+      "start_seconds": 15,
+      "end_seconds": 23.5,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "图书馆一楼开放自习位与过渡区",
+      "space_type": "indoor_study",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "place_ids": [
+        "xianlin.library.open_study",
+        "xianlin.library.study_threshold"
+      ],
+      "observed_features": [
+        "带分隔板的学习桌、插座",
+        "木格栅、浅色柱、低隔断绿植",
+        "开敞学习区外的过渡通道和候坐凳"
+      ],
+      "basis": "镜头连续沿自习位移动到门口过渡区，字幕称一楼多个自习座位",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        17.0375625,
+        20.0354375,
+        23.03325
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.library.open_study",
+          "to_place_id": "xianlin.library.study_threshold",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "学习桌旁开敞通道连续进入门口区域"
+        }
+      ],
+      "uncertainties": [
+        "柱网间距及家具尺寸不能从画面直接认作实测"
+      ],
+      "reference_frame_pts_seconds": [
+        17.0375625,
+        20.0354375,
+        23.03325
+      ],
+      "review_frame_pts_seconds": [
+        15.0390625,
+        16.0383125,
+        17.0375625,
+        18.036875,
+        19.036125,
+        20.0354375,
+        21.0346875,
+        22.0339375,
+        23.03325
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000272601",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000320567",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000368532"
+      ]
+    },
+    {
+      "id": "bilibili-BV1T3RaBqE7c-s004",
+      "start_seconds": 23.5,
+      "end_seconds": 35.5,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "米色双门房间门口可见，随后进入旁侧蓝绿墙长条自习区",
+      "space_type": "indoor_study",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "place_ids": [
+        "xianlin.library.study_threshold",
+        "xianlin.library.white_ceiling_room",
+        "xianlin.library.study_room"
+      ],
+      "observed_features": [
+        "25.03175秒从米色开启双门看到白色格栅吊顶房、书架和学习桌，未进入",
+        "镜头转向门旁宣传架/绿色墙后的长条学习区，两侧学习桌与中央通道",
+        "蓝绿墙成排照片、线形顶灯；另一端有木格栅开口",
+        "字幕提到一楼之外二楼也可自习，未将此旁白强制当画面楼层"
+      ],
+      "basis": "追加21–26秒原始PTS高分辨率图复核：没有明显硬切/登楼；米色双门白吊顶房与随后蓝绿学习区是不同空间。进入蓝绿区从木格栅开口，不是进入米色门。",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        24.0325,
+        25.03175,
+        26.0310625,
+        27.0303125,
+        30.028125,
+        34.02525
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.library.study_threshold",
+          "to_place_id": "xianlin.library.white_ceiling_room",
+          "relation": "visible_through_doorway",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "25.03175秒开启米色双门内可见自习桌；相机没有走入，不能声称室内通行或与蓝绿区相同。"
+        },
+        {
+          "from_place_id": "xianlin.library.study_threshold",
+          "to_place_id": "xianlin.library.study_room",
+          "relation": "entered_through",
+          "basis": "continuous_shot",
+          "confidence": 0.83,
+          "notes": "26–27秒连续转向并进入蓝绿墙区的木格栅开口；不是米色双门房间。"
+        }
+      ],
+      "uncertainties": [
+        "楼层未确认；画面字幕提二楼，但没有楼层牌或上楼画面，不能自动一楼/二楼",
+        "两个自习空间的正式名称、房号未知",
+        "没有发生从一楼到二楼的实拍转层关系"
+      ],
+      "reference_frame_pts_seconds": [
+        24.0325,
+        25.03175,
+        26.0310625,
+        27.0303125,
+        30.028125,
+        34.02525
+      ],
+      "review_frame_pts_seconds": [
+        24.0325,
+        25.03175,
+        26.0310625,
+        27.0303125,
+        28.0295625,
+        29.028875,
+        30.028125,
+        31.027375,
+        32.0266875,
+        33.0259375,
+        34.02525,
+        35.0245
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000384520",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000432485",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000480450",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000544404",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000400508",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000416497"
+      ]
+    },
+    {
+      "id": "bilibili-BV1T3RaBqE7c-s005",
+      "start_seconds": 35.5,
+      "end_seconds": 39.5,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "沿蓝绿墙自习区中央通道穿另一端木格栅开口，到金属候坐椅区",
+      "space_type": "indoor_lounge",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "place_ids": [
+        "xianlin.library.study_room",
+        "xianlin.library.study_exit",
+        "xianlin.library.lounge"
+      ],
+      "observed_features": [
+        "中央通道前方木格栅开口、矮书柜图案隔断",
+        "连续走出另一端后可见灰色长排金属候坐椅及相邻咖啡烘焙区"
+      ],
+      "basis": "35–39秒原始PTS大图显示向前穿另一端格栅开口，没有折返回原入口；两个端点保留不同ID。",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        36.02375,
+        38.0223125
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.library.study_room",
+          "to_place_id": "xianlin.library.study_exit",
+          "relation": "entered_through",
+          "basis": "continuous_shot",
+          "confidence": 0.85,
+          "notes": "35–37秒沿中央通道连续穿过远端木格栅开口，不是折返入口。"
+        },
+        {
+          "from_place_id": "xianlin.library.study_exit",
+          "to_place_id": "xianlin.library.lounge",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.85,
+          "notes": "出口外灰色金属候坐椅区及开敞地面连续可见。"
+        }
+      ],
+      "uncertainties": [
+        "该出口与入端不是同一点；与总体楼层平面的定位尚未完成",
+        "楼层未确认"
+      ],
+      "reference_frame_pts_seconds": [
+        36.02375,
+        38.0223125
+      ],
+      "review_frame_pts_seconds": [
+        36.02375,
+        37.0230625,
+        38.0223125,
+        38.5219375,
+        38.5719375,
+        38.621875,
+        38.6718125,
+        38.7218125,
+        38.77175,
+        38.82175,
+        38.8716875,
+        38.921625,
+        38.971625,
+        39.0215625,
+        39.0715625,
+        39.1215,
+        39.1714375,
+        39.2214375,
+        39.271375,
+        39.321375,
+        39.3713125,
+        39.4213125,
+        39.47125
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000576380",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000608357"
+      ]
+    },
+    {
+      "id": "bilibili-BV1T3RaBqE7c-s006",
+      "start_seconds": 39.5,
+      "end_seconds": 43.5,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "图书馆咖啡烘焙柜台及相邻通道（楼层未核实）",
+      "space_type": "indoor_service",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "place_ids": [
+        "xianlin.library.lounge",
+        "xianlin.library.refreshments"
+      ],
+      "observed_features": [
+        "瑞幸咖啡柜台、绿底烘焙柜台",
+        "公共通道、天窗/玻璃顶采光和浅色柱"
+      ],
+      "basis": "从候坐区连续摇摄到饮品柜台，品牌识别只保留为拍摄时态观测",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        40.020875,
+        41.020125,
+        43.0186875
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.library.lounge",
+          "to_place_id": "xianlin.library.refreshments",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "连续平移可见共享通道和两个柜台"
+        }
+      ],
+      "uncertainties": [],
+      "reference_frame_pts_seconds": [
+        40.020875,
+        41.020125,
+        43.0186875
+      ],
+      "review_frame_pts_seconds": [
+        39.5211875,
+        39.5711875,
+        39.621125,
+        39.671125,
+        39.7210625,
+        39.7710625,
+        39.821,
+        39.8709375,
+        39.9209375,
+        39.970875,
+        40.020875,
+        40.0708125,
+        40.12075,
+        40.17075,
+        40.2206875,
+        40.2706875,
+        40.320625,
+        40.370625,
+        40.4205625,
+        40.4705,
+        40.5205,
+        40.5704375,
+        40.6204375,
+        40.670375,
+        40.720375,
+        40.7703125,
+        40.82025,
+        40.87025,
+        40.9201875,
+        40.970125,
+        41.020125,
+        41.0700625,
+        41.1200625,
+        41.17,
+        41.22,
+        41.2699375,
+        41.319875,
+        41.369875,
+        41.4198125,
+        41.4698125,
+        41.51975,
+        41.56975,
+        41.6196875,
+        41.669625,
+        41.719625,
+        41.7695625,
+        41.8195625,
+        41.8695,
+        41.9194375,
+        41.9694375,
+        42.019375,
+        42.069375,
+        42.1193125,
+        42.1693125,
+        42.21925,
+        42.2691875,
+        42.3191875,
+        43.0186875,
+        43.118625,
+        43.1685625,
+        43.2185,
+        43.2685,
+        43.3184375,
+        43.3684375,
+        43.418375,
+        43.468375
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000640334",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000656322",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000688299"
+      ]
+    },
+    {
+      "id": "bilibili-BV1T3RaBqE7c-s007",
+      "start_seconds": 43.5,
+      "end_seconds": 45.766625,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "烘焙柜台、玻璃外门和窗边座位",
+      "space_type": "indoor_lounge",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "place_ids": [
+        "xianlin.library.refreshments",
+        "xianlin.library.window_seating"
+      ],
+      "observed_features": [
+        "绿色烘焙柜台、落地玻璃门、窗边桌椅",
+        "柜台到窗边座位之间通道"
+      ],
+      "basis": "同一连续镜头向玻璃门和座位方向转动；43秒原图确认柜台",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        44.0179375,
+        45.0171875
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.library.refreshments",
+          "to_place_id": "xianlin.library.window_seating",
+          "relation": "adjacent_open_space",
+          "basis": "continuous_shot",
+          "confidence": 0.85,
+          "notes": "柜台与玻璃外门/窗边桌椅之间开放地面连续可见；未将其与金属候坐椅合并。"
+        }
+      ],
+      "uncertainties": [
+        "这处玻璃外门是否就是片头入口或不同出口未知，不合并门ID"
+      ],
+      "reference_frame_pts_seconds": [
+        44.0179375,
+        45.0171875
+      ],
+      "review_frame_pts_seconds": [
+        43.5183125,
+        43.56825,
+        43.61825,
+        43.6681875,
+        43.718125,
+        43.768125,
+        43.8180625,
+        43.8680625,
+        43.918,
+        43.968,
+        44.0179375,
+        44.067875,
+        44.117875,
+        44.1678125,
+        44.2178125,
+        44.26775,
+        44.31775,
+        44.3676875,
+        44.417625,
+        44.467625,
+        44.5175625,
+        44.5675625,
+        44.6175,
+        44.6674375,
+        44.7174375,
+        44.767375,
+        44.817375,
+        44.8673125,
+        44.9173125,
+        44.96725,
+        45.0171875,
+        45.0671875,
+        45.117125,
+        45.167125,
+        45.2170625,
+        45.2670625,
+        45.317,
+        45.3669375,
+        45.4169375
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000704287",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000720275"
+      ]
+    }
+  ]
+}

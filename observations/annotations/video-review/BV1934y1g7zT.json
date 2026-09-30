@@ -1,0 +1,2340 @@
+{
+  "source_id": "bilibili-BV1934y1g7zT",
+  "source_sha256": "03ebb3c0661846cde41621431fdbb8ea3a1800aaf1ff94bb7619071d966d3a54",
+  "duration_seconds": 370.066,
+  "published_at": "2023-10-17T13:42:24+08:00",
+  "filming_date": null,
+  "temporal_basis": "发表日期是素材拍摄时间的上界，不是拍摄日期；未获得原始拍摄日期。2021–2023发表素材按本阶段要求排除于当前建模集。",
+  "review": {
+    "method": "人工查看全部按源PTS顺序排列的联系表页面，逐区段判读校区、可辨地标、室内外与年代适用性；仅对明确标识补查原分辨率和官网",
+    "sampling": {
+      "interval_seconds": 1.0,
+      "scene_threshold": 0.22,
+      "near_cut_seconds": 0.12,
+      "method": "Full sequential decode, source-PTS grid and scene-change union; second sequential pass for cut neighbours",
+      "limitations": "Threshold scene detection and sparse frames are review aids, not proof that all visual changes or places were identified"
+    },
+    "seen_sheet_pages": [
+      {
+        "path": "BV1934y1g7zT/sheet-001.jpg",
+        "first_frame_index": 0,
+        "last_frame_index": 63,
+        "start_pts_seconds": 0.0,
+        "end_pts_seconds": 44.0
+      },
+      {
+        "path": "BV1934y1g7zT/sheet-002.jpg",
+        "first_frame_index": 64,
+        "last_frame_index": 127,
+        "start_pts_seconds": 45.0,
+        "end_pts_seconds": 95.0
+      },
+      {
+        "path": "BV1934y1g7zT/sheet-003.jpg",
+        "first_frame_index": 128,
+        "last_frame_index": 191,
+        "start_pts_seconds": 96.0,
+        "end_pts_seconds": 144.0
+      },
+      {
+        "path": "BV1934y1g7zT/sheet-004.jpg",
+        "first_frame_index": 192,
+        "last_frame_index": 255,
+        "start_pts_seconds": 145.0,
+        "end_pts_seconds": 192.3
+      },
+      {
+        "path": "BV1934y1g7zT/sheet-005.jpg",
+        "first_frame_index": 256,
+        "last_frame_index": 319,
+        "start_pts_seconds": 192.333,
+        "end_pts_seconds": 244.0
+      },
+      {
+        "path": "BV1934y1g7zT/sheet-006.jpg",
+        "first_frame_index": 320,
+        "last_frame_index": 383,
+        "start_pts_seconds": 245.0,
+        "end_pts_seconds": 287.0
+      },
+      {
+        "path": "BV1934y1g7zT/sheet-007.jpg",
+        "first_frame_index": 384,
+        "last_frame_index": 447,
+        "start_pts_seconds": 288.0,
+        "end_pts_seconds": 351.0
+      },
+      {
+        "path": "BV1934y1g7zT/sheet-008.jpg",
+        "first_frame_index": 448,
+        "last_frame_index": 476,
+        "start_pts_seconds": 352.0,
+        "end_pts_seconds": 370.033
+      }
+    ],
+    "candidate_frames_seen": 477,
+    "seen_original_resolution_detail_frames": [],
+    "limitations": [
+      "全部候选帧已在联系表上看过，不等同于原视频每个30fps帧均经语义识别。1秒网格和切镜头邻帧仍可能漏掉阈值未检测到的短插入。",
+      "联系表缩略帧240×135，未能辨读的门牌、楼号和室内标识明确保留未知；没有使用自动语音转写。",
+      "时间段是语义地点区段，可能包含同一地点的多次剪辑；边界取人工判读的切点或网格附近时间，精度不能等同逐帧镜头标注。",
+      "没有做摄影测量、相机标定、尺度求解或实测，画面不能直接给出可靠三维尺寸或楼层高度。",
+      "剪辑前后相邻不证明地点空间相邻。空中的连续飞行仅支持可见地物共现与方位，不能单独证明地面道路可通行。",
+      "最后一个视频帧至容器结束的短尾部按最后画面类归类；音频尾长不提供额外视觉信息。",
+      "第三方视频和提取图片的公开再分发权利未确认，仍限本地审查。"
+    ],
+    "specific_limitations": [
+      "新体育馆和北侧用地施工状态明确不进入当前完成形态参照；后半快速多地剪辑不形成空间连接。"
+    ],
+    "full_frame_manual_review": false,
+    "final_manifest_sha256": "608c0a9af7838e51f41f4957dd904f99816bbb544001460a54bf3a42ed06b60b"
+  },
+  "segments": [
+    {
+      "start_seconds": 0.0,
+      "end_seconds": 5.067,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "品牌片头",
+      "place_ids": [],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "non_spatial",
+      "observed_connections": [],
+      "observed_features": [
+        "文字",
+        "动画"
+      ],
+      "basis": "没有校园空间。",
+      "confidence": 0.99,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。本段是标题、片尾、黑场或非场所特写，没有可配准空间信息。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s001",
+      "reference_frame_pts_seconds": [
+        0.0,
+        3.0,
+        4.967
+      ],
+      "review_frame_pts_seconds": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        4.967,
+        5.0,
+        5.033
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 5.067,
+      "end_seconds": 8.9,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林南门教学主轴",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s002"
+      ],
+      "asset_ids": [
+        "osm_way_1454085437"
+      ],
+      "map_feature_ids": [
+        "map-feature-c0c46fab7fac5ffdbae1"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "横梁",
+        "立柱",
+        "校名",
+        "主轴"
+      ],
+      "basis": "独特门头明确。",
+      "confidence": 0.97,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s002",
+      "reference_frame_pts_seconds": [
+        5.167,
+        7.0,
+        8.8
+      ],
+      "review_frame_pts_seconds": [
+        5.067,
+        5.1,
+        5.133,
+        5.167,
+        6.0,
+        7.0,
+        8.0,
+        8.8,
+        8.833,
+        8.867
+      ],
+      "map_object_ids": [
+        "osm_way_1454085437"
+      ]
+    },
+    {
+      "start_seconds": 8.9,
+      "end_seconds": 22.867,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "图书馆与草坪",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s003"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "图书馆",
+        "草坪",
+        "道路"
+      ],
+      "basis": "唯一地标明确。",
+      "confidence": 0.97,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s003",
+      "reference_frame_pts_seconds": [
+        9.0,
+        16.0,
+        22.767
+      ],
+      "review_frame_pts_seconds": [
+        8.9,
+        8.933,
+        8.967,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0,
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        22.767,
+        22.8,
+        22.833
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 22.867,
+      "end_seconds": 58.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "图书馆屋顶环視",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s004"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "屋顶",
+        "门廊",
+        "侧窗",
+        "草坪"
+      ],
+      "basis": "连续环视特征图书馆，能观察多侧历史形态。",
+      "confidence": 0.98,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "未标定相机/尺度，屋面设备是2023前状态。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s004",
+      "reference_frame_pts_seconds": [
+        23.0,
+        40.0,
+        57.9
+      ],
+      "review_frame_pts_seconds": [
+        22.867,
+        22.9,
+        22.933,
+        22.967,
+        23.0,
+        24.0,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        33.0,
+        34.0,
+        35.0,
+        36.0,
+        37.0,
+        38.0,
+        39.0,
+        40.0,
+        41.0,
+        42.0,
+        43.0,
+        44.0,
+        45.0,
+        46.0,
+        47.0,
+        48.0,
+        49.0,
+        50.0,
+        51.0,
+        52.0,
+        53.0,
+        54.0,
+        55.0,
+        56.0,
+        57.0,
+        57.9,
+        57.933,
+        57.967
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 58.0,
+      "end_seconds": 71.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "仙林主区总览",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s005"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "教学区",
+        "图书馆",
+        "学院区",
+        "草坪"
+      ],
+      "basis": "宏观组团布局明确。",
+      "confidence": 0.92,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s005",
+      "reference_frame_pts_seconds": [
+        58.1,
+        64.0,
+        70.0
+      ],
+      "review_frame_pts_seconds": [
+        58.0,
+        58.033,
+        58.067,
+        58.1,
+        59.0,
+        60.0,
+        61.0,
+        62.0,
+        63.0,
+        64.0,
+        65.0,
+        66.0,
+        67.0,
+        68.0,
+        69.0,
+        70.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 71.0,
+      "end_seconds": 83.733,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "战邮广场与南场",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s006",
+        "observed.BV1934y1g7zT.label.a9e7551bf766",
+        "observed.BV1934y1g7zT.label.457241a755b5"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [
+        {
+          "from_place_id": "observed.BV1934y1g7zT.label.a9e7551bf766",
+          "to_place_id": "observed.BV1934y1g7zT.label.457241a755b5",
+          "relation": "visible_spatial_relation",
+          "description": "同框相邻；地面通行未证明",
+          "basis": "continuous_shot",
+          "confidence": 0.96,
+          "notes": "仅局部视觉关系，未校准尺度；不是从剪辑相邻推出。"
+        }
+      ],
+      "observed_features": [
+        "五角星",
+        "矩形南场",
+        "山林"
+      ],
+      "basis": "独特星形与南场布局匹配。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_node_10899412245",
+          "display_name": "战邮广场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        },
+        {
+          "source_object_id": "osm_way_223859839",
+          "display_name": "南区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s006",
+      "reference_frame_pts_seconds": [
+        71.0,
+        77.0,
+        83.633
+      ],
+      "review_frame_pts_seconds": [
+        71.0,
+        72.0,
+        73.0,
+        74.0,
+        75.0,
+        76.0,
+        77.0,
+        78.0,
+        79.0,
+        80.0,
+        81.0,
+        82.0,
+        83.0,
+        83.633,
+        83.667,
+        83.7
+      ],
+      "map_object_ids": [
+        "osm_node_10899412245",
+        "osm_way_223859839"
+      ]
+    },
+    {
+      "start_seconds": 83.733,
+      "end_seconds": 112.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "战邮广场俯视环視",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s007"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "星形铺装",
+        "圆形台阶",
+        "纪念区",
+        "绿地"
+      ],
+      "basis": "独特几何明确。",
+      "confidence": 0.97,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "没有标定尺寸/高差，雕塑材质未测。"
+      ],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_node_10899412245",
+          "display_name": "战邮广场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s007",
+      "reference_frame_pts_seconds": [
+        83.833,
+        98.0,
+        111.0
+      ],
+      "review_frame_pts_seconds": [
+        83.733,
+        83.767,
+        83.8,
+        83.833,
+        84.0,
+        85.0,
+        86.0,
+        87.0,
+        88.0,
+        89.0,
+        90.0,
+        91.0,
+        92.0,
+        93.0,
+        94.0,
+        95.0,
+        96.0,
+        97.0,
+        98.0,
+        99.0,
+        100.0,
+        101.0,
+        102.0,
+        103.0,
+        104.0,
+        105.0,
+        106.0,
+        107.0,
+        108.0,
+        109.0,
+        110.0,
+        111.0
+      ],
+      "map_object_ids": [
+        "osm_node_10899412245"
+      ]
+    },
+    {
+      "start_seconds": 112.0,
+      "end_seconds": 117.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "校园全景过渡",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s008"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "学院区",
+        "体育区域",
+        "道路"
+      ],
+      "basis": "仙林组团明确。",
+      "confidence": 0.86,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s008",
+      "reference_frame_pts_seconds": [
+        112.0,
+        114.267,
+        116.0
+      ],
+      "review_frame_pts_seconds": [
+        112.0,
+        113.0,
+        114.0,
+        114.067,
+        114.1,
+        114.133,
+        114.167,
+        114.2,
+        114.233,
+        114.267,
+        115.0,
+        116.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 117.0,
+      "end_seconds": 135.767,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "文科楼区域",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s009"
+      ],
+      "asset_ids": [
+        "osm_way_1173057056"
+      ],
+      "map_feature_ids": [
+        "map-feature-c56aec79aa973967b065"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "米色长楼",
+        "红色中部门廊",
+        "院落"
+      ],
+      "basis": "与BV1S3411H7VX可读文科楼及地图轮廓跨片匹配。",
+      "confidence": 0.89,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "本片未读楼牌；身份是跨片形态/布局推断。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s009",
+      "reference_frame_pts_seconds": [
+        117.0,
+        126.0,
+        135.667
+      ],
+      "review_frame_pts_seconds": [
+        117.0,
+        118.0,
+        119.0,
+        120.0,
+        121.0,
+        122.0,
+        123.0,
+        124.0,
+        125.0,
+        126.0,
+        127.0,
+        128.0,
+        129.0,
+        130.0,
+        131.0,
+        132.0,
+        133.0,
+        134.0,
+        135.0,
+        135.667,
+        135.7,
+        135.733
+      ],
+      "map_object_ids": [
+        "osm_way_1173057056"
+      ]
+    },
+    {
+      "start_seconds": 135.767,
+      "end_seconds": 172.267,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "材料学院新楼",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s010"
+      ],
+      "asset_ids": [
+        "osm_way_1173059720"
+      ],
+      "map_feature_ids": [
+        "map-feature-b9659bf61142504b2823"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "红银墙面",
+        "方形中庭",
+        "入口",
+        "屋顶"
+      ],
+      "basis": "独特红银方形中庭与地图材料学院新楼及周围组团布局匹配。",
+      "confidence": 0.92,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "楼牌不清，身份依赖形态/地图布局；尺寸未测。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s010",
+      "reference_frame_pts_seconds": [
+        135.9,
+        154.0,
+        172.167
+      ],
+      "review_frame_pts_seconds": [
+        135.767,
+        135.8,
+        135.833,
+        135.867,
+        135.9,
+        136.0,
+        137.0,
+        138.0,
+        139.0,
+        140.0,
+        141.0,
+        142.0,
+        143.0,
+        144.0,
+        145.0,
+        146.0,
+        147.0,
+        148.0,
+        149.0,
+        150.0,
+        151.0,
+        152.0,
+        153.0,
+        154.0,
+        155.0,
+        156.0,
+        157.0,
+        158.0,
+        159.0,
+        160.0,
+        161.0,
+        162.0,
+        163.0,
+        164.0,
+        165.0,
+        166.0,
+        167.0,
+        168.0,
+        169.0,
+        170.0,
+        171.0,
+        172.0,
+        172.167,
+        172.2,
+        172.233
+      ],
+      "map_object_ids": [
+        "osm_way_1173059720"
+      ]
+    },
+    {
+      "start_seconds": 172.267,
+      "end_seconds": 174.8,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "北側全景过渡",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s011"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "道路",
+        "学院",
+        "体育场"
+      ],
+      "basis": "宏观校园形制明确。",
+      "confidence": 0.84,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s011",
+      "reference_frame_pts_seconds": [
+        172.367,
+        174.0,
+        174.7
+      ],
+      "review_frame_pts_seconds": [
+        172.267,
+        172.3,
+        172.333,
+        172.367,
+        173.0,
+        174.0,
+        174.7,
+        174.733,
+        174.767
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 174.8,
+      "end_seconds": 178.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "材料楼至运动区方向",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s012"
+      ],
+      "asset_ids": [
+        "osm_way_1173059720"
+      ],
+      "map_feature_ids": [
+        "map-feature-b9659bf61142504b2823"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "红银材料楼",
+        "绿地",
+        "北场远景"
+      ],
+      "basis": "独特建筑可辨，北部组团可见。",
+      "confidence": 0.89,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s012",
+      "reference_frame_pts_seconds": [
+        175.0,
+        176.0,
+        177.0
+      ],
+      "review_frame_pts_seconds": [
+        174.8,
+        174.833,
+        174.867,
+        174.9,
+        175.0,
+        176.0,
+        177.0
+      ],
+      "map_object_ids": [
+        "osm_way_1173059720"
+      ]
+    },
+    {
+      "start_seconds": 178.0,
+      "end_seconds": 192.367,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "北场看台与新体育馆",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s013",
+        "observed.BV1934y1g7zT.label.1acc69fca1e3",
+        "observed.BV1934y1g7zT.label.04dc2168b0de"
+      ],
+      "asset_ids": [
+        "osm_way_223859802",
+        "osm_way_1281082570"
+      ],
+      "map_feature_ids": [
+        "map-feature-650746df0a966446b8ac",
+        "map-feature-66e464a36e411b02c0c4"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [
+        {
+          "from_place_id": "observed.BV1934y1g7zT.label.1acc69fca1e3",
+          "to_place_id": "observed.BV1934y1g7zT.label.04dc2168b0de",
+          "relation": "visible_spatial_relation",
+          "description": "同框展示相邻场馆组团",
+          "basis": "continuous_shot",
+          "confidence": 0.97,
+          "notes": "仅局部视觉关系，未校准尺度；不是从剪辑相邻推出。"
+        }
+      ],
+      "observed_features": [
+        "跑道",
+        "大看台",
+        "新馆大屋面"
+      ],
+      "basis": "两体育地标独特明确。",
+      "confidence": 0.97,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_225104362",
+          "display_name": "北区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s013",
+      "reference_frame_pts_seconds": [
+        178.0,
+        185.0,
+        192.267
+      ],
+      "review_frame_pts_seconds": [
+        178.0,
+        179.0,
+        180.0,
+        181.0,
+        182.0,
+        183.0,
+        184.0,
+        185.0,
+        186.0,
+        187.0,
+        188.0,
+        189.0,
+        190.0,
+        191.0,
+        192.0,
+        192.267,
+        192.3,
+        192.333
+      ],
+      "map_object_ids": [
+        "osm_way_1281082570",
+        "osm_way_223859802",
+        "osm_way_225104362"
+      ]
+    },
+    {
+      "start_seconds": 192.367,
+      "end_seconds": 195.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "北侧宿舍短插入",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s014"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "宿舍排布",
+        "道路",
+        "屋顶"
+      ],
+      "basis": "宿舍组团可见，单栋不清。",
+      "confidence": 0.81,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "快剪不证明空间连接，栋号未知。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s014",
+      "reference_frame_pts_seconds": [
+        192.467,
+        194.0
+      ],
+      "review_frame_pts_seconds": [
+        192.367,
+        192.4,
+        192.433,
+        192.467,
+        193.0,
+        194.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 195.0,
+      "end_seconds": 230.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "北区运动场多角度",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s015"
+      ],
+      "asset_ids": [
+        "osm_way_223859802"
+      ],
+      "map_feature_ids": [
+        "map-feature-650746df0a966446b8ac"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "椭圆跑道",
+        "草坪",
+        "大看台",
+        "后侧停车"
+      ],
+      "basis": "独特北场明确，多角度历史外观可见。",
+      "confidence": 0.98,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "当前场地画线/停车/绿化另核验。"
+      ],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_225104362",
+          "display_name": "北区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s015",
+      "reference_frame_pts_seconds": [
+        195.0,
+        212.0,
+        229.0
+      ],
+      "review_frame_pts_seconds": [
+        195.0,
+        196.0,
+        197.0,
+        198.0,
+        199.0,
+        200.0,
+        201.0,
+        202.0,
+        203.0,
+        204.0,
+        205.0,
+        206.0,
+        207.0,
+        208.0,
+        209.0,
+        210.0,
+        211.0,
+        212.0,
+        213.0,
+        214.0,
+        215.0,
+        216.0,
+        217.0,
+        218.0,
+        219.0,
+        220.0,
+        221.0,
+        222.0,
+        223.0,
+        224.0,
+        225.0,
+        226.0,
+        227.0,
+        228.0,
+        229.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859802",
+        "osm_way_225104362"
+      ]
+    },
+    {
+      "start_seconds": 230.0,
+      "end_seconds": 231.767,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "北部场馆全景",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s016"
+      ],
+      "asset_ids": [
+        "osm_way_1281082570"
+      ],
+      "map_feature_ids": [
+        "map-feature-66e464a36e411b02c0c4"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "新馆",
+        "北场",
+        "远景"
+      ],
+      "basis": "体育组团宏观形制明确。",
+      "confidence": 0.86,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_225104362",
+          "display_name": "北区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s016",
+      "reference_frame_pts_seconds": [
+        230.0,
+        231.0,
+        231.667
+      ],
+      "review_frame_pts_seconds": [
+        230.0,
+        231.0,
+        231.667,
+        231.7,
+        231.733
+      ],
+      "map_object_ids": [
+        "osm_way_1281082570",
+        "osm_way_225104362"
+      ]
+    },
+    {
+      "start_seconds": 231.767,
+      "end_seconds": 245.2,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "新体育馆施工周边",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s017"
+      ],
+      "asset_ids": [
+        "osm_way_1281082570"
+      ],
+      "map_feature_ids": [
+        "map-feature-66e464a36e411b02c0c4"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "白银屋面",
+        "未完工场地",
+        "施工材料"
+      ],
+      "basis": "馆体明确，施工状态明显。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "施工地面/临时物不能进入当前完成模型。"
+      ],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_225104362",
+          "display_name": "北区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s017",
+      "reference_frame_pts_seconds": [
+        231.867,
+        238.0,
+        245.0
+      ],
+      "review_frame_pts_seconds": [
+        231.767,
+        231.8,
+        231.833,
+        231.867,
+        232.0,
+        233.0,
+        234.0,
+        235.0,
+        236.0,
+        237.0,
+        238.0,
+        239.0,
+        240.0,
+        241.0,
+        242.0,
+        243.0,
+        244.0,
+        245.0,
+        245.1,
+        245.133,
+        245.167
+      ],
+      "map_object_ids": [
+        "osm_way_1281082570",
+        "osm_way_225104362"
+      ]
+    },
+    {
+      "start_seconds": 245.2,
+      "end_seconds": 247.767,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "运动场看台停车后场",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s018"
+      ],
+      "asset_ids": [
+        "osm_way_223859802"
+      ],
+      "map_feature_ids": [
+        "map-feature-650746df0a966446b8ac"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "大看台屋顶",
+        "停车",
+        "跑道"
+      ],
+      "basis": "看台独特形制明确。",
+      "confidence": 0.95,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_225104362",
+          "display_name": "北区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s018",
+      "reference_frame_pts_seconds": [
+        245.3,
+        246.0,
+        247.0
+      ],
+      "review_frame_pts_seconds": [
+        245.2,
+        245.233,
+        245.267,
+        245.3,
+        246.0,
+        247.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859802",
+        "osm_way_225104362"
+      ]
+    },
+    {
+      "start_seconds": 247.767,
+      "end_seconds": 264.2,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "新体育馆近景环視施工场地",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s019"
+      ],
+      "asset_ids": [
+        "osm_way_1281082570"
+      ],
+      "map_feature_ids": [
+        "map-feature-66e464a36e411b02c0c4"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "银色屋面",
+        "側墙",
+        "入口",
+        "未完工地面"
+      ],
+      "basis": "馆体和施工背景明确。",
+      "confidence": 0.97,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "只支持历史结构观察，不是已完成外观参照。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s019",
+      "reference_frame_pts_seconds": [
+        248.0,
+        256.0,
+        264.0
+      ],
+      "review_frame_pts_seconds": [
+        248.0,
+        249.0,
+        250.0,
+        251.0,
+        252.0,
+        253.0,
+        254.0,
+        255.0,
+        256.0,
+        257.0,
+        258.0,
+        259.0,
+        260.0,
+        261.0,
+        262.0,
+        263.0,
+        264.0,
+        264.1,
+        264.133,
+        264.167
+      ],
+      "map_object_ids": [
+        "osm_way_1281082570"
+      ]
+    },
+    {
+      "start_seconds": 264.2,
+      "end_seconds": 269.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "新体育馆工地局部",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s020"
+      ],
+      "asset_ids": [
+        "osm_way_1281082570"
+      ],
+      "map_feature_ids": [
+        "map-feature-66e464a36e411b02c0c4"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "材料",
+        "未完工路面",
+        "側墙"
+      ],
+      "basis": "明确施工期。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "临时道路/材料不登记永久设施。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s020",
+      "reference_frame_pts_seconds": [
+        264.3,
+        267.0,
+        268.0
+      ],
+      "review_frame_pts_seconds": [
+        264.2,
+        264.233,
+        264.267,
+        264.3,
+        265.0,
+        266.0,
+        267.0,
+        268.0
+      ],
+      "map_object_ids": [
+        "osm_way_1281082570"
+      ]
+    },
+    {
+      "start_seconds": 269.0,
+      "end_seconds": 275.367,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "北侧宿舍组团",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s021"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "成排宿舍",
+        "道路",
+        "绿化"
+      ],
+      "basis": "仙林北宿舍宏观布局可辨。",
+      "confidence": 0.84,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "苑名栋号不猜。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s021",
+      "reference_frame_pts_seconds": [
+        269.0,
+        272.0,
+        275.267
+      ],
+      "review_frame_pts_seconds": [
+        269.0,
+        270.0,
+        271.0,
+        272.0,
+        273.0,
+        274.0,
+        275.0,
+        275.267,
+        275.3,
+        275.333
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 275.367,
+      "end_seconds": 280.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "南门正面推进",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s022"
+      ],
+      "asset_ids": [
+        "osm_way_1454085437"
+      ],
+      "map_feature_ids": [
+        "map-feature-c0c46fab7fac5ffdbae1"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "校名",
+        "横梁",
+        "旗杆",
+        "柱"
+      ],
+      "basis": "南门明确，是编辑切回南部。",
+      "confidence": 0.98,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "从北宿舍剪到南门不是连续路线。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s022",
+      "reference_frame_pts_seconds": [
+        275.467,
+        278.0,
+        279.0
+      ],
+      "review_frame_pts_seconds": [
+        275.367,
+        275.4,
+        275.433,
+        275.467,
+        276.0,
+        277.0,
+        278.0,
+        279.0
+      ],
+      "map_object_ids": [
+        "osm_way_1454085437"
+      ]
+    },
+    {
+      "start_seconds": 280.0,
+      "end_seconds": 288.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "南门内教学屋顶",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s023"
+      ],
+      "asset_ids": [
+        "osm_way_1454085437",
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-c0c46fab7fac5ffdbae1",
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "门背",
+        "教学内院",
+        "主轴",
+        "圆楼"
+      ],
+      "basis": "地标组团可辨。",
+      "confidence": 0.94,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s023",
+      "reference_frame_pts_seconds": [
+        280.0,
+        284.0,
+        287.0
+      ],
+      "review_frame_pts_seconds": [
+        280.0,
+        281.0,
+        282.0,
+        283.0,
+        284.0,
+        285.0,
+        286.0,
+        287.0
+      ],
+      "map_object_ids": [
+        "osm_way_1454085437",
+        "osm_way_224950590"
+      ]
+    },
+    {
+      "start_seconds": 288.0,
+      "end_seconds": 293.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "材料楼/体育馆快速组镜",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s024"
+      ],
+      "asset_ids": [
+        "osm_way_1173059720",
+        "osm_way_1281082570"
+      ],
+      "map_feature_ids": [
+        "map-feature-b9659bf61142504b2823",
+        "map-feature-66e464a36e411b02c0c4"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "红银材料楼",
+        "体育馆屋面",
+        "快速转场"
+      ],
+      "basis": "已辨建筑多次插入，不构成连续路径。",
+      "confidence": 0.87,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "转场不是空间关系和尺度信息。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s024",
+      "reference_frame_pts_seconds": [
+        288.0,
+        290.0,
+        292.0
+      ],
+      "review_frame_pts_seconds": [
+        288.0,
+        289.0,
+        290.0,
+        291.0,
+        292.0
+      ],
+      "map_object_ids": [
+        "osm_way_1173059720",
+        "osm_way_1281082570"
+      ]
+    },
+    {
+      "start_seconds": 293.0,
+      "end_seconds": 298.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "宿舍与裸地施工",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s025"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "宿舍",
+        "裸地",
+        "施工地块"
+      ],
+      "basis": "历史未完成状态明确。",
+      "confidence": 0.85,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "裸地后续可能建成，不能据此保持当前地图空地。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s025",
+      "reference_frame_pts_seconds": [
+        293.0,
+        295.0,
+        297.0
+      ],
+      "review_frame_pts_seconds": [
+        293.0,
+        294.0,
+        295.0,
+        296.0,
+        297.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 298.0,
+      "end_seconds": 303.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "既有院系组团",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s026"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "米色红色院系楼",
+        "院落"
+      ],
+      "basis": "学院区形制明确，具体楼未知。",
+      "confidence": 0.84,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "学院名称未确认。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s026",
+      "reference_frame_pts_seconds": [
+        298.0,
+        300.0,
+        302.0
+      ],
+      "review_frame_pts_seconds": [
+        298.0,
+        299.0,
+        300.0,
+        301.0,
+        302.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 303.0,
+      "end_seconds": 308.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "材料新楼及周边学院",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s027"
+      ],
+      "asset_ids": [
+        "osm_way_1173059720"
+      ],
+      "map_feature_ids": [
+        "map-feature-b9659bf61142504b2823"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "红银中庭楼",
+        "学院",
+        "草坪"
+      ],
+      "basis": "材料楼体量明确，其余不猜。",
+      "confidence": 0.91,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s027",
+      "reference_frame_pts_seconds": [
+        303.0,
+        305.0,
+        307.0
+      ],
+      "review_frame_pts_seconds": [
+        303.0,
+        304.0,
+        305.0,
+        306.0,
+        307.0
+      ],
+      "map_object_ids": [
+        "osm_way_1173059720"
+      ]
+    },
+    {
+      "start_seconds": 308.0,
+      "end_seconds": 313.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "青春剧场和活动中心组团",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s028"
+      ],
+      "asset_ids": [
+        "osm_way_223944205",
+        "osm_way_223944209"
+      ],
+      "map_feature_ids": [
+        "map-feature-433b548aeb426d69c991",
+        "map-feature-0074058d3d7e5c4ddef9"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "弧形剧场屋顶",
+        "长体量活动楼",
+        "广场"
+      ],
+      "basis": "与地图两个场馆相邻布局与轮廓匹配。",
+      "confidence": 0.86,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "组团身份匹配；入口/内部舞台未可见。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s028",
+      "reference_frame_pts_seconds": [
+        308.0,
+        310.0,
+        312.0
+      ],
+      "review_frame_pts_seconds": [
+        308.0,
+        309.0,
+        310.0,
+        311.0,
+        312.0
+      ],
+      "map_object_ids": [
+        "osm_way_223944205",
+        "osm_way_223944209"
+      ]
+    },
+    {
+      "start_seconds": 313.0,
+      "end_seconds": 318.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "北侧既有宿舍排布",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s029"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "平行宿舍",
+        "路",
+        "树冠"
+      ],
+      "basis": "组团可辨，楼号不清。",
+      "confidence": 0.83,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "不从窗格猜寝室。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s029",
+      "reference_frame_pts_seconds": [
+        313.0,
+        315.0,
+        317.0
+      ],
+      "review_frame_pts_seconds": [
+        313.0,
+        314.0,
+        315.0,
+        316.0,
+        317.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 318.0,
+      "end_seconds": 323.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "图书馆草坪",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s030"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "图书馆",
+        "大草坪"
+      ],
+      "basis": "特征明确。",
+      "confidence": 0.97,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s030",
+      "reference_frame_pts_seconds": [
+        318.0,
+        320.0,
+        322.0
+      ],
+      "review_frame_pts_seconds": [
+        318.0,
+        319.0,
+        320.0,
+        321.0,
+        322.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 323.0,
+      "end_seconds": 328.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "战邮广场",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s031"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "星形铺装",
+        "圆台阶",
+        "绿地"
+      ],
+      "basis": "独特形态明确。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_node_10899412245",
+          "display_name": "战邮广场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s031",
+      "reference_frame_pts_seconds": [
+        323.0,
+        325.0,
+        327.0
+      ],
+      "review_frame_pts_seconds": [
+        323.0,
+        324.0,
+        325.0,
+        326.0,
+        327.0
+      ],
+      "map_object_ids": [
+        "osm_node_10899412245"
+      ]
+    },
+    {
+      "start_seconds": 328.0,
+      "end_seconds": 333.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "教学区远景",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s032"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "内院",
+        "主轴",
+        "教学楼"
+      ],
+      "basis": "主区形制明确。",
+      "confidence": 0.89,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "单栋编号未读。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s032",
+      "reference_frame_pts_seconds": [
+        328.0,
+        330.0,
+        332.0
+      ],
+      "review_frame_pts_seconds": [
+        328.0,
+        329.0,
+        330.0,
+        331.0,
+        332.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 333.0,
+      "end_seconds": 338.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "图书馆远处屋顶",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s033"
+      ],
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "屋顶",
+        "草坪",
+        "教学后景"
+      ],
+      "basis": "独特图书馆可辨。",
+      "confidence": 0.95,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s033",
+      "reference_frame_pts_seconds": [
+        333.0,
+        335.0,
+        337.0
+      ],
+      "review_frame_pts_seconds": [
+        333.0,
+        334.0,
+        335.0,
+        336.0,
+        337.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ]
+    },
+    {
+      "start_seconds": 338.0,
+      "end_seconds": 343.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "教学主轴",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s034"
+      ],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "主轴",
+        "楼群",
+        "树带"
+      ],
+      "basis": "教学宏观形制明确。",
+      "confidence": 0.89,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s034",
+      "reference_frame_pts_seconds": [
+        338.0,
+        340.0,
+        342.0
+      ],
+      "review_frame_pts_seconds": [
+        338.0,
+        339.0,
+        340.0,
+        341.0,
+        342.0
+      ],
+      "map_object_ids": []
+    },
+    {
+      "start_seconds": 343.0,
+      "end_seconds": 348.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "圆楼与中博湖",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s035"
+      ],
+      "asset_ids": [
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "圆楼",
+        "湖面",
+        "湖岸"
+      ],
+      "basis": "地标组合唯一。",
+      "confidence": 0.98,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_223859823",
+          "display_name": "中博湖",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s035",
+      "reference_frame_pts_seconds": [
+        343.0,
+        345.0,
+        347.0
+      ],
+      "review_frame_pts_seconds": [
+        343.0,
+        344.0,
+        345.0,
+        346.0,
+        347.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859823",
+        "osm_way_224950590"
+      ]
+    },
+    {
+      "start_seconds": 348.0,
+      "end_seconds": 353.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "北区运动场正向远景",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s036"
+      ],
+      "asset_ids": [
+        "osm_way_223859802"
+      ],
+      "map_feature_ids": [
+        "map-feature-650746df0a966446b8ac"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "跑道",
+        "看台",
+        "足球场"
+      ],
+      "basis": "北场形制明确。",
+      "confidence": 0.97,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_225104362",
+          "display_name": "北区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s036",
+      "reference_frame_pts_seconds": [
+        348.0,
+        350.0,
+        352.0
+      ],
+      "review_frame_pts_seconds": [
+        348.0,
+        349.0,
+        350.0,
+        351.0,
+        352.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859802",
+        "osm_way_225104362"
+      ]
+    },
+    {
+      "start_seconds": 353.0,
+      "end_seconds": 358.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "新体育馆屋顶和施工地",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s037"
+      ],
+      "asset_ids": [
+        "osm_way_1281082570"
+      ],
+      "map_feature_ids": [
+        "map-feature-66e464a36e411b02c0c4"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "大屋面",
+        "裸地",
+        "施工"
+      ],
+      "basis": "历史施工背景明确。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "排除未完工场地当前有效性。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s037",
+      "reference_frame_pts_seconds": [
+        353.0,
+        355.0,
+        357.0
+      ],
+      "review_frame_pts_seconds": [
+        353.0,
+        354.0,
+        355.0,
+        356.0,
+        357.0
+      ],
+      "map_object_ids": [
+        "osm_way_1281082570"
+      ]
+    },
+    {
+      "start_seconds": 358.0,
+      "end_seconds": 363.0,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "运动场看台侧景",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s038"
+      ],
+      "asset_ids": [
+        "osm_way_223859802"
+      ],
+      "map_feature_ids": [
+        "map-feature-650746df0a966446b8ac"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "看台顶",
+        "北场",
+        "停车"
+      ],
+      "basis": "独特看台明确。",
+      "confidence": 0.96,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [],
+      "unresolved_map_bindings": [
+        {
+          "source_object_id": "osm_way_225104362",
+          "display_name": "北区足球场",
+          "reason": "canonical map record currently has no map_feature_id; no replacement ID invented"
+        }
+      ],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s038",
+      "reference_frame_pts_seconds": [
+        358.0,
+        360.0,
+        362.0
+      ],
+      "review_frame_pts_seconds": [
+        358.0,
+        359.0,
+        360.0,
+        361.0,
+        362.0
+      ],
+      "map_object_ids": [
+        "osm_way_223859802",
+        "osm_way_225104362"
+      ]
+    },
+    {
+      "start_seconds": 363.0,
+      "end_seconds": 367.833,
+      "campus": "xianlin",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "新馆屋面与未完工侧区",
+      "place_ids": [
+        "observed.BV1934y1g7zT.s039"
+      ],
+      "asset_ids": [
+        "osm_way_1281082570"
+      ],
+      "map_feature_ids": [
+        "map-feature-66e464a36e411b02c0c4"
+      ],
+      "space_type": "outdoor",
+      "observed_connections": [],
+      "observed_features": [
+        "新馆顶",
+        "側墙入口",
+        "施工地面",
+        "材料"
+      ],
+      "basis": "馆体/施工状态都清楚。",
+      "confidence": 0.97,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "需2026观测确认完成外观。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s039",
+      "reference_frame_pts_seconds": [
+        363.0,
+        365.0,
+        367.733
+      ],
+      "review_frame_pts_seconds": [
+        363.0,
+        364.0,
+        365.0,
+        366.0,
+        367.0,
+        367.733,
+        367.767,
+        367.8
+      ],
+      "map_object_ids": [
+        "osm_way_1281082570"
+      ]
+    },
+    {
+      "start_seconds": 367.833,
+      "end_seconds": 370.066,
+      "campus": "unknown",
+      "status": "excluded",
+      "eligibility": "excluded_historical",
+      "place_label": "片尾标题",
+      "place_ids": [],
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "space_type": "non_spatial",
+      "observed_connections": [],
+      "observed_features": [
+        "署名",
+        "片尾图形"
+      ],
+      "basis": "没有新增空间。",
+      "confidence": 0.99,
+      "exclusion_reason": "2021–2023发表的历史素材按本阶段要求排除，不能据此声称当前2026外观或室内状态。本段是标题、片尾、黑场或非场所特写，没有可配准空间信息。",
+      "selected_frame_pts_seconds": [],
+      "uncertainties": [
+        "该段无可读校区标识或唯一地标；不根据视频标题或前后剪辑猜测校区。"
+      ],
+      "unresolved_map_bindings": [],
+      "current_state_status": "historical_excluded",
+      "id": "bilibili-BV1934y1g7zT-s040",
+      "reference_frame_pts_seconds": [
+        368.0,
+        369.0,
+        369.933
+      ],
+      "review_frame_pts_seconds": [
+        367.833,
+        367.867,
+        367.9,
+        367.933,
+        368.0,
+        369.0,
+        369.933,
+        369.967,
+        370.0,
+        370.033
+      ],
+      "map_object_ids": []
+    }
+  ],
+  "validation": {
+    "continuous_timeline": true,
+    "source_hash_matches_catalog": true,
+    "references_validated_against_current_map_and_asset_catalog": true,
+    "formal_place_registration": "not performed in this build review; empty place_ids and observed_connections are intentional"
+  },
+  "schema_version": 1,
+  "target_state": "2026-09-30"
+}

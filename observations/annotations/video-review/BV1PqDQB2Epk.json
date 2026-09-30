@@ -1,0 +1,1550 @@
+{
+  "schema_version": 1,
+  "source_id": "bilibili-BV1PqDQB2Epk",
+  "source_sha256": "842fa3b781830cc1590b89e567232a6f1826113a9db81d623dfedddb82deb7c9",
+  "duration_seconds": 164.2,
+  "target_state": "2026-09-30",
+  "review": {
+    "method": "完整时长1秒格点、阈值场景变化及邻帧的全部contact sheets逐页视觉审查；重要招牌与构造追加原分辨率复核。",
+    "sampling_seconds": 1,
+    "scene_threshold": 0.22,
+    "seen_sheet_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "sampled_frames_reviewed": 400,
+    "full_frame_manual_review": false,
+    "semantic_boundary_precision": "明确硬切采用源PTS；连续拍摄的地点变化按语义分段，通常约1秒精度；阈值cut中大量快速摇摄误报未当真实转场。",
+    "limitations": [
+      "不是逐视频全部原始帧的人工审查；1秒网格和cut邻帧覆盖全时长。",
+      "未进行相机标定、三维重建或像素到地图的几何配准。",
+      "accepted仅表示当前候选观测，发表时间不是拍摄时间，几何尺寸尚未实测。"
+    ],
+    "full_resolution_detail_times_seconds": [
+      8,
+      86,
+      137,
+      148,
+      153,
+      160
+    ],
+    "final_manifest_sha256": "0006424a427be69a05ed954613f45693c4cfc8322729d73a75cecd7286e3d4c7"
+  },
+  "temporal_assessment": {
+    "published_at": "2026-04-12T16:35:03+08:00",
+    "capture_time": "unknown",
+    "latest_possible_capture_time": "2026-04-12T16:35:03+08:00",
+    "current_validity": "candidate_requires_component_level_verification"
+  },
+  "segments": [
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s001",
+      "start_seconds": 0.0,
+      "end_seconds": 2.0,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "仙林校园道路片头，具体路口未定位",
+      "space_type": "outdoor_road",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s001"
+      ],
+      "observed_features": [
+        "林荫道路、斑马线、相交支路"
+      ],
+      "basis": "片头航拍，无足够上下文唯一定位路口",
+      "confidence": 0.6,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [
+        "具体道路未知"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        1.0
+      ],
+      "review_frame_pts_seconds": [
+        0.0,
+        0.033,
+        0.067,
+        0.1,
+        0.133,
+        0.167,
+        0.2,
+        1.0,
+        1.233,
+        1.267,
+        1.3,
+        1.333,
+        1.367,
+        1.4,
+        1.433,
+        1.9,
+        1.933,
+        1.967
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s002",
+      "start_seconds": 2.0,
+      "end_seconds": 19.8,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+      "space_type": "outdoor_entrance",
+      "asset_ids": [
+        "osm_way_1454085437",
+        "osm_way_224938858",
+        "osm_way_224938894",
+        "osm_way_223699451",
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-5d691c59864f954a13e9",
+        "map-feature-b4588aad94959c7ab88f",
+        "map-feature-c0c46fab7fac5ffdbae1",
+        "map-feature-dcac9df84777f251049f",
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "place_ids": [
+        "xianlin.south_gate.forecourt",
+        "xianlin.dingxin_avenue.south"
+      ],
+      "observed_features": [
+        "低矮校名门头和水景与后方高门廊为不同构件",
+        "两座门卫房；两侧车道及中间人行/自行车通道",
+        "教1矩形教学楼；圆楼曲面玻璃立面；后方跨路门廊",
+        "鼎新大道从门内延伸至校园纵向主轴"
+      ],
+      "basis": "同镜头航拍连续推进；可读南门/教学区/圆楼字幕并与地图形态交叉核对",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        8.0,
+        15.0,
+        19.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.south_gate.forecourt",
+          "to_place_id": "xianlin.dingxin_avenue.south",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "画面内连续道路与人行铺装可见，通行管理状态未确认"
+        }
+      ],
+      "uncertainties": [
+        "门牌水景没有单独GeoPackage建筑ID，不能误用高门廊ID作为门头位置",
+        "航拍拍摄时间未知"
+      ],
+      "map_object_ids": [
+        "osm_way_1454085437",
+        "osm_way_223699451",
+        "osm_way_224938858",
+        "osm_way_224938894",
+        "osm_way_224950590"
+      ],
+      "reference_frame_pts_seconds": [
+        8.0,
+        15.0,
+        19.0
+      ],
+      "review_frame_pts_seconds": [
+        2.0,
+        2.033,
+        2.067,
+        2.1,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0,
+        18.0,
+        19.0,
+        19.7,
+        19.733,
+        19.767
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000304000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s003",
+      "start_seconds": 19.8,
+      "end_seconds": 32.7,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "校园南部道路/教学区/行政楼地图插图",
+      "space_type": "map_insert",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s003"
+      ],
+      "observed_features": [
+        "导览地图标记道路、出入口和服务设施"
+      ],
+      "basis": "视频插入的发布地图，不是实景；底图年代/许可/比例精度均不明",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [
+        "不能直接写入当前空间几何",
+        "标注导览信息待与当前工程交叉核验"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        23.0,
+        29.0
+      ],
+      "review_frame_pts_seconds": [
+        19.8,
+        19.833,
+        19.867,
+        19.9,
+        19.933,
+        19.967,
+        20.0,
+        20.033,
+        20.067,
+        20.1,
+        20.133,
+        20.167,
+        20.2,
+        20.233,
+        20.267,
+        20.3,
+        20.333,
+        20.367,
+        20.4,
+        20.433,
+        20.467,
+        20.5,
+        20.533,
+        20.567,
+        20.6,
+        20.633,
+        21.0,
+        22.0,
+        22.1,
+        22.133,
+        22.167,
+        22.2,
+        22.233,
+        22.267,
+        22.3,
+        23.0,
+        24.0,
+        24.1,
+        24.133,
+        24.167,
+        24.2,
+        24.233,
+        24.267,
+        24.3,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        29.033,
+        29.067,
+        29.1,
+        29.133,
+        29.167,
+        29.2,
+        29.233,
+        29.267,
+        29.3,
+        29.333,
+        29.367,
+        29.4,
+        29.433,
+        29.467,
+        29.5,
+        29.533,
+        29.567,
+        29.6,
+        29.633,
+        29.667,
+        29.7,
+        29.733,
+        29.767,
+        29.8,
+        30.0,
+        31.0,
+        32.0,
+        32.6,
+        32.633,
+        32.667
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s004",
+      "start_seconds": 32.7,
+      "end_seconds": 40.2,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "教1至教5与鼎新大道的斜向航拍",
+      "space_type": "outdoor_aerial",
+      "asset_ids": [
+        "osm_way_223699451",
+        "osm_way_223699456",
+        "osm_way_155434036",
+        "osm_way_223699452",
+        "osm_way_223699454"
+      ],
+      "map_feature_ids": [
+        "map-feature-249122c09b02c295b06c",
+        "map-feature-2d5449f0be4d933ec523",
+        "map-feature-5545b5b75d4497faa106",
+        "map-feature-5d691c59864f954a13e9",
+        "map-feature-7d9e7021cfc3bc8fcc95"
+      ],
+      "place_ids": [
+        "xianlin.dingxin_avenue.teaching"
+      ],
+      "observed_features": [
+        "教学楼沿主轴排列、矩形庭院和屋顶体块",
+        "教学楼名称字幕可读"
+      ],
+      "basis": "同一航拍视野中多栋教学楼，字幕与现有地图顺序吻合",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        36.0,
+        39.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "只能证明可见相邻/排列，未证明所有庭院通行"
+      ],
+      "map_object_ids": [
+        "osm_way_155434036",
+        "osm_way_223699451",
+        "osm_way_223699452",
+        "osm_way_223699454",
+        "osm_way_223699456"
+      ],
+      "reference_frame_pts_seconds": [
+        36.0,
+        39.0
+      ],
+      "review_frame_pts_seconds": [
+        32.7,
+        32.733,
+        32.767,
+        32.8,
+        33.0,
+        34.0,
+        35.0,
+        36.0,
+        37.0,
+        38.0,
+        39.0,
+        40.0,
+        40.1,
+        40.133,
+        40.167
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000624000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s005",
+      "start_seconds": 40.2,
+      "end_seconds": 42.633,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "教2侧鼎新大道及远景教学楼",
+      "space_type": "outdoor_road",
+      "asset_ids": [
+        "osm_way_223699456",
+        "osm_way_155434036",
+        "osm_way_223699452"
+      ],
+      "map_feature_ids": [
+        "map-feature-2d5449f0be4d933ec523",
+        "map-feature-5545b5b75d4497faa106",
+        "map-feature-7d9e7021cfc3bc8fcc95"
+      ],
+      "place_ids": [
+        "xianlin.dingxin_avenue.teaching"
+      ],
+      "observed_features": [
+        "连续主干道、沿路行道树、交叉道路和教2侧立面"
+      ],
+      "basis": "标注教2、教3、教4、鼎新大道，真实连续道路可见",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        41.0,
+        42.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_155434036",
+        "osm_way_223699452",
+        "osm_way_223699456"
+      ],
+      "reference_frame_pts_seconds": [
+        41.0,
+        42.0
+      ],
+      "review_frame_pts_seconds": [
+        40.2,
+        40.233,
+        40.267,
+        40.3,
+        41.0,
+        42.0,
+        42.533,
+        42.567,
+        42.6
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000656000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000672000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s006",
+      "start_seconds": 42.633,
+      "end_seconds": 52.6,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "教学区东侧至南一食堂侧的绿地穿行小径",
+      "space_type": "outdoor_footpath",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.teaching_east.shortcut",
+        "xianlin.dining1.approach"
+      ],
+      "observed_features": [
+        "弯曲浅色步道穿过林地连接两侧道路",
+        "一侧字幕教学楼区域，另一侧南一食堂"
+      ],
+      "basis": "单段俯拍能看到小径两端连接道路；字幕帮助区域识别",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        46.0,
+        51.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.teaching_east.shortcut",
+          "to_place_id": "xianlin.dining1.approach",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "可见实际步道到食堂侧道路，未进入建筑"
+        }
+      ],
+      "uncertainties": [
+        "南一食堂有3个模型ID，本片未显示足够建筑形态指定单体"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        46.0,
+        51.0
+      ],
+      "review_frame_pts_seconds": [
+        42.633,
+        42.667,
+        42.7,
+        42.733,
+        43.0,
+        44.0,
+        45.0,
+        46.0,
+        47.0,
+        48.0,
+        49.0,
+        50.0,
+        51.0,
+        52.0,
+        52.5,
+        52.533,
+        52.567
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000736000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000816000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s007",
+      "start_seconds": 52.6,
+      "end_seconds": 60.733,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "南门—圆楼—中博湖地图插图",
+      "space_type": "map_insert",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s007"
+      ],
+      "observed_features": [],
+      "basis": "导览地图插图，图示箭头不能替代实景通路核验",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        55.0,
+        59.0
+      ],
+      "review_frame_pts_seconds": [
+        52.6,
+        52.633,
+        52.667,
+        52.7,
+        53.0,
+        54.0,
+        55.0,
+        56.0,
+        57.0,
+        58.0,
+        59.0,
+        60.0,
+        60.633,
+        60.667,
+        60.7
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s008",
+      "start_seconds": 60.733,
+      "end_seconds": 66.167,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "圆楼与中博湖全景",
+      "space_type": "outdoor_aerial",
+      "asset_ids": [
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "place_ids": [
+        "xianlin.round_hall.lake_road"
+      ],
+      "observed_features": [
+        "圆形玻璃体块、顶层红色檐带",
+        "圆楼位于湖边道路和铺装前场侧"
+      ],
+      "basis": "实景圆楼轮廓与地图唯一匹配，字幕圆楼和中博湖",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        63.0,
+        65.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_224950590"
+      ],
+      "reference_frame_pts_seconds": [
+        63.0,
+        65.0
+      ],
+      "review_frame_pts_seconds": [
+        60.733,
+        60.767,
+        60.8,
+        60.833,
+        61.0,
+        62.0,
+        63.0,
+        64.0,
+        65.0,
+        66.0,
+        66.067,
+        66.1,
+        66.133
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001008000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001040000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s009",
+      "start_seconds": 66.167,
+      "end_seconds": 72.0,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "圆楼沿湖路、中博湖桥与相交路口",
+      "space_type": "outdoor_road",
+      "asset_ids": [
+        "osm_way_224950590"
+      ],
+      "map_feature_ids": [
+        "map-feature-dd9300c159622a9d089e"
+      ],
+      "place_ids": [
+        "xianlin.round_hall.lake_road",
+        "xianlin.zhongbo_lake.bridge"
+      ],
+      "observed_features": [
+        "桥面连接沿湖道路路口",
+        "圆楼玻璃曲面、湖岸和沿湖停车"
+      ],
+      "basis": "连续俯拍可见桥与道路节点在同一视野接合",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        68.0,
+        70.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.round_hall.lake_road",
+          "to_place_id": "xianlin.zhongbo_lake.bridge",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "路口与桥接合实景可见；不是依据地图箭头"
+        }
+      ],
+      "uncertainties": [],
+      "map_object_ids": [
+        "osm_way_224950590"
+      ],
+      "reference_frame_pts_seconds": [
+        68.0,
+        70.0
+      ],
+      "review_frame_pts_seconds": [
+        66.167,
+        66.2,
+        66.233,
+        66.267,
+        67.0,
+        68.0,
+        69.0,
+        70.0,
+        71.0,
+        71.9,
+        71.933,
+        71.967
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001088000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001120000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s010",
+      "start_seconds": 72.0,
+      "end_seconds": 76.433,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "中博湖桥和圆楼地图插图",
+      "space_type": "map_insert",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s010"
+      ],
+      "observed_features": [],
+      "basis": "地图截屏，现状日期未确定",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        74.0
+      ],
+      "review_frame_pts_seconds": [
+        72.0,
+        72.033,
+        72.067,
+        72.1,
+        73.0,
+        74.0,
+        75.0,
+        76.0,
+        76.333,
+        76.367,
+        76.4
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s011",
+      "start_seconds": 76.433,
+      "end_seconds": 83.933,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "东南宿舍苑、南一食堂与教学区关系全景",
+      "space_type": "outdoor_aerial",
+      "asset_ids": [
+        "osm_way_223859810"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450"
+      ],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s011"
+      ],
+      "observed_features": [
+        "南一食堂、梅苑、兰苑、竹苑和菊苑为画面字幕的区域名称",
+        "宿舍沿东侧道路排列，教学区在相对另一侧"
+      ],
+      "basis": "多区连续航拍全景，地图整体形态吻合；苑名为作者标注",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        80.0,
+        82.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "苑是组团，未将组团标签猜配到每栋宿舍ID"
+      ],
+      "map_object_ids": [
+        "osm_way_223859810"
+      ],
+      "reference_frame_pts_seconds": [
+        80.0,
+        82.0
+      ],
+      "review_frame_pts_seconds": [
+        76.433,
+        76.467,
+        76.5,
+        76.533,
+        77.0,
+        78.0,
+        79.0,
+        80.0,
+        81.0,
+        82.0,
+        83.0,
+        83.833,
+        83.867,
+        83.9
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001280000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001312000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s012",
+      "start_seconds": 83.933,
+      "end_seconds": 88.8,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "图书馆与二食堂之间十字路口及兰苑方向",
+      "space_type": "outdoor_road",
+      "asset_ids": [
+        "osm_way_223859810",
+        "osm_way_223859784"
+      ],
+      "map_feature_ids": [
+        "map-feature-7259862f1bce66ca6450",
+        "map-feature-aee2202d3ffe84bd2faf"
+      ],
+      "place_ids": [
+        "xianlin.library_dining2.junction",
+        "xianlin.library.forecourt"
+      ],
+      "observed_features": [
+        "图书馆一侧长窗立面、食堂侧建筑",
+        "四向斑马线、支路接合和校园道路"
+      ],
+      "basis": "单段航拍连续移动展示十字路口，图书馆和二食堂标注与地图吻合",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        86.0,
+        88.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.library_dining2.junction",
+          "to_place_id": "xianlin.library.forecourt",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "道路与图书馆前场步道相接可见"
+        }
+      ],
+      "uncertainties": [
+        "宿舍单体未定位"
+      ],
+      "map_object_ids": [
+        "osm_way_223859784",
+        "osm_way_223859810"
+      ],
+      "reference_frame_pts_seconds": [
+        86.0,
+        88.0
+      ],
+      "review_frame_pts_seconds": [
+        83.933,
+        83.967,
+        84.0,
+        84.033,
+        85.0,
+        86.0,
+        87.0,
+        88.0,
+        88.7,
+        88.733,
+        88.767
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001376000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001408000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s013",
+      "start_seconds": 88.8,
+      "end_seconds": 96.967,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "东侧菊苑和南操场旁道路至战邮广场方向",
+      "space_type": "outdoor_road",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.east_road.south_track",
+        "xianlin.zhanyou_square"
+      ],
+      "observed_features": [
+        "道路沿中央绿地东侧延伸",
+        "右侧宿舍、南操场，远景圆形路口"
+      ],
+      "basis": "航拍连续纵向道路及远处节点在同画面；字幕指出南操和转盘",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        91.0,
+        95.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.east_road.south_track",
+          "to_place_id": "xianlin.zhanyou_square",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.8,
+          "notes": "同一航拍道路连续延伸到广场路口，部分被树冠遮挡"
+        }
+      ],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        91.0,
+        95.0
+      ],
+      "review_frame_pts_seconds": [
+        88.8,
+        88.833,
+        88.867,
+        88.9,
+        89.0,
+        90.0,
+        91.0,
+        92.0,
+        93.0,
+        94.0,
+        95.0,
+        96.0,
+        96.867,
+        96.9,
+        96.933
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001456000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001520000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s014",
+      "start_seconds": 96.967,
+      "end_seconds": 101.4,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "东側道路与战邮广场地图插图",
+      "space_type": "map_insert",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s014"
+      ],
+      "observed_features": [],
+      "basis": "地图导览箭头，无当前实景/精确尺度",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        99.0
+      ],
+      "review_frame_pts_seconds": [
+        96.967,
+        97.0,
+        97.033,
+        97.067,
+        98.0,
+        99.0,
+        100.0,
+        101.0,
+        101.3,
+        101.333,
+        101.367
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s015",
+      "start_seconds": 101.4,
+      "end_seconds": 105.5,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "战邮广场南侧道路、东门方向与南操场",
+      "space_type": "outdoor_aerial",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.east_road.south_track",
+        "xianlin.zhanyou_square",
+        "xianlin.east_gate.road"
+      ],
+      "observed_features": [
+        "开敞铺装场地、南操场旁路、圆形纪念柱路口",
+        "作者标注战邮广场/东门/南操"
+      ],
+      "basis": "同一航拍画面显示道路接入广场；战邮广场已存在地图POI",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        103.0,
+        105.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.east_road.south_track",
+          "to_place_id": "xianlin.zhanyou_square",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "本段更近视野确认道路进入节点"
+        }
+      ],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        103.0,
+        105.0
+      ],
+      "review_frame_pts_seconds": [
+        101.4,
+        101.433,
+        101.467,
+        101.5,
+        102.0,
+        103.0,
+        104.0,
+        105.0,
+        105.4,
+        105.433,
+        105.467
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001648000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001680000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s016",
+      "start_seconds": 105.5,
+      "end_seconds": 114.2,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "战邮广场红色纪念柱、弧形台阶和路口",
+      "space_type": "outdoor_square",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.zhanyou_square",
+        "xianlin.east_gate.road"
+      ],
+      "observed_features": [
+        "白色高柱顶红色标志",
+        "后方多层半圆阶梯与草坡、周边红灰铺装",
+        "广场路口通向东门和宿舍区的分支"
+      ],
+      "basis": "围绕同一广场连续航拍，可见道路与广场节点接合；方向标签来自视频字幕",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        108.0,
+        112.0
+      ],
+      "observed_connections": [
+        {
+          "from_place_id": "xianlin.zhanyou_square",
+          "to_place_id": "xianlin.east_gate.road",
+          "relation": "connects_to",
+          "basis": "continuous_shot",
+          "confidence": 0.88,
+          "notes": "可见道路从路口延伸；并未拍到穿过东门"
+        }
+      ],
+      "uncertainties": [
+        "纪念柱尺寸、红色标志精确轮廓尚未测量"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        108.0,
+        112.0
+      ],
+      "review_frame_pts_seconds": [
+        105.5,
+        105.533,
+        105.567,
+        105.6,
+        106.0,
+        107.0,
+        108.0,
+        109.0,
+        110.0,
+        111.0,
+        112.0,
+        113.0,
+        114.0,
+        114.1,
+        114.133,
+        114.167
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001728000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001792000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s017",
+      "start_seconds": 114.2,
+      "end_seconds": 121.767,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "战邮广场北侧宿舍区及大学生活动中心方向",
+      "space_type": "outdoor_aerial",
+      "asset_ids": [
+        "osm_way_223944209",
+        "osm_way_223944205"
+      ],
+      "map_feature_ids": [
+        "map-feature-0074058d3d7e5c4ddef9",
+        "map-feature-433b548aeb426d69c991"
+      ],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s017"
+      ],
+      "observed_features": [
+        "东北宿舍组团、大学生活动中心/青春剧场标注",
+        "校医务室和大学生事务中心仅为画面标签"
+      ],
+      "basis": "航拍整体形态与地图及作者标注交叉对应，具体医务室/事务中心不绑定单体",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        116.0,
+        120.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "未直接看见室内；未将运营机构标签自动当成建筑名"
+      ],
+      "map_object_ids": [
+        "osm_way_223944205",
+        "osm_way_223944209"
+      ],
+      "reference_frame_pts_seconds": [
+        116.0,
+        120.0
+      ],
+      "review_frame_pts_seconds": [
+        114.2,
+        114.233,
+        114.267,
+        114.3,
+        115.0,
+        116.0,
+        117.0,
+        118.0,
+        119.0,
+        120.0,
+        121.0,
+        121.667,
+        121.7,
+        121.733
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001856000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001920000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s018",
+      "start_seconds": 121.767,
+      "end_seconds": 131.033,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "南三食堂、南北荷、桂柳李桃苑宿舍组团",
+      "space_type": "outdoor_aerial",
+      "asset_ids": [
+        "osm_way_224896131"
+      ],
+      "map_feature_ids": [
+        "map-feature-1c96a4a422b89c0f4f83"
+      ],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s018"
+      ],
+      "observed_features": [
+        "南三食堂和多组团宿舍的相对排列",
+        "屋顶设备、宿舍端墙和中间道路"
+      ],
+      "basis": "航拍同一视野，食堂名称字幕与地图唯一目标匹配",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        124.0,
+        128.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "各苑单体楼号不可读，未按标题猜定建筑ID"
+      ],
+      "map_object_ids": [
+        "osm_way_224896131"
+      ],
+      "reference_frame_pts_seconds": [
+        124.0,
+        128.0
+      ],
+      "review_frame_pts_seconds": [
+        121.767,
+        121.8,
+        121.833,
+        121.867,
+        122.0,
+        123.0,
+        124.0,
+        125.0,
+        126.0,
+        127.0,
+        128.0,
+        129.0,
+        130.0,
+        130.933,
+        130.967,
+        131.0
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001984000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002048000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s019",
+      "start_seconds": 131.033,
+      "end_seconds": 135.433,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "北操场/南北荷附近地图插图",
+      "space_type": "map_insert",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s019"
+      ],
+      "observed_features": [],
+      "basis": "发布地图年代未知",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        133.0
+      ],
+      "review_frame_pts_seconds": [
+        131.033,
+        131.067,
+        131.1,
+        131.133,
+        132.0,
+        133.0,
+        134.0,
+        135.0,
+        135.333,
+        135.367,
+        135.4
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s020",
+      "start_seconds": 135.433,
+      "end_seconds": 140.467,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "南荷北荷和北操场旁转盘",
+      "space_type": "outdoor_junction",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.north_lotus.roundabout"
+      ],
+      "observed_features": [
+        "中央圆形绿岛、路面箭头、斑马线、宿舍前人行步道",
+        "视频文字给北操体育场/北篮球场/南荷/北荷方向"
+      ],
+      "basis": "连续俯拍可见实际转盘与支路接合，宿舍编号未显示",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        137.0,
+        139.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "道路各支路具体map_feature_id待配准"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        137.0,
+        139.0
+      ],
+      "review_frame_pts_seconds": [
+        135.433,
+        135.467,
+        135.5,
+        135.533,
+        136.0,
+        137.0,
+        138.0,
+        139.0,
+        140.0,
+        140.367,
+        140.4,
+        140.433
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002192000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002224000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s021",
+      "start_seconds": 140.467,
+      "end_seconds": 144.6,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "大学生活动中心/青春剧场附近外部连廊与铺装",
+      "space_type": "outdoor_building",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s021"
+      ],
+      "observed_features": [
+        "两侧长体块、中央树木和铺装通道",
+        "外部水池或蓝色覆盖物"
+      ],
+      "basis": "上下文讲述活动中心/青春剧场，但无可读单体标识，剪辑独立镜头不能证明是指定建筑",
+      "confidence": 0.55,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [
+        "具体建筑未确认，保留候选待匹配"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        142.0,
+        144.0
+      ],
+      "review_frame_pts_seconds": [
+        140.467,
+        140.5,
+        140.533,
+        140.567,
+        141.0,
+        142.0,
+        143.0,
+        144.0,
+        144.5,
+        144.533,
+        144.567
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s022",
+      "start_seconds": 144.6,
+      "end_seconds": 149.467,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "入口2宽大楼梯及两侧玻璃门，具体建筑待定位",
+      "space_type": "outdoor_stair",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "xianlin.entrance_2.stair_unresolved"
+      ],
+      "observed_features": [
+        "双宽楼梯段和中间休息平台",
+        "两侧标识“2入口 ENTRANCE”及玻璃门",
+        "两侧楼梯通向门廊平台、上方可见球场"
+      ],
+      "basis": "148秒原分辨率明确读到入口2，不是二楼或房间号；上下文不足确定单体",
+      "confidence": 0.62,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [
+        "不能按上下文直接绑定活动中心或体育馆",
+        "楼层、室内去向未确认"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        147.0,
+        148.0
+      ],
+      "review_frame_pts_seconds": [
+        144.6,
+        144.633,
+        144.667,
+        144.7,
+        145.0,
+        146.0,
+        147.0,
+        148.0,
+        149.0,
+        149.367,
+        149.4,
+        149.433
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s023",
+      "start_seconds": 149.467,
+      "end_seconds": 152.367,
+      "campus": "xianlin",
+      "status": "unknown",
+      "eligibility": "unresolved",
+      "place_label": "校园西北体育馆/材料楼附近地图插图",
+      "space_type": "map_insert",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s023"
+      ],
+      "observed_features": [],
+      "basis": "地图插图，几何精度与现状未知",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [],
+      "observed_connections": [],
+      "uncertainties": [],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        151.0
+      ],
+      "review_frame_pts_seconds": [
+        149.467,
+        149.5,
+        149.533,
+        149.567,
+        150.0,
+        151.0,
+        152.0,
+        152.267,
+        152.3,
+        152.333
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s024",
+      "start_seconds": 152.367,
+      "end_seconds": 156.167,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "新体育馆和材料科学新楼旁北门转盘",
+      "space_type": "outdoor_junction",
+      "asset_ids": [
+        "osm_way_1281082570",
+        "osm_way_1173059720"
+      ],
+      "map_feature_ids": [
+        "map-feature-66e464a36e411b02c0c4",
+        "map-feature-b9659bf61142504b2823"
+      ],
+      "place_ids": [
+        "xianlin.north_gate.roundabout"
+      ],
+      "observed_features": [
+        "新体育馆白色大跨屋面",
+        "材料学科楼红灰立面，圆形路口和斑马线",
+        "朝向宿舍区及北门的道路分支"
+      ],
+      "basis": "153秒原图和地图现有独特体块/相对位置匹配，字幕材料学科楼/新体育馆",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        153.0,
+        155.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "北门本身未在镜头里穿越确认"
+      ],
+      "map_object_ids": [
+        "osm_way_1173059720",
+        "osm_way_1281082570"
+      ],
+      "reference_frame_pts_seconds": [
+        153.0,
+        155.0
+      ],
+      "review_frame_pts_seconds": [
+        152.367,
+        152.4,
+        152.433,
+        152.467,
+        153.0,
+        154.0,
+        155.0,
+        156.0,
+        156.067,
+        156.1,
+        156.133
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002448000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002480000"
+      ]
+    },
+    {
+      "id": "bilibili-BV1PqDQB2Epk-s025",
+      "start_seconds": 156.167,
+      "end_seconds": 164.2,
+      "campus": "xianlin",
+      "status": "accepted",
+      "eligibility": "current_candidate",
+      "place_label": "樱苑与青教公寓俯视外观",
+      "space_type": "outdoor_aerial",
+      "asset_ids": [],
+      "map_feature_ids": [],
+      "place_ids": [
+        "observed.BV1PqDQB2Epk.s025"
+      ],
+      "observed_features": [
+        "樱苑宿舍的围合庭院、浅色端墙和深色竖向玻璃",
+        "屋顶光伏或斜向条状设备、青教公寓较高住宅块"
+      ],
+      "basis": "字幕樱苑/青教，地图区域/体块匹配；具体楼号不可读",
+      "confidence": 0.9,
+      "exclusion_reason": null,
+      "selected_frame_pts_seconds": [
+        158.0,
+        160.0,
+        163.0
+      ],
+      "observed_connections": [],
+      "uncertainties": [
+        "不能仅凭此视角把樱苑50–55栋逐一确定",
+        "拍摄年代未知，屋顶设备现状需复核"
+      ],
+      "map_object_ids": [],
+      "reference_frame_pts_seconds": [
+        158.0,
+        160.0,
+        163.0
+      ],
+      "review_frame_pts_seconds": [
+        156.167,
+        156.2,
+        156.233,
+        156.267,
+        157.0,
+        158.0,
+        159.0,
+        160.0,
+        161.0,
+        162.0,
+        163.0,
+        164.0
+      ],
+      "selected_frame_source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002528000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002560000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002608000"
+      ]
+    }
+  ]
+}

@@ -6,6 +6,10 @@
       "observation_group": "teaching_3",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000656000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000672000",
         "gallery-02",
         "guide-2020-21",
         "guide-2020-22",
@@ -282,13 +286,60 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_155434036",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000656000",
+          "component": "教2侧鼎新大道及远景教学楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000672000",
+          "component": "教2侧鼎新大道及远景教学楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_223699451",
       "observation_group": "teaching_1",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000304000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
         "gallery-02",
         "guide-2020-18",
         "guide-2020-20",
@@ -510,13 +561,69 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_223699451",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000304000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_223699452",
       "observation_group": "teaching_4",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000656000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000672000",
         "gallery-02",
         "guide-2020-29",
         "guide-2020-30",
@@ -773,13 +880,57 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_223699452",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000656000",
+          "component": "教2侧鼎新大道及远景教学楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000672000",
+          "component": "教2侧鼎新大道及远景教学楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_223699454",
       "observation_group": "teaching_5",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
         "gallery-02",
         "guide-2020-32",
         "guide-2020-33",
@@ -820,13 +971,39 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_223699454",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_223699456",
       "observation_group": "teaching_2",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000656000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000672000",
         "gallery-02",
         "guide-2020-21",
         "guide-2020-22",
@@ -1103,7 +1280,49 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_223699456",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000576000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000624000",
+          "component": "教1至教5与鼎新大道的斜向航拍",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000656000",
+          "component": "教2侧鼎新大道及远景教学楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000672000",
+          "component": "教2侧鼎新大道及远景教学楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_223859783",
@@ -1146,6 +1365,32 @@
       "observation_group": "canteens_existing",
       "reference_scope": "group_reference_partial_asset_matching",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001376000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001408000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000016000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000048000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000096000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000144000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000176000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000256000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000304000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000352000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000400000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000464000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000496000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000528000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000576000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000608000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000640000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000688000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000736000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000784000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000832000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000864000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000912000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000944000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000000976000",
+        "bilibili-BV1Y2XvBpE86-frame-pts-000001008000",
         "guide-2020-02",
         "guide-2020-05",
         "guide-2020-08",
@@ -1184,7 +1429,269 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_223859784",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001376000",
+          "component": "图书馆与二食堂之间十字路口及兰苑方向",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s012",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001408000",
+          "component": "图书馆与二食堂之间十字路口及兰苑方向",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s012",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000016000",
+          "component": "第二食堂正立面及前广场",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s001",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000048000",
+          "component": "第二食堂正立面及前广场",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s001",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000096000",
+          "component": "第二食堂一楼烘焙店侧",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000144000",
+          "component": "第二食堂一楼餐具回收/窗口与用餐空间",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s003",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000176000",
+          "component": "第二食堂一楼餐具回收/窗口与用餐空间",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s003",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000256000",
+          "component": "第二食堂一楼主要用餐大厅",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000304000",
+          "component": "第二食堂一楼另一窗口侧座位区",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000352000",
+          "component": "第二食堂一楼营养快餐/徐州烩饭档",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s006",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000400000",
+          "component": "第二食堂一楼营养快餐/徐州烩饭档",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s006",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000464000",
+          "component": "第二食堂一楼麻辣烫、小面等窗口列",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s007",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000496000",
+          "component": "第二食堂一楼麻辣烫、小面等窗口列",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s007",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000528000",
+          "component": "第二食堂一楼饮品档侧通道",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s008",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000576000",
+          "component": "第二食堂一楼便利店及相邻餐档",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s010",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000608000",
+          "component": "第二食堂一楼便利店及相邻餐档",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s010",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000640000",
+          "component": "第二食堂二楼用餐大厅、餐具回收和楼梯上端",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s011",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000688000",
+          "component": "第二食堂二楼用餐大厅、餐具回收和楼梯上端",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s011",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000736000",
+          "component": "第二食堂二楼用餐大厅、餐具回收和楼梯上端",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s011",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000784000",
+          "component": "第二食堂二楼楼梯口旁饮品档",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s012",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000832000",
+          "component": "第二食堂二楼自选菜等窗口列",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s013",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000864000",
+          "component": "第二食堂二楼自选菜等窗口列",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s013",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000912000",
+          "component": "第二食堂二楼另一档口列与木色座位",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s014",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000944000",
+          "component": "第二食堂二楼另一档口列与木色座位",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s014",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000000976000",
+          "component": "第二食堂二楼结束摇摄",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s015",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1Y2XvBpE86-frame-pts-000001008000",
+          "component": "第二食堂二楼结束摇摄",
+          "annotation_segment_id": "bilibili-BV1Y2XvBpE86-s015",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1Y2XvBpE86.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_223859786",
@@ -1634,6 +2141,31 @@
       "observation_group": "library",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001280000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001312000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001376000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001408000",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000032776",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000096730",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000144695",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000192660",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000224636",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000272601",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000320567",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000368532",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000384520",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000400508",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000416497",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000432485",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000480450",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000544404",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000576380",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000608357",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000640334",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000656322",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000688299",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000704287",
+        "bilibili-BV1T3RaBqE7c-frame-pts-000000720275",
         "gallery-15",
         "gallery-19",
         "gallery-21",
@@ -1717,7 +2249,259 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_223859810",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001280000",
+          "component": "东南宿舍苑、南一食堂与教学区关系全景",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s011",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001312000",
+          "component": "东南宿舍苑、南一食堂与教学区关系全景",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s011",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001376000",
+          "component": "图书馆与二食堂之间十字路口及兰苑方向",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s012",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001408000",
+          "component": "图书馆与二食堂之间十字路口及兰苑方向",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s012",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000032776",
+          "component": "图书馆数智里玻璃入口正面",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s001",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000096730",
+          "component": "图书馆数智里玻璃入口正面",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s001",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000144695",
+          "component": "玻璃入口进入学生发展支持中心大厅",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000192660",
+          "component": "玻璃入口进入学生发展支持中心大厅",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000224636",
+          "component": "玻璃入口进入学生发展支持中心大厅",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000272601",
+          "component": "图书馆一楼开放自习位与过渡区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s003",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000320567",
+          "component": "图书馆一楼开放自习位与过渡区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s003",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000368532",
+          "component": "图书馆一楼开放自习位与过渡区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s003",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000384520",
+          "component": "米色双门房间门口可见，随后进入旁侧蓝绿墙长条自习区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000432485",
+          "component": "米色双门房间门口可见，随后进入旁侧蓝绿墙长条自习区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000480450",
+          "component": "米色双门房间门口可见，随后进入旁侧蓝绿墙长条自习区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000544404",
+          "component": "米色双门房间门口可见，随后进入旁侧蓝绿墙长条自习区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s004",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000576380",
+          "component": "沿蓝绿墙自习区中央通道穿另一端木格栅开口，到金属候坐椅区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000608357",
+          "component": "沿蓝绿墙自习区中央通道穿另一端木格栅开口，到金属候坐椅区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s005",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000640334",
+          "component": "图书馆咖啡烘焙柜台及相邻通道（楼层未核实）",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s006",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000656322",
+          "component": "图书馆咖啡烘焙柜台及相邻通道（楼层未核实）",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s006",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000688299",
+          "component": "图书馆咖啡烘焙柜台及相邻通道（楼层未核实）",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s006",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000704287",
+          "component": "烘焙柜台、玻璃外门和窗边座位",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s007",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000720275",
+          "component": "烘焙柜台、玻璃外门和窗边座位",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s007",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000400508",
+          "component": "米色双门房间门口可见，随后进入旁侧蓝绿墙长条自习区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s004",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered"
+        },
+        {
+          "source_id": "bilibili-BV1T3RaBqE7c-frame-pts-000000416497",
+          "component": "米色双门房间门口可见，随后进入旁侧蓝绿墙长条自习区",
+          "annotation_segment_id": "bilibili-BV1T3RaBqE7c-s004",
+          "annotation_path": "observations/annotations/video-review/BV1T3RaBqE7c.json",
+          "temporal_status": "current_candidate",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_223859811",
@@ -2222,7 +3006,10 @@
       "asset_id": "osm_way_223944205",
       "observation_group": null,
       "reference_scope": "map_only_no_matched_facade_photo",
-      "source_ids": [],
+      "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001856000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001920000"
+      ],
       "floorplans": [],
       "assertions": [],
       "unknowns": [
@@ -2239,13 +3026,38 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_223944205",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001856000",
+          "component": "战邮广场北侧宿舍区及大学生活动中心方向",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s017",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001920000",
+          "component": "战邮广场北侧宿舍区及大学生活动中心方向",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s017",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_223944209",
       "observation_group": null,
       "reference_scope": "map_only_no_matched_facade_photo",
-      "source_ids": [],
+      "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001856000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001920000"
+      ],
       "floorplans": [],
       "assertions": [],
       "unknowns": [
@@ -2262,13 +3074,37 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_223944209",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001856000",
+          "component": "战邮广场北侧宿舍区及大学生活动中心方向",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s017",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001920000",
+          "component": "战邮广场北侧宿舍区及大学生活动中心方向",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s017",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_224896131",
       "observation_group": "canteens_existing",
       "reference_scope": "group_reference_partial_asset_matching",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001984000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002048000",
         "guide-2020-02",
         "guide-2020-05",
         "guide-2020-08",
@@ -2307,13 +3143,39 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_224896131",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001984000",
+          "component": "南三食堂、南北荷、桂柳李桃苑宿舍组团",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s018",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000002048000",
+          "component": "南三食堂、南北荷、桂柳李桃苑宿舍组团",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s018",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_224938858",
       "observation_group": null,
       "reference_scope": "map_only_no_matched_facade_photo",
-      "source_ids": [],
+      "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000304000"
+      ],
       "floorplans": [],
       "assertions": [],
       "unknowns": [
@@ -2330,13 +3192,49 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_224938858",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000304000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_224938894",
       "observation_group": null,
       "reference_scope": "map_only_no_matched_facade_photo",
-      "source_ids": [],
+      "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000304000"
+      ],
       "floorplans": [],
       "assertions": [],
       "unknowns": [
@@ -2353,7 +3251,39 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_224938894",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000304000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_224940517",
@@ -2407,6 +3337,13 @@
       "observation_group": "round_building",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000304000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001008000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001040000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001088000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000001120000",
         "gallery-01",
         "gallery-02",
         "gallery-07",
@@ -2448,7 +3385,79 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_224950590",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000304000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001008000",
+          "component": "圆楼与中博湖全景",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s008",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001040000",
+          "component": "圆楼与中博湖全景",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s008",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001088000",
+          "component": "圆楼沿湖路、中博湖桥与相交路口",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s009",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000001120000",
+          "component": "圆楼沿湖路、中博湖桥与相交路口",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s009",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_224953835",
@@ -5155,6 +6164,8 @@
       "observation_group": "materials_new",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002448000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002480000",
         "construction_home_image_01",
         "gallery-17",
         "materials-completion",
@@ -5200,13 +6211,37 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_1173059720",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000002448000",
+          "component": "新体育馆和材料科学新楼旁北门转盘",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s024",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000002480000",
+          "component": "新体育馆和材料科学新楼旁北门转盘",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s024",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_1281082570",
       "observation_group": "new_gym",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002448000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000002480000",
         "construction_article_241104_image_01",
         "construction_article_248369_image_01_original",
         "construction_article_267603_image_00_original",
@@ -5283,7 +6318,29 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_1281082570",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000002448000",
+          "component": "新体育馆和材料科学新楼旁北门转盘",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s024",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000002480000",
+          "component": "新体育馆和材料科学新楼旁北门转盘",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s024",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "osm_way_1390009973",
@@ -5425,6 +6482,9 @@
       "observation_group": "south_gate",
       "reference_scope": "individual_asset_reference",
       "source_ids": [
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+        "bilibili-BV1PqDQB2Epk-frame-pts-000000304000",
         "gallery-01",
         "gallery-02",
         "gallery-08",
@@ -5482,7 +6542,39 @@
         "camera_pose": null,
         "target_entity_id": "osm_way_1454085437",
         "position_source": "projects/map/campus.gpkg:buildings"
-      }
+      },
+      "components": [
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000128000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000240000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        },
+        {
+          "source_id": "bilibili-BV1PqDQB2Epk-frame-pts-000000304000",
+          "component": "南门前场、门卫房、跨鼎新大道高门廊、教1和圆楼",
+          "annotation_segment_id": "bilibili-BV1PqDQB2Epk-s002",
+          "control_points": [],
+          "camera_pose": null,
+          "precision": "unregistered",
+          "annotation_path": "observations/annotations/video-review/BV1PqDQB2Epk.json",
+          "temporal_status": "current_candidate"
+        }
+      ]
     },
     {
       "asset_id": "njupt_k_dormitory_01",
