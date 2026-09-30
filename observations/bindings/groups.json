@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "groups": [
+    {
+      "id": "library",
+      "osm_name_match": [
+        "图书馆"
+      ],
+      "osm_ids": [
+        "osm_way_223859810"
+      ],
+      "unverified": [
+        "具体楼层层高、幕墙网格尺寸、背面排布未实测",
+        "彩虹台阶2026状态未确认",
+        "屋顶设备尺寸未知"
+      ],
+      "source_ids": [
+        "gallery-15",
+        "gallery-19",
+        "gallery-21",
+        "guide-2020-13"
+      ]
+    },
+    {
+      "id": "teaching_1",
+      "osm_name_match": [
+        "教1"
+      ],
+      "osm_ids": [
+        "osm_way_223699451"
+      ],
+      "unverified": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断"
+      ],
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-18",
+        "guide-2020-20",
+        "local-jiao-1"
+      ]
+    },
+    {
+      "id": "teaching_2",
+      "osm_name_match": [
+        "教2"
+      ],
+      "osm_ids": [
+        "osm_way_223699456"
+      ],
+      "unverified": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断"
+      ],
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-21",
+        "guide-2020-22",
+        "guide-2020-23",
+        "guide-2020-24",
+        "guide-2020-25",
+        "guide-2020-26",
+        "guide-2020-27",
+        "guide-2020-28",
+        "local-jiao-2"
+      ]
+    },
+    {
+      "id": "teaching_3",
+      "osm_name_match": [
+        "教3"
+      ],
+      "osm_ids": [
+        "osm_way_155434036"
+      ],
+      "unverified": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断"
+      ],
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-21",
+        "guide-2020-22",
+        "guide-2020-23",
+        "guide-2020-24",
+        "guide-2020-25",
+        "guide-2020-26",
+        "guide-2020-27",
+        "guide-2020-28",
+        "local-jiao-3"
+      ]
+    },
+    {
+      "id": "teaching_4",
+      "osm_name_match": [
+        "教4"
+      ],
+      "osm_ids": [
+        "osm_way_223699452"
+      ],
+      "unverified": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断"
+      ],
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-29",
+        "guide-2020-30",
+        "guide-2020-31",
+        "local-jiao-4"
+      ]
+    },
+    {
+      "id": "teaching_5",
+      "osm_name_match": [
+        "教5"
+      ],
+      "osm_ids": [
+        "osm_way_223699454"
+      ],
+      "unverified": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断"
+      ],
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-32",
+        "guide-2020-33",
+        "guide-2020-34",
+        "guide-2020-35",
+        "guide-2020-36",
+        "guide-2020-37"
+      ]
+    },
+    {
+      "id": "round_building",
+      "osm_name_match": [
+        "圆楼"
+      ],
+      "osm_ids": [
+        "osm_way_224950590"
+      ],
+      "unverified": [
+        "精确圆弧半径和各层标高未测量",
+        "顶部盒体橙红色受光照影响"
+      ],
+      "source_ids": [
+        "gallery-01",
+        "gallery-02",
+        "gallery-07",
+        "gallery-09"
+      ]
+    },
+    {
+      "id": "south_gate",
+      "osm_name_match": [
+        "南门"
+      ],
+      "osm_ids": [],
+      "unverified": [
+        "校训石与校门入口石是否同一石需区别，不能混为一块",
+        "门架尺寸与实际道路轴线需要地图配准"
+      ],
+      "source_ids": [
+        "gallery-01",
+        "gallery-02",
+        "gallery-08"
+      ]
+    },
+    {
+      "id": "new_gym",
+      "osm_name_match": [
+        "新体育馆"
+      ],
+      "osm_ids": [
+        "osm_way_1281082570"
+      ],
+      "unverified": [
+        "入口完工颜色和竖鳍片数量未核对",
+        "照片时点为施工阶段",
+        "OSM轮廓可能吞并旧馆，应结合航拍分体"
+      ],
+      "source_ids": [
+        "new-gym-01",
+        "new-gym-02",
+        "new-gym-03"
+      ]
+    },
+    {
+      "id": "materials_new",
+      "osm_name_match": [
+        "材料科学与工程学院-新大楼"
+      ],
+      "osm_ids": [
+        "osm_way_1173059720"
+      ],
+      "unverified": [
+        "无法从单张航拍精确数清每种设备",
+        "层高和各翼高度有推断"
+      ],
+      "source_ids": [
+        "gallery-17"
+      ]
+    },
+    {
+      "id": "discipline_complex",
+      "osm_name_match": [
+        "电子与光学工程学院、柔性材料（未来技术）学院",
+        "自动化学院、人工智能学院",
+        "地理与生物信息学院",
+        "集成电路科学与工程学院",
+        "工程实验教学部",
+        "计算机学院、软件学院、网络空间安全学院",
+        "南京邮电大学-文科楼"
+      ],
+      "osm_ids": [
+        "osm_way_1173057050",
+        "osm_way_1173057051",
+        "osm_way_1173057052",
+        "osm_way_1173057053",
+        "osm_way_1173057054",
+        "osm_way_1173057055",
+        "osm_way_1173057056"
+      ],
+      "unverified": [
+        "具体楼号需按朝向和轮廓进一步对应",
+        "学院更名不一定意味着外墙旧标牌已换",
+        "报告厅在OSM可能未单列"
+      ],
+      "source_ids": [
+        "gallery-13"
+      ]
+    },
+    {
+      "id": "dormitory_existing",
+      "osm_name_match": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49"
+      ],
+      "osm_ids": [],
+      "unverified": [
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed"
+      ],
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ]
+    },
+    {
+      "id": "dormitory_ying",
+      "osm_name_match": [
+        "樱苑"
+      ],
+      "osm_ids": [
+        "osm_way_1173057031",
+        "osm_way_1173057032",
+        "osm_way_1173057033",
+        "osm_way_1173057034",
+        "osm_way_1173057035",
+        "osm_way_1173057036"
+      ],
+      "unverified": [
+        "编号50+与每栋OSM对象的精确对应尚未证实"
+      ],
+      "source_ids": [
+        "k-plan"
+      ]
+    },
+    {
+      "id": "dormitory_k_and_canteen4",
+      "osm_name_match": [
+        "K组团",
+        "第四食堂",
+        "南四食堂"
+      ],
+      "osm_ids": [],
+      "unverified": [
+        "2026竣工航拍URL可检索但本地请求403，未作为已观察照片",
+        "外立面具体颜色和窗样未知",
+        "屋頂球场是否按设计落地未知"
+      ],
+      "source_ids": [
+        "k-plan"
+      ]
+    },
+    {
+      "id": "canteens_existing",
+      "osm_name_match": [
+        "南邮仙林一食堂",
+        "南邮仙林二食堂",
+        "南邮仙林三食堂"
+      ],
+      "osm_ids": [
+        "osm_way_1390009973",
+        "osm_way_1390009974",
+        "osm_way_1390009975",
+        "osm_way_223859784",
+        "osm_way_224896131"
+      ],
+      "unverified": [
+        "外立面颜色、檐口、入口细节仍不充分"
+      ],
+      "source_ids": [
+        "guide-2020-02",
+        "guide-2020-05",
+        "guide-2020-08",
+        "map-2017"
+      ]
+    },
+    {
+      "id": "old_gym",
+      "osm_name_match": [
+        "体育馆（旧馆）"
+      ],
+      "osm_ids": [
+        "osm_way_223944208"
+      ],
+      "source_ids": [
+        "construction_home_image_04",
+        "construction_article_241104_image_01",
+        "map-2017"
+      ],
+      "unverified": [
+        "隐藏立面、精确高度和凹口尺寸未实测"
+      ]
+    }
+  ],
+  "unlocated_sources": {
+    "gallery-06": "新三好亭校区未独立确认",
+    "gallery-10": "女篮雕塑可能三牌楼，未用于仙林定位",
+    "gallery-12": "紫藤长廊校区未确认",
+    "gallery-14": "甘霖榭校区未确认",
+    "teaching-spring": "该官网英语访问页图片建筑身份未确定，不用于仙林建模"
+  }
+}

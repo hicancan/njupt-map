@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "orientation_inferences": [
+    {
+      "asset_id": "osm_way_1281082570",
+      "rotation_degrees": 29.8,
+      "basis": "Photo landmark positions cross-checked against campus.json; approximate image ratios, not calibrated camera solve",
+      "track_center_local_xy_m": [
+        53.358,
+        143.643
+      ],
+      "materials_center_local_xy_m": [
+        -131.619,
+        -117.612
+      ],
+      "track_facing_elevation": "local +Y, world northwest normal approximately (-0.497,+0.868)",
+      "large_hall": "local -X",
+      "roof_x_fraction_estimate": {
+        "large_hall": [
+          0.0,
+          0.54
+        ],
+        "central_court_and_plant": [
+          0.54,
+          0.79
+        ],
+        "small_hall": [
+          0.79,
+          1.0
+        ]
+      },
+      "roof_fraction_source": "construction_article_241104_image_01",
+      "opposite_elevation_source": "construction_article_267603_image_00_original",
+      "signage": "track side sign at large-hall outer end; opposite side sign at small-hall outer end"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+﻿[Script Info]
+Title: NJUPT Xianlin campus film
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Hero,Segoe UI Light,78,&H00F7F5F0,&H00FFFFFF,&H800E1012,&H8A000000,0,0,0,0,100,100,2,0,1,0.7,1.2,7,110,110,70,1
+Style: Sub,Microsoft YaHei,24,&H00EEE5CE,&H00FFFFFF,&H700A0C10,&HA0000000,0,0,0,0,100,100,2,0,1,0.6,0.8,7,110,110,70,1
+Style: English,Segoe UI,20,&H00E5DACA,&H00FFFFFF,&H800A0C10,&HA0000000,0,0,0,0,100,100,3.2,0,1,0.5,0.8,7,110,110,70,1
+Style: Credit,Microsoft YaHei,17,&H16EDE9E1,&H00FFFFFF,&H500A0C10,&H80000000,0,0,0,0,100,100,0,0,1,0.6,1,1,110,110,45,1
+Style: Rule,Arial,20,&H00C7B48B,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:30.50,0:00:34.20,Credit,,0,0,0,,{\fad(500,350)}Map data © OpenStreetMap contributors · ODbL
+Dialogue: 0,0:00:00.85,0:00:04.65,Rule,,0,0,0,,{\pos(112,820)\fad(550,450)\p1}m 0 0 l 76 0 76 3 0 3{\p0}
+Dialogue: 1,0:00:01.05,0:00:04.65,Hero,,0,0,0,,{\move(108,829,108,815,0,1100)\fad(650,450)}njupt-map
+Dialogue: 1,0:00:01.28,0:00:04.65,Sub,,0,0,0,,{\pos(112,922)\fad(600,450)}南京邮电大学 · 仙林校区
+Dialogue: 1,0:00:01.42,0:00:04.65,English,,0,0,0,,{\pos(112,966)\fad(600,450)}A NEW PERSPECTIVE
+Dialogue: 0,0:00:30.50,0:00:34.20,Rule,,0,0,0,,{\pos(112,733)\fad(550,450)\p1}m 0 0 l 76 0 76 3 0 3{\p0}
+Dialogue: 1,0:00:30.65,0:00:34.20,Hero,,0,0,0,,{\move(108,747,108,734,0,1100)\fad(650,450)}njupt-map
+Dialogue: 1,0:00:30.88,0:00:34.20,Sub,,0,0,0,,{\pos(112,849)\fad(600,450)}南京邮电大学 · 仙林校区
+Dialogue: 1,0:00:31.10,0:00:34.20,English,,0,0,0,,{\pos(112,894)\fad(550,450)}A NEW PERSPECTIVE

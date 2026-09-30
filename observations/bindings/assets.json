@@ -1,0 +1,6048 @@
+{
+  "schema_version": 1,
+  "bindings": [
+    {
+      "asset_id": "osm_way_155434036",
+      "observation_group": "teaching_3",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-21",
+        "guide-2020-22",
+        "guide-2020-23",
+        "guide-2020-24",
+        "guide-2020-25",
+        "guide-2020-26",
+        "guide-2020-27",
+        "guide-2020-28",
+        "guide-2020-page",
+        "local-jiao-3",
+        "plan-xianlin-jiao-3-floor-01-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-02-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-03-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-04-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-05-evacuation-plan",
+        "plan-xianlin-jiao-3-floor-06-evacuation-plan"
+      ],
+      "floorplans": [
+        {
+          "floor": 1,
+          "source_id": "plan-xianlin-jiao-3-floor-01-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.016,
+              0.273,
+              0.963,
+              0.666
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -0.6066,
+              -0.9538,
+              0.065
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.047054
+            ],
+            "image_full_width_m": 183.3976,
+            "z_m": 0.065,
+            "rotation_z_degrees": 1.3707,
+            "building_id": "osm_way_155434036"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 2,
+          "source_id": "plan-xianlin-jiao-3-floor-02-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.015,
+              0.22,
+              0.97,
+              0.651
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -1.0706,
+              -5.0438,
+              3.765
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.962803
+            ],
+            "image_full_width_m": 181.8613,
+            "z_m": 3.765,
+            "rotation_z_degrees": 1.3707,
+            "building_id": "osm_way_155434036"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 3,
+          "source_id": "plan-xianlin-jiao-3-floor-03-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.01,
+              0.245,
+              0.97,
+              0.681
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -0.7132,
+              -1.3671,
+              7.465
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.956745
+            ],
+            "image_full_width_m": 180.9141,
+            "z_m": 7.465,
+            "rotation_z_degrees": 1.3707,
+            "building_id": "osm_way_155434036"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 4,
+          "source_id": "plan-xianlin-jiao-3-floor-04-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.012,
+              0.242,
+              0.969,
+              0.68
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -0.7926,
+              -1.6056,
+              11.165
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.9494
+            ],
+            "image_full_width_m": 181.4813,
+            "z_m": 11.165,
+            "rotation_z_degrees": 1.3707,
+            "building_id": "osm_way_155434036"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 5,
+          "source_id": "plan-xianlin-jiao-3-floor-05-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.012,
+              0.256,
+              0.97,
+              0.673
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -0.8903,
+              -1.3866,
+              14.865
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.998254
+            ],
+            "image_full_width_m": 181.2918,
+            "z_m": 14.865,
+            "rotation_z_degrees": 1.3707,
+            "building_id": "osm_way_155434036"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 6,
+          "source_id": "plan-xianlin-jiao-3-floor-06-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.022,
+              0.198,
+              0.958,
+              0.618
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -0.4852,
+              -8.9587,
+              18.565
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.968363
+            ],
+            "image_full_width_m": 185.5529,
+            "z_m": 18.565,
+            "rotation_z_degrees": 1.3707,
+            "building_id": "osm_way_155434036"
+          },
+          "control_points": []
+        }
+      ],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "教学区以浅灰白外墙、深灰蓝玻璃、平屋顶和突出屋面楼梯间为主；屋面和窗下均有水平分层。",
+          "source_ids": [
+            "gallery-02"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "官方2020导览明确教2、3主要6层，且一至三层之间有连廊。",
+          "source_ids": [
+            "guide-2020-page"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "教3首层平面由前后长翼、两端连接部分与中央教室/楼梯翼组成，中间存在两处分开的开敞空间。",
+          "source_ids": [
+            "guide-2020-23"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "本地第6层疏散图清楚显示左右两翼变成屋面，仅中央翼仍有房间；左右庭院围楼止于第5层。",
+          "source_ids": [
+            "local-jiao-3"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "二层以上庭院区出现斜线轮廓，可能是低层大厅屋顶/采光顶；其类型尚待现场照验证。",
+          "source_ids": [
+            "local-jiao-3"
+          ]
+        }
+      ],
+      "unknowns": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_155434036",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223699451",
+      "observation_group": "teaching_1",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-18",
+        "guide-2020-20",
+        "local-jiao-1",
+        "plan-xianlin-jiao-1-floor-01-evacuation-plan",
+        "plan-xianlin-jiao-1-floor-02-evacuation-plan",
+        "plan-xianlin-jiao-1-floor-03-evacuation-plan",
+        "plan-xianlin-jiao-1-floor-04-evacuation-plan",
+        "plan-xianlin-jiao-1-floor-05-evacuation-plan"
+      ],
+      "floorplans": [
+        {
+          "floor": 1,
+          "source_id": "plan-xianlin-jiao-1-floor-01-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.045,
+              0.036,
+              0.9,
+              0.954
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              1.8232,
+              -0.3171,
+              0.065
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.227772
+            ],
+            "image_full_width_m": 64.5593,
+            "z_m": 0.065,
+            "rotation_z_degrees": 1.979,
+            "building_id": "osm_way_223699451"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 2,
+          "source_id": "plan-xianlin-jiao-1-floor-02-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.11,
+              0.055,
+              0.95,
+              0.975
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -1.9623,
+              0.7399,
+              3.765
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.203609
+            ],
+            "image_full_width_m": 65.7121,
+            "z_m": 3.765,
+            "rotation_z_degrees": 1.979,
+            "building_id": "osm_way_223699451"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 3,
+          "source_id": "plan-xianlin-jiao-1-floor-03-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.104,
+              0.052,
+              0.945,
+              0.979
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -1.6,
+              0.7751,
+              7.465
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.195943
+            ],
+            "image_full_width_m": 65.634,
+            "z_m": 7.465,
+            "rotation_z_degrees": 1.979,
+            "building_id": "osm_way_223699451"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 4,
+          "source_id": "plan-xianlin-jiao-1-floor-04-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.087,
+              0.053,
+              0.92,
+              0.977
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -0.2238,
+              0.7961,
+              11.165
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.188412
+            ],
+            "image_full_width_m": 66.2643,
+            "z_m": 11.165,
+            "rotation_z_degrees": 1.979,
+            "building_id": "osm_way_223699451"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 5,
+          "source_id": "plan-xianlin-jiao-1-floor-05-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.094,
+              0.018,
+              0.947,
+              0.955
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -1.26,
+              -0.9129,
+              14.865
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.200062
+            ],
+            "image_full_width_m": 64.7106,
+            "z_m": 14.865,
+            "rotation_z_degrees": 1.979,
+            "building_id": "osm_way_223699451"
+          },
+          "control_points": []
+        }
+      ],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "教学区以浅灰白外墙、深灰蓝玻璃、平屋顶和突出屋面楼梯间为主；屋面和窗下均有水平分层。",
+          "source_ids": [
+            "gallery-02"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "教1二层图显示矩形周圈楼体和一个大露天内院，东侧门厅竖向中空，四角楼梯。",
+          "source_ids": [
+            "guide-2020-18",
+            "guide-2020-20"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "本地用户采集疏散图连续覆盖1至5层；东西两侧首层入口；中央大内院，东侧2层门厅挑空，3至5层为报告厅/房间。",
+          "source_ids": [
+            "local-jiao-1"
+          ]
+        }
+      ],
+      "unknowns": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223699451",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223699452",
+      "observation_group": "teaching_4",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-29",
+        "guide-2020-30",
+        "guide-2020-31",
+        "local-jiao-4",
+        "plan-xianlin-jiao-4-floor-01-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-02-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-03-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-04-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-05-evacuation-plan",
+        "plan-xianlin-jiao-4-floor-06-evacuation-plan"
+      ],
+      "floorplans": [
+        {
+          "floor": 1,
+          "source_id": "plan-xianlin-jiao-4-floor-01-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.012,
+              0.228,
+              0.987,
+              0.676
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -0.9236,
+              -9.287,
+              0.065
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.939262
+            ],
+            "image_full_width_m": 175.6397,
+            "z_m": 0.065,
+            "rotation_z_degrees": 1.0514,
+            "building_id": "osm_way_223699452"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 2,
+          "source_id": "plan-xianlin-jiao-4-floor-02-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.004,
+              0.25,
+              0.99,
+              0.708
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -0.5527,
+              -5.8822,
+              3.765
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.92912
+            ],
+            "image_full_width_m": 173.6802,
+            "z_m": 3.765,
+            "rotation_z_degrees": 1.0514,
+            "building_id": "osm_way_223699452"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 3,
+          "source_id": "plan-xianlin-jiao-4-floor-03-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.02,
+              0.184,
+              0.998,
+              0.623
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -2.4724,
+              -15.5621,
+              7.465
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.961467
+            ],
+            "image_full_width_m": 175.1009,
+            "z_m": 7.465,
+            "rotation_z_degrees": 1.0514,
+            "building_id": "osm_way_223699452"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 4,
+          "source_id": "plan-xianlin-jiao-4-floor-04-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.025,
+              0.201,
+              0.997,
+              0.635
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -2.8658,
+              -13.8575,
+              11.165
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.966578
+            ],
+            "image_full_width_m": 176.1818,
+            "z_m": 11.165,
+            "rotation_z_degrees": 1.0514,
+            "building_id": "osm_way_223699452"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 5,
+          "source_id": "plan-xianlin-jiao-4-floor-05-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.018,
+              0.263,
+              0.987,
+              0.709
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -1.5302,
+              -5.0984,
+              14.865
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.937668
+            ],
+            "image_full_width_m": 176.7272,
+            "z_m": 14.865,
+            "rotation_z_degrees": 1.0514,
+            "building_id": "osm_way_223699452"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 6,
+          "source_id": "plan-xianlin-jiao-4-floor-06-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.022,
+              0.245,
+              0.988,
+              0.68
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -1.9189,
+              -8.1446,
+              18.565
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.958403
+            ],
+            "image_full_width_m": 177.2761,
+            "z_m": 18.565,
+            "rotation_z_degrees": 1.0514,
+            "building_id": "osm_way_223699452"
+          },
+          "control_points": []
+        }
+      ],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "教学区以浅灰白外墙、深灰蓝玻璃、平屋顶和突出屋面楼梯间为主；屋面和窗下均有水平分层。",
+          "source_ids": [
+            "gallery-02"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "本地第6层疏散图清楚显示左右两翼变成屋面，仅中央翼仍有房间；左右庭院围楼止于第5层。",
+          "source_ids": [
+            "local-jiao-4"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "二层以上庭院区出现斜线轮廓，可能是低层大厅屋顶/采光顶；其类型尚待现场照验证。",
+          "source_ids": [
+            "local-jiao-4"
+          ]
+        }
+      ],
+      "unknowns": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223699452",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223699454",
+      "observation_group": "teaching_5",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-32",
+        "guide-2020-33",
+        "guide-2020-34",
+        "guide-2020-35",
+        "guide-2020-36",
+        "guide-2020-37"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "教学区以浅灰白外墙、深灰蓝玻璃、平屋顶和突出屋面楼梯间为主；屋面和窗下均有水平分层。",
+          "source_ids": [
+            "gallery-02"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2020旧材料学科楼（教5）照片：白小瓷砖网格、深凹成对窗、银色水平栏杆、蓝色竖字、底层玻璃入口与宽台阶。",
+          "source_ids": [
+            "guide-2020-32"
+          ]
+        }
+      ],
+      "unknowns": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223699454",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223699456",
+      "observation_group": "teaching_2",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "gallery-02",
+        "guide-2020-21",
+        "guide-2020-22",
+        "guide-2020-23",
+        "guide-2020-24",
+        "guide-2020-25",
+        "guide-2020-26",
+        "guide-2020-27",
+        "guide-2020-28",
+        "guide-2020-page",
+        "local-jiao-2",
+        "plan-xianlin-jiao-2-floor-01-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-02-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-03-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-04-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-05-evacuation-plan",
+        "plan-xianlin-jiao-2-floor-06-evacuation-plan"
+      ],
+      "floorplans": [
+        {
+          "floor": 1,
+          "source_id": "plan-xianlin-jiao-2-floor-01-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.038,
+              0.267,
+              0.964,
+              0.68
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              -1.2703,
+              -7.2666,
+              0.065
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.057847
+            ],
+            "image_full_width_m": 184.5808,
+            "z_m": 0.065,
+            "rotation_z_degrees": 1.331,
+            "building_id": "osm_way_223699456"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 2,
+          "source_id": "plan-xianlin-jiao-2-floor-02-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.012,
+              0.224,
+              0.972,
+              0.665
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              0.4248,
+              -10.9591,
+              3.765
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.027057
+            ],
+            "image_full_width_m": 178.0436,
+            "z_m": 3.765,
+            "rotation_z_degrees": 1.331,
+            "building_id": "osm_way_223699456"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 3,
+          "source_id": "plan-xianlin-jiao-2-floor-03-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.012,
+              0.228,
+              0.969,
+              0.659
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              0.7045,
+              -11.2696,
+              7.465
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.047603
+            ],
+            "image_full_width_m": 178.6017,
+            "z_m": 7.465,
+            "rotation_z_degrees": 1.331,
+            "building_id": "osm_way_223699456"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 4,
+          "source_id": "plan-xianlin-jiao-2-floor-04-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.014,
+              0.198,
+              0.964,
+              0.647
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              1.0451,
+              -13.7732,
+              11.165
+            ],
+            "local_xy_scale": [
+              1.0,
+              0.99825
+            ],
+            "image_full_width_m": 179.9177,
+            "z_m": 11.165,
+            "rotation_z_degrees": 1.331,
+            "building_id": "osm_way_223699456"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 5,
+          "source_id": "plan-xianlin-jiao-2-floor-05-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.023,
+              0.295,
+              0.96,
+              0.701
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              0.3811,
+              -3.6445,
+              14.865
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.088869
+            ],
+            "image_full_width_m": 182.4139,
+            "z_m": 14.865,
+            "rotation_z_degrees": 1.331,
+            "building_id": "osm_way_223699456"
+          },
+          "control_points": []
+        },
+        {
+          "floor": 6,
+          "source_id": "plan-xianlin-jiao-2-floor-06-evacuation-plan",
+          "registration": {
+            "status": "approximate",
+            "coordinate_frame": "asset_local_m",
+            "basis": "Hand-estimated image plan bounds and building footprint; not camera calibration or measured indoor geometry",
+            "control_points": [],
+            "image_plan_bounds_normalized": [
+              0.018,
+              0.272,
+              0.946,
+              0.694
+            ],
+            "image_dimensions_px": [
+              4096,
+              3072
+            ],
+            "local_location": [
+              2.1951,
+              -5.7414,
+              18.565
+            ],
+            "local_xy_scale": [
+              1.0,
+              1.037523
+            ],
+            "image_full_width_m": 184.183,
+            "z_m": 18.565,
+            "rotation_z_degrees": 1.331,
+            "building_id": "osm_way_223699456"
+          },
+          "control_points": []
+        }
+      ],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "教学区以浅灰白外墙、深灰蓝玻璃、平屋顶和突出屋面楼梯间为主；屋面和窗下均有水平分层。",
+          "source_ids": [
+            "gallery-02"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "官方2020导览明确教2、3主要6层，且一至三层之间有连廊。",
+          "source_ids": [
+            "guide-2020-page"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "教3首层平面由前后长翼、两端连接部分与中央教室/楼梯翼组成，中间存在两处分开的开敞空间。",
+          "source_ids": [
+            "guide-2020-23"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "本地第6层疏散图清楚显示左右两翼变成屋面，仅中央翼仍有房间；左右庭院围楼止于第5层。",
+          "source_ids": [
+            "local-jiao-2"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "二层以上庭院区出现斜线轮廓，可能是低层大厅屋顶/采光顶；其类型尚待现场照验证。",
+          "source_ids": [
+            "local-jiao-2"
+          ]
+        }
+      ],
+      "unknowns": [
+        "每块体量的层数及立面窗列不能统一认定为六层",
+        "屋顶/背面具体排布仍须推断",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223699456",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859783",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859783",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859784",
+      "observation_group": "canteens_existing",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "guide-2020-02",
+        "guide-2020-05",
+        "guide-2020-08",
+        "guide-2020-page",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "2020官方导览可确认南一、南二、南三均有三层使用空间；下载照片主要为室内。",
+          "source_ids": [
+            "guide-2020-page"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "南二三层内景能见大面积连续外窗、玻璃分格和天花圆形层次；不能把这些内景当整栋外立面证据。",
+          "source_ids": [
+            "guide-2020-05"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "外立面颜色、檐口、入口细节仍不充分",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859784",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859786",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859786",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859787",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859787",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859790",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859790",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859791",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859791",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859792",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859792",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859794",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859794",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859796",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859796",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859797",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859797",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859798",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859798",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859801",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859801",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859802",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "看台座席和顶棚须限定在原始凹多边形内；矩形包围盒不能替代真实轮廓",
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859802",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859807",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859807",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859809",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859809",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859810",
+      "observation_group": "library",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "gallery-15",
+        "gallery-19",
+        "gallery-21",
+        "guide-2020-13",
+        "guide-2020-page",
+        "library-36-steps",
+        "library-procurement-2024",
+        "library-property-2021",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "正立面左右对称白色石材感双翼；中央蓝色玻璃幕墙高于两翼，顶部黑水平百叶前白色图书馆三字。",
+          "source_ids": [
+            "gallery-19",
+            "guide-2020-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "中央顶部有宽白挑檐与透空横梁；入口钢玻璃雨棚上为LIBRARY，宽台阶直达二层入口。",
+          "source_ids": [
+            "guide-2020-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2020照片台阶为蓝底、白云与弯曲彩虹彩绘；扶手细金属；两侧白边框带细长成列窗。",
+          "source_ids": [
+            "guide-2020-13"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "官方招标确认地上5层，需覆盖OSM4层标签。",
+          "source_ids": [
+            "library-procurement-2024",
+            "library-property-2021"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "主立面朝西：官方导览称南二在背面，而空间地图南二在图书馆东侧；航拍朝霞也吻合。",
+          "source_ids": [
+            "guide-2020-page",
+            "gallery-19",
+            "map-2017"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2016年官方资料明确彩绘台阶为36级；画面色彩图案位于立面踢面。",
+          "source_ids": [
+            "library-36-steps"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "历史彩绘不能证明2026年未重涂；两翼上部长百叶和西入口细部需以最终对照图再验收。",
+          "source_ids": [
+            "gallery-19",
+            "guide-2020-13"
+          ]
+        }
+      ],
+      "unknowns": [
+        "具体楼层层高、幕墙网格尺寸、背面排布未实测",
+        "彩虹台阶2026状态未确认",
+        "屋顶设备尺寸未知",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859810",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859811",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859811",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859813",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859813",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859814",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859814",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859815",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859815",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859816",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859816",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859820",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859820",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859824",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859824",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859826",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859826",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859827",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "看台座席和顶棚须限定在原始凹多边形内；矩形包围盒不能替代真实轮廓",
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859827",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859828",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859828",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859829",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859829",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859832",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859832",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859840",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859840",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859843",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859843",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859846",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859846",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223859852",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223859852",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223944205",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223944205",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223944209",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223944209",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224896131",
+      "observation_group": "canteens_existing",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "guide-2020-02",
+        "guide-2020-05",
+        "guide-2020-08",
+        "guide-2020-page",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "2020官方导览可确认南一、南二、南三均有三层使用空间；下载照片主要为室内。",
+          "source_ids": [
+            "guide-2020-page"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "南二三层内景能见大面积连续外窗、玻璃分格和天花圆形层次；不能把这些内景当整栋外立面证据。",
+          "source_ids": [
+            "guide-2020-05"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "外立面颜色、檐口、入口细节仍不充分",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224896131",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224938858",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224938858",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224938894",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224938894",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224940517",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224940517",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224940881",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "看台座席和顶棚须限定在原始凹多边形内；矩形包围盒不能替代真实轮廓",
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224940881",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224950590",
+      "observation_group": "round_building",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "gallery-01",
+        "gallery-02",
+        "gallery-07",
+        "gallery-09",
+        "visiting_gallery_image_50"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "圆楼圆弧玻璃幕墙被密集白色水平带分隔；邻水端有高通柱廊与厚平顶挑板；顶部还有橙红方盒。",
+          "source_ids": [
+            "gallery-01",
+            "gallery-02",
+            "gallery-09"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "湖侧底座为石砌护岸，建筑通过直线连体与教1方向连接，前方桥梁横跨水面。",
+          "source_ids": [
+            "gallery-02",
+            "gallery-09"
+          ]
+        }
+      ],
+      "unknowns": [
+        "精确圆弧半径和各层标高未测量",
+        "顶部盒体橙红色受光照影响",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224950590",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224953835",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224953835",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224954737",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224954737",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224990427",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224990427",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224990428",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224990428",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_224996787",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_224996787",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225092103",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225092103",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225109136",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225109136",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225198908",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225198908",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225198909",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225198909",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225198910",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225198910",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225198911",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225198911",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225198912",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225198912",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225198913",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225198913",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225242507",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225242507",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225242509",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225242509",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225242511",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225242511",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225242513",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225242513",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225242515",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225242515",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225242517",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225242517",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225250615",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225250615",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225250617",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225250617",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225250618",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225250618",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225250619",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225250619",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225250620",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225250620",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225251648",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225251648",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225253706",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225253706",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225253707",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225253707",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225253711",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225253711",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225253712",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225253712",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225255192",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225255192",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225255194",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225255194",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225255196",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225255196",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225255198",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225255198",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225255200",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225255200",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225255202",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225255202",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265324",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265324",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265327",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265327",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265329",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265329",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265332",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265332",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265335",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265335",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265337",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265337",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265339",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265339",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265342",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265342",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265344",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265344",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265346",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265346",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265348",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265348",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225265351",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225265351",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_225267146",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_225267146",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_962566084",
+      "observation_group": null,
+      "reference_scope": "map_only_no_matched_facade_photo",
+      "source_ids": [],
+      "floorplans": [],
+      "assertions": [],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_962566084",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057023",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057023",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057024",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057024",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057025",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057025",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057026",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057026",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057027",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057027",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057028",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057028",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057029",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057029",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057030",
+      "observation_group": "dormitory_existing",
+      "reference_scope": "campus_or_family_reference_only",
+      "source_ids": [
+        "gallery-02",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "map_documented",
+          "text": "东侧宿舍呈多个院落组团，南北长条与短翼围合；OSM广泛标6层。",
+          "source_ids": [
+            "map-2017"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "尚未取得足以独立确认各苑区外立面/屋顶的清晰近景",
+        "目前一般宿舍配色和阳台排列属inferred而非observed",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057030",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057031",
+      "observation_group": "dormitory_ying",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_02",
+        "k-plan",
+        "k_structure_2025_image_00",
+        "ying-procurement"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方招标明确樱苑6栋6层，屋顶有热泵、热水箱、太阳能集热板。",
+          "source_ids": [
+            "ying-procurement"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "OSM西北六栋规整宿舍对应旧樱苑，K位于其南侧；这种身份匹配依地块关系推断。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "55与52号楼在同一正面照片中可辨：灰白墙、深灰水平层带、突出端部楼梯塔与连接低层公共空间。",
+          "source_ids": [
+            "construction_home_image_02"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "50/51/53/54其余楼与52/55照片采用家族级推断，仍需逐栋四向照片确认。",
+          "source_ids": [
+            "k_structure_2025_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "编号50+与每栋OSM对象的精确对应尚未证实",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057031",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057032",
+      "observation_group": "dormitory_ying",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_02",
+        "k-plan",
+        "k_structure_2025_image_00",
+        "ying-procurement"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方招标明确樱苑6栋6层，屋顶有热泵、热水箱、太阳能集热板。",
+          "source_ids": [
+            "ying-procurement"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "OSM西北六栋规整宿舍对应旧樱苑，K位于其南侧；这种身份匹配依地块关系推断。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "55与52号楼在同一正面照片中可辨：灰白墙、深灰水平层带、突出端部楼梯塔与连接低层公共空间。",
+          "source_ids": [
+            "construction_home_image_02"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "50/51/53/54其余楼与52/55照片采用家族级推断，仍需逐栋四向照片确认。",
+          "source_ids": [
+            "k_structure_2025_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "编号50+与每栋OSM对象的精确对应尚未证实",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057032",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057033",
+      "observation_group": "dormitory_ying",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_02",
+        "k-plan",
+        "k_structure_2025_image_00",
+        "ying-procurement"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方招标明确樱苑6栋6层，屋顶有热泵、热水箱、太阳能集热板。",
+          "source_ids": [
+            "ying-procurement"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "OSM西北六栋规整宿舍对应旧樱苑，K位于其南侧；这种身份匹配依地块关系推断。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "55与52号楼在同一正面照片中可辨：灰白墙、深灰水平层带、突出端部楼梯塔与连接低层公共空间。",
+          "source_ids": [
+            "construction_home_image_02"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "50/51/53/54其余楼与52/55照片采用家族级推断，仍需逐栋四向照片确认。",
+          "source_ids": [
+            "k_structure_2025_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "编号50+与每栋OSM对象的精确对应尚未证实",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057033",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057034",
+      "observation_group": "dormitory_ying",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_02",
+        "k-plan",
+        "k_structure_2025_image_00",
+        "ying-procurement"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方招标明确樱苑6栋6层，屋顶有热泵、热水箱、太阳能集热板。",
+          "source_ids": [
+            "ying-procurement"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "OSM西北六栋规整宿舍对应旧樱苑，K位于其南侧；这种身份匹配依地块关系推断。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "55与52号楼在同一正面照片中可辨：灰白墙、深灰水平层带、突出端部楼梯塔与连接低层公共空间。",
+          "source_ids": [
+            "construction_home_image_02"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "50/51/53/54其余楼与52/55照片采用家族级推断，仍需逐栋四向照片确认。",
+          "source_ids": [
+            "k_structure_2025_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "编号50+与每栋OSM对象的精确对应尚未证实",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057034",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057035",
+      "observation_group": "dormitory_ying",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "construction_home_image_02",
+        "k-plan",
+        "k_structure_2025_image_00",
+        "ying-procurement"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方招标明确樱苑6栋6层，屋顶有热泵、热水箱、太阳能集热板。",
+          "source_ids": [
+            "ying-procurement"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "OSM西北六栋规整宿舍对应旧樱苑，K位于其南侧；这种身份匹配依地块关系推断。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "55与52号楼在同一正面照片中可辨：灰白墙、深灰水平层带、突出端部楼梯塔与连接低层公共空间。",
+          "source_ids": [
+            "construction_home_image_02"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "50/51/53/54其余楼与52/55照片采用家族级推断，仍需逐栋四向照片确认。",
+          "source_ids": [
+            "k_structure_2025_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "编号50+与每栋OSM对象的精确对应尚未证实",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057035",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057036",
+      "observation_group": "dormitory_ying",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "construction_home_image_02",
+        "k-plan",
+        "k_structure_2025_image_00",
+        "ying-procurement"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方招标明确樱苑6栋6层，屋顶有热泵、热水箱、太阳能集热板。",
+          "source_ids": [
+            "ying-procurement"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "OSM西北六栋规整宿舍对应旧樱苑，K位于其南侧；这种身份匹配依地块关系推断。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "55与52号楼在同一正面照片中可辨：灰白墙、深灰水平层带、突出端部楼梯塔与连接低层公共空间。",
+          "source_ids": [
+            "construction_home_image_02"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "50/51/53/54其余楼与52/55照片采用家族级推断，仍需逐栋四向照片确认。",
+          "source_ids": [
+            "k_structure_2025_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "编号50+与每栋OSM对象的精确对应尚未证实",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057036",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057050",
+      "observation_group": "discipline_complex",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_03",
+        "gallery-13"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "旧学科楼群主色浅米黄，亮橙色入口矩框和红砖色局部竖塔；外观5至6层，平屋面且局部有机房。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "前方两座外张翼楼顶部用白色架空连桥连接，中间有独立低矮长条报告厅，楼前弧形道路围出石铺广场。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "该组参考照片为下部灰色石材、上部浅黄墙面、局部橙色入口框与高层连桥；橙色并非每个立面的完整外框。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "照片只证明被摄立面及该建筑家族特征，不能为七个学院单体的全部背面和入口位置背书。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "具体楼号需按朝向和轮廓进一步对应",
+        "学院更名不一定意味着外墙旧标牌已换",
+        "报告厅在OSM可能未单列",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057050",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057051",
+      "observation_group": "discipline_complex",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_03",
+        "gallery-13"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "旧学科楼群主色浅米黄，亮橙色入口矩框和红砖色局部竖塔；外观5至6层，平屋面且局部有机房。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "前方两座外张翼楼顶部用白色架空连桥连接，中间有独立低矮长条报告厅，楼前弧形道路围出石铺广场。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "该组参考照片为下部灰色石材、上部浅黄墙面、局部橙色入口框与高层连桥；橙色并非每个立面的完整外框。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "照片只证明被摄立面及该建筑家族特征，不能为七个学院单体的全部背面和入口位置背书。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "具体楼号需按朝向和轮廓进一步对应",
+        "学院更名不一定意味着外墙旧标牌已换",
+        "报告厅在OSM可能未单列",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057051",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057052",
+      "observation_group": "discipline_complex",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_03",
+        "gallery-13"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "旧学科楼群主色浅米黄，亮橙色入口矩框和红砖色局部竖塔；外观5至6层，平屋面且局部有机房。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "前方两座外张翼楼顶部用白色架空连桥连接，中间有独立低矮长条报告厅，楼前弧形道路围出石铺广场。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "该组参考照片为下部灰色石材、上部浅黄墙面、局部橙色入口框与高层连桥；橙色并非每个立面的完整外框。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "照片只证明被摄立面及该建筑家族特征，不能为七个学院单体的全部背面和入口位置背书。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "具体楼号需按朝向和轮廓进一步对应",
+        "学院更名不一定意味着外墙旧标牌已换",
+        "报告厅在OSM可能未单列",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057052",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057053",
+      "observation_group": "discipline_complex",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_03",
+        "gallery-13"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "旧学科楼群主色浅米黄，亮橙色入口矩框和红砖色局部竖塔；外观5至6层，平屋面且局部有机房。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "前方两座外张翼楼顶部用白色架空连桥连接，中间有独立低矮长条报告厅，楼前弧形道路围出石铺广场。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "该组参考照片为下部灰色石材、上部浅黄墙面、局部橙色入口框与高层连桥；橙色并非每个立面的完整外框。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "照片只证明被摄立面及该建筑家族特征，不能为七个学院单体的全部背面和入口位置背书。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "具体楼号需按朝向和轮廓进一步对应",
+        "学院更名不一定意味着外墙旧标牌已换",
+        "报告厅在OSM可能未单列",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057053",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057054",
+      "observation_group": "discipline_complex",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_03",
+        "gallery-13"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "旧学科楼群主色浅米黄，亮橙色入口矩框和红砖色局部竖塔；外观5至6层，平屋面且局部有机房。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "前方两座外张翼楼顶部用白色架空连桥连接，中间有独立低矮长条报告厅，楼前弧形道路围出石铺广场。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "该组参考照片为下部灰色石材、上部浅黄墙面、局部橙色入口框与高层连桥；橙色并非每个立面的完整外框。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "照片只证明被摄立面及该建筑家族特征，不能为七个学院单体的全部背面和入口位置背书。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "具体楼号需按朝向和轮廓进一步对应",
+        "学院更名不一定意味着外墙旧标牌已换",
+        "报告厅在OSM可能未单列",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057054",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057055",
+      "observation_group": "discipline_complex",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_03",
+        "gallery-13"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "旧学科楼群主色浅米黄，亮橙色入口矩框和红砖色局部竖塔；外观5至6层，平屋面且局部有机房。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "前方两座外张翼楼顶部用白色架空连桥连接，中间有独立低矮长条报告厅，楼前弧形道路围出石铺广场。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "该组参考照片为下部灰色石材、上部浅黄墙面、局部橙色入口框与高层连桥；橙色并非每个立面的完整外框。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "照片只证明被摄立面及该建筑家族特征，不能为七个学院单体的全部背面和入口位置背书。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "具体楼号需按朝向和轮廓进一步对应",
+        "学院更名不一定意味着外墙旧标牌已换",
+        "报告厅在OSM可能未单列",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057055",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173057056",
+      "observation_group": "discipline_complex",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_home_image_03",
+        "gallery-13"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "旧学科楼群主色浅米黄，亮橙色入口矩框和红砖色局部竖塔；外观5至6层，平屋面且局部有机房。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "前方两座外张翼楼顶部用白色架空连桥连接，中间有独立低矮长条报告厅，楼前弧形道路围出石铺广场。",
+          "source_ids": [
+            "gallery-13"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "该组参考照片为下部灰色石材、上部浅黄墙面、局部橙色入口框与高层连桥；橙色并非每个立面的完整外框。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "照片只证明被摄立面及该建筑家族特征，不能为七个学院单体的全部背面和入口位置背书。",
+          "source_ids": [
+            "construction_home_image_03"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "具体楼号需按朝向和轮廓进一步对应",
+        "学院更名不一定意味着外墙旧标牌已换",
+        "报告厅在OSM可能未单列",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173057056",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1173059720",
+      "observation_group": "materials_new",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "construction_home_image_01",
+        "gallery-17",
+        "materials-completion",
+        "materials_completion_2023_image_02"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "新材料楼以青灰石材/金属感外皮和砖红竖框构成；多层内院楼群，平屋顶密布银色弯管、排风筒和设备。",
+          "source_ids": [
+            "gallery-17"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2023年12月竣工交付。",
+          "source_ids": [
+            "materials-completion"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "上层红褐竖向格栅、下层灰白基座及细长窗有别于普通学院楼；航拍可见内部开庭和屋顶设备区。",
+          "source_ids": [
+            "construction_home_image_01",
+            "materials_completion_2023_image_02"
+          ]
+        }
+      ],
+      "unknowns": [
+        "无法从单张航拍精确数清每种设备",
+        "层高和各翼高度有推断",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1173059720",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1281082570",
+      "observation_group": "new_gym",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "construction_article_241104_image_01",
+        "construction_article_248369_image_01_original",
+        "construction_article_267603_image_00_original",
+        "construction_home_image_00",
+        "gym-case",
+        "gym-opening",
+        "new-gym-01",
+        "new-gym-02",
+        "new-gym-03"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "施工航拍显示大馆与窄长小馆两块银灰金属低坡屋面，中间为露天庭院和设备平台。",
+          "source_ids": [
+            "new-gym-03"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2024年6月启用；主馆金属屋顶约4800㎡、小馆约1700㎡。",
+          "source_ids": [
+            "gym-opening",
+            "gym-case"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "竣工照片显示浅米石材折线外框、主馆七组斜凹窗、低体量四组凹窗、长水平玻璃窗带。",
+          "source_ids": [
+            "construction_home_image_00",
+            "construction_article_267603_image_00_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "屋顶大馆、中央开庭/设备平台、小馆三条带清晰分开；楼梯贯通中央空间，不能把整座馆做成实心盒子。",
+          "source_ids": [
+            "construction_article_241104_image_01",
+            "construction_article_248369_image_01_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "面操场一侧馆名在大馆一端；相反一侧馆名在小馆一端。两侧折线立面相似但不能简单镜像所有标牌。",
+          "source_ids": [
+            "construction_home_image_00",
+            "construction_article_267603_image_00_original"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "根据操场、材料楼与OSM位置交叉确定操场立面为局部+Y；大馆为局部-X。精确长度及凹口深度按照片比例估算。",
+          "source_ids": [
+            "construction_home_image_00",
+            "construction_article_241104_image_01"
+          ]
+        }
+      ],
+      "unknowns": [
+        "入口完工颜色和竖鳍片数量未核对",
+        "照片时点为施工阶段",
+        "OSM轮廓可能吞并旧馆，应结合航拍分体",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1281082570",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1390009973",
+      "observation_group": "canteens_existing",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "guide-2020-02",
+        "guide-2020-05",
+        "guide-2020-08",
+        "guide-2020-page",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "2020官方导览可确认南一、南二、南三均有三层使用空间；下载照片主要为室内。",
+          "source_ids": [
+            "guide-2020-page"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "南二三层内景能见大面积连续外窗、玻璃分格和天花圆形层次；不能把这些内景当整栋外立面证据。",
+          "source_ids": [
+            "guide-2020-05"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "外立面颜色、檐口、入口细节仍不充分",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1390009973",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1390009974",
+      "observation_group": "canteens_existing",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "guide-2020-02",
+        "guide-2020-05",
+        "guide-2020-08",
+        "guide-2020-page",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "2020官方导览可确认南一、南二、南三均有三层使用空间；下载照片主要为室内。",
+          "source_ids": [
+            "guide-2020-page"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "南二三层内景能见大面积连续外窗、玻璃分格和天花圆形层次；不能把这些内景当整栋外立面证据。",
+          "source_ids": [
+            "guide-2020-05"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "外立面颜色、檐口、入口细节仍不充分",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1390009974",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1390009975",
+      "observation_group": "canteens_existing",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "guide-2020-02",
+        "guide-2020-05",
+        "guide-2020-08",
+        "guide-2020-page",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "2020官方导览可确认南一、南二、南三均有三层使用空间；下载照片主要为室内。",
+          "source_ids": [
+            "guide-2020-page"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "南二三层内景能见大面积连续外窗、玻璃分格和天花圆形层次；不能把这些内景当整栋外立面证据。",
+          "source_ids": [
+            "guide-2020-05"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "外立面颜色、檐口、入口细节仍不充分",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1390009975",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_1454085437",
+      "observation_group": "south_gate",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "gallery-01",
+        "gallery-02",
+        "gallery-08",
+        "official-logo-ai",
+        "official-name-vector",
+        "visiting_gallery_image_35",
+        "visiting_gallery_image_44"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "校训石为粗糙偏黄天然竖石，红色竖排厚德弘毅、求是笃行，位于草坪。",
+          "source_ids": [
+            "gallery-08"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "真实门架具有贯通开口、前后两排柱和石材包覆梁；前部学校名为书法造型金属字。",
+          "source_ids": [
+            "gallery-01",
+            "visiting_gallery_image_35",
+            "visiting_gallery_image_44"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "学校宣传部公开AI矢量文件含六字官方书法校名，可提取轮廓而非使用替代字库。",
+          "source_ids": [
+            "official-logo-ai",
+            "official-name-vector"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "金属字实际厚度、背部固定件、石材缝及柱截面不是矢量文件给出的实测参数。",
+          "source_ids": [
+            "gallery-01"
+          ]
+        }
+      ],
+      "unknowns": [
+        "校训石与校门入口石是否同一石需区别，不能混为一块",
+        "门架尺寸与实际道路轴线需要地图配准",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_1454085437",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "njupt_k_dormitory_01",
+      "observation_group": "dormitory_k_and_canteen4",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_article_300088_image_00_original",
+        "k-opening-2026",
+        "k-plan",
+        "k_complete_20260901_image_00",
+        "k_inspection_20260901_full_image_00_original",
+        "k_structure_2025_image_00"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方规划为六栋五层宿舍和一栋五层食堂，位于樱苑南侧；CAD显示北侧六栋斜列、南侧食堂长体量及屋顶球场图案。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2026年8月底新闻称预计当年秋开学投用。",
+          "source_ids": [
+            "k-opening-2026"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2026完工照片可见灰白宿舍、深色水平层带、连续外廊和局部橙色框；部分区域为不同高度的连接空间。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "k_inspection_20260901_full_image_00_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "第四食堂为红橙与灰白多体量组合，存在斜撑/斜边入口和室外高差、玻璃首层；不能仅用统一五层普通窗楼替代。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "construction_article_300088_image_00_original"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "六栋宿舍模型序号与正式楼号未逐栋配准；不能给每栋复制同一橙框。2024总图与2025结构照需服从2026完工状态。",
+          "source_ids": [
+            "k_structure_2025_image_00",
+            "k_complete_20260901_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "2026竣工航拍URL可检索但本地请求403，未作为已观察照片",
+        "外立面具体颜色和窗样未知",
+        "屋頂球场是否按设计落地未知",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "njupt_k_dormitory_01",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "njupt_k_dormitory_02",
+      "observation_group": "dormitory_k_and_canteen4",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_article_300088_image_00_original",
+        "k-opening-2026",
+        "k-plan",
+        "k_complete_20260901_image_00",
+        "k_inspection_20260901_full_image_00_original",
+        "k_structure_2025_image_00"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方规划为六栋五层宿舍和一栋五层食堂，位于樱苑南侧；CAD显示北侧六栋斜列、南侧食堂长体量及屋顶球场图案。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2026年8月底新闻称预计当年秋开学投用。",
+          "source_ids": [
+            "k-opening-2026"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2026完工照片可见灰白宿舍、深色水平层带、连续外廊和局部橙色框；部分区域为不同高度的连接空间。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "k_inspection_20260901_full_image_00_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "第四食堂为红橙与灰白多体量组合，存在斜撑/斜边入口和室外高差、玻璃首层；不能仅用统一五层普通窗楼替代。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "construction_article_300088_image_00_original"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "六栋宿舍模型序号与正式楼号未逐栋配准；不能给每栋复制同一橙框。2024总图与2025结构照需服从2026完工状态。",
+          "source_ids": [
+            "k_structure_2025_image_00",
+            "k_complete_20260901_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "2026竣工航拍URL可检索但本地请求403，未作为已观察照片",
+        "外立面具体颜色和窗样未知",
+        "屋頂球场是否按设计落地未知",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "njupt_k_dormitory_02",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "njupt_k_dormitory_03",
+      "observation_group": "dormitory_k_and_canteen4",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_article_300088_image_00_original",
+        "k-opening-2026",
+        "k-plan",
+        "k_complete_20260901_image_00",
+        "k_inspection_20260901_full_image_00_original",
+        "k_structure_2025_image_00"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方规划为六栋五层宿舍和一栋五层食堂，位于樱苑南侧；CAD显示北侧六栋斜列、南侧食堂长体量及屋顶球场图案。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2026年8月底新闻称预计当年秋开学投用。",
+          "source_ids": [
+            "k-opening-2026"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2026完工照片可见灰白宿舍、深色水平层带、连续外廊和局部橙色框；部分区域为不同高度的连接空间。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "k_inspection_20260901_full_image_00_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "第四食堂为红橙与灰白多体量组合，存在斜撑/斜边入口和室外高差、玻璃首层；不能仅用统一五层普通窗楼替代。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "construction_article_300088_image_00_original"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "六栋宿舍模型序号与正式楼号未逐栋配准；不能给每栋复制同一橙框。2024总图与2025结构照需服从2026完工状态。",
+          "source_ids": [
+            "k_structure_2025_image_00",
+            "k_complete_20260901_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "2026竣工航拍URL可检索但本地请求403，未作为已观察照片",
+        "外立面具体颜色和窗样未知",
+        "屋頂球场是否按设计落地未知",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "njupt_k_dormitory_03",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "njupt_k_dormitory_04",
+      "observation_group": "dormitory_k_and_canteen4",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_article_300088_image_00_original",
+        "k-opening-2026",
+        "k-plan",
+        "k_complete_20260901_image_00",
+        "k_inspection_20260901_full_image_00_original",
+        "k_structure_2025_image_00"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方规划为六栋五层宿舍和一栋五层食堂，位于樱苑南侧；CAD显示北侧六栋斜列、南侧食堂长体量及屋顶球场图案。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2026年8月底新闻称预计当年秋开学投用。",
+          "source_ids": [
+            "k-opening-2026"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2026完工照片可见灰白宿舍、深色水平层带、连续外廊和局部橙色框；部分区域为不同高度的连接空间。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "k_inspection_20260901_full_image_00_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "第四食堂为红橙与灰白多体量组合，存在斜撑/斜边入口和室外高差、玻璃首层；不能仅用统一五层普通窗楼替代。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "construction_article_300088_image_00_original"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "六栋宿舍模型序号与正式楼号未逐栋配准；不能给每栋复制同一橙框。2024总图与2025结构照需服从2026完工状态。",
+          "source_ids": [
+            "k_structure_2025_image_00",
+            "k_complete_20260901_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "2026竣工航拍URL可检索但本地请求403，未作为已观察照片",
+        "外立面具体颜色和窗样未知",
+        "屋頂球场是否按设计落地未知",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "njupt_k_dormitory_04",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "njupt_k_dormitory_05",
+      "observation_group": "dormitory_k_and_canteen4",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_article_300088_image_00_original",
+        "k-opening-2026",
+        "k-plan",
+        "k_complete_20260901_image_00",
+        "k_inspection_20260901_full_image_00_original",
+        "k_structure_2025_image_00"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方规划为六栋五层宿舍和一栋五层食堂，位于樱苑南侧；CAD显示北侧六栋斜列、南侧食堂长体量及屋顶球场图案。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2026年8月底新闻称预计当年秋开学投用。",
+          "source_ids": [
+            "k-opening-2026"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2026完工照片可见灰白宿舍、深色水平层带、连续外廊和局部橙色框；部分区域为不同高度的连接空间。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "k_inspection_20260901_full_image_00_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "第四食堂为红橙与灰白多体量组合，存在斜撑/斜边入口和室外高差、玻璃首层；不能仅用统一五层普通窗楼替代。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "construction_article_300088_image_00_original"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "六栋宿舍模型序号与正式楼号未逐栋配准；不能给每栋复制同一橙框。2024总图与2025结构照需服从2026完工状态。",
+          "source_ids": [
+            "k_structure_2025_image_00",
+            "k_complete_20260901_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "2026竣工航拍URL可检索但本地请求403，未作为已观察照片",
+        "外立面具体颜色和窗样未知",
+        "屋頂球场是否按设计落地未知",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "njupt_k_dormitory_05",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "njupt_k_dormitory_06",
+      "observation_group": "dormitory_k_and_canteen4",
+      "reference_scope": "group_reference_partial_asset_matching",
+      "source_ids": [
+        "construction_article_300088_image_00_original",
+        "k-opening-2026",
+        "k-plan",
+        "k_complete_20260901_image_00",
+        "k_inspection_20260901_full_image_00_original",
+        "k_structure_2025_image_00"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方规划为六栋五层宿舍和一栋五层食堂，位于樱苑南侧；CAD显示北侧六栋斜列、南侧食堂长体量及屋顶球场图案。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2026年8月底新闻称预计当年秋开学投用。",
+          "source_ids": [
+            "k-opening-2026"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2026完工照片可见灰白宿舍、深色水平层带、连续外廊和局部橙色框；部分区域为不同高度的连接空间。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "k_inspection_20260901_full_image_00_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "第四食堂为红橙与灰白多体量组合，存在斜撑/斜边入口和室外高差、玻璃首层；不能仅用统一五层普通窗楼替代。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "construction_article_300088_image_00_original"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "六栋宿舍模型序号与正式楼号未逐栋配准；不能给每栋复制同一橙框。2024总图与2025结构照需服从2026完工状态。",
+          "source_ids": [
+            "k_structure_2025_image_00",
+            "k_complete_20260901_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "缺少该单体可唯一匹配的完整四向立面照片；家族参考不代表该单体逐项实证",
+        "2026竣工航拍URL可检索但本地请求403，未作为已观察照片",
+        "外立面具体颜色和窗样未知",
+        "屋頂球场是否按设计落地未知",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "njupt_k_dormitory_06",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "njupt_k_dining_04",
+      "observation_group": "dormitory_k_and_canteen4",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "construction_article_300088_image_00_original",
+        "k-opening-2026",
+        "k-plan",
+        "k_complete_20260901_image_00",
+        "k_inspection_20260901_full_image_00_original",
+        "k_structure_2025_image_00"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "documented",
+          "text": "官方规划为六栋五层宿舍和一栋五层食堂，位于樱苑南侧；CAD显示北侧六栋斜列、南侧食堂长体量及屋顶球场图案。",
+          "source_ids": [
+            "k-plan"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "2026年8月底新闻称预计当年秋开学投用。",
+          "source_ids": [
+            "k-opening-2026"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "2026完工照片可见灰白宿舍、深色水平层带、连续外廊和局部橙色框；部分区域为不同高度的连接空间。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "k_inspection_20260901_full_image_00_original"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "第四食堂为红橙与灰白多体量组合，存在斜撑/斜边入口和室外高差、玻璃首层；不能仅用统一五层普通窗楼替代。",
+          "source_ids": [
+            "k_complete_20260901_image_00",
+            "construction_article_300088_image_00_original"
+          ]
+        },
+        {
+          "kind": "inferred",
+          "text": "六栋宿舍模型序号与正式楼号未逐栋配准；不能给每栋复制同一橙框。2024总图与2025结构照需服从2026完工状态。",
+          "source_ids": [
+            "k_structure_2025_image_00",
+            "k_complete_20260901_image_00"
+          ]
+        }
+      ],
+      "unknowns": [
+        "2026竣工航拍URL可检索但本地请求403，未作为已观察照片",
+        "外立面具体颜色和窗样未知",
+        "屋頂球场是否按设计落地未知",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "njupt_k_dining_04",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    },
+    {
+      "asset_id": "osm_way_223944208",
+      "observation_group": "old_gym",
+      "reference_scope": "individual_asset_reference",
+      "source_ids": [
+        "construction_article_241104_image_01",
+        "construction_home_image_00",
+        "construction_home_image_04",
+        "map-2017"
+      ],
+      "floorplans": [],
+      "assertions": [
+        {
+          "kind": "observed",
+          "text": "老馆具有米黄大面积实体高墙、五环标志、侧边深黄色窄高入口框和居中低玻璃连接空间。",
+          "source_ids": [
+            "construction_home_image_04"
+          ]
+        },
+        {
+          "kind": "observed",
+          "text": "新馆正射照右侧可见旧馆及五环墙，确认其位于新馆局部+X侧，与2017地图体育馆地块吻合。",
+          "source_ids": [
+            "construction_article_241104_image_01",
+            "map-2017"
+          ]
+        },
+        {
+          "kind": "documented",
+          "text": "原始OSM way223944208有leisure=stadium和体育馆名称但没有building标签；现已将此封闭建筑纳入正式空间数据。",
+          "source_ids": []
+        },
+        {
+          "kind": "inferred",
+          "text": "由OSM原始节点精确投影恢复轮廓；建筑高度、墙体厚度和材料色值仍由照片比例推断。",
+          "source_ids": [
+            "construction_home_image_04"
+          ]
+        }
+      ],
+      "unknowns": [
+        "精确高度、巨墙凹口进深与所有隐藏立面未实测",
+        "五环墙面朝新馆一侧，局部-X方向；不能把本楼误认为青春剧场",
+        "未实测的高度、尺寸、色值及细部均为推断；OSM不是测绘成果",
+        "未完成单体所有可见立面的实景同视角渲染验收",
+        "室内空间与设备状态未达到BIM/运行数据数字孪生验证"
+      ],
+      "spatial_binding": {
+        "coordinate_frame": "campus_local_m",
+        "precision": "mapped_or_inferred",
+        "component": null,
+        "control_points": [],
+        "camera_pose": null,
+        "target_entity_id": "osm_way_223944208",
+        "position_source": "projects/map/campus.gpkg:buildings"
+      }
+    }
+  ]
+}

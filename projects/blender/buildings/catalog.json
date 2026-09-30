@@ -1,0 +1,5336 @@
+{
+  "osm_way_155434036": {
+    "sha256": "4d63522da8316c05afa17e0ccf3c369011548f6e207752cb9fddba2581afd803",
+    "collection": "教3 | osm_way_155434036",
+    "stats": {
+      "id": "osm_way_155434036",
+      "name": "教3",
+      "kind": "teaching",
+      "facade_profile": "teaching",
+      "height": 18.5,
+      "levels": 5,
+      "window_count": 451,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        17.879,
+        -472.217
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/official-tour-2017-08.jpg",
+        "observations/catalog.json"
+      ],
+      "observed_features": [
+        "broad subdivided classroom glazing",
+        "small pale ceramic tiles",
+        "recessed floor reveals",
+        "plan-preserved courtyard and partial sixth floor"
+      ],
+      "floorplan_references": {
+        "reference_images": 6,
+        "building_id": "osm_way_155434036",
+        "collection": "教3 · 楼层原图参考 / 默认隐藏 · 非实测",
+        "default_hidden": true,
+        "registration": "approximate; not survey/BIM interior",
+        "rotation_degrees": 1.3707,
+        "storey_height_m_inferred": 3.7,
+        "dependency_path_remap_required": "RELATIVE"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_155434036.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "教3 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1452796ff0ca5389f1eb7ef28cb9d0fa5d9048336380d540ec76872f06571ea7",
+    "map_center_m": [
+      17.879,
+      -472.217
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223699451": {
+    "sha256": "bf4712fd6bd3963efae1d439d8afbd3e5ab71ae841dc7330ede167c4d38b8f86",
+    "collection": "教1 | osm_way_223699451",
+    "stats": {
+      "id": "osm_way_223699451",
+      "name": "教1",
+      "kind": "teaching",
+      "facade_profile": "teaching",
+      "height": 18.5,
+      "levels": 5,
+      "window_count": 180,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        78.319,
+        -634.47
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/official-tour-2017-08.jpg",
+        "observations/catalog.json"
+      ],
+      "observed_features": [
+        "broad subdivided classroom glazing",
+        "small pale ceramic tiles",
+        "recessed floor reveals",
+        "plan-preserved courtyard and partial sixth floor"
+      ],
+      "floorplan_references": {
+        "reference_images": 5,
+        "building_id": "osm_way_223699451",
+        "collection": "教1 · 楼层原图参考 / 默认隐藏 · 非实测",
+        "default_hidden": true,
+        "registration": "approximate; not survey/BIM interior",
+        "rotation_degrees": 1.979,
+        "storey_height_m_inferred": 3.7,
+        "dependency_path_remap_required": "RELATIVE"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223699451.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "教1 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b4fa37e65c1140c8154306e6d940b23ac978f65dfdafb9fefc85eeed2cec71a7",
+    "map_center_m": [
+      78.319,
+      -634.47
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223699452": {
+    "sha256": "85001a6d4062630a0aeb27ce8cd51df17870ba6dcae07b02bc469e608e78d25c",
+    "collection": "教4 | osm_way_223699452",
+    "stats": {
+      "id": "osm_way_223699452",
+      "name": "教4",
+      "kind": "teaching",
+      "facade_profile": "teaching",
+      "height": 18.5,
+      "levels": 5,
+      "window_count": 468,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        14.313,
+        -375.129
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/official-tour-2017-08.jpg",
+        "observations/catalog.json"
+      ],
+      "observed_features": [
+        "broad subdivided classroom glazing",
+        "small pale ceramic tiles",
+        "recessed floor reveals",
+        "plan-preserved courtyard and partial sixth floor"
+      ],
+      "floorplan_references": {
+        "reference_images": 6,
+        "building_id": "osm_way_223699452",
+        "collection": "教4 · 楼层原图参考 / 默认隐藏 · 非实测",
+        "default_hidden": true,
+        "registration": "approximate; not survey/BIM interior",
+        "rotation_degrees": 1.0514,
+        "storey_height_m_inferred": 3.7,
+        "dependency_path_remap_required": "RELATIVE"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223699452.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "教4 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "89a71376bfe89ba1219f184eb9423422e63b3a21edd29e607c63e3d9020936ec",
+    "map_center_m": [
+      14.313,
+      -375.129
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223699454": {
+    "sha256": "3ce069ae267d50a164d5838b61e4df3d375c7efe83c2cdede8ab6d740ae9ff41",
+    "collection": "教5 | osm_way_223699454",
+    "stats": {
+      "id": "osm_way_223699454",
+      "name": "教5",
+      "kind": "teaching",
+      "facade_profile": "teaching",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 324,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -23.976,
+        -287.115
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/official-tour-2017-08.jpg",
+        "observations/catalog.json"
+      ],
+      "observed_features": [
+        "broad subdivided classroom glazing",
+        "small pale ceramic tiles",
+        "recessed floor reveals",
+        "plan-preserved courtyard and partial sixth floor"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223699454"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223699454.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "教5 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b6db6d73c0683e6046394ad09bea839e5b890c5c877eea117f2b6c95fb7044fa",
+    "map_center_m": [
+      -23.976,
+      -287.115
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223699456": {
+    "sha256": "0907bfc6d02fe908fa936146bab3727d75735e49afcf1175fd9fa64088ec3de8",
+    "collection": "教2 | osm_way_223699456",
+    "stats": {
+      "id": "osm_way_223699456",
+      "name": "教2",
+      "kind": "teaching",
+      "facade_profile": "teaching",
+      "height": 18.5,
+      "levels": 5,
+      "window_count": 474,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        18.67,
+        -556.216
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/official-tour-2017-08.jpg",
+        "observations/catalog.json"
+      ],
+      "observed_features": [
+        "broad subdivided classroom glazing",
+        "small pale ceramic tiles",
+        "recessed floor reveals",
+        "plan-preserved courtyard and partial sixth floor"
+      ],
+      "floorplan_references": {
+        "reference_images": 6,
+        "building_id": "osm_way_223699456",
+        "collection": "教2 · 楼层原图参考 / 默认隐藏 · 非实测",
+        "default_hidden": true,
+        "registration": "approximate; not survey/BIM interior",
+        "rotation_degrees": 1.331,
+        "storey_height_m_inferred": 3.7,
+        "dependency_path_remap_required": "RELATIVE"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223699456.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "教2 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "28a4b0fe6b0e2573057be6f48a20dc2cfac761d911c1403eba0ebb7f2c754698",
+    "map_center_m": [
+      18.67,
+      -556.216
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859783": {
+    "sha256": "918888bbf7c6d7e691c013468056140e8e813231550ba032be6f51db77b3dc8b",
+    "collection": "19 | osm_way_223859783",
+    "stats": {
+      "id": "osm_way_223859783",
+      "name": "19",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 150,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        400.419,
+        36.312
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859783"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859783.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "19 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "e7df709a59b88cfc1698c4a197ccd6e61b879e8b31d5add6901164a450fd220f",
+    "map_center_m": [
+      400.419,
+      36.312
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859784": {
+    "sha256": "bd61a8e08dcc491247e05d6d74ac40ce98cb0b834ee8b03e3020d42215f9fec4",
+    "collection": "南邮仙林二食堂 | osm_way_223859784",
+    "stats": {
+      "id": "osm_way_223859784",
+      "name": "南邮仙林二食堂",
+      "kind": "dining",
+      "facade_profile": "unverified_dining",
+      "height": 12.6,
+      "levels": 3,
+      "window_count": 246,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        302.84,
+        -109.682
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859784"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859784.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "南邮仙林二食堂 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "629ad4dddf37707da6fbce66d9f554230d19a0535fedcdbb277bf4b0841573c6",
+    "map_center_m": [
+      302.84,
+      -109.682
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859786": {
+    "sha256": "9616ac24fc12c91c59590de4bc91657cfee2c3c4d3ed6e5735a1ab93bb76aca1",
+    "collection": "12 | osm_way_223859786",
+    "stats": {
+      "id": "osm_way_223859786",
+      "name": "12",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 354,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        331.636,
+        -195.509
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859786"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859786.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "12 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "03ee2fe7663cde0fb6a494dbe8ac74899ad4e0c8ff15ecbf09e0668914336ef5",
+    "map_center_m": [
+      331.636,
+      -195.509
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859787": {
+    "sha256": "d94b82a476cc7b2cdcee25e0e3aa77bf909d9e7caeaacde1ea1894dcb950d525",
+    "collection": "10 | osm_way_223859787",
+    "stats": {
+      "id": "osm_way_223859787",
+      "name": "10",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 108,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        368.558,
+        -221.655
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859787"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859787.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "10 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "483434b1a52780d3764d8b28881fb87d33289d11cfc557867d4bee9bb6768d95",
+    "map_center_m": [
+      368.558,
+      -221.655
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859790": {
+    "sha256": "aae42151d20e7675c3ca1f96bdb0dd3926a7db9446c17e3d713427164891a9a9",
+    "collection": "20 | osm_way_223859790",
+    "stats": {
+      "id": "osm_way_223859790",
+      "name": "20",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 174,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        335.326,
+        36.081
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859790"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859790.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "20 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b1b9394cf3e620d8118fd2a9bc60783a7b324934eff46fb5530b32a09f285dfd",
+    "map_center_m": [
+      335.326,
+      36.081
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859791": {
+    "sha256": "cec4d5d34545c0fe21a26e7923a64b86e4236a1f9412dbe69a6668e9e53d832c",
+    "collection": "17 | osm_way_223859791",
+    "stats": {
+      "id": "osm_way_223859791",
+      "name": "17",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        394.87,
+        4.573
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859791"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859791.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "17 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "7ec6aa73d52cba2bf4fe484048048449e4a6a79f2939556292858eaf466675ad",
+    "map_center_m": [
+      394.87,
+      4.573
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859792": {
+    "sha256": "af0e2bfdd742ac08ec457f48055be2af6beadb3c9cff82a0d46e328b82e6fc50",
+    "collection": "6 | osm_way_223859792",
+    "stats": {
+      "id": "osm_way_223859792",
+      "name": "6",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 300,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        343.446,
+        -326.439
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859792"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859792.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "6 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "0e54f17a0392ba7be2567d4ba2465040a3ccbb093d80ce2d61e6c5ccdf23becf",
+    "map_center_m": [
+      343.446,
+      -326.439
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859794": {
+    "sha256": "164f779a553196582affc5b40917996744daac0efe26f32a1f8e07a7eec7e1ae",
+    "collection": "9 | osm_way_223859794",
+    "stats": {
+      "id": "osm_way_223859794",
+      "name": "9",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 174,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        303.607,
+        -251.247
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859794"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859794.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "9 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "2ee9864d6a51f2a88294db7a7e45b52610c8f1f472ff7ce05d4d31bf0f3f24f3",
+    "map_center_m": [
+      303.607,
+      -251.247
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859796": {
+    "sha256": "07f5c9124510e43e662c03f23c188ab9e243e42ca6c8a9f142de284994074ef0",
+    "collection": "15 | osm_way_223859796",
+    "stats": {
+      "id": "osm_way_223859796",
+      "name": "15",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 192,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        370.618,
+        -69.814
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859796"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859796.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "15 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "49ff5ceb0570d1d6984288f8527dc36d28a6efbb8970d816b6c52511e3d67d1b",
+    "map_center_m": [
+      370.618,
+      -69.814
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859797": {
+    "sha256": "59a9f21e4c71606e7cc63338d380eba22adc8ab004a52635a84fa90ec52222fa",
+    "collection": "7 | osm_way_223859797",
+    "stats": {
+      "id": "osm_way_223859797",
+      "name": "7",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 348,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        332.119,
+        -283.788
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859797"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859797.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "7 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "93efd2853dd5898050957cc84289110c924227fbfc12e5b64038b644a322d9d8",
+    "map_center_m": [
+      332.119,
+      -283.788
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859798": {
+    "sha256": "b5b3fa1560b2873fdcf18bd034532d1e2ca50d857f5ed4b7a157a9f9829a9004",
+    "collection": "3 | osm_way_223859798",
+    "stats": {
+      "id": "osm_way_223859798",
+      "name": "3",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 132,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        318.828,
+        -383.479
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859798"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859798.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "3 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "4c8f1a454a3668b0f3ff33d1c1abd12467f530c83103ddc4d854e31c4971bd64",
+    "map_center_m": [
+      318.828,
+      -383.479
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859801": {
+    "sha256": "4a452ac613f87249d0ed65ca42c1914d517d1c7e9e626c4e50648c48f11353be",
+    "collection": "4 | osm_way_223859801",
+    "stats": {
+      "id": "osm_way_223859801",
+      "name": "4",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 108,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        373.337,
+        -353.016
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859801"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859801.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "4 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "4be22c49e8252d5977b4bcbfa350e959274b93dc66465c96d44defac00e0a355",
+    "map_center_m": [
+      373.337,
+      -353.016
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859802": {
+    "sha256": "dfc239686fa4972c64a5e6bbb782c374402eccd4ea5b6c40203b5ef015525f23",
+    "collection": "看台 | osm_way_223859802",
+    "stats": {
+      "id": "osm_way_223859802",
+      "name": "看台",
+      "kind": "stadium_stand",
+      "center": [
+        -19.781,
+        701.687
+      ],
+      "facade_status": "photo-reconstructed landmark; unmeasured dimensions and unseen details inferred",
+      "height": 8.64,
+      "levels": 1,
+      "window_count": 0,
+      "objects": 1,
+      "seating_count": 2597,
+      "tier_footprint": "clipped to concave mapped polygon; seats face nearest mapped soccer field",
+      "references": [
+        "observations/images/njupt/construction_article_216691_image_00.jpg"
+      ],
+      "inferred": [
+        "row count and riser dimension"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859802"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859802.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "看台 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "31df4d4e82d7c0b103cf7c4237edfc4c334c4ffe5d4ec450204dd47aebaa5588",
+    "map_center_m": [
+      -19.781,
+      701.687
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859807": {
+    "sha256": "651c2896a8fb80c16b0e7fab323dc9c6f3d804398091d8e14ab8fafcb965e9ee",
+    "collection": "门卫 | osm_way_223859807",
+    "stats": {
+      "id": "osm_way_223859807",
+      "name": "门卫",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 21,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        466.296,
+        388.079
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859807"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859807.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "门卫 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b93d241367ae548db25e63e5cb95a2deb91c12fb563d9a53b508362ceaf764d3",
+    "map_center_m": [
+      466.296,
+      388.079
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859809": {
+    "sha256": "cdc85e0a6e58f3ad4e1258b5b42ab031cf15f82cee3c72186e65160b85266034",
+    "collection": "8 | osm_way_223859809",
+    "stats": {
+      "id": "osm_way_223859809",
+      "name": "8",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 108,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        369.123,
+        -250.804
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859809"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859809.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "8 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "e2bf83459dfb82246c1b713b8757609f25cb4e3ee4045c639de6b50a600fba6e",
+    "map_center_m": [
+      369.123,
+      -250.804
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859810": {
+    "sha256": "93f566dc2ded13e93d287a6d835a993b6566903688ba482958ba81c7f28e7317",
+    "collection": "图书馆 | osm_way_223859810",
+    "stats": {
+      "id": "osm_way_223859810",
+      "name": "图书馆",
+      "kind": "library",
+      "center": [
+        182.01,
+        -105.532
+      ],
+      "facade_status": "photo-reconstructed landmark; unmeasured dimensions and unseen details inferred",
+      "height": 27.85,
+      "levels": 5,
+      "window_count": 462,
+      "objects": 8,
+      "references": [
+        "observations/images/njupt/gallery-19.jpg",
+        "observations/images/njupt/guide-2020-13.png",
+        "observations/images/derived/rainbow_steps_2016.jpg"
+      ],
+      "observed_features": [
+        "36 risers in official text",
+        "riser-only mural in official text",
+        "photographed calligraphic sign outline",
+        "open crown",
+        "continuous wing louver bands",
+        "lower outer fore-wings and setback upper wings"
+      ],
+      "inferred_features": [
+        "meter dimensions",
+        "roof service volume dimensions",
+        "rear elevation spacing",
+        "courtyard internal wall dimensions",
+        "simplified rainbow/cloud/dove artwork"
+      ],
+      "visual_validation": "pending full-scene rendered comparison; source correspondence is not survey validation",
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859810"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859810.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "图书馆 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "0651c0d88409ee1d40917f63c33e2bd48ba129ee50863e70882b26e31a67064a",
+    "map_center_m": [
+      182.01,
+      -105.532
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859811": {
+    "sha256": "eca7e5fa1bf8671d48bb371f6880c9e3f10fa9c125a2d921104a864be5eaea3d",
+    "collection": "行政楼办公楼 | osm_way_223859811",
+    "stats": {
+      "id": "osm_way_223859811",
+      "name": "行政楼办公楼",
+      "kind": "admin",
+      "facade_profile": "unverified_admin",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 354,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -64.68,
+        -785.517
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859811"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859811.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "行政楼办公楼 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "cb5c0120506b52ae34bf7d07fcda274aafbbdc98d7eadeea4babc4b927828c76",
+    "map_center_m": [
+      -64.68,
+      -785.517
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859813": {
+    "sha256": "130de79febea4381cdc655de4f85182df7a40168418232cad01b91ad9941b68d",
+    "collection": "11 | osm_way_223859813",
+    "stats": {
+      "id": "osm_way_223859813",
+      "name": "11",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 162,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        302.751,
+        -223.198
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859813"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859813.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "11 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "65e60684449a89ad836a71c2c4a92c0ff04f6cb277318a23e0cc820a86e39b96",
+    "map_center_m": [
+      302.751,
+      -223.198
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859814": {
+    "sha256": "3d57c188d9f14002531fb86f8c346c9e7cd04cb0d922d75be4dd259271f0b12e",
+    "collection": "osm_way_223859814 | osm_way_223859814",
+    "stats": {
+      "id": "osm_way_223859814",
+      "name": "osm_way_223859814",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 186,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        186.694,
+        773.825
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859814"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859814.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b9f23408bb114bc4189cd75edadd4246b8c8579ca99fdedc868a015e3b951c4a",
+    "map_center_m": [
+      186.694,
+      773.825
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859815": {
+    "sha256": "3c73d6a5673442b7f680a1c513d53e09ef2595e89fec4f7908a6222357e02204",
+    "collection": "13 | osm_way_223859815",
+    "stats": {
+      "id": "osm_way_223859815",
+      "name": "13",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 180,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        364.588,
+        -148.577
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859815"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859815.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "13 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1bdd8ccf8d37032f4c767d1ad3f1f5d8ce21c25ab73bd0df231d13e28d43075a",
+    "map_center_m": [
+      364.588,
+      -148.577
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859816": {
+    "sha256": "3b7fee01e393ec922a4a8a472a78ec50ab585109bd62fc7bc4619e696a4694c3",
+    "collection": "14 | osm_way_223859816",
+    "stats": {
+      "id": "osm_way_223859816",
+      "name": "14",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 186,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        368.479,
+        -108.684
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859816"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859816.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "14 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "66c67b2adc5e53f72a2c47da7ec41ddc631c26b3ccb9c5368c136e37571213e6",
+    "map_center_m": [
+      368.479,
+      -108.684
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859820": {
+    "sha256": "f3db66a0ef3cd06c8aeb0985b2a2d37e060cda5538da918ee1e27b62c6a4ebd9",
+    "collection": "osm_way_223859820 | osm_way_223859820",
+    "stats": {
+      "id": "osm_way_223859820",
+      "name": "osm_way_223859820",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 7.6,
+      "levels": 2,
+      "window_count": 56,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -134.536,
+        -204.711
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859820"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859820.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "57c05a51080c220497d3803242663782715c0a72043c59c17720fc5dcd6ac1e4",
+    "map_center_m": [
+      -134.536,
+      -204.711
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859824": {
+    "sha256": "f0b4634f1d76b24a8423a21e53ddc81972e03451a26ab6e2bb8b716eb3c367ad",
+    "collection": "5 | osm_way_223859824",
+    "stats": {
+      "id": "osm_way_223859824",
+      "name": "5",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 132,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        318.064,
+        -354.235
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859824"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859824.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "5 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "a692895c3ee5248522c3fc08ebc0c226fbc93a68656fa11aff920f3cf85c4beb",
+    "map_center_m": [
+      318.064,
+      -354.235
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859826": {
+    "sha256": "6426920bcdf0a1738ddf07b12759aa2b272096c5c836b35ccd9e6e077118776a",
+    "collection": "行政楼办公楼 | osm_way_223859826",
+    "stats": {
+      "id": "osm_way_223859826",
+      "name": "行政楼办公楼",
+      "kind": "admin",
+      "facade_profile": "unverified_admin",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 504,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -22.422,
+        -741.606
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859826"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859826.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "行政楼办公楼 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1405777446383170cc8ee659ac26f8124f18c5e8a278b4ea16df907d8b75948f",
+    "map_center_m": [
+      -22.422,
+      -741.606
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859827": {
+    "sha256": "f605cac5deca9e97f7634df7834337e2309cf5b45ceed1d920ad8e0d870255ea",
+    "collection": "主席台 | osm_way_223859827",
+    "stats": {
+      "id": "osm_way_223859827",
+      "name": "主席台",
+      "kind": "stadium_stand",
+      "center": [
+        -138.827,
+        630.655
+      ],
+      "facade_status": "photo-reconstructed landmark; unmeasured dimensions and unseen details inferred",
+      "height": 18.4,
+      "levels": 1,
+      "window_count": 0,
+      "objects": 3,
+      "seating_count": 3105,
+      "tier_footprint": "clipped to concave mapped polygon; seats face nearest mapped soccer field",
+      "references": [
+        "observations/images/njupt/construction_article_216691_image_00.jpg"
+      ],
+      "inferred": [
+        "row count and riser dimension",
+        "canopy curve, ribs and core elevations"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859827"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859827.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "主席台 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "42bd8486eebd33e8a303c3eb609f8a4101f1ed4a726d924913f67e09f5978433",
+    "map_center_m": [
+      -138.827,
+      630.655
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859828": {
+    "sha256": "7d8bbbba15cd4bd40e44b82b362c45d0d8798350c082e921f09bf291703c1787",
+    "collection": "osm_way_223859828 | osm_way_223859828",
+    "stats": {
+      "id": "osm_way_223859828",
+      "name": "osm_way_223859828",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 7.6,
+      "levels": 2,
+      "window_count": 44,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -153.552,
+        -154.303
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859828"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859828.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "ea320e2ed4a063e3b90b7895c85eef3682d559d40740ad3d3f5619b693f75116",
+    "map_center_m": [
+      -153.552,
+      -154.303
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859829": {
+    "sha256": "75244f353c9b0d3a94aa3161faa7106cb62e1d9ff956bfec06b0664c6a9259d0",
+    "collection": "1 | osm_way_223859829",
+    "stats": {
+      "id": "osm_way_223859829",
+      "name": "1",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 300,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        348.107,
+        -412.252
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859829"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859829.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "1 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "fe84f12513130d38924fe286380d5dba49f202d45646217b9fee2fc53b2ccea2",
+    "map_center_m": [
+      348.107,
+      -412.252
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859832": {
+    "sha256": "fe339afb188c2539c6b0898247d2f68dcbc7bb225b994e729a774cdf6ce71a92",
+    "collection": "2 | osm_way_223859832",
+    "stats": {
+      "id": "osm_way_223859832",
+      "name": "2",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 120,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        376.112,
+        -382.422
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859832"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859832.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "2 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "03150e59c3f6c3bb83c68ab00ecd4f8911a65889c6570e5262119f2371945177",
+    "map_center_m": [
+      376.112,
+      -382.422
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859840": {
+    "sha256": "3d23e09dd1f9492641b2bce309bfb7692c3da923eb87d3a0c882fafcbb3bdaaf",
+    "collection": "18 | osm_way_223859840",
+    "stats": {
+      "id": "osm_way_223859840",
+      "name": "18",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 186,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        329.511,
+        4.307
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859840"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859840.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "18 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "ac3dae8e52c31fd07d8e34462d33ef9104bbeb8e9c4f088a59b71dd2060bbb91",
+    "map_center_m": [
+      329.511,
+      4.307
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859843": {
+    "sha256": "007309981e4ca4ea1da83c2536cd55ee39e9943be2e683d00e28c51d11f5db64",
+    "collection": "16 | osm_way_223859843",
+    "stats": {
+      "id": "osm_way_223859843",
+      "name": "16",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 378,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        353.343,
+        -28.986
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859843"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859843.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "16 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "60807cfdea6e214334142f252575c4c137f45c5177f6e17d0608f7c295f625f7",
+    "map_center_m": [
+      353.343,
+      -28.986
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859846": {
+    "sha256": "e281ea46114c262e56743937c21a018e7b2526248e3ba01da19896a28495f106",
+    "collection": "21 国防生楼 | osm_way_223859846",
+    "stats": {
+      "id": "osm_way_223859846",
+      "name": "21 国防生楼",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 342,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        376.868,
+        68.196
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859846"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859846.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "21 国防生楼 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "45f3d3d7a263052fd1e9fe4aa8a9316909b15e38d7cdb4aa13d372a55d27ded7",
+    "map_center_m": [
+      376.868,
+      68.196
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223859852": {
+    "sha256": "8d80f430109e4bb5905f3873f2c7eef9e8255e15977fe7f0a855cae191888fb9",
+    "collection": "收发室 | osm_way_223859852",
+    "stats": {
+      "id": "osm_way_223859852",
+      "name": "收发室",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 18,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        499.298,
+        352.002
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223859852"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223859852.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "收发室 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "5d654ee89764812c69f7d0c798176d10a9b54f269321e967c89c08c99727db3e",
+    "map_center_m": [
+      499.298,
+      352.002
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223944205": {
+    "sha256": "d35c1aa51b9eb32711ad3506aff473e2e46195b8c20eeac8a18fd84a07fc3003",
+    "collection": "青春剧场 | osm_way_223944205",
+    "stats": {
+      "id": "osm_way_223944205",
+      "name": "青春剧场",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 14.1,
+      "levels": 3,
+      "window_count": 177,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        103.187,
+        469.94
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223944205"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223944205.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "青春剧场 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "2c4f8acc9bb9faf2d6f0f05ef963bbbe821a5caf58ae988331dde5c8f7c50498",
+    "map_center_m": [
+      103.187,
+      469.94
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223944209": {
+    "sha256": "0de473012ae24c764ed009cbc04e541bb0669ac1e32287259588558b49ed07c9",
+    "collection": "大学生活动中心 | osm_way_223944209",
+    "stats": {
+      "id": "osm_way_223944209",
+      "name": "大学生活动中心",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 14.1,
+      "levels": 3,
+      "window_count": 225,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        137.013,
+        434.82
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223944209"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223944209.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "大学生活动中心 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "f3a0bd8f2e3bcee8968b37e5110cbc674f9d466bcb049aade04aea4de485ef40",
+    "map_center_m": [
+      137.013,
+      434.82
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224896131": {
+    "sha256": "084198613e1eeda394268e0bd9c5890034595bfd395148aa5dacfdbac067f1d7",
+    "collection": "南邮仙林三食堂 | osm_way_224896131",
+    "stats": {
+      "id": "osm_way_224896131",
+      "name": "南邮仙林三食堂",
+      "kind": "dining",
+      "facade_profile": "unverified_dining",
+      "height": 12.6,
+      "levels": 3,
+      "window_count": 267,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        282.991,
+        530.995
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224896131"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224896131.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "南邮仙林三食堂 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "8d54ec27b49bbd254183666ea2494a2e9c91dfbd9d0cc8778c9299e1118b9dbc",
+    "map_center_m": [
+      282.991,
+      530.995
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224938858": {
+    "sha256": "6207aaae042abadc50afe31d931d70519fa40fc0b79dc3a3cd9af4cdd2d68662",
+    "collection": "门卫 | osm_way_224938858",
+    "stats": {
+      "id": "osm_way_224938858",
+      "name": "门卫",
+      "kind": "utility",
+      "facade_profile": "unverified_utility",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 2,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        114.053,
+        -722.84
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224938858"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224938858.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "门卫 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "8e14f66d07e6ea62db705a11704ca252387c397ee6ed28cf87d9495793689ee3",
+    "map_center_m": [
+      114.053,
+      -722.84
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224938894": {
+    "sha256": "a269c68a66104912099ae03ac00122494d396763e8e303fc1075a09996f8de8a",
+    "collection": "门卫 | osm_way_224938894",
+    "stats": {
+      "id": "osm_way_224938894",
+      "name": "门卫",
+      "kind": "utility",
+      "facade_profile": "unverified_utility",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 5,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        159.122,
+        -721.698
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224938894"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224938894.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "门卫 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "5449a9b9bd3fb56b8eac1bbbe50572736112ae70f804573963dd70ceeedcb9f2",
+    "map_center_m": [
+      159.122,
+      -721.698
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224940517": {
+    "sha256": "48820089f0115d8e0d95a2a43831f1924758b6b5b879afc66038fe9724ec8352",
+    "collection": "osm_way_224940517 | osm_way_224940517",
+    "stats": {
+      "id": "osm_way_224940517",
+      "name": "osm_way_224940517",
+      "kind": "utility",
+      "facade_profile": "unverified_utility",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 5,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -183.985,
+        -134.883
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224940517"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224940517.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "9d1f54337b0b3a3e62891ffe72591fc9ef4053cd18c2b041e02cecd191a3cff3",
+    "map_center_m": [
+      -183.985,
+      -134.883
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224940881": {
+    "sha256": "87565532d842a5c125a7585bc46ad083083779d36dd025f955db06bcaf7af8ea",
+    "collection": "主席台 | osm_way_224940881",
+    "stats": {
+      "id": "osm_way_224940881",
+      "name": "主席台",
+      "kind": "stadium_stand",
+      "center": [
+        322.032,
+        184.098
+      ],
+      "facade_status": "photo-reconstructed landmark; unmeasured dimensions and unseen details inferred",
+      "height": 1.7999999999999998,
+      "levels": 1,
+      "window_count": 0,
+      "objects": 1,
+      "seating_count": 115,
+      "tier_footprint": "clipped to concave mapped polygon; seats face nearest mapped soccer field",
+      "references": [
+        "observations/images/njupt/construction_article_216691_image_00.jpg"
+      ],
+      "inferred": [
+        "row count and riser dimension"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224940881"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224940881.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "主席台 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "549a14a088f91b908e234fa27ab2b77644efdded72ee1310520d3d4d607d7044",
+    "map_center_m": [
+      322.032,
+      184.098
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224950590": {
+    "sha256": "b5ba21d4fdbb0a9c94adea94d1d7e14648c4f69825c9aae316048279a7be37d4",
+    "collection": "圆楼 | osm_way_224950590",
+    "stats": {
+      "id": "osm_way_224950590",
+      "name": "圆楼",
+      "kind": "round_hall",
+      "center": [
+        188.163,
+        -631.524
+      ],
+      "facade_status": "photo-reconstructed landmark; unmeasured dimensions and unseen details inferred",
+      "height": 23.51,
+      "levels": 5,
+      "window_count": 504,
+      "objects": 3,
+      "lake_plinth_facade": {
+        "kind": "openings between stone sill and lintel with segmented curved glass",
+        "window_panes": 24,
+        "stone_pier_positions": 7,
+        "glass_outer_radius_m": 22.26,
+        "wall_outer_radius_m": 22.4,
+        "sill_top_m": 0.72,
+        "lintel_bottom_m": 1.8,
+        "glass_bottom_m": 0.75,
+        "glass_top_m": 1.77,
+        "source": "observations/images/njupt/gallery-02.jpg",
+        "inferred": "Exact pane count, piers, frame sections and vertical dimensions"
+      },
+      "gallery_geometry": {
+        "glazing_radius_m": 18.95,
+        "railing_radius_m": 20.34,
+        "minimum_clear_width_m": 1.1,
+        "railing_height_m": 1.06,
+        "upper_pier_width_m": 0.52,
+        "upper_pier_depth_m": 0.32,
+        "upper_pier_grid_angle_deg": 15.0,
+        "crown_base_m": 19.68,
+        "crown_top_m": 23.33,
+        "crown_cap_top_m": 23.51
+      },
+      "references": [
+        "observations/images/njupt/gallery-01.jpg",
+        "observations/images/njupt/gallery-02.jpg",
+        "observations/images/njupt/gallery-07.jpg",
+        "observations/images/njupt/visiting_gallery_image_37.jpg",
+        "observations/images/njupt/visiting_gallery_image_43.jpg",
+        "observations/images/njupt/visiting_gallery_image_50.jpg"
+      ],
+      "observed_features": [
+        "low curved lake plinth",
+        "continuous round metal-clad columns",
+        "red crown above the white frame",
+        "horizontal curtain-wall bands",
+        "wide top-floor white piers separating grouped windows",
+        "external curved galleries with slender metal balustrades",
+        "glazed lake-side curved lower plinth"
+      ],
+      "inferred_features": [
+        "exact heights and radii",
+        "hidden floor arrangement",
+        "complete column count and spacing",
+        "rear glazing spacing",
+        "balustrade pitch and gallery dimensions",
+        "lower plinth pane count and dimensions"
+      ],
+      "visual_validation": "pending full-scene rendered comparison; source correspondence is not survey validation",
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224950590"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224950590.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "圆楼 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "cf7eb6e8dd794029dc5d293fe2c97b000f78aeec584cf1b5acbc1b7de60e0f90",
+    "map_center_m": [
+      188.163,
+      -631.524
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224953835": {
+    "sha256": "384168a85cd11326bdf4b5291e6b4af91e5248c0baed837aff16ddc473102832",
+    "collection": "osm_way_224953835 | osm_way_224953835",
+    "stats": {
+      "id": "osm_way_224953835",
+      "name": "osm_way_224953835",
+      "kind": "utility",
+      "facade_profile": "unverified_utility",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 8,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -184.945,
+        -97.911
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224953835"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224953835.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "9e0afd38e3186395df31015469beecbb1cec84226858640da67cff5a2bf3c75c",
+    "map_center_m": [
+      -184.945,
+      -97.911
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224954737": {
+    "sha256": "871675f4e1fc36d590eb6d2460709c0da9d2a9b3f36f2b85614213cc0b6dc048",
+    "collection": "特大教室 | osm_way_224954737",
+    "stats": {
+      "id": "osm_way_224954737",
+      "name": "特大教室",
+      "kind": "teaching",
+      "facade_profile": "unverified_teaching",
+      "height": 7.6,
+      "levels": 2,
+      "window_count": 56,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        68.204,
+        -515.054
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224954737"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224954737.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "特大教室 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1441d8755a1e46923f427f5b4f4504819fb7316b49d03cac1a9878e01714876f",
+    "map_center_m": [
+      68.204,
+      -515.054
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224990427": {
+    "sha256": "27830cb9d14180fb2f29b737a6f636dc1227d366cae59e1e23122f9316a9beb2",
+    "collection": "连廊 | osm_way_224990427",
+    "stats": {
+      "id": "osm_way_224990427",
+      "name": "连廊",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 10.8,
+      "levels": 3,
+      "window_count": 34,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -12.35,
+        -513.665
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224990427"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224990427.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "连廊 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "2ccd1bb49264b576771a5094460d2ac2f213966c42b1dfa4d6b40b6586a3e3ad",
+    "map_center_m": [
+      -12.35,
+      -513.665
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224990428": {
+    "sha256": "d2f18c9e16f63f45dc524c6f8ca692ff79861d06fb7930c951929a92ac0603a0",
+    "collection": "连廊 | osm_way_224990428",
+    "stats": {
+      "id": "osm_way_224990428",
+      "name": "连廊",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 10.8,
+      "levels": 3,
+      "window_count": 38,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        48.576,
+        -512.48
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224990428"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224990428.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "连廊 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "0461a475fe24e3e6f985439d93fda22f22f750d421b39ed96d78adf53130b7d6",
+    "map_center_m": [
+      48.576,
+      -512.48
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_224996787": {
+    "sha256": "613e9745feaad501397ff49dbbfd80c1c4bfa1368b1d8a1d8615e16f0d4e776e",
+    "collection": "osm_way_224996787 | osm_way_224996787",
+    "stats": {
+      "id": "osm_way_224996787",
+      "name": "osm_way_224996787",
+      "kind": "utility",
+      "facade_profile": "unverified_utility",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 4,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        45.05,
+        -264.724
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_224996787"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_224996787.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "116e0bb068ef36b721609974f6e4337282d510e568e69d77fdecf66b16141457",
+    "map_center_m": [
+      45.05,
+      -264.724
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225092103": {
+    "sha256": "80b0a952fe7b904eb5ce5ccbbb6da7e7bbc4334ff366a44e8eb3e567fbc6b5ec",
+    "collection": "热水房 | osm_way_225092103",
+    "stats": {
+      "id": "osm_way_225092103",
+      "name": "热水房",
+      "kind": "academic",
+      "facade_profile": "unverified_academic",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 14,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        327.91,
+        53.732
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225092103"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225092103.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "热水房 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "9ba78526ce49db5b7abeb0fb4c355d9de1804cb07d1a023412961dc4bc4f739a",
+    "map_center_m": [
+      327.91,
+      53.732
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225109136": {
+    "sha256": "eea0423832a227586033fe1d8bf12252488a5c4a6e4e81e3b6cca32c1bd4372a",
+    "collection": "门卫 | osm_way_225109136",
+    "stats": {
+      "id": "osm_way_225109136",
+      "name": "门卫",
+      "kind": "utility",
+      "facade_profile": "unverified_utility",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 6,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -261.296,
+        680.693
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225109136"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225109136.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "门卫 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "55b73698de25df9955fed19156e71b5bcb2e68484191d1d814c69964e1baf05e",
+    "map_center_m": [
+      -261.296,
+      680.693
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225198908": {
+    "sha256": "578e227abcabfc2c9980e7e7d3e6ff9687669944a78bc1b671ca7e7cc34269f0",
+    "collection": "22 | osm_way_225198908",
+    "stats": {
+      "id": "osm_way_225198908",
+      "name": "22",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 372,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        346.358,
+        373.225
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225198908"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225198908.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "22 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "8b27a14f09c9b6f702341755b372a87136363866434958835375c81a3f756bbb",
+    "map_center_m": [
+      346.358,
+      373.225
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225198909": {
+    "sha256": "7f594710dc6e8586fd70afc16b7674241f90a89a12620fe1e5156646f70a503e",
+    "collection": "23 | osm_way_225198909",
+    "stats": {
+      "id": "osm_way_225198909",
+      "name": "23",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        305.355,
+        383.888
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225198909"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225198909.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "23 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "0a9372df06866ce7d2483fcc83730ae43affe53ce4b93782c22d62ab56cef007",
+    "map_center_m": [
+      305.355,
+      383.888
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225198910": {
+    "sha256": "0afa3637a63d583b7f91c8c9e18e1e0b3d4f6b4b0d6b240aa3849688ee3faf34",
+    "collection": "24 | osm_way_225198910",
+    "stats": {
+      "id": "osm_way_225198910",
+      "name": "24",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 186,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        359.49,
+        418.735
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225198910"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225198910.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "24 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "eeb65e3f7375e3204461d9d6b0dfa3590f0a0ca6487bdc4c31a4595c07aad4ff",
+    "map_center_m": [
+      359.49,
+      418.735
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225198911": {
+    "sha256": "1133ecde6cd24b53a53114e2131bffe0d2dfd3112c8632022dca88e048320407",
+    "collection": "25 | osm_way_225198911",
+    "stats": {
+      "id": "osm_way_225198911",
+      "name": "25",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 210,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        289.07,
+        403.556
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225198911"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225198911.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "25 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "598fc6c06096bfcd6ff5be2886b4da0fd7476927056f7ed3aa308adbe09c674d",
+    "map_center_m": [
+      289.07,
+      403.556
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225198912": {
+    "sha256": "968ed27ccde3ce7dd1e8ba9d97b1bdcb35828b98fd8a6f0ff9b3c72c87625eaa",
+    "collection": "26 | osm_way_225198912",
+    "stats": {
+      "id": "osm_way_225198912",
+      "name": "26",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 150,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        344.419,
+        439.592
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225198912"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225198912.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "26 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "54657acac9a4075df49b25b22361fa41e695d59c4979df3376b58271b1238ecf",
+    "map_center_m": [
+      344.419,
+      439.592
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225198913": {
+    "sha256": "a7beb9c2b9af477077b9fec7690a72e3e0c5876887b7d15f67c0faffc0afd6e5",
+    "collection": "27 | osm_way_225198913",
+    "stats": {
+      "id": "osm_way_225198913",
+      "name": "27",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 330,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        298.755,
+        444.212
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225198913"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225198913.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "27 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "fa1a958d41d0ebd22403a90f01883c530f904b835336242b062a09c02259222c",
+    "map_center_m": [
+      298.755,
+      444.212
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225242507": {
+    "sha256": "b25b01e1446f5d19181ceb1981e6c25cf682e15f15d2bd9f173c88dd96d2233c",
+    "collection": "28 | osm_way_225242507",
+    "stats": {
+      "id": "osm_way_225242507",
+      "name": "28",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 204,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        450.162,
+        435.652
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225242507"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225242507.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "28 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "f8db19570d8f89150e91137f549674e6cbfbf21c366ed467a07d1e78b9a6fcfb",
+    "map_center_m": [
+      450.162,
+      435.652
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225242509": {
+    "sha256": "4478b19698b8bc7e8b8e038d17b666c3d26d53a7e4de2278e642ca9a1af9742f",
+    "collection": "29 | osm_way_225242509",
+    "stats": {
+      "id": "osm_way_225242509",
+      "name": "29",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 198,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        424.539,
+        457.393
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225242509"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225242509.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "29 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "d9f2fe0191fee7e8d040c355bbffbb2efbb069ea1e66a88ad5770e015632d38d",
+    "map_center_m": [
+      424.539,
+      457.393
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225242511": {
+    "sha256": "80e5bef9fd7586c403623e481a8eae3c778e70c5a1323991902b259bf1780a27",
+    "collection": "30 | osm_way_225242511",
+    "stats": {
+      "id": "osm_way_225242511",
+      "name": "30",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 126,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        467.577,
+        484.593
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225242511"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225242511.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "30 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "94f4d35a5d99fc996033d07f6e36f811e25ecf2e16c12fc8cb1c4e1b94fc5f74",
+    "map_center_m": [
+      467.577,
+      484.593
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225242513": {
+    "sha256": "a00d2386410804d68f46aef2780f92db428cdd5d7ebe0ef61899058bcb21ebfe",
+    "collection": "31 | osm_way_225242513",
+    "stats": {
+      "id": "osm_way_225242513",
+      "name": "31",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 150,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        413.71,
+        481.166
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225242513"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225242513.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "31 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "0ee5db606f622ecc864a75637547d1485563fad1fd2eec1336693c8b78e2365f",
+    "map_center_m": [
+      413.71,
+      481.166
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225242515": {
+    "sha256": "cf73f492992d4f3a71921e5a48a650495918ca4eba6e44adb7937d7fe21eafe9",
+    "collection": "32 | osm_way_225242515",
+    "stats": {
+      "id": "osm_way_225242515",
+      "name": "32",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 78,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        458.561,
+        507.258
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225242515"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225242515.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "32 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "ed4dc793dba815e90d2a67169c1a20bba74199823f6bcbf80d2c3d75f6b7d9a5",
+    "map_center_m": [
+      458.561,
+      507.258
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225242517": {
+    "sha256": "88a17158b5a735cb01bacf82429c3d9acd62625b2ac028bd3d9d8d7dccc2d073",
+    "collection": "33 | osm_way_225242517",
+    "stats": {
+      "id": "osm_way_225242517",
+      "name": "33",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 252,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        420.593,
+        517.582
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225242517"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225242517.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "33 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "e7e29eb0b61db5507d6fcfe38bcd5fdd92174f3a01b34e9fc80f998a302b3750",
+    "map_center_m": [
+      420.593,
+      517.582
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225250615": {
+    "sha256": "2974fdb7e4a88b7380adc127671b8cbd1717463bd6e5a1225de1909045a58322",
+    "collection": "34 | osm_way_225250615",
+    "stats": {
+      "id": "osm_way_225250615",
+      "name": "34",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 324,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        402.634,
+        549.908
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225250615"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225250615.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "34 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "f07022e1443452a5e349c99cc4d846ba86e830619cf9df443afd76eb461391fe",
+    "map_center_m": [
+      402.634,
+      549.908
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225250617": {
+    "sha256": "33ee8350773be911578ff88f829c06d2cdd92a3edc3bd12029b5224b9ab8ac28",
+    "collection": "36 | osm_way_225250617",
+    "stats": {
+      "id": "osm_way_225250617",
+      "name": "36",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 192,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        410.854,
+        601.468
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225250617"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225250617.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "36 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "dd41192ffdd4c4adc59e80a6e486e82ed1c3e893d344bcd561443c1d032a37d5",
+    "map_center_m": [
+      410.854,
+      601.468
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225250618": {
+    "sha256": "6d51d0cad480d9d98939abe397a0f362dbdd5ff472246321de5dc7543b681fb2",
+    "collection": "37 | osm_way_225250618",
+    "stats": {
+      "id": "osm_way_225250618",
+      "name": "37",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        343.168,
+        593.552
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225250618"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225250618.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "37 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "0af32a9b5cd5f2d366564f21f021271ea47b874794d093996c9cd7acedffb74d",
+    "map_center_m": [
+      343.168,
+      593.552
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225250619": {
+    "sha256": "e0f4906d75fe25a4a412383b6e4b399da03c8598718a130e687dce66caffca3f",
+    "collection": "38 | osm_way_225250619",
+    "stats": {
+      "id": "osm_way_225250619",
+      "name": "38",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 168,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        393.891,
+        623.943
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225250619"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225250619.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "38 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "ee7b22730639a41a63dd87de98c9f3ff5cb59587b885d4ef3ef193588c6cf60e",
+    "map_center_m": [
+      393.891,
+      623.943
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225250620": {
+    "sha256": "b4776497b78c5c2614163be0fc872a5aa678b3b4f97833f3c7dc7f1cda0ea46e",
+    "collection": "39 | osm_way_225250620",
+    "stats": {
+      "id": "osm_way_225250620",
+      "name": "39",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 300,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        352.055,
+        637.571
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225250620"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225250620.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "39 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "a48ab653bb31dfbbb7884abbbd92262e9fc00156f0be1aa6543fae7d9e296ef4",
+    "map_center_m": [
+      352.055,
+      637.571
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225251648": {
+    "sha256": "7471a94a4eed260c7e28d0cfbc0df8e3fbcc67fa4e93d4627ce5d5bb54a04f1f",
+    "collection": "35 | osm_way_225251648",
+    "stats": {
+      "id": "osm_way_225251648",
+      "name": "35",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 222,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        353.128,
+        566.952
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225251648"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225251648.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "35 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "720495697114e795bc77cd334bdca061b93a741f4d43346f6734e1e524355e38",
+    "map_center_m": [
+      353.128,
+      566.952
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225253706": {
+    "sha256": "01d09c8cb7a4f474fc0120261bc522cb47433eb67a56c944dbfa99c233a3ff3d",
+    "collection": "46 | osm_way_225253706",
+    "stats": {
+      "id": "osm_way_225253706",
+      "name": "46",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 384,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        217.923,
+        593.212
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225253706"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225253706.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "46 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "ae417ff237d6c9641f55ca569ca0a5976fc44882bacb913ea7a92506dd002b1f",
+    "map_center_m": [
+      217.923,
+      593.212
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225253707": {
+    "sha256": "611fc16c0c616827460d0676143f594a136a68a9a7d3330bd99eb6678d5991c8",
+    "collection": "47 | osm_way_225253707",
+    "stats": {
+      "id": "osm_way_225253707",
+      "name": "47",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 432,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        210.025,
+        619.474
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225253707"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225253707.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "47 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "5e7786501131f910193e8669555964cbb7ead4a9d492754ef776c9c05712bf84",
+    "map_center_m": [
+      210.025,
+      619.474
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225253711": {
+    "sha256": "2ad07de2c177fba7bb9221a50375b1fbeb3cfb3a15166d8b6869e7d6779f0d89",
+    "collection": "48 | osm_way_225253711",
+    "stats": {
+      "id": "osm_way_225253711",
+      "name": "48",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 390,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        180.918,
+        643.766
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225253711"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225253711.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "48 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "9ca3d283a9f3bc8cada7e4f7ad851b0f1a18b5c7e0132cf5ebab25e3952287e3",
+    "map_center_m": [
+      180.918,
+      643.766
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225253712": {
+    "sha256": "cd6a193e5581459ba54bec8950c21c80559af120cd7e5b7096daa65dce8fcd0e",
+    "collection": "49 | osm_way_225253712",
+    "stats": {
+      "id": "osm_way_225253712",
+      "name": "49",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 450,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        174.399,
+        670.887
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225253712"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225253712.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "49 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "fb204225681b25c9d980e178eedd6ec4675990045ce18d0670ea5ea8e37f11f6",
+    "map_center_m": [
+      174.399,
+      670.887
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225255192": {
+    "sha256": "785c5277c92f756ddf8a7d071fc482c859501590d26b8501d8fab1e730f00cf2",
+    "collection": "45 | osm_way_225255192",
+    "stats": {
+      "id": "osm_way_225255192",
+      "name": "45",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 300,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        293.716,
+        743.464
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225255192"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225255192.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "45 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "fce978e2394c6c4bd47b122c69d7fee36ba8355ad7f30eb430621ac8433932b2",
+    "map_center_m": [
+      293.716,
+      743.464
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225255194": {
+    "sha256": "6f94c0462c3ed5f6e5de3f7dd99ad6244ef656280ac2fc53dcc442560071d204",
+    "collection": "43 | osm_way_225255194",
+    "stats": {
+      "id": "osm_way_225255194",
+      "name": "43",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 162,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        282.788,
+        701.249
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225255194"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225255194.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "43 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "01795be1d5ebbcbc60821ea5e3c9ef3f238dff825ee4b46ae6aa691924aa54f9",
+    "map_center_m": [
+      282.788,
+      701.249
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225255196": {
+    "sha256": "f843549e437247ee4dcc05be1fd20799bc0909e2fea89b301e1f0c66e38584ca",
+    "collection": "41 | osm_way_225255196",
+    "stats": {
+      "id": "osm_way_225255196",
+      "name": "41",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 198,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        291.853,
+        678.303
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225255196"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225255196.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "41 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "981e2eb33cd6dc67fdecb4cce8c626596de62067e326928d3dcf4dab349a6c71",
+    "map_center_m": [
+      291.853,
+      678.303
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225255198": {
+    "sha256": "baa8d12c5645b18770fe6968fe31ea71d9a25132d6655a36c403cd60af5e2635",
+    "collection": "40 | osm_way_225255198",
+    "stats": {
+      "id": "osm_way_225255198",
+      "name": "40",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 300,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        339.652,
+        668.25
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225255198"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225255198.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "40 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "bb94e3ef71b8e5dc987d166308b5045a8bb3dcdff069343a640722d048e90912",
+    "map_center_m": [
+      339.652,
+      668.25
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225255200": {
+    "sha256": "b72a3a0c34d2de3d32fd2d68a93ddcccfe5e1324d2605ebea7c0ed0ee240abfe",
+    "collection": "44 | osm_way_225255200",
+    "stats": {
+      "id": "osm_way_225255200",
+      "name": "44",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 150,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        333.266,
+        732.612
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225255200"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225255200.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "44 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "bc74128f4ed36cc4aa155a34a329b861cd7cdf75829fcde73c60bf3a2f2f3cc3",
+    "map_center_m": [
+      333.266,
+      732.612
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225255202": {
+    "sha256": "a35ba5a98794a5e91a143356bc99ef724b8eb7cffb296e8f6f09a3cfe6cfbefc",
+    "collection": "42 | osm_way_225255202",
+    "stats": {
+      "id": "osm_way_225255202",
+      "name": "42",
+      "kind": "dorm",
+      "facade_profile": "east_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 192,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        349.344,
+        712.201
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/dorm_renovation_2022_image_07.jpg",
+        "observations/images/njupt/dorm_renovation_2022_image_22.jpg"
+      ],
+      "observed_features": [
+        "grey ceramic material replaces uniformly tan walls",
+        "paired residential glazing family; window modules inferred",
+        "surface AC units and brackets are unsurveyed reconstruction detail"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225255202"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225255202.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "42 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "301086b4a7634043cd9061cd2b400867a7fdcc0f91aea797c6a79a216969bb2c",
+    "map_center_m": [
+      349.344,
+      712.201
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265324": {
+    "sha256": "5808a5294c57e84f0e2e4086f2020532cfb9d1500c687b5db65291e06e0d67d3",
+    "collection": "osm_way_225265324 | osm_way_225265324",
+    "stats": {
+      "id": "osm_way_225265324",
+      "name": "osm_way_225265324",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 216,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -445.758,
+        442.844
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265324"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265324.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "c72db621e932105f26477f37b36b31d53c15908fb14c7e2d4b12aa0661122d96",
+    "map_center_m": [
+      -445.758,
+      442.844
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265327": {
+    "sha256": "006d068e50e7b85ffe93fe7f00ca1f6333679527cdf34434ac2b97441aeca5d5",
+    "collection": "osm_way_225265327 | osm_way_225265327",
+    "stats": {
+      "id": "osm_way_225265327",
+      "name": "osm_way_225265327",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 216,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -427.598,
+        411.79
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265327"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265327.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "0fbfe1082def2529d4a1794ce809dc993bb65c318e35a5bd0c1ab5549c24fb59",
+    "map_center_m": [
+      -427.598,
+      411.79
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265329": {
+    "sha256": "ea322706dc6f7a2a67d117cc84ae3ddb562d701e16593303f161959c94e90c14",
+    "collection": "osm_way_225265329 | osm_way_225265329",
+    "stats": {
+      "id": "osm_way_225265329",
+      "name": "osm_way_225265329",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 168,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -371.308,
+        444.421
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265329"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265329.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b1cc8a2a5d6cdddab1d223799255c4c51be6166376f078ace8563a17730fe40a",
+    "map_center_m": [
+      -371.308,
+      444.421
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265332": {
+    "sha256": "89287c1792e100a9394883e8c0eb4298024cc2bc4c2244197ffabc8f4c83049f",
+    "collection": "osm_way_225265332 | osm_way_225265332",
+    "stats": {
+      "id": "osm_way_225265332",
+      "name": "osm_way_225265332",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 168,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -320.237,
+        474.511
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265332"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265332.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "bfade3abfb66aa3d02c9d51125c731f8d1766eec0408508193e15585ae35c3b5",
+    "map_center_m": [
+      -320.237,
+      474.511
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265335": {
+    "sha256": "eea19de5df8014cfea71071a8ebaf20ba5ad60d2e9a7cbb04eb6c8c794794404",
+    "collection": "osm_way_225265335 | osm_way_225265335",
+    "stats": {
+      "id": "osm_way_225265335",
+      "name": "osm_way_225265335",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 180,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -339.118,
+        506.641
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265335"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265335.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "2be11ea57da1af71945e580c8b6bb782c0e83555afe290306f1bc7786289f02b",
+    "map_center_m": [
+      -339.118,
+      506.641
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265337": {
+    "sha256": "2f6ca65c57c5cfd946167b4f5238332609ee7e0be05d1d3c93c368d6acea34e2",
+    "collection": "青教公寓 | osm_way_225265337",
+    "stats": {
+      "id": "osm_way_225265337",
+      "name": "青教公寓",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 168,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -390.148,
+        475.82
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265337"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265337.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "青教公寓 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "128bf4b9571c9b739c1e5bb0bc746d6d7fdbf0f065c3f6b4bb1e1940d9a6d290",
+    "map_center_m": [
+      -390.148,
+      475.82
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265339": {
+    "sha256": "87a00c47bd2eb3c57026be21be761b24a61287b496a782d872114461b89ab59b",
+    "collection": "osm_way_225265339 | osm_way_225265339",
+    "stats": {
+      "id": "osm_way_225265339",
+      "name": "osm_way_225265339",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -469.193,
+        488.39
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265339"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265339.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1d23a826469159eb5279b10e0683981e7c7b3f8233e5b791305ec2c9f9b3151a",
+    "map_center_m": [
+      -469.193,
+      488.39
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265342": {
+    "sha256": "f63049095054404dbfee9f8e6db9074b8ff4c662bbc8050693bc6e93a9e097a4",
+    "collection": "osm_way_225265342 | osm_way_225265342",
+    "stats": {
+      "id": "osm_way_225265342",
+      "name": "osm_way_225265342",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 144,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -403.613,
+        527.712
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265342"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265342.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1fa15c7d57e56cc13d763d2bb028de914cf5c72d588e44232885e474fa4e50cd",
+    "map_center_m": [
+      -403.613,
+      527.712
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265344": {
+    "sha256": "1fde8439d723dcf93ab773407182ee2cb40122b19cbc1325c6e41e41c030e57f",
+    "collection": "osm_way_225265344 | osm_way_225265344",
+    "stats": {
+      "id": "osm_way_225265344",
+      "name": "osm_way_225265344",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 168,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -361.386,
+        552.942
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265344"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265344.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "56760515d46b9e5630c1a2080a78bc30d94819f83b2a1a58107fcbe9e90c4a1d",
+    "map_center_m": [
+      -361.386,
+      552.942
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265346": {
+    "sha256": "4b49f635fbfc32d3e104b0d57692316dd08db25a833de133da93124cb98125b5",
+    "collection": "osm_way_225265346 | osm_way_225265346",
+    "stats": {
+      "id": "osm_way_225265346",
+      "name": "osm_way_225265346",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 216,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -385.372,
+        578.538
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265346"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265346.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "76fccad9b8649b739e2403eb3673848749c80a5067439a38fb0bc91cc96c682f",
+    "map_center_m": [
+      -385.372,
+      578.538
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265348": {
+    "sha256": "8691bf1b38caede04d868551984e3ebc59bc69865afef18baaea7595eeef78b7",
+    "collection": "osm_way_225265348 | osm_way_225265348",
+    "stats": {
+      "id": "osm_way_225265348",
+      "name": "osm_way_225265348",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 204,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -439.621,
+        545.953
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265348"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265348.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "e334d9cb70fb2e18d87884b71a0a0ed282cd482d5b7d904b5e91621a904f4a73",
+    "map_center_m": [
+      -439.621,
+      545.953
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225265351": {
+    "sha256": "5af61602e08fad97b909d0ca177457ab3147ebca9607fdee4c5f5194c14ccaa1",
+    "collection": "osm_way_225265351 | osm_way_225265351",
+    "stats": {
+      "id": "osm_way_225265351",
+      "name": "osm_way_225265351",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -487.669,
+        517.295
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225265351"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225265351.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "286de3247768ac4b6191ab854f8e990482a92c227d82a53ed528c1a2fdebf414",
+    "map_center_m": [
+      -487.669,
+      517.295
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_225267146": {
+    "sha256": "224b76cb4780f3f5145a1036ddc89a511a38d01ca0210c2f46aafc3f645a7e58",
+    "collection": "osm_way_225267146 | osm_way_225267146",
+    "stats": {
+      "id": "osm_way_225267146",
+      "name": "osm_way_225267146",
+      "kind": "dorm",
+      "facade_profile": "unverified_dorm",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 84,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -451.213,
+        479.112
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_225267146"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_225267146.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "59827dcc980abf2c2078104ff486665170cafdd565b7c510415dcf393a207d95",
+    "map_center_m": [
+      -451.213,
+      479.112
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_962566084": {
+    "sha256": "7477e39fa739429e3f7616a27ff161ae3a02434580ef13c4afe6a45a601bbbb9",
+    "collection": "osm_way_962566084 | osm_way_962566084",
+    "stats": {
+      "id": "osm_way_962566084",
+      "name": "osm_way_962566084",
+      "kind": "utility",
+      "facade_profile": "unverified_utility",
+      "height": 4.0,
+      "levels": 1,
+      "window_count": 0,
+      "objects": 2,
+      "roof_equipment": 0,
+      "center": [
+        87.58,
+        163.978
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_962566084"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_962566084.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "d55c4e172866bc216b99b30a2b67df4f3de6d1e33b51b53a891f3de00bca026e",
+    "map_center_m": [
+      87.58,
+      163.978
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057023": {
+    "sha256": "45b998c774ca1f58835b02b3458027ecb6dc77f2bab05ec0d224402112608cc0",
+    "collection": "osm_way_1173057023 | osm_way_1173057023",
+    "stats": {
+      "id": "osm_way_1173057023",
+      "name": "osm_way_1173057023",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 222,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -277.046,
+        535.899
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057023"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057023.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "bb06a6c2f0ab426ca2ec02f0ea062d55ffd1fa34e5ce231e0e1263c21154577a",
+    "map_center_m": [
+      -277.046,
+      535.899
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057024": {
+    "sha256": "7002d870e61ad1e4bef49968f420c5704d0fc0227367c29c2438354cdb2cd158",
+    "collection": "osm_way_1173057024 | osm_way_1173057024",
+    "stats": {
+      "id": "osm_way_1173057024",
+      "name": "osm_way_1173057024",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 222,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -258.706,
+        505.683
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057024"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057024.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "d89031738db9d45af386b46a97af73cee73f6481a9d9af8678071ceb7d76087c",
+    "map_center_m": [
+      -258.706,
+      505.683
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057025": {
+    "sha256": "c5b7b1c225dc2455b0f6f7266daf37665c127d1b89dc1513a432f52e240ea513",
+    "collection": "osm_way_1173057025 | osm_way_1173057025",
+    "stats": {
+      "id": "osm_way_1173057025",
+      "name": "osm_way_1173057025",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 222,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -321.537,
+        611.898
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057025"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057025.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "3f1f24ec686357607dfea943f9e01be81af02e9b5059073e0297af8ea5345c94",
+    "map_center_m": [
+      -321.537,
+      611.898
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057026": {
+    "sha256": "1a314da15c35088b84bf838803b6446642924a380010f2fa314b8b6cae6cfd18",
+    "collection": "osm_way_1173057026 | osm_way_1173057026",
+    "stats": {
+      "id": "osm_way_1173057026",
+      "name": "osm_way_1173057026",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 222,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -297.742,
+        566.895
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057026"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057026.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "3f1f24ec686357607dfea943f9e01be81af02e9b5059073e0297af8ea5345c94",
+    "map_center_m": [
+      -297.742,
+      566.895
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057027": {
+    "sha256": "f12e8b6ea3c376812be8e6313d2cf791ff6ed03c48d7c43dc59e3137f06420c1",
+    "collection": "osm_way_1173057027 | osm_way_1173057027",
+    "stats": {
+      "id": "osm_way_1173057027",
+      "name": "osm_way_1173057027",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -264.979,
+        645.829
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057027"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057027.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "63864014ef52b351a5dac48c27fbffb1059c321e92cca2d54a58e5b1b3b49611",
+    "map_center_m": [
+      -264.979,
+      645.829
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057028": {
+    "sha256": "0673166a34c538daa289201822e73caf70997285cac92ff5a287278bb8035540",
+    "collection": "osm_way_1173057028 | osm_way_1173057028",
+    "stats": {
+      "id": "osm_way_1173057028",
+      "name": "osm_way_1173057028",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -237.067,
+        600.311
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057028"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057028.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "7724f8e5acc8d929c57ab920a76acfc6e844fa856c8de6bb156cb22c3d93116a",
+    "map_center_m": [
+      -237.067,
+      600.311
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057029": {
+    "sha256": "20c2e2ba5a9a0be2df88a39a6bef1206cd0b23b40b63b023cd623c72f5234b86",
+    "collection": "osm_way_1173057029 | osm_way_1173057029",
+    "stats": {
+      "id": "osm_way_1173057029",
+      "name": "osm_way_1173057029",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -224.439,
+        567.459
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057029"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057029.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "022b6e7ecd7352bdedca06ed0c525fbbbc791effb7b557ffb40276da76e07ba3",
+    "map_center_m": [
+      -224.439,
+      567.459
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057030": {
+    "sha256": "c9b4b355cc884a4ef7a3d24bc4efa8dfee2938349275cef3e7811227294e3803",
+    "collection": "osm_way_1173057030 | osm_way_1173057030",
+    "stats": {
+      "id": "osm_way_1173057030",
+      "name": "osm_way_1173057030",
+      "kind": "dorm",
+      "facade_profile": "staff_apartment",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 156,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -207.036,
+        536.849
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057030"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057030.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": " • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "c5ae46ab5f1438e6ccdfb9ff0e867309c7712dd0b09092682d9dc6f66f788be6",
+    "map_center_m": [
+      -207.036,
+      536.849
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057031": {
+    "sha256": "846106b280255310f82b012f2af039f03a93c5667b990aa205815bb65b40a0fc",
+    "collection": "樱苑50栋 | osm_way_1173057031",
+    "stats": {
+      "id": "osm_way_1173057031",
+      "name": "樱苑50栋",
+      "kind": "dorm",
+      "facade_profile": "yingyuan",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 114,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -410.771,
+        372.141
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_02.jpg",
+        "observations/images/njupt/gallery-16.jpg"
+      ],
+      "observed_features": [
+        "pale grey elevation",
+        "charcoal continuous floor ribbons",
+        "restrained metal window frames"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057031"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057031.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "樱苑50栋 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "cfd59b8087287edfd768fc4a9e3913fa129c0fa7225c18cc59c937e32a24fbd6",
+    "map_center_m": [
+      -410.771,
+      372.141
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057032": {
+    "sha256": "a6b73e79bb9070cfebbab25c108930b6fdbb4d299d3ab5fa0858a72410bc7876",
+    "collection": "樱苑53栋 | osm_way_1173057032",
+    "stats": {
+      "id": "osm_way_1173057032",
+      "name": "樱苑53栋",
+      "kind": "dorm",
+      "facade_profile": "yingyuan",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 114,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -386.775,
+        331.666
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_02.jpg",
+        "observations/images/njupt/gallery-16.jpg"
+      ],
+      "observed_features": [
+        "pale grey elevation",
+        "charcoal continuous floor ribbons",
+        "restrained metal window frames"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057032"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057032.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "樱苑53栋 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "7064c04bcb831389559c7a94350b1f8ea3123c8c442c11cb4878c447f08a2acc",
+    "map_center_m": [
+      -386.775,
+      331.666
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057033": {
+    "sha256": "27ab56aa8e0806365a599c477486ed9f11cadb92b02726dbfb6e3475af9bd089",
+    "collection": "樱苑54栋 | osm_way_1173057033",
+    "stats": {
+      "id": "osm_way_1173057033",
+      "name": "樱苑54栋",
+      "kind": "dorm",
+      "facade_profile": "yingyuan",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 114,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -333.221,
+        363.833
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_02.jpg",
+        "observations/images/njupt/gallery-16.jpg"
+      ],
+      "observed_features": [
+        "pale grey elevation",
+        "charcoal continuous floor ribbons",
+        "restrained metal window frames"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057033"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057033.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "樱苑54栋 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1c6bbf14f2f2118f4d6b4e08c07185a66ec614e6fb8b69d7e358302159924fc9",
+    "map_center_m": [
+      -333.221,
+      363.833
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057034": {
+    "sha256": "92dfd24347c919423e238d10c89a21f3b5ccadac7322d00ba8edb05f3cbd8b46",
+    "collection": "樱苑51栋 | osm_way_1173057034",
+    "stats": {
+      "id": "osm_way_1173057034",
+      "name": "樱苑51栋",
+      "kind": "dorm",
+      "facade_profile": "yingyuan",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 114,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -357.41,
+        403.592
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_02.jpg",
+        "observations/images/njupt/gallery-16.jpg"
+      ],
+      "observed_features": [
+        "pale grey elevation",
+        "charcoal continuous floor ribbons",
+        "restrained metal window frames"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057034"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057034.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "樱苑51栋 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b57e2dd393ba150cf68cfff6a3a7411e615aacaaeeee58216a09d177b319b709",
+    "map_center_m": [
+      -357.41,
+      403.592
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057035": {
+    "sha256": "03eb52d7d07f08e2ae8802e48ac2c6bcf075098761b1f5cf07169802fd82098e",
+    "collection": "樱苑55栋 | osm_way_1173057035",
+    "stats": {
+      "id": "osm_way_1173057035",
+      "name": "樱苑55栋",
+      "kind": "dorm",
+      "facade_profile": "yingyuan",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 114,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -280.029,
+        393.859
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_02.jpg",
+        "observations/images/njupt/gallery-16.jpg"
+      ],
+      "observed_features": [
+        "pale grey elevation",
+        "charcoal continuous floor ribbons",
+        "restrained metal window frames",
+        "paired 55/52 low glazed entrance and open covered link; approximate dimensions"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057035"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057035.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "樱苑55栋 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1337b6cb1e8c60bc75e9c0ec4cd3235b7672098f9b5d8406d28beb38e24d8216",
+    "map_center_m": [
+      -280.029,
+      393.859
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057036": {
+    "sha256": "fae1caa9ee115bfc48434167335c7c058f24e0e262af2988772cbf3b889649a5",
+    "collection": "樱苑52栋 | osm_way_1173057036",
+    "stats": {
+      "id": "osm_way_1173057036",
+      "name": "樱苑52栋",
+      "kind": "dorm",
+      "facade_profile": "yingyuan",
+      "height": 19.2,
+      "levels": 6,
+      "window_count": 114,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -304.53,
+        434.612
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_02.jpg",
+        "observations/images/njupt/gallery-16.jpg"
+      ],
+      "observed_features": [
+        "pale grey elevation",
+        "charcoal continuous floor ribbons",
+        "restrained metal window frames"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057036"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057036.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "樱苑52栋 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "74a150ab147b8c3e9c5aae1c3b88b2c854db5a7a27da36763c882a2973ffff97",
+    "map_center_m": [
+      -304.53,
+      434.612
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057050": {
+    "sha256": "ed518db6dfcc4b7246b91fe2f7aec6781c53c45af44321ddc31f01b2070c58e3",
+    "collection": "电子与光学工程学院、柔性材料（未来技术）学院 | osm_way_1173057050",
+    "stats": {
+      "id": "osm_way_1173057050",
+      "name": "电子与光学工程学院、柔性材料（未来技术）学院",
+      "kind": "legacy_academic",
+      "facade_profile": "legacy",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 480,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -114.337,
+        44.92
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_03.jpg",
+        "observations/images/njupt/gallery-13.jpg"
+      ],
+      "observed_features": [
+        "two lower grey-stone storeys",
+        "pale warm upper walls",
+        "localized glazed portal; no repeated orange frames on every edge"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057050"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057050.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "电子与光学工程学院、柔性材料（未来技术）学院 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "afab5eb9264845a567e5dde295f6ee0b52192a14b3d89539a5cf26d21361820a",
+    "map_center_m": [
+      -114.337,
+      44.92
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057051": {
+    "sha256": "363c4e466d855068b72d1b1e4cd159a778d4195b12be65215e2f94109f3ecc89",
+    "collection": "自动化学院、人工智能学院 | osm_way_1173057051",
+    "stats": {
+      "id": "osm_way_1173057051",
+      "name": "自动化学院、人工智能学院",
+      "kind": "legacy_academic",
+      "facade_profile": "legacy",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 300,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -163.057,
+        87.098
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_03.jpg",
+        "observations/images/njupt/gallery-13.jpg"
+      ],
+      "observed_features": [
+        "two lower grey-stone storeys",
+        "pale warm upper walls",
+        "localized glazed portal; no repeated orange frames on every edge"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057051"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057051.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "自动化学院、人工智能学院 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "259befff5300fcde2ac0d6fd78e8e622d2b41df1f15a858f9261866bc0fc5ca6",
+    "map_center_m": [
+      -163.057,
+      87.098
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057052": {
+    "sha256": "e3c3cbd80662d77f7226736be4d2830e1104423e6db39e4d641b6fea8294317e",
+    "collection": "地理与生物信息学院 | osm_way_1173057052",
+    "stats": {
+      "id": "osm_way_1173057052",
+      "name": "地理与生物信息学院",
+      "kind": "legacy_academic",
+      "facade_profile": "legacy",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 192,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -89.377,
+        128.537
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_03.jpg",
+        "observations/images/njupt/gallery-13.jpg"
+      ],
+      "observed_features": [
+        "two lower grey-stone storeys",
+        "pale warm upper walls",
+        "localized glazed portal; no repeated orange frames on every edge"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057052"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057052.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "地理与生物信息学院 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "1325cc44f5abe417c154b319300f2df7c1a374acbb70d3c95baca14b73c31ac1",
+    "map_center_m": [
+      -89.377,
+      128.537
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057053": {
+    "sha256": "bba531a4ce3cc57189f02f9f1dac60b1b6897241317e0321490524234a121176",
+    "collection": "集成电路科学与工程学院 | osm_way_1173057053",
+    "stats": {
+      "id": "osm_way_1173057053",
+      "name": "集成电路科学与工程学院",
+      "kind": "legacy_academic",
+      "facade_profile": "legacy",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 300,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -189.847,
+        131.404
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_03.jpg",
+        "observations/images/njupt/gallery-13.jpg"
+      ],
+      "observed_features": [
+        "two lower grey-stone storeys",
+        "pale warm upper walls",
+        "localized glazed portal; no repeated orange frames on every edge"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057053"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057053.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "集成电路科学与工程学院 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "ae9f62e3940637d888b7afa8b5b3855cc72dc4fa51305a8e37c8c037465d1773",
+    "map_center_m": [
+      -189.847,
+      131.404
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057054": {
+    "sha256": "1f8d623863a05048e510fb2ab2ceff6d6cf73130b33ee395ed5b0787c03704a9",
+    "collection": "工程实验教学部 | osm_way_1173057054",
+    "stats": {
+      "id": "osm_way_1173057054",
+      "name": "工程实验教学部",
+      "kind": "legacy_academic",
+      "facade_profile": "legacy",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 216,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -113.125,
+        175.484
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_03.jpg",
+        "observations/images/njupt/gallery-13.jpg"
+      ],
+      "observed_features": [
+        "two lower grey-stone storeys",
+        "pale warm upper walls",
+        "localized glazed portal; no repeated orange frames on every edge"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057054"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057054.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "工程实验教学部 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b0cbbe8818406c72b9c1ea5e0a0b736b80f6ab7e558a8b2ef3a77e4208ef17fc",
+    "map_center_m": [
+      -113.125,
+      175.484
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057055": {
+    "sha256": "6cee4e81b21e695e8ba1267f457b6981be126640c0e0b5bf15f3228dc1bb5d67",
+    "collection": "计算机学院、软件学院、网络空间安全学院 | osm_way_1173057055",
+    "stats": {
+      "id": "osm_way_1173057055",
+      "name": "计算机学院、软件学院、网络空间安全学院",
+      "kind": "legacy_academic",
+      "facade_profile": "legacy",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 636,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -168.888,
+        238.331
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_03.jpg",
+        "observations/images/njupt/gallery-13.jpg"
+      ],
+      "observed_features": [
+        "two lower grey-stone storeys",
+        "pale warm upper walls",
+        "localized glazed portal; no repeated orange frames on every edge"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057055"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057055.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "计算机学院、软件学院、网络空间安全学院 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "a7fe4eb008e950e68dd78c20bc0af0d9503b0144e5372dac15b821343bc6bec0",
+    "map_center_m": [
+      -168.888,
+      238.331
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173057056": {
+    "sha256": "33e61c0691cb67c69487a16e162b25286f1fef8e49ea0fe2f036ae7ef48c35f4",
+    "collection": "南京邮电大学-文科楼 | osm_way_1173057056",
+    "stats": {
+      "id": "osm_way_1173057056",
+      "name": "南京邮电大学-文科楼",
+      "kind": "legacy_academic",
+      "facade_profile": "legacy",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 588,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -72.666,
+        267.727
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_03.jpg",
+        "observations/images/njupt/gallery-13.jpg"
+      ],
+      "observed_features": [
+        "two lower grey-stone storeys",
+        "pale warm upper walls",
+        "localized glazed portal; no repeated orange frames on every edge"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173057056"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173057056.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "南京邮电大学-文科楼 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "f5e8ce2c912d8ff268cb7bd53ff26bb39c3f05a320b3663ce211f60f3df644ab",
+    "map_center_m": [
+      -72.666,
+      267.727
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1173059720": {
+    "sha256": "b0a14ea6e435713f476ad0088dad36d7a26bbe2e5c6348ea08e787da7684d42b",
+    "collection": "材料科学与工程学院-新大楼 | osm_way_1173059720",
+    "stats": {
+      "id": "osm_way_1173059720",
+      "name": "材料科学与工程学院-新大楼",
+      "kind": "science",
+      "facade_profile": "materials",
+      "height": 22.2,
+      "levels": 6,
+      "window_count": 684,
+      "objects": 3,
+      "roof_equipment": 31,
+      "center": [
+        -107.697,
+        346.906
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/construction_home_image_01.jpg",
+        "observations/images/njupt/gallery-17.jpg"
+      ],
+      "observed_features": [
+        "lower pale narrow-pier podium",
+        "upper red vertical screening and horizontal framing",
+        "mapped internal light court",
+        "photo-supported roof mechanical zone"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1173059720"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1173059720.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "材料科学与工程学院-新大楼 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "64ee40905cd5f06f6a259dfef7338e02c12964463ad5c96fd8eefbedaac74ce2",
+    "map_center_m": [
+      -107.697,
+      346.906
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1281082570": {
+    "sha256": "fa5719e33d2634a50eaed19630a090f0a246db060ce857f5392573d835301f9a",
+    "collection": "新体育馆 | osm_way_1281082570",
+    "stats": {
+      "id": "osm_way_1281082570",
+      "name": "新体育馆",
+      "kind": "new_gym_photo",
+      "center": [
+        -51.933,
+        514.377
+      ],
+      "facade_status": "photo-reconstructed landmark; unmeasured dimensions and unseen details inferred",
+      "height": 21.3,
+      "levels": 4,
+      "objects": 7,
+      "window_count": 22,
+      "references": [
+        "observations/images/njupt/construction_home_image_00.jpg",
+        "observations/images/njupt/construction_article_267603_image_00_original.jpg",
+        "observations/images/njupt/construction_article_241104_image_01.jpg"
+      ],
+      "confirmed": [
+        "Northwest facing front (local +Y), major hall at local -X",
+        "Seven inclined main openings and four auxiliary openings on each principal elevation",
+        "Continuous glazing, diagonal dark reveal and folded stone fascia",
+        "Open rooftop mechanical courtyard and two equipment platforms"
+      ],
+      "inferred": [
+        "Metric elevations and stone sizes",
+        "End-wall and courtyard opening spacing",
+        "Equipment dimensions and pipe layout"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1281082570"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1281082570.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "新体育馆 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "39d179bca34678cec29f2eca536803f5a294f25c428c80d6fce5a1ff960fcecc",
+    "map_center_m": [
+      -51.933,
+      514.377
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1390009973": {
+    "sha256": "f0c451b321e8d48d3113b02ae07ebfba2455adc39ee6dfad0b5c70a15d6574b3",
+    "collection": "南邮仙林一食堂 | osm_way_1390009973",
+    "stats": {
+      "id": "osm_way_1390009973",
+      "name": "南邮仙林一食堂",
+      "kind": "dining",
+      "facade_profile": "unverified_dining",
+      "height": 12.6,
+      "levels": 3,
+      "window_count": 99,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        345.006,
+        -500.996
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1390009973"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1390009973.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "南邮仙林一食堂 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "70ef42576322780783198fb53bafdc10e31b2ee9410d02b07010489e370a5372",
+    "map_center_m": [
+      345.006,
+      -500.996
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1390009974": {
+    "sha256": "691ae0206a4673dd47433a959cb4ab343b08e6208d7c2506ae20a50308264ea5",
+    "collection": "南邮仙林一食堂 | osm_way_1390009974",
+    "stats": {
+      "id": "osm_way_1390009974",
+      "name": "南邮仙林一食堂",
+      "kind": "dining",
+      "facade_profile": "unverified_dining",
+      "height": 12.6,
+      "levels": 3,
+      "window_count": 84,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        318.032,
+        -455.586
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1390009974"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1390009974.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "南邮仙林一食堂 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b95084d43d8353ce339183fb9f279e210f7cfed50ed48525b3716a57f5cd3ec7",
+    "map_center_m": [
+      318.032,
+      -455.586
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1390009975": {
+    "sha256": "0f640b8a10245fdc186e723c8b81ce58de23da193205405492a5911a0ef4419c",
+    "collection": "南邮仙林一食堂 | osm_way_1390009975",
+    "stats": {
+      "id": "osm_way_1390009975",
+      "name": "南邮仙林一食堂",
+      "kind": "dining",
+      "facade_profile": "unverified_dining",
+      "height": 12.6,
+      "levels": 3,
+      "window_count": 63,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        345.106,
+        -463.904
+      ],
+      "facade_status": "unverified conservative envelope; no surveyed facade evidence",
+      "facade_sources": [],
+      "observed_features": [],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1390009975"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1390009975.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "南邮仙林一食堂 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "01a625632e3bd461943fc40a8331aa5f550aab6cf74590f746f94cd244f1a711",
+    "map_center_m": [
+      345.106,
+      -463.904
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_1454085437": {
+    "sha256": "9ff3e139b0f4a8e61cc31f054fa547f3a0837788beb085b3467b2a1b26db171c",
+    "collection": "仙林南门 | osm_way_1454085437",
+    "stats": {
+      "id": "osm_way_1454085437",
+      "name": "仙林南门",
+      "kind": "south_gate_photo",
+      "center": [
+        131.087,
+        -633.353
+      ],
+      "facade_status": "photo-reconstructed landmark; unmeasured dimensions and unseen details inferred",
+      "height": 22.1,
+      "levels": 0,
+      "window_count": 0,
+      "objects": 9,
+      "references": [
+        "observations/images/njupt/gallery-01.jpg",
+        "observations/documents/njupt/official-logo.ai"
+      ],
+      "confirmed": [
+        "Open double-depth frame",
+        "Paired slender columns",
+        "Gold calligraphic lettering outlines from official identity"
+      ],
+      "inferred": [
+        "Member sections and joint module",
+        "Letter mounting brackets and physical thickness",
+        "Letter installation spacing and height"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_1454085437"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_1454085437.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "仙林南门 • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "ccb8cc123ede5ea373af69541991a0d615fb26561c7390464278cfc19cecb4aa",
+    "map_center_m": [
+      131.087,
+      -633.353
+    ],
+    "map_base_z_m": 0.0
+  },
+  "njupt_k_dormitory_01": {
+    "sha256": "d989821338d6dddf0d557292a1205bc0cbc9255c0c654197d8c2decc9dccd3ce",
+    "collection": "K组团宿舍（模型序号1） | njupt_k_dormitory_01",
+    "stats": {
+      "id": "njupt_k_dormitory_01",
+      "name": "K组团宿舍（模型序号1）",
+      "kind": "dorm",
+      "facade_profile": "k_dorm",
+      "height": 18.1,
+      "levels": 5,
+      "window_count": 200,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -365.204,
+        309.048
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/k_complete_20260901_image_00.png",
+        "observations/images/njupt/k_inspection_20260901_image_00.png"
+      ],
+      "observed_features": [
+        "new-block grey/white residential envelope; observed detail palette",
+        "five storeys from project record",
+        "recessed balcony openings and closely spaced pale piers",
+        "continuous dark horizontal slab edges",
+        "flat roofs with deep layered cornice"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "njupt_k_dormitory_01"
+      },
+      "asset_file": "projects/blender/buildings/njupt_k_dormitory_01.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "K组团宿舍（模型序号1） • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "cb3c6b790b2034e166797f6a5e878e598e612a5551922f02a987a15f2a0ae6f7",
+    "map_center_m": [
+      -365.204,
+      309.048
+    ],
+    "map_base_z_m": 0.0
+  },
+  "njupt_k_dormitory_02": {
+    "sha256": "5f45eea395f35a9638ad81fac72ceddd0dae0f114c33f49237e4aaf90da29d21",
+    "collection": "K组团宿舍（模型序号2） | njupt_k_dormitory_02",
+    "stats": {
+      "id": "njupt_k_dormitory_02",
+      "name": "K组团宿舍（模型序号2）",
+      "kind": "dorm",
+      "facade_profile": "k_dorm",
+      "height": 18.1,
+      "levels": 5,
+      "window_count": 190,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -309.523,
+        336.382
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/k_complete_20260901_image_00.png",
+        "observations/images/njupt/k_inspection_20260901_image_00.png"
+      ],
+      "observed_features": [
+        "new-block grey/white residential envelope; observed detail palette",
+        "five storeys from project record",
+        "recessed balcony openings and closely spaced pale piers",
+        "continuous dark horizontal slab edges",
+        "flat roofs with deep layered cornice"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "njupt_k_dormitory_02"
+      },
+      "asset_file": "projects/blender/buildings/njupt_k_dormitory_02.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "K组团宿舍（模型序号2） • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "b4c0c0629f8cb73c3dada7ef96025fddba09c33b6e55865fc5d34bc308b7cf44",
+    "map_center_m": [
+      -309.523,
+      336.382
+    ],
+    "map_base_z_m": 0.0
+  },
+  "njupt_k_dormitory_03": {
+    "sha256": "d23d3c8b8a2622276735e449789583a837ce4d2693dea0f8c0e43868deebce2d",
+    "collection": "K组团宿舍（模型序号3） | njupt_k_dormitory_03",
+    "stats": {
+      "id": "njupt_k_dormitory_03",
+      "name": "K组团宿舍（模型序号3）",
+      "kind": "dorm",
+      "facade_profile": "k_dorm",
+      "height": 18.1,
+      "levels": 5,
+      "window_count": 190,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -255.118,
+        362.408
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/k_complete_20260901_image_00.png",
+        "observations/images/njupt/k_inspection_20260901_image_00.png"
+      ],
+      "observed_features": [
+        "new-block grey/white residential envelope; observed detail palette",
+        "five storeys from project record",
+        "recessed balcony openings and closely spaced pale piers",
+        "continuous dark horizontal slab edges",
+        "flat roofs with deep layered cornice"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "njupt_k_dormitory_03"
+      },
+      "asset_file": "projects/blender/buildings/njupt_k_dormitory_03.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "K组团宿舍（模型序号3） • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "3a0d710c8015040f8908159afb9aa5c6ace6f0a906a79a8d527a798259218a76",
+    "map_center_m": [
+      -255.118,
+      362.408
+    ],
+    "map_base_z_m": 0.0
+  },
+  "njupt_k_dormitory_04": {
+    "sha256": "5f54343039f7c37f22618a3fdaf5fe2d126332df2c6f4ac6cb6019df1025fa7c",
+    "collection": "K组团宿舍（模型序号4） | njupt_k_dormitory_04",
+    "stats": {
+      "id": "njupt_k_dormitory_04",
+      "name": "K组团宿舍（模型序号4）",
+      "kind": "dorm",
+      "facade_profile": "k_dorm",
+      "height": 18.1,
+      "levels": 5,
+      "window_count": 195,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -337.74,
+        272.028
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/k_complete_20260901_image_00.png",
+        "observations/images/njupt/k_inspection_20260901_image_00.png"
+      ],
+      "observed_features": [
+        "new-block grey/white residential envelope; observed detail palette",
+        "five storeys from project record",
+        "recessed balcony openings and closely spaced pale piers",
+        "continuous dark horizontal slab edges",
+        "flat roofs with deep layered cornice"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "njupt_k_dormitory_04"
+      },
+      "asset_file": "projects/blender/buildings/njupt_k_dormitory_04.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "K组团宿舍（模型序号4） • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "5846779cc9594dfe92d1ac8e6eff53880347c3f5bceea7eaf15f4efa74fe6b7a",
+    "map_center_m": [
+      -337.74,
+      272.028
+    ],
+    "map_base_z_m": 0.0
+  },
+  "njupt_k_dormitory_05": {
+    "sha256": "2c129183b5ed3da96ae391dbc6e8ec8ed70701c0bd97c3f13fae6c07821b97a7",
+    "collection": "K组团宿舍（模型序号5） | njupt_k_dormitory_05",
+    "stats": {
+      "id": "njupt_k_dormitory_05",
+      "name": "K组团宿舍（模型序号5）",
+      "kind": "dorm",
+      "facade_profile": "k_dorm",
+      "height": 18.1,
+      "levels": 5,
+      "window_count": 175,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -245.705,
+        321.013
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/k_complete_20260901_image_00.png",
+        "observations/images/njupt/k_inspection_20260901_image_00.png"
+      ],
+      "observed_features": [
+        "new-block grey/white residential envelope; observed detail palette",
+        "five storeys from project record",
+        "recessed balcony openings and closely spaced pale piers",
+        "continuous dark horizontal slab edges",
+        "flat roofs with deep layered cornice"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "njupt_k_dormitory_05"
+      },
+      "asset_file": "projects/blender/buildings/njupt_k_dormitory_05.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "K组团宿舍（模型序号5） • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "8929059c5ca1595df5de60d9c86751cb62bf7cfe59322effb8dad4d183a5c190",
+    "map_center_m": [
+      -245.705,
+      321.013
+    ],
+    "map_base_z_m": 0.0
+  },
+  "njupt_k_dormitory_06": {
+    "sha256": "340b018711891cb4f7c428b610ed2ee24e3a1ec2e6c9891c92300b4b01d1da70",
+    "collection": "K组团宿舍（模型序号6） | njupt_k_dormitory_06",
+    "stats": {
+      "id": "njupt_k_dormitory_06",
+      "name": "K组团宿舍（模型序号6）",
+      "kind": "dorm",
+      "facade_profile": "k_dorm",
+      "height": 18.1,
+      "levels": 5,
+      "window_count": 190,
+      "objects": 3,
+      "roof_equipment": 0,
+      "center": [
+        -316.358,
+        235.694
+      ],
+      "facade_status": "photo-informed visible features; exact modules, hidden elevations and dimensions remain inferred",
+      "facade_sources": [
+        "observations/images/njupt/k_complete_20260901_image_00.png",
+        "observations/images/njupt/k_inspection_20260901_image_00.png"
+      ],
+      "observed_features": [
+        "new-block grey/white residential envelope; observed detail palette",
+        "five storeys from project record",
+        "recessed balcony openings and closely spaced pale piers",
+        "continuous dark horizontal slab edges",
+        "flat roofs with deep layered cornice",
+        "one two-storey orange balcony frame; assignment to model block 06 and bay position provisional"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "njupt_k_dormitory_06"
+      },
+      "asset_file": "projects/blender/buildings/njupt_k_dormitory_06.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "K组团宿舍（模型序号6） • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "86e76315f167bbcc735be215c6102f8bd02d574bf10bf21d33bb293c5e0e4841",
+    "map_center_m": [
+      -316.358,
+      235.694
+    ],
+    "map_base_z_m": 0.0
+  },
+  "njupt_k_dining_04": {
+    "sha256": "fa8e5e49240a5aa663116eb7364c09710c6aea3288eeb0d70a42c3543de68187",
+    "collection": "南四食堂（K组团） | njupt_k_dining_04",
+    "stats": {
+      "id": "njupt_k_dining_04",
+      "name": "南四食堂（K组团）",
+      "kind": "dining",
+      "facade_profile": "k_dining",
+      "height": 20.6,
+      "levels": 5,
+      "window_count": 622,
+      "objects": 3,
+      "roof_equipment": 2,
+      "center": [
+        -303.348,
+        164.447
+      ],
+      "facade_status": "photo-informed multilevel reconstruction; internal volume boundaries, dimensions and hidden elevations inferred",
+      "facade_sources": [
+        "observations/images/njupt/k_complete_20260901_image_00.png",
+        "observations/images/njupt/k_structure_2025_image_00.jpg",
+        "observations/images/njupt/canteen4_structure_2025_image_00.jpg"
+      ],
+      "observed_features": [
+        "white tall narrow-window volume",
+        "stepped eastern terrace and low orange-red entrance",
+        "slanted white door surround",
+        "external stair with metal balustrade",
+        "roof service housings"
+      ],
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "njupt_k_dining_04"
+      },
+      "asset_file": "projects/blender/buildings/njupt_k_dining_04.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "南四食堂（K组团） • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "3fcabe06e6ed7d979eb36768b120297d6ce6e24ba877b7428ca912dca3b0ac50",
+    "map_center_m": [
+      -303.348,
+      164.447
+    ],
+    "map_base_z_m": 0.0
+  },
+  "osm_way_223944208": {
+    "sha256": "c3a795f67ad91458c7f7b8e20157c0391937f4b6dff41906d180d525f7d073c9",
+    "collection": "体育馆（旧馆） | osm_way_223944208",
+    "stats": {
+      "id": "osm_way_223944208",
+      "name": "体育馆（旧馆）",
+      "kind": "old_gym_photo",
+      "center": [
+        59.695,
+        583.937
+      ],
+      "facade_status": "photo-reconstructed landmark; unmeasured dimensions and unseen details inferred",
+      "height": 22.13,
+      "levels": 2,
+      "window_count": 12,
+      "objects": 7,
+      "references": [
+        "observations/images/njupt/construction_home_image_04.jpg",
+        "observations/images/njupt/construction_home_image_00.jpg",
+        "observations/images/njupt/construction_article_241104_image_01.jpg"
+      ],
+      "observed_features": [
+        "five-ring blank limestone face",
+        "three low grouped windows",
+        "ochre recessed portal",
+        "blue roof",
+        "north large upper window groups",
+        "recessed glass link",
+        "distinct narrow northern wing"
+      ],
+      "inferred_features": [
+        "22m height from photograph width-to-height ratio",
+        "roof ridge height and seam pitch",
+        "unseen rear openings",
+        "complete stair tower dimensions",
+        "link exact depth and height"
+      ],
+      "orientation": "main five-ring facade local -X rotated +29.8deg from world X",
+      "visual_validation": "pending scene render; photograph reconstruction is not measured survey",
+      "floorplan_references": {
+        "reference_images": 0,
+        "building_id": "osm_way_223944208"
+      },
+      "asset_file": "projects/blender/buildings/osm_way_223944208.blend",
+      "directly_editable": true
+    },
+    "standalone_scene": "体育馆（旧馆） • editable building",
+    "source_ownership": "authored; never overwritten by default",
+    "spatial_signature": "44f7a83546ed93d02dba8df6d031d4a0ac087a984a734c78d9df3d8624e6b1a7",
+    "map_center_m": [
+      59.695,
+      583.937
+    ],
+    "map_base_z_m": 0.0
+  }
+}

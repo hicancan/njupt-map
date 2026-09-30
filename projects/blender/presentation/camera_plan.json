@@ -1,0 +1,223 @@
+{
+  "format": "16:9",
+  "duration_seconds": 35,
+  "sensor_width_mm": 36,
+  "coordinate_system": "master scene local metres, x east, y north, z up",
+  "interpolation": "Use a single monotonic interpolation weight for camera and target; gentle ease with nonzero endpoint velocity, no overshoot, no handheld roll. Render 180-degree shutter motion blur if affordable.",
+  "shots": [
+    {
+      "id": "01",
+      "name": "从南门启程",
+      "duration": 5,
+      "intent": "Gentle left-to-right crane frames the open stone gateway, official calligraphic gold name, paired columns and adjoining campus buildings.",
+      "risk": "Refined gate reaches z22.1. Camera backed away and lens widened to43mm, with target raised to11.8–12m so the new lettering stays in-frame. Minimum camera z31; no forward crossing of the gateway. Confirm all three storyboard frames after rebuild.",
+      "start_location": [
+        122,
+        -718,
+        31
+      ],
+      "end_location": [
+        145,
+        -706,
+        33
+      ],
+      "start_target": [
+        132,
+        -643,
+        11.8
+      ],
+      "end_target": [
+        131,
+        -638,
+        12
+      ],
+      "lens": 43,
+      "roll_deg": 0,
+      "fstop": 8
+    },
+    {
+      "id": "02",
+      "name": "掠过中博湖",
+      "duration": 5,
+      "intent": "Diagonal northwest tracking above water; round hall glazing and open eastern colonnade remain the subject, with teaching blocks behind.",
+      "risk": "Refined round hall reaches z23.51; camera stays z69–75. Widened to47mm and end target lowered toz6 after frame240 clipped the lake terrace. Actual22.65m terrace arc projects with positive lower-frame clearance at all three sampled poses. Verify the full curved roof and terrace in replacement samples.",
+      "start_location": [
+        290,
+        -720,
+        69
+      ],
+      "end_location": [
+        297,
+        -661,
+        75
+      ],
+      "start_target": [
+        190,
+        -632,
+        8
+      ],
+      "end_target": [
+        190,
+        -631,
+        6
+      ],
+      "lens": 47,
+      "roll_deg": 0,
+      "fstop": 8
+    },
+    {
+      "id": "03",
+      "name": "穿行知识庭院",
+      "duration": 5,
+      "intent": "Northwest glide targets teaching2 western courtyard, centred near[-38,-558], with progressively more downward angle to reveal courtyard floor instead of approaching the solid central roof.",
+      "risk": "Target follows the western courtyard opening from the supplied floor plans. Camera remains z93 or above, comfortably above the stepped teaching roofs. Storyboard must show courtyard depth rather than only rooftop surface.",
+      "start_location": [
+        76,
+        -638,
+        97
+      ],
+      "end_location": [
+        19,
+        -605,
+        93
+      ],
+      "start_target": [
+        -34,
+        -556,
+        8
+      ],
+      "end_target": [
+        -37,
+        -555,
+        8
+      ],
+      "lens": 42,
+      "roll_deg": 0,
+      "fstop": 8
+    },
+    {
+      "id": "04",
+      "name": "抵达图书馆",
+      "duration": 5,
+      "intent": "West-front push toward the curtain wall and blue rainbow stair, with a small sideways correction aligning on the central entry.",
+      "risk": "Library west frontage is approximately x145; the camera stops at x60. The 36-step stair, open crown and blue curtain wall are the visual checks. Endpoint crops some outer wings intentionally; confirm roof title remains visible.",
+      "start_location": [
+        30,
+        -146,
+        67
+      ],
+      "end_location": [
+        60,
+        -126,
+        60
+      ],
+      "start_target": [
+        174,
+        -106,
+        8
+      ],
+      "end_target": [
+        174,
+        -106,
+        9
+      ],
+      "lens": 45,
+      "roll_deg": 0,
+      "fstop": 8
+    },
+    {
+      "id": "05",
+      "name": "学科群像",
+      "duration": 5,
+      "intent": "Northbound lateral track follows the pale yellow academic buildings, local orange entrance frames and connecting upper volumes from the wooded eastern side.",
+      "risk": "Ding hill terrain is inferred rather than surveyed. Camera z65–69 remains above the modeled hill and canopy. Keep the academic fronts readable; verify trees do not fill the entire foreground.",
+      "start_location": [
+        20,
+        35,
+        69
+      ],
+      "end_location": [
+        5,
+        94,
+        65
+      ],
+      "start_target": [
+        -115,
+        78,
+        8
+      ],
+      "end_target": [
+        -112,
+        115,
+        8
+      ],
+      "lens": 48,
+      "roll_deg": 0,
+      "fstop": 8
+    },
+    {
+      "id": "06",
+      "name": "向活力北区升起",
+      "duration": 5,
+      "intent": "Forward crane rises past the unequal silver new-gym roofs and open court, then reveals the recovered old gym, curved western grandstand canopy and athletics oval.",
+      "risk": "New gym reaches aboutz21.3; old gym and western grandstand canopy remain belowz18.4. Camera z112–151 provides vertical clearance. The southeast viewpoint sees the photo-supported opposite gym facade; verify the old gym and curved grandstand do not become cropped or occluded.",
+      "start_location": [
+        132,
+        348,
+        112
+      ],
+      "end_location": [
+        136,
+        430,
+        151
+      ],
+      "start_target": [
+        -52,
+        518,
+        6
+      ],
+      "end_target": [
+        -63,
+        590,
+        5
+      ],
+      "lens": 50,
+      "roll_deg": 0,
+      "fstop": 8
+    },
+    {
+      "id": "07",
+      "name": "全校展开",
+      "duration": 5,
+      "intent": "Slow pullback and lift opens the complete campus footprint for the closing njupt-map brand shot.",
+      "risk": "The campus footprint is unchanged; prior16:9 boundary fit provides the starting camera. Recheck the new full-scene render. Surrounding city remains outside the modeled scope, so keep attention on the campus and avoid unnecessary empty horizon.",
+      "start_location": [
+        -1160,
+        -1710,
+        1400
+      ],
+      "end_location": [
+        -1320,
+        -1880,
+        1620
+      ],
+      "start_target": [
+        20,
+        -150,
+        0
+      ],
+      "end_target": [
+        20,
+        -150,
+        0
+      ],
+      "lens": 42,
+      "roll_deg": 0,
+      "fstop": 8
+    }
+  ],
+  "fps": 24,
+  "duration": 35,
+  "revision": "2026-09-30 landmarks and recovered old gym",
+  "on_screen_copy_policy": "njupt-map brand and campus name only; no explanatory digital-campus labels. Preserve the existing closing map attribution."
+}
