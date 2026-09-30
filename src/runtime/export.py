@@ -17,6 +17,7 @@ from shapely.geometry import Polygon,mapping
 from pyproj import Transformer
 from .glb import write_glb, triangles
 from .semantics import audit_regions
+from .context import context_products
 from ..map.export import export as map_export
 from ..map.store import ROOT,SOURCE
 
@@ -38,7 +39,7 @@ def bounds(building):
     vertices=[p for t in triangles(building) for p in t]
     return [round(min(p[i] for p in vertices),6) for i in range(3)]+[round(max(p[i] for p in vertices),6) for i in range(3)]
 
-def _export_runtime(source, output):
+def _export_runtime(source, output, native_detail=None):
     output=Path(output).resolve()
     # Never generate inside native source directories, even through symlinks.
     for protected in (ROOT/'projects', ROOT/'observations', ROOT/'src', ROOT/'tests'):
@@ -71,6 +72,9 @@ def _export_runtime(source, output):
                         'geometry_status':'derived_footprint','measured_height':False}}
                    for b in buildings]})
     (output/'campus-lod1.glb').write_bytes(write_glb(buildings))
+    context_glb,context_geojson,context_metadata=context_products(data)
+    (output/'campus-context.glb').write_bytes(context_glb)
+    write_json(output/'context.local.geojson',context_geojson)
     descriptors=[]
     inverse=Transformer.from_crs(data['metadata']['crs'],'EPSG:4326',always_xy=True)
     ox,oy=data['metadata']['origin_easting_northing']
@@ -89,6 +93,10 @@ def _export_runtime(source, output):
            'confidence':'source_community_mapping_not_surveyed','measured_height':False,
            'source_url':b.get('source_url'),'spatial_signature':b['spatial_signature'],
            'node_name':b['asset_id'],'mesh_url':relative,'mesh_sha256':sha(path)})
+    native_metadata=None
+    if native_detail is not None:
+        from .native import integrate_native
+        native_metadata=integrate_native(native_detail,output,descriptors,before)
     design=ROOT/'projects/blender/design/interiors.json'
     design_before=sha(design)
     region_audit=audit_regions(design)
@@ -100,7 +108,7 @@ def _export_runtime(source, output):
        'source_url':'https://github.com/hicancan/njupt-map',
        'toolchain':{'pipeline':'njupt-map-runtime-v1','python':'3.12','dependencies':'uv.lock',
                     'pipeline_sources_sha256':hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'src/runtime').glob('*.py')))).hexdigest()},
-       'native_blender':'Preserved, not opened or re-exported; Blender 5.2 source is not supported by installed 4.3.2',
+       'native_blender':native_metadata or {'status':'not_requested','note':'Native assets preserved; this publication contains no authored exterior detail'},
        'accuracy_note':data['metadata']['evidence_note'],
        'source_geometry_snapshot':data['metadata']['source_geometry_snapshot']}
     write_json(output/'ATTRIBUTION.json',{'materials':[
@@ -123,6 +131,8 @@ def _export_runtime(source, output):
        'buildings':descriptors,'artifacts':files,
        'campus_mesh_url':'campus-lod1.glb','local_geojson_url':'buildings.local.geojson',
        'wgs84_geojson_url':'buildings.geojson',
+       'context_mesh_url':'campus-context.glb','context_local_geojson_url':'context.local.geojson',
+       'context':context_metadata,
        'limitations':['Footprints are source-derived, not survey measurements',
           'Height and storey count inherit source inference; no measured heights are asserted',
           'LOD1 is a lightweight extrusion, not a high-detail export of authored Blender',
@@ -133,12 +143,16 @@ def _export_runtime(source, output):
     return manifest
 
 
-def export_runtime(source=SOURCE, output=ROOT/'build/runtime'):
+def export_runtime(source=SOURCE, output=ROOT/'build/runtime', native_detail=None):
     """Build in staging; replace only a recognized generated output package."""
     output=Path(output).resolve()
     source=Path(source).resolve()
     if (ROOT in output.parents or output==ROOT) and not (ROOT/'build').resolve() in output.parents:
         raise ValueError('Runtime output inside the repository must be under build/')
+    if native_detail is not None:
+        native_detail=Path(native_detail).resolve()
+        if output==native_detail or output in native_detail.parents or native_detail in output.parents:
+            raise ValueError('Runtime output must not overlap native detail inputs')
     if output==source or output in source.parents:
         raise ValueError('Runtime output cannot contain the source file')
     if output.exists() and any(output.iterdir()):
@@ -148,7 +162,7 @@ def export_runtime(source=SOURCE, output=ROOT/'build/runtime'):
     output.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.runtime-build-',dir=output.parent) as tmp:
         stage=Path(tmp)/'runtime'
-        manifest=_export_runtime(source,stage)
+        manifest=_export_runtime(source,stage,native_detail)
         if output.exists():shutil.rmtree(output)
         shutil.move(str(stage),str(output))
     return manifest
@@ -157,6 +171,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--source',type=Path,default=SOURCE)
     p.add_argument('--output',type=Path,default=ROOT/'build/runtime')
+    p.add_argument('--native-detail',type=Path,help='Verified output from src.runtime.native; no Blender evaluation occurs here')
     a=p.parse_args()
-    m=export_runtime(a.source,a.output)
+    m=export_runtime(a.source,a.output,a.native_detail)
     print(json.dumps({'version':m['version'],'buildings':len(m['buildings']),'output':str(a.output)}))
