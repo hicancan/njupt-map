@@ -35,13 +35,60 @@ Only `projects/map/campus.gpkg` must be hydrated from LFS for geometry export. T
 - `buildings.local.geojson`: source footprints, holes, IDs and dimensions in campus-local east/north metres
 - `buildings.geojson`: WGS84 longitude/latitude, suitable for GIS clients
 - `layers/*.geojson`: source boundary, roads, landscape and context in WGS84
-- `campus-context.glb`: 373 canonical context features in seven material groups; 688,880 bytes for this source
+- `campus-context.glb`: 373 canonical context features in seven material groups; its exact current byte length is in the manifest
 - `context.local.geojson`: exact source-local context polygons and road centerlines, with `context_layer` provenance
 - Optional `detail/buildings/<asset_id>.glb` and `.json`: authored exterior mesh plus an object/material/omission report, only after an explicit native extraction
 - `source-regions.json`: all 564 authored source region identities and seven multi-region label groups; no merging or deletion based on a duplicate label
 - `ATTRIBUTION.json`: material-specific provenance, exclusions and license notices
 
 The version is SHA-256 of canonical UTF-8 JSON (`sort_keys`, no ASCII escaping, compact separators) of the manifest with `version` omitted. Every file listed in `artifacts` is verified before platform import. Regeneration stages a fresh package and replaces only a recognized generated output directory, preventing stale files from becoming current resources. It performs no network publication.
+
+## Bounded reproducibility and provenance
+
+The version-1 consumer schema now records the `njupt-map-runtime-v2` producer.
+Derived WGS84 geometry, building anchors and centroids use nine decimal places
+(a 1e-9 degree grid, about 0.11 mm at the equator; maximum half-grid rounding
+per axis). Only derived longitude/latitude is rounded. GPKG bytes, local-metre
+coordinates, heights, source signatures and indoor identities remain unchanged.
+JSON outputs use UTF-8 and LF on every host and reject non-finite numbers.
+
+The context mesh writer normalizes signed zero, and accessor bounds describe
+the float32 values actually emitted. Surface faces have a fixed winding,
+starting vertex and order. Convex quadrilaterals use an explicit diagonal,
+avoiding the two equally valid triangulations of straight buffered roads.
+No boundary vertex is moved or removed; concavities and holes keep constrained
+triangulation. This does not fabricate road-edge measurements or change authored
+native meshes. A native re-extraction remains a separate Blender 5.2 operation.
+
+`source_interiors_sha256` remains the SHA-256 of exact input bytes. The additional
+`source_interiors_canonical_json_sha256` hashes parsed JSON serialized with sorted
+keys, compact separators, UTF-8, no ASCII escaping and finite numbers. It allows
+LF/CRLF or whitespace-only versions to be recognized without concealing the raw
+byte difference. It is not a redistribution of reference-derived room geometry.
+
+The toolchain records actual Python, Shapely/GEOS, pyproj/PROJ, OS/architecture,
+and the exact `uv.lock` hash. `pipeline_sources_sha256` is now SHA-256 of the
+sorted, compact JSON object mapping each `src/map/*.py` and `src/runtime/*.py`
+relative path to its raw SHA-256. `pipeline_sources_lf_sha256` is the separate
+CRLF-to-LF equivalent; it does not replace raw integrity. These hashes cover the
+GIS producer as well as the runtime packager. Inputs and toolchain are checked
+again before publication. `source_git_commit` is the checkout base revision;
+the accompanying hashes identify the actual inputs even in an edited tree.
+
+Exact package identity still requires matching raw inputs and the recorded
+toolchain. It intentionally changes when raw line endings or the toolchain
+change. Rounding near a grid boundary and arbitrary GEOS/PROJ/compiler changes
+are not promised to be equivalent. Use the same locked dependencies and
+recorded host/toolchain for byte-reproduction; retain the verified fixed package
+when that environment is unavailable. Synthetic ordering, rounding and
+line-ending tests do not substitute for a second-host rebuild.
+
+All nested manifests, including `detail/manifest.json` when native detail is
+provided, are now hash-listed. Consumers must copy them with the other listed
+files. Earlier products that omitted that nested manifest are historical fixed
+artifacts, not evidence of a fresh native rebuild. Do not silently drop LOD2,
+relabel old detail as newly extracted, or bypass native source verification to
+refresh a consumer package on a host that lacks the authored inputs.
 
 ## Coordinates and precision
 

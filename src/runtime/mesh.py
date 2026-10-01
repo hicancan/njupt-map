@@ -36,10 +36,24 @@ class MeshWriter:
         if indices:
             payload = struct.pack('<' + 'I' * size, *values)
         elif hasattr(values, 'astype'):
-            payload = values.astype('<f4', copy=False).tobytes()
+            import numpy as np
+            if not np.isfinite(values).all():
+                raise ValueError('Non-finite mesh component')
+            values = values.astype('<f4', copy=True)
+            if not np.isfinite(values).all():
+                raise ValueError('Mesh component outside float32 range')
+            values[values == 0] = 0.0
+            payload = values.tobytes()
         else:
             if any(not math.isfinite(v) for v in values):
                 raise ValueError('Non-finite mesh component')
+            payload = struct.pack('<' + 'f' * size, *(0.0 if v == 0 else v for v in values))
+            # Accessor bounds must describe emitted float32 values, rather than
+            # host-specific intermediate double-precision tails.
+            values = struct.unpack('<' + 'f' * size, payload)
+            if any(not math.isfinite(v) for v in values):
+                raise ValueError('Mesh component outside float32 range')
+            values = [0.0 if v == 0 else v for v in values]
             payload = struct.pack('<' + 'f' * size, *values)
         offset = len(self.binary)
         self.binary.extend(payload)

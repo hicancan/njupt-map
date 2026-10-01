@@ -18,6 +18,7 @@ from src.map.store import ROOT, SOURCE, load_campus
 from src.runtime.export import export_runtime, canonical
 from src.runtime.glb import building_mesh, triangles, write_glb
 from src.runtime.semantics import audit_regions
+from src.runtime.provenance import canonical_json_sha256
 
 
 def parse_glb(content):
@@ -52,6 +53,10 @@ class RuntimeContracts(unittest.TestCase):
         self.assertEqual(m['version'],hashlib.sha256(canonical({k:v for k,v in m.items() if k!='version'})).hexdigest())
         self.assertEqual(self.before,hashlib.sha256(SOURCE.read_bytes()).hexdigest())
         self.assertEqual(self.before,m['source']['source_gpkg_sha256'])
+        interior=(ROOT/'projects/blender/design/interiors.json').read_bytes()
+        self.assertEqual(m['source']['source_interiors_sha256'],hashlib.sha256(interior).hexdigest())
+        self.assertEqual(m['source']['source_interiors_canonical_json_sha256'],canonical_json_sha256(interior))
+        self.assertEqual(m['serialization']['wgs84_decimal_places'],9)
         for name,ref in m['artifacts'].items():
             content=(self.output/name).read_bytes()
             self.assertEqual(hashlib.sha256(content).hexdigest(),ref['sha256'])
@@ -87,6 +92,33 @@ class RuntimeContracts(unittest.TestCase):
         m=self.manifest['coordinate_frame']
         self.assertEqual(m['source_crs'],'EPSG:32650')
         self.assertEqual(m['gltf_to_local'],'[x,-z,y]')
+
+    def test_nested_native_manifest_is_hash_listed_for_consumer_copy(self):
+        # Synthetic integration boundary fixture, not a claimed native export.
+        def integrate_fixture(root, output, descriptors, source_hash):
+            nested=output/'detail/manifest.json'
+            nested.parent.mkdir()
+            nested.write_bytes(b'{"fixture":true}\n')
+            return {'status':'test_fixture','manifest_url':'detail/manifest.json'}
+        with tempfile.TemporaryDirectory() as tmp, patch('src.runtime.native.integrate_native',side_effect=integrate_fixture):
+            output=Path(tmp)/'runtime'
+            manifest=export_runtime(output=output,native_detail=Path(tmp)/'native')
+            self.assertNotIn('manifest.json',manifest['artifacts'])
+            ref=manifest['artifacts']['detail/manifest.json']
+            self.assertEqual(ref['sha256'],hashlib.sha256((output/'detail/manifest.json').read_bytes()).hexdigest())
+
+    def test_producer_source_change_aborts_without_replacing_existing_package(self):
+        from src.runtime.provenance import toolchain
+        first=toolchain(ROOT)
+        changed={**first,'pipeline_sources_sha256':'changed-during-export'}
+        with tempfile.TemporaryDirectory() as tmp:
+            output=Path(tmp)/'runtime'
+            export_runtime(output=output)
+            before=(output/'manifest.json').read_bytes()
+            with patch('src.runtime.export.toolchain',side_effect=[first,changed]):
+                with self.assertRaisesRegex(RuntimeError,'Source or toolchain changed'):
+                    export_runtime(output=output)
+            self.assertEqual(before,(output/'manifest.json').read_bytes())
 
     def test_glb_every_node_maps_roundtrip_and_bounds(self):
         doc,binary=parse_glb((self.output/'campus-lod1.glb').read_bytes())

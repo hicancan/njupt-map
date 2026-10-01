@@ -18,12 +18,14 @@ from pyproj import Transformer
 from .glb import write_glb, triangles
 from .semantics import audit_regions, public_regions
 from .context import context_products
+from .provenance import canonical_json_sha256, toolchain
 from ..map.export import export as map_export
+from ..map.precision import WGS84_DECIMAL_PLACES, wgs84_coordinates
 from ..map.store import ROOT,SOURCE
 
 
 def canonical(value):
-    return json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf8')
+    return json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False).encode('utf8')
 
 def write_json(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -47,6 +49,7 @@ def _export_runtime(source, output, native_detail=None):
             raise ValueError(f'Refusing runtime output inside authored source: {protected.name}')
     source=Path(source)
     before=sha(source)
+    producer=toolchain(ROOT)
     output.mkdir(parents=True,exist_ok=True)
     # Reuse the existing GIS exporter without bundling its Blender-oriented JSON.
     with tempfile.TemporaryDirectory(prefix='njupt-gis-export-') as tmp:
@@ -85,8 +88,8 @@ def _export_runtime(source, output, native_detail=None):
         path.write_bytes(write_glb([b]))
         descriptors.append({'asset_id':b['asset_id'],'name':b['name'],'search_building_id':b.get('space_id'),
            'map_feature_id':b.get('map_feature_id'),'center_local_m':[*b['center'],b.get('base_z',0)],
-           'anchor_wgs84':list(inverse.transform(b['center'][0]+ox,b['center'][1]+oy)),
-           'centroid_wgs84':list(inverse.transform(Polygon(b['outer'],b['holes']).centroid.x+ox,Polygon(b['outer'],b['holes']).centroid.y+oy)),
+           'anchor_wgs84':wgs84_coordinates(inverse.transform(b['center'][0]+ox,b['center'][1]+oy)),
+           'centroid_wgs84':wgs84_coordinates(inverse.transform(Polygon(b['outer'],b['holes']).centroid.x+ox,Polygon(b['outer'],b['holes']).centroid.y+oy)),
            'bounds_local_m':bounds(b),'base_z_m':b.get('base_z',0),'min_height_m':b.get('min_height',0),'height_m':b['height'],'height_source':b.get('height_source'),
            'levels':b.get('levels'),'levels_source':b.get('levels_source'),
            'geometry_role':b['geometry_role'],'geometry_status':'derived_footprint_extrusion',
@@ -103,11 +106,12 @@ def _export_runtime(source, output, native_detail=None):
     if sha(design)!=design_before:raise RuntimeError('Interior source changed during runtime export')
     write_json(output/'source-regions.json',public_regions(region_audit))
     provenance={'source_namespace':'njupt-map','source_git_commit':source_revision(),
+       'source_git_commit_role':'Checkout base revision; exact source bytes are identified by the accompanying hashes',
        'source_gpkg_sha256':before,'dataset_sha256':data['metadata']['dataset_sha256'],
        'source_interiors_sha256':design_before,
+       'source_interiors_canonical_json_sha256':canonical_json_sha256(design.read_bytes()),
        'source_url':'https://github.com/hicancan/njupt-map',
-       'toolchain':{'pipeline':'njupt-map-runtime-v1','python':'3.12','dependencies':'uv.lock',
-                    'pipeline_sources_sha256':hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'src/runtime').glob('*.py')))).hexdigest()},
+       'toolchain':producer,
        'native_blender':native_metadata or {'status':'not_requested','note':'Native assets preserved; this publication contains no authored exterior detail'},
        'accuracy_note':data['metadata']['evidence_note'],
        'source_geometry_snapshot':data['metadata']['source_geometry_snapshot']}
@@ -118,8 +122,12 @@ def _export_runtime(source, output, native_detail=None):
        'excluded':'No native .blend, school marks, photographs, restricted floorplan originals or traced reference polygons, textures or Poly Haven assets are embedded.',
        'notice':'Preserve database obligations and attribution when distributing derivatives. Institutional endorsement and survey/BIM accuracy are not claimed.'})
     files={p.relative_to(output).as_posix():{'sha256':sha(p),'bytes':p.stat().st_size}
-           for p in sorted(output.rglob('*')) if p.is_file() and p.name!='manifest.json'}
+           for p in sorted(output.rglob('*')) if p.is_file() and p!=output/'manifest.json'}
     manifest={'schema_version':1,'format':'njupt-map-runtime','source':provenance,
+       'serialization':{'wgs84_decimal_places':WGS84_DECIMAL_PLACES,
+           'json_encoding':'UTF-8, LF, sorted keys, compact separators, finite numbers',
+           'context_mesh':'float32 bounds and positive zero; canonical face order and convex-quad diagonal',
+           'reproducibility':'Exact package identity requires identical raw inputs and recorded toolchain; arbitrary cross-host GEOS/PROJ equivalence is not asserted'},
        'coordinate_frame':{'source_crs':data['metadata']['crs'],'units':'m',
            'origin_easting_northing':data['metadata']['origin_easting_northing'],
            'origin_lonlat':data['metadata']['origin_lonlat'],'local_axes':['east','north','up'],
@@ -139,7 +147,8 @@ def _export_runtime(source, output, native_detail=None):
           'LOD1 is a lightweight extrusion, not a high-detail export of authored Blender',
           'No registered indoor metric coordinates, equipment installation or occupancy']}
     manifest['version']=hashlib.sha256(canonical(manifest)).hexdigest()
-    if sha(source)!=before or sha(design)!=design_before: raise RuntimeError('Source changed during runtime export')
+    if sha(source)!=before or sha(design)!=design_before or toolchain(ROOT)!=producer:
+        raise RuntimeError('Source or toolchain changed during runtime export')
     write_json(output/'manifest.json',manifest)
     return manifest
 
