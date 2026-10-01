@@ -103,9 +103,11 @@ class ReproducibilityContracts(unittest.TestCase):
 
     def test_text_canonical_identity_is_additional_to_exact_raw_identity(self):
         source = (ROOT/'projects/blender/design/interiors.json').read_bytes()
-        crlf = source.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')
-        self.assertNotEqual(hashlib.sha256(source).hexdigest(), hashlib.sha256(crlf).hexdigest())
-        self.assertEqual(canonical_json_sha256(source), canonical_json_sha256(crlf))
+        lf = source.replace(b'\r\n', b'\n')
+        crlf = lf.replace(b'\n', b'\r\n')
+        self.assertNotEqual(hashlib.sha256(lf).hexdigest(), hashlib.sha256(crlf).hexdigest())
+        for variant in (lf, crlf):
+            self.assertEqual(canonical_json_sha256(source), canonical_json_sha256(variant))
         changed = json.loads(source)
         changed['floorplans'][0]['rooms'][0]['raw_label'] = 'genuine source edit'
         self.assertNotEqual(canonical_json_sha256(source), canonical_json_sha256(json.dumps(changed)))
