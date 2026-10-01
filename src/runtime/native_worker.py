@@ -1,4 +1,4 @@
-"""One read-only Blender asset extraction in an isolated bpy 5.2 process.
+"""One read-only Blender asset extraction in an isolated Blender 5.2 process.
 
 Never link the authored collection to an evaluated scene. Read base mesh data,
 exclude interiors by authoring metadata, and omit expensive render modifiers.
@@ -202,7 +202,7 @@ def extract(request):
         'accuracy_note':'Authored/source-informed and inferred appearance; not surveyed or BIM-accurate'}
     if hashlib.sha256(source.read_bytes()).hexdigest() != source_hash:
         raise RuntimeError('Native source changed during extraction')
-    output.with_suffix('.json').write_text(json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(',',':'))+'\n')
+    output.with_suffix('.json').write_text(json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(',',':'))+'\n', encoding='utf-8')
     print(json.dumps({'asset_id':aid, 'bytes':len(payload), 'triangles':result['triangles']}), flush=True)
     return result
 
@@ -210,5 +210,5 @@ def extract(request):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--request', type=Path, required=True)
-    args = parser.parse_args()
-    extract(json.loads(args.request.read_text()))
+    args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
+    extract(json.loads(args.request.read_text(encoding='utf-8')))

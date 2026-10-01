@@ -16,7 +16,7 @@ import re
 from shapely.geometry import Polygon,mapping
 from pyproj import Transformer
 from .glb import write_glb, triangles
-from .semantics import audit_regions
+from .semantics import audit_regions, public_regions
 from .context import context_products
 from ..map.export import export as map_export
 from ..map.store import ROOT,SOURCE
@@ -101,7 +101,7 @@ def _export_runtime(source, output, native_detail=None):
     design_before=sha(design)
     region_audit=audit_regions(design)
     if sha(design)!=design_before:raise RuntimeError('Interior source changed during runtime export')
-    write_json(output/'source-regions.json',region_audit)
+    write_json(output/'source-regions.json',public_regions(region_audit))
     provenance={'source_namespace':'njupt-map','source_git_commit':source_revision(),
        'source_gpkg_sha256':before,'dataset_sha256':data['metadata']['dataset_sha256'],
        'source_interiors_sha256':design_before,
@@ -115,7 +115,7 @@ def _export_runtime(source, output, native_detail=None):
        {'scope':'map spatial database and footprint-derived GLB','license':'ODbL-1.0','attribution':'© OpenStreetMap contributors','url':'https://www.openstreetmap.org/copyright'},
        {'scope':'original authored source and region metadata','license':'CC-BY-4.0','attribution':'hicancan / njupt-map','url':'https://github.com/hicancan/njupt-map'},
        {'scope':'exporter source code','license':'AGPL-3.0-or-later','url':'https://github.com/hicancan/njupt-map'}],
-       'excluded':'No native .blend, school marks, photographs, restricted floorplan originals, textures or Poly Haven assets are embedded.',
+       'excluded':'No native .blend, school marks, photographs, restricted floorplan originals or traced reference polygons, textures or Poly Haven assets are embedded.',
        'notice':'Preserve database obligations and attribution when distributing derivatives. Institutional endorsement and survey/BIM accuracy are not claimed.'})
     files={p.relative_to(output).as_posix():{'sha256':sha(p),'bytes':p.stat().st_size}
            for p in sorted(output.rglob('*')) if p.is_file() and p.name!='manifest.json'}
@@ -158,7 +158,7 @@ def export_runtime(source=SOURCE, output=ROOT/'build/runtime', native_detail=Non
         raise ValueError('Runtime output cannot contain the source file')
     if output.exists() and any(output.iterdir()):
         manifest=output/'manifest.json'
-        if not manifest.exists() or json.loads(manifest.read_text()).get('format')!='njupt-map-runtime':
+        if not manifest.exists() or json.loads(manifest.read_text(encoding='utf-8')).get('format')!='njupt-map-runtime':
             raise ValueError('Refusing to replace an unrecognized output directory')
     output.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.runtime-build-',dir=output.parent) as tmp:

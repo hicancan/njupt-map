@@ -12,6 +12,19 @@ uv run python -m src.runtime.export
 uv run python -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
+The complete local check uses the installed Blender, validates the native
+sources and all 129 interiors, extracts all exterior meshes and verifies the
+integrated publication:
+
+```powershell
+./src/check.ps1 -Blender 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -Full -Render
+```
+
+`build/checks/toolchain/summary.json` records each executed check and exit code.
+Short-lived files use a dedicated directory under `D:\Temp\codex` on Windows
+and are removed after the check; `-TempRoot` supports another host's temporary
+root. The project `.venv` and reproducible `build/` products remain local.
+
 Only `projects/map/campus.gpkg` must be hydrated from LFS for geometry export. The pipeline also reads the existing textual `projects/blender/design/interiors.json` to audit region identity. It does not need the 621 MB authoring collection. An unwritable default uv cache can be redirected with `UV_CACHE_DIR` to an allowed cache directory.
 
 ## Published contract, version 1
@@ -56,14 +69,14 @@ Context nodes expose `extras.source_asset_id` and `extras.context_layer`, delibe
 
 ## Native assets and optimization boundary
 
-The authored files require Blender 5.2. The optional pipeline uses an existing official Blender 5.2 `bpy` interpreter in an isolated subprocess. Do not install Blender into the locked GIS environment or use an older reader to rewrite native assets.
+The authored files require Blender 5.2. The optional pipeline uses the installed Blender 5.2 executable in an isolated background subprocess. Its bundled Python owns `bpy`; the locked uv GIS environment coordinates the export and measures memory with cross-platform psutil. Do not install another Blender runtime into the GIS environment or use an older reader to rewrite native assets.
 
 ```powershell
-uv run python -m src.runtime.native --bpy-python /path/to/bpy52/python --output build/native-exteriors --asset-id osm_way_223859810
+uv run python -m src.runtime.native --blender 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' --output build/native-exteriors --asset-id osm_way_223859810
 uv run python -m src.runtime.export --native-detail build/native-exteriors --output build/runtime-detail-stage
 ```
 
-Omit `--asset-id` to extract all canonical assets. Extraction is serial. Defaults require at least 3,500 MiB host `MemAvailable`, stop a process exceeding 1,500 MiB RSS, and impose a 180-second per-asset timeout. A failed resource gate stops before launching Blender. Coordinate with other memory-intensive work; do not lower budgets merely to bypass resource contention. Logs and elapsed/peak-memory observations stay outside deterministic publication files. `--pause-file <path>` lets a coordinator pause safely between assets while preserving staged work; the driver resumes when that marker is removed.
+Omit `--asset-id` to extract all canonical assets. Extraction is serial. Defaults require at least 3,500 MiB available host memory on Windows, Linux or macOS, stop a process exceeding 1,500 MiB RSS, and impose a 180-second per-asset timeout. A failed resource gate stops before launching Blender. Coordinate with other memory-intensive work; do not lower budgets merely to bypass resource contention. Logs and elapsed/peak-memory observations stay outside deterministic publication files. `--pause-file <path>` lets a coordinator pause safely between assets while preserving staged work; the driver resumes when that marker is removed.
 
 The worker appends only the catalog's exact collection as unlinked data. It never loads the campus scene, evaluates a dependency graph, queries evaluated bounding boxes, saves a `.blend`, or converts source files. Interior collections are excluded through `njupt_editable_interiors` metadata and `interior_role`, including renamed/nested objects. Only authored exterior base meshes are emitted. Curve/font objects, references, cameras, interiors, render-time bevel/subdivision modifiers and the source-helper-identified five-ring emblem are omitted. The report records these omissions; `LOD2` means this explicit runtime projection, not complete authored rendering fidelity.
 
@@ -92,11 +105,13 @@ See [LICENSES.md](../LICENSES.md). OSM-derived spatial products retain ODbL obli
 ## Classroom state overlays
 
 `source-regions.json` is now the single current `njupt-indoor-region-catalog`
-version 2. Each immutable source region includes its stable region ID, building
-and floor identity, source-normalized polygon, label point and bounds. The
-publisher validates finite normalized coordinates and closed polygons. The
-frame remains `source_image_normalized_xy_down`; `metric_transform` is null.
-These outlines are not surveyed classroom coordinates or an inferred BIM.
+version 2. The public catalog retains stable region IDs, building and floor
+identity, source hashes and explicit room crosswalk keys. Its
+`geometry_publication` is `metadata_only`: reference-derived floorplan
+polygons, label coordinates, bounds and registration fields are excluded
+pending a redistribution-rights review. The authoring audit still validates
+the retained local source coordinates. The public catalog contains no
+surveyed classroom coordinates or inferred BIM.
 
 A consumer joins room state through an explicit region-to-space crosswalk, not
 through label equality or proximity. A room can retain several source regions;

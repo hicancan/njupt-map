@@ -74,10 +74,10 @@ class RuntimeContracts(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             p=Path(tmp);(p/'important.txt').write_text('authored')
             with self.assertRaises(ValueError):export_runtime(output=p)
-            self.assertEqual((p/'important.txt').read_text(),'authored')
+            self.assertEqual((p/'important.txt').read_text(encoding='utf-8'),'authored')
 
     def test_local_coordinates_match_source_exact_export_precision(self):
-        g=json.loads((self.output/'buildings.local.geojson').read_text())
+        g=json.loads((self.output/'buildings.local.geojson').read_text(encoding='utf-8'))
         for feature in g['features']:
             b=self.by_id[feature['id']]
             source=Polygon(b['outer'],b['holes'])
@@ -144,15 +144,30 @@ class RuntimeContracts(unittest.TestCase):
         self.assertEqual(report['floorplan_count'],23)
         self.assertEqual(len(report['multi_region_space_keys']),7)
         self.assertEqual(max(len(x['region_ids']) for x in report['multi_region_space_keys']),3)
-        design=json.loads(p.read_text())
+        design=json.loads(p.read_text(encoding='utf-8'))
         design['floorplans'][0]['rooms'].append(copy.deepcopy(design['floorplans'][0]['rooms'][0]))
         with tempfile.TemporaryDirectory() as tmp:
             source=Path(tmp)/'design.json';source.write_text(json.dumps(design))
             with self.assertRaisesRegex(ValueError,'Duplicate source region_id'):audit_regions(source)
 
+    def test_public_regions_preserve_identity_without_reference_geometry(self):
+        published=json.loads((self.output/'source-regions.json').read_text(encoding='utf-8'))
+        source=audit_regions(ROOT/'projects/blender/design/interiors.json')
+        self.assertEqual(published['geometry_publication'],'metadata_only')
+        self.assertEqual(published['region_count'],564)
+        self.assertEqual(published['floorplan_count'],23)
+        self.assertEqual(published['multi_region_space_keys'],source['multi_region_space_keys'])
+        self.assertEqual([r['region_id'] for r in published['regions']],
+                         [r['region_id'] for r in source['regions']])
+        for region in published['regions']:
+            self.assertEqual(region['geometry_status'],'not_published_reference_geometry')
+            for field in ('polygon_normalized','label_point_normalized','bounds_normalized',
+                          'metric_transform','coordinate_frame','geometry_binding'):
+                self.assertNotIn(field,region)
+
     def test_derived_material_manifest_matches_committed_lfs_identity(self):
         if not (ROOT/'.git').exists():self.skipTest('Requires source checkout')
-        manifest=json.loads((ROOT/'projects/blender/materials/manifest.json').read_text())
+        manifest=json.loads((ROOT/'projects/blender/materials/manifest.json').read_text(encoding='utf-8'))
         for asset in manifest['derived_assets']:
             path='projects/blender/materials/'+asset['path']
             pointer=subprocess.run(['git','show','HEAD:'+path],cwd=ROOT,check=True,capture_output=True,text=True).stdout
@@ -181,7 +196,7 @@ class IndoorOverlayContract(unittest.TestCase):
                 self.assertEqual(len(r['bounds_normalized']),4)
 
     def test_invalid_geometry_or_coordinate_frame_is_rejected(self):
-        source=json.loads((ROOT/'projects/blender/design/interiors.json').read_text())
+        source=json.loads((ROOT/'projects/blender/design/interiors.json').read_text(encoding='utf-8'))
         import copy
         variants=[]
         a=copy.deepcopy(source); a['floorplans'][0]['rooms'][0]['polygon'][0][0]=float('nan'); variants.append(a)

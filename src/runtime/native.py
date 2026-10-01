@@ -1,6 +1,6 @@
 """Resource-bounded, serial read-only extraction of authored exterior artifacts.
 
-Run with the locked map Python and pass an existing official bpy 5.2 interpreter.
+Run with the locked map Python and the installed Blender 5.2 executable.
 Native .blend files are never saved. Extraction is opt-in and refuses to start
 below the requested free-memory threshold; each asset has timeout/RSS budgets.
 """
@@ -16,6 +16,7 @@ import shutil
 import subprocess
 import tempfile
 import time
+import psutil
 from .export import bounds, canonical, sha, write_json
 from ..map.store import ROOT, SOURCE, load_campus
 
@@ -34,21 +35,20 @@ def artifact_path(root, relative):
 
 
 def available_memory_bytes():
-    """Linux gate; fail closed when the host cannot expose a memory reading."""
-    for line in Path('/proc/meminfo').read_text().splitlines():
-        if line.startswith('MemAvailable:'):
-            return int(line.split()[1])*1024
-    raise RuntimeError('Cannot establish available host memory')
+    """Read the available-memory gate on Windows, Linux and macOS."""
+    available = psutil.virtual_memory().available
+    if available <= 0:
+        raise RuntimeError('Cannot establish available host memory')
+    return available
 
 
 def process_rss_bytes(pid):
     try:
-        for line in Path(f'/proc/{pid}/status').read_text().splitlines():
-            if line.startswith('VmRSS:'):
-                return int(line.split()[1])*1024
-    except FileNotFoundError:
+        return psutil.Process(pid).memory_info().rss
+    except psutil.NoSuchProcess:
         return 0
-    return 0
+    except psutil.AccessDenied as error:
+        raise RuntimeError('Cannot monitor native subprocess memory') from error
 
 
 def run_bounded(command, log_path, timeout_s=180, max_rss_bytes=1500*1024**2,
@@ -138,7 +138,7 @@ def verify_native_glb(content, building):
 
 def verify_bundle(root):
     root = Path(root).resolve()
-    manifest = json.loads((root/'manifest.json').read_text())
+    manifest = json.loads((root/'manifest.json').read_text(encoding='utf-8'))
     if manifest.get('format') != FORMAT or manifest.get('schema_version') != 1:
         raise ValueError('Unsupported native exterior package')
     content = {k:v for k,v in manifest.items() if k != 'version'}
@@ -162,7 +162,7 @@ def verify_bundle(root):
     return manifest
 
 
-def export_native(python, output, source=SOURCE, asset_ids=None, timeout_s=180,
+def export_native(blender, output, source=SOURCE, asset_ids=None, timeout_s=180,
                   max_rss_bytes=1500*1024**2, min_available_bytes=3500*1024**2, pause_file=None):
     output = Path(output).resolve()
     source = Path(source).resolve()
@@ -171,12 +171,12 @@ def export_native(python, output, source=SOURCE, asset_ids=None, timeout_s=180,
     if output == source or output in source.parents:
         raise ValueError('Native output cannot contain its source')
     if output.exists() and any(output.iterdir()):
-        if not (output/'manifest.json').exists() or json.loads((output/'manifest.json').read_text()).get('format') != FORMAT:
+        if not (output/'manifest.json').exists() or json.loads((output/'manifest.json').read_text(encoding='utf-8')).get('format') != FORMAT:
             raise ValueError('Refusing to replace unrecognized native output')
     # Validate every source/hash before the first subprocess.
     source_hash = sha(source)
     catalog_hash = sha(CATALOG)
-    catalog = json.loads(CATALOG.read_text())
+    catalog = json.loads(CATALOG.read_text(encoding='utf-8'))
     campus = load_campus(source)
     buildings = {b['asset_id']:b for b in campus['buildings']}
     selected = sorted(asset_ids if asset_ids else buildings)
@@ -208,9 +208,11 @@ def export_native(python, output, source=SOURCE, asset_ids=None, timeout_s=180,
             write_json(request_path, request)
             # Logs/timings stay out of the deterministic publication.
             log_path = output.parent/f'{output.name}-{aid}.log'
-            budget = run_bounded([str(python), str(ROOT/'src/runtime/native_worker.py'), '--request', str(request_path)],
+            command = [str(blender), '--background', '--factory-startup', '--python-exit-code', '1',
+                       '--python', str(ROOT/'src/runtime/native_worker.py'), '--', '--request', str(request_path)]
+            budget = run_bounded(command,
                 log_path, timeout_s, max_rss_bytes, min_available_bytes)
-            report = json.loads((stage/relative).with_suffix('.json').read_text())
+            report = json.loads((stage/relative).with_suffix('.json').read_text(encoding='utf-8'))
             descriptors.append({'asset_id':aid, 'mesh_url':relative,
                 'report_url':str(PurePosixPath(relative).with_suffix('.json')), **report})
             print(json.dumps({'asset_id':aid, 'bytes':report['bytes'], 'triangles':report['triangles'], **budget}), flush=True)
@@ -239,7 +241,7 @@ def integrate_native(root, output, descriptors, source_hash):
     if manifest['source_gpkg_sha256'] != source_hash or manifest['source_catalog_sha256'] != sha(CATALOG):
         raise ValueError('Native detail was generated from different canonical sources')
     by_id = {b['asset_id']:b for b in descriptors}
-    catalog = json.loads(CATALOG.read_text())
+    catalog = json.loads(CATALOG.read_text(encoding='utf-8'))
     for item in manifest['buildings']:
         aid = item['asset_id']
         if aid not in by_id:
@@ -266,7 +268,7 @@ def integrate_native(root, output, descriptors, source_hash):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--bpy-python',type=Path,required=True)
+    parser.add_argument('--blender',type=Path,default=shutil.which('blender'),help='Installed Blender 5.2 executable; defaults to PATH')
     parser.add_argument('--output',type=Path,default=ROOT/'build/native-exteriors')
     parser.add_argument('--source',type=Path,default=SOURCE)
     parser.add_argument('--asset-id',action='append')
@@ -275,5 +277,7 @@ if __name__ == '__main__':
     parser.add_argument('--max-rss-mib',type=int,default=1500)
     parser.add_argument('--min-available-mib',type=int,default=3500)
     args = parser.parse_args()
-    export_native(args.bpy_python,args.output,args.source,args.asset_id,args.timeout_s,
+    if args.blender is None:
+        parser.error('Blender not found; provide --blender with its executable path')
+    export_native(args.blender,args.output,args.source,args.asset_id,args.timeout_s,
                   args.max_rss_mib*1024**2,args.min_available_mib*1024**2,args.pause_file)

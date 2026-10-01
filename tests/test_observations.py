@@ -19,8 +19,7 @@ from src.observations import validate as validator
 
 class ObservationPipelineTest(unittest.TestCase):
     def setUp(self):
-        task_root = (Path("D:/Temp/codex/njupt-map-observations-test") if os.name == 'nt'
-                     else Path(tempfile.gettempdir()) / 'njupt-map-tests')
+        task_root = Path(tempfile.gettempdir())
         task_root.mkdir(parents=True, exist_ok=True)
         self.temporary = tempfile.TemporaryDirectory(dir=task_root)
         self.root = Path(self.temporary.name).resolve()

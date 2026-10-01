@@ -46,6 +46,14 @@
 
 使用 `uv run python -m src.runtime.export` 从唯一 GeoPackage 派生全校 129 个建筑的米制轮廓、轻量 GLB、分栋加载资产和带来源/散列的语义清单。它保留原生 Blender 作者源，不将推定高度、示意室内或未知占用当作实测事实。详见 [运行时发布合同](docs/runtime.md)。
 
+本机完整检查使用 Python 3.12、uv 与已安装的 Blender 5.2，不再单独安装 `bpy` 或依赖 Linux `/proc`：
+
+```powershell
+./src/check.ps1 -Blender 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -Full -Render
+```
+
+公开室内目录保留 564 个区域的身份与来源，未审查授权的参考平面图描摹坐标不随运行时发布。当前本机验证记录见 [本机验证](docs/local-validation.md)。
+
 ## 获取与打开
 
 正式 `.blend`、`.gpkg`、贴图和媒体使用 Git LFS。安装 Git LFS 后获取完整工程：

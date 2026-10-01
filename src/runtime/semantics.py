@@ -53,3 +53,26 @@ def audit_regions(path: Path):
             'multi_region_space_keys':[{'space_key':k,'region_ids':sorted(v),'status':'retained_requires_semantic_review'}
                                      for k,v in sorted(families.items()) if len(v)>1],
             'note':'Duplicate room labels may denote legitimate multiple regions. No regions were merged or deleted; a physical room ID requires explicit mapping.'}
+
+
+def public_regions(audit):
+    """Publish identity and provenance, excluding unreviewed reference geometry.
+
+    The authoring audit still validates the retained native design inputs.
+    A floorplan's availability as a reference does not grant redistribution of
+    traced coordinates; the browser publication therefore contains no traces.
+    """
+    identity_keys = ('region_id', 'asset_id', 'floor_level', 'floorplan_id',
+                     'source_observation_id', 'source_observation_sha256',
+                     'source_space_key', 'raw_label', 'identity_status',
+                     'dynamic_state_binding')
+    return {
+        'schema_version': audit['schema_version'], 'format': audit['format'],
+        'region_count': audit['region_count'], 'floorplan_count': audit['floorplan_count'],
+        'regions': [{**{key: region[key] for key in identity_keys},
+                     'geometry_status': 'not_published_reference_geometry'}
+                    for region in audit['regions']],
+        'multi_region_space_keys': audit['multi_region_space_keys'],
+        'geometry_publication': 'metadata_only',
+        'note': 'Stable source identities and provenance only. Reference-derived floorplan polygons, label coordinates and metric registration are not distributed.'
+    }

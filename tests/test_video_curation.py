@@ -15,7 +15,7 @@ from src.observations.transcribe_video import resume_document
 
 class VideoCurationTest(unittest.TestCase):
     def setUp(self):
-        task = Path('D:/Temp/codex/njupt-map-curation-test') if os.name == 'nt' else Path(tempfile.gettempdir()) / 'njupt-map-curation-test'
+        task = Path(tempfile.gettempdir())
         task.mkdir(parents=True, exist_ok=True)
         self.temp = tempfile.TemporaryDirectory(dir=task)
         self.root = Path(self.temp.name).resolve()

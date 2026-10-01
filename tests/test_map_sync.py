@@ -149,7 +149,7 @@ class MapContracts(unittest.TestCase):
 
     def test_export_is_deterministic_and_does_not_modify_source(self):
         # CI may set its own temp root. Windows Codex tasks use their dedicated root.
-        temp_root = Path("D:/Temp/codex") if os.name == "nt" and Path("D:/Temp/codex").is_dir() else None
+        temp_root = Path(tempfile.gettempdir())
         with tempfile.TemporaryDirectory(prefix="njupt-map-export-test-", dir=temp_root) as folder:
             source = ROOT / "projects/map/campus.gpkg"
             before = hashlib.sha256(source.read_bytes()).hexdigest()

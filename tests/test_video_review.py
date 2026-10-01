@@ -72,7 +72,7 @@ class AnnotationTests(unittest.TestCase):
 @unittest.skipUnless(shutil.which("ffmpeg") and shutil.which("ffprobe"), "FFmpeg tools unavailable")
 class DecodeTests(unittest.TestCase):
     def test_short_insert_between_grid_samples_retains_exact_pts(self):
-        temporary_root = Path("D:/Temp/codex/njupt-map-video-review-test") if os.name == "nt" else Path(tempfile.gettempdir())
+        temporary_root = Path(tempfile.gettempdir())
         temporary_root.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=temporary_root) as directory:
             root = Path(directory)
