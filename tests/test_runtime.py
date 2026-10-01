@@ -162,3 +162,32 @@ class RuntimeContracts(unittest.TestCase):
             self.assertEqual(asset['size'],int(match[2]))
 
 if __name__=='__main__':unittest.main()
+
+class IndoorOverlayContract(unittest.TestCase):
+    def test_region_geometry_is_source_normalized_and_has_no_dynamic_state(self):
+        report=audit_regions(ROOT/'projects/blender/design/interiors.json')
+        self.assertEqual(report['schema_version'],2)
+        self.assertEqual(report['format'],'njupt-indoor-region-catalog')
+        self.assertEqual(len(report['regions']),564)
+        for r in report['regions']:
+            self.assertEqual(r['coordinate_frame'],'source_image_normalized_xy_down')
+            self.assertIsNone(r['metric_transform'])
+            self.assertNotIn('occupancy',r)
+            self.assertNotIn('power_w',r)
+            self.assertEqual(r['dynamic_state_binding'],'external_explicit_region_to_space_crosswalk')
+            self.assertTrue(r['floorplan_id'].startswith(r['asset_id']+'/floor/'))
+            if r['polygon_normalized']:
+                self.assertEqual(r['polygon_normalized'][0],r['polygon_normalized'][-1])
+                self.assertEqual(len(r['bounds_normalized']),4)
+
+    def test_invalid_geometry_or_coordinate_frame_is_rejected(self):
+        source=json.loads((ROOT/'projects/blender/design/interiors.json').read_text())
+        import copy
+        variants=[]
+        a=copy.deepcopy(source); a['floorplans'][0]['rooms'][0]['polygon'][0][0]=float('nan'); variants.append(a)
+        a=copy.deepcopy(source); a['floorplans'][0]['rooms'][0]['label_point']=[2,0]; variants.append(a)
+        a=copy.deepcopy(source); a['floorplans'][0]['coordinate_frame']='campus_metres'; variants.append(a)
+        for data in variants:
+            with tempfile.TemporaryDirectory() as tmp:
+                path=Path(tmp)/'interiors.json';path.write_text(json.dumps(data))
+                with self.assertRaises(ValueError):audit_regions(path)

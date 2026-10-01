@@ -129,6 +129,7 @@ def _export_runtime(source, output, native_detail=None):
            'gltf_to_local':'[x,-z,y]'},
        'counts':{'buildings':len(buildings),'source_floorplans':region_audit['floorplan_count'],'observed_occupancy':0},
        'buildings':descriptors,'artifacts':files,
+       'indoor_regions_url':'source-regions.json',
        'campus_mesh_url':'campus-lod1.glb','local_geojson_url':'buildings.local.geojson',
        'wgs84_geojson_url':'buildings.geojson',
        'context_mesh_url':'campus-context.glb','context_local_geojson_url':'context.local.geojson',

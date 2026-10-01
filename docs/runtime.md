@@ -88,3 +88,22 @@ The library sample was visually inspected as an offline orthographic rendering o
 ## Attribution
 
 See [LICENSES.md](../LICENSES.md). OSM-derived spatial products retain ODbL obligations and © OpenStreetMap contributors attribution. Original work is attributed to `hicancan / njupt-map` under CC BY 4.0; exporter code is AGPL-3.0-or-later. Native files, restricted photographs, plan originals, school marks, textures and Poly Haven assets are not embedded in this runtime package. Distribution rights for a derived database and a produced visual work are not interchangeable.
+
+## Classroom state overlays
+
+`source-regions.json` is now the single current `njupt-indoor-region-catalog`
+version 2. Each immutable source region includes its stable region ID, building
+and floor identity, source-normalized polygon, label point and bounds. The
+publisher validates finite normalized coordinates and closed polygons. The
+frame remains `source_image_normalized_xy_down`; `metric_transform` is null.
+These outlines are not surveyed classroom coordinates or an inferred BIM.
+
+A consumer joins room state through an explicit region-to-space crosswalk, not
+through label equality or proximity. A room can retain several source regions;
+a region without a reviewed mapping stays unresolved. Dynamic state is owned
+by the campus application's timestamped classroom API and is never written into
+the geometry package. A missing observation remains unknown. The manifest's
+`indoor_regions_url` identifies the catalog and the normal artifact hashes cover
+its complete contents. Historical state queries must use their own time and
+binding history; this static catalog does not infer occupancy, device locations,
+energy consumption or electrical topology.
