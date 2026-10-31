@@ -1,5 +1,5 @@
 from __future__ import annotations
-import argparse, heapq, json, math, shutil
+import argparse, heapq, json, math, shutil, re
 from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any
@@ -19,6 +19,9 @@ OBS=ROOT/'observations'/'providers'/'amap'/'仙林'/'routes.jsonl'
 WGS_TO_M=Transformer.from_crs('EPSG:4326','EPSG:32650',always_xy=True).transform
 M_TO_WGS=Transformer.from_crs('EPSG:32650','EPSG:4326',always_xy=True).transform
 WALK=1; BIKE=2; STEPS=4
+
+# Stable client-facing place categories; provider classifications never enter authored layers.
+CATEGORY_VOCAB=frozenset({'食堂','餐饮','咖啡茶饮','超市','快递','打印','体育','校医院','公交站','停车场','服务','营业厅','图书馆','宿舍','学院'})
 
 def dump(path:Path,value:Any):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -195,6 +198,33 @@ def check_geometry(features):
         if g is not None and (g.is_empty or not g.is_valid): errors.append({'id':f['id'],'reason':explain_validity(g)})
     return errors
 
+def authored_errors(layers):
+    errors=[]
+    byid={f['id']:f for fs in layers.values() for f in fs}
+    buildings={f['id']:shape(f['geometry']) for f in layers['buildings'] if f.get('geometry')}
+    seen_names=set()
+    bad_suffix=re.compile(r'~\d+|\-\d+$')
+    provider_qualifier=re.compile(r'\((?:[^)]*(?:校区|南邮店|暂停营业|南京邮电大学)[^)]*)\)')
+    for layer, fs in layers.items():
+        for f in fs:
+            text=f.get('id','')+' '+str(f.get('properties',{}).get('name',''))
+            if '~' in text and layer != 'rooms': errors.append({'id':f['id'],'reason':'counter suffix'})
+            if bad_suffix.search(f.get('id','')) and layer in {'buildings','places'}: errors.append({'id':f['id'],'reason':'trailing counter'})
+            if provider_qualifier.search(text): errors.append({'id':f['id'],'reason':'provider qualifier'})
+            if '未命名' in text or '暂停营业' in text: errors.append({'id':f['id'],'reason':'placeholder or closed entity'})
+    for f in layers['places']:
+        p=f['properties']; category=p.get('category')
+        if category not in CATEGORY_VOCAB: errors.append({'id':f['id'],'reason':f'category outside vocabulary: {category}'})
+        parent=p.get('parent') or p.get('parent_id')
+        if parent and parent not in buildings: errors.append({'id':f['id'],'reason':'orphan parent'})
+        if parent and f.get('geometry') and shape(f['geometry']).geom_type=='Point' and not buildings[parent].covers(shape(f['geometry'])):
+            errors.append({'id':f['id'],'reason':'place point outside parent building'})
+        key=(parent,p.get('name'))
+        if key in seen_names: errors.append({'id':f['id'],'reason':'duplicate (parent,name)'})
+        seen_names.add(key)
+        if any(seg in CATEGORY_VOCAB for seg in f['id'].split('/')[1:]): errors.append({'id':f['id'],'reason':'category segment in id'})
+    return errors
+
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--output',type=Path,default=OUT); args=ap.parse_args(); out=args.output
     layers={n:load_layer(n) for n in ('campuses','buildings','floors','rooms','places','entrances','ways','greens','waters','sports','surfaces','context_buildings','landscape_exclusions')}
@@ -209,6 +239,7 @@ def main():
         p=f['properties'].get('parent_id')
         if p and p not in byid: parent_errors.append({'id':f['id'],'parent':p})
     geom_errors=[e for fs in layers.values() for e in check_geometry(fs)]
+    authored_name_errors=authored_errors(layers)
     network,nodes_m=build_network(layers['ways'],layers['entrances'],layers['buildings'], [f['geometry'] for f in layers['buildings']+layers['waters']])
     reachable={}
     for mode,name in ((WALK,'walking'),(BIKE,'bicycling')):
@@ -229,7 +260,7 @@ def main():
     # Derived places/entities: map only.
     places=[]
     for f in layers['campuses']+layers['buildings']+layers['floors']+layers['rooms']+layers['places']:
-        p=f['properties']; item={'id':f['id'],'kind':p.get('kind'),'name':p.get('name'),'parent':p.get('parent_id'),
+        p=f['properties']; item={'id':f['id'],'kind':p.get('kind'),'name':p.get('name'),'parent':p.get('parent') or p.get('parent_id'),
                                   'level':p.get('level'),'category':p.get('category'),'group':p.get('group'),'aliases':p.get('aliases'),
                                   'geometry':f.get('geometry')}
         places.append({k:v for k,v in item.items() if v is not None})
@@ -249,8 +280,8 @@ def main():
     cb=transform(WGS_TO_M,campus_geom).bounds; xb=transform(WGS_TO_M,context).bounds
     margins=[cb[0]-xb[0],cb[1]-xb[1],xb[2]-cb[2],xb[3]-cb[3]]
     context_ok=min(margins)>=300
-    checks={'passed':not(id_errors or parent_errors or geom_errors or not context_ok),'id_uniqueness':{'passed':not id_errors,'duplicates':id_errors},
-            'geometry_validity':{'passed':not geom_errors,'errors':geom_errors},'parent_chains':{'passed':not parent_errors,'errors':parent_errors},
+    checks={'passed':not(id_errors or parent_errors or geom_errors or authored_name_errors or not context_ok),'id_uniqueness':{'passed':not id_errors,'duplicates':id_errors},
+            'geometry_validity':{'passed':not geom_errors,'errors':geom_errors},'parent_chains':{'passed':not parent_errors,'errors':parent_errors},'authored_invariants':{'passed':not authored_name_errors,'errors':authored_name_errors},
             'reachability':reachable,'route_gate':gate,'counts':{k:len(v) for k,v in layers.items()},
             'basemap_context':{'passed':context_ok,'margins_m':[round(x,1) for x in margins],
                                'network_only_crossings':len(layers['ways'])-len(rendered_ways),'rendered_crossings':0,
@@ -262,6 +293,7 @@ def main():
     if not checks['passed']: raise SystemExit(1)
     print(json.dumps({'output':str(out),'counts':checks['counts'],'route_gate':gate['status']},ensure_ascii=False))
 if __name__=='__main__': main()
+
 
 
 
