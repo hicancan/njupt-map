@@ -11,7 +11,7 @@ def run_check(*args):
 
 def main():
     ap=argparse.ArgumentParser(description='Build, verify, package and publish one immutable authored-map release.')
-    ap.add_argument('version',nargs='?',default='map-v0.1.0',help='map-vX.Y.Z (default: map-v0.1.0)')
+    ap.add_argument('version',nargs='?',default='map-v0.2.0',help='map-vX.Y.Z (default: map-v0.2.0)')
     ap.add_argument('--output',type=Path,default=ROOT/'build'/'release')
     ap.add_argument('--dry-run',action='store_true',help='build and package without calling gh release create')
     args=ap.parse_args()

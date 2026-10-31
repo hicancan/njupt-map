@@ -5,7 +5,6 @@
  <layer-tree-group name="Author map" expanded="1">
   <layer-tree-layer name="campuses" id="campuses" checked="1"/>
   <layer-tree-layer name="buildings" id="buildings" checked="1"/>
-  <layer-tree-layer name="floors" id="floors" checked="0"/>
   <layer-tree-layer name="rooms" id="rooms" checked="0"/>
   <layer-tree-layer name="places" id="places" checked="1"/>
   <layer-tree-layer name="entrances" id="entrances" checked="1"/>
@@ -15,11 +14,11 @@
   <layer-tree-layer name="sports" id="sports" checked="1"/>
   <layer-tree-layer name="surfaces" id="surfaces" checked="1"/>
   <layer-tree-layer name="context_buildings" id="context_buildings" checked="1"/>
+  <layer-tree-layer name="landscape_exclusions" id="landscape_exclusions" checked="0"/>
  </layer-tree-group>
  <projectlayers>
   <maplayer type="vector" name="campuses" id="campuses"><datasource>layers/campuses.geojson</datasource><provider>ogr</provider></maplayer>
   <maplayer type="vector" name="buildings" id="buildings"><datasource>layers/buildings.geojson</datasource><provider>ogr</provider></maplayer>
-  <maplayer type="vector" name="floors" id="floors"><datasource>layers/floors.geojson</datasource><provider>ogr</provider></maplayer>
   <maplayer type="vector" name="rooms" id="rooms"><datasource>layers/rooms.geojson</datasource><provider>ogr</provider></maplayer>
   <maplayer type="vector" name="places" id="places"><datasource>layers/places.geojson</datasource><provider>ogr</provider></maplayer>
   <maplayer type="vector" name="entrances" id="entrances"><datasource>layers/entrances.geojson</datasource><provider>ogr</provider></maplayer>

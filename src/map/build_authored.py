@@ -1,5 +1,5 @@
 from __future__ import annotations
-import argparse, heapq, json, math, shutil, re
+import argparse, copy, heapq, json, math, re
 from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any
@@ -20,6 +20,15 @@ WGS_TO_M=Transformer.from_crs('EPSG:4326','EPSG:32650',always_xy=True).transform
 M_TO_WGS=Transformer.from_crs('EPSG:32650','EPSG:4326',always_xy=True).transform
 WALK=1; BIKE=2; STEPS=4
 
+LAYER_NAMES=('campuses','buildings','rooms','places','entrances','ways','greens','waters',
+             'sports','surfaces','context_buildings','landscape_exclusions')
+STYLE_DEFAULTS={'宿舍':'dormitory','食堂':'dining','图书馆':'library','教学':'academic',
+                '学院':'academic','服务':'service'}
+LAYER_KINDS={'campuses':'campus','buildings':'building','rooms':'room','places':'place',
+             'entrances':'entrance','greens':'greens','waters':'waters','sports':'sports',
+             'surfaces':'surfaces','context_buildings':'context_buildings',
+             'landscape_exclusions':'landscape_exclusions'}
+
 # Stable client-facing place categories; provider classifications never enter authored layers.
 CATEGORY_VOCAB=frozenset({'食堂','餐饮','咖啡茶饮','超市','快递','打印','体育','校医院','公交站','停车场','服务','营业厅','图书馆','宿舍','学院'})
 
@@ -31,7 +40,26 @@ def load_layer(name):
     p=AUTHOR/f'{name}.geojson'
     d=json.loads(p.read_text(encoding='utf-8'))
     if d.get('type')!='FeatureCollection': raise ValueError(f'{p} is not FeatureCollection')
-    return sorted(d['features'],key=lambda f:f['id'])
+    if name=='floors': raise ValueError('floors is derived from buildings.levels')
+    for f in d['features']:
+        props=f.get('properties') or {}
+        if 'id' not in props or 'id' in f: raise ValueError(f'{p}: id must live only in properties')
+        if f.get('id') is not None: raise ValueError(f'{p}: top-level id is not authored')
+    return sorted(d['features'],key=lambda f:f['properties']['id'])
+
+def feature_id(feature):
+    return feature['properties']['id']
+
+def derive_floors(buildings):
+    floors=[]
+    for building in buildings:
+        p=building['properties']; bid=feature_id(building)
+        levels=int(p['levels'])
+        for level in range(1,levels+1):
+            floors.append({'type':'Feature','properties':{
+                'id':f'{bid}/{level}','kind':'floor','name':f'{level}层',
+                'parent':bid,'level':level},'geometry':copy.deepcopy(building['geometry'])})
+    return floors
 
 def metric_point(c): return WGS_TO_M(*c)
 def dist(a,b): return math.hypot(a[0]-b[0],a[1]-b[1])
@@ -117,7 +145,7 @@ def build_network(ways,entrances,buildings,obstacles=()):
             n2=node(c); nodes_m[n2]=metric_point(c)
             flags=(WALK if p.get('walk',True) else 0)|(BIKE if p.get('bike',True) else 0)
             edges.append([n2,n,round(gap,3),flags,'authored/entrance-connector']); n=n2
-        ent_nodes[p['id']]=n; targets[p['parent_id']].append(n)
+        ent_nodes[p['id']]=n; targets[p['parent']].append(n)
     # Ensure every authored building entrance has both modal access; this is a map fact.
     for mode in (WALK,BIKE):
         reachable=set()
@@ -140,7 +168,7 @@ def build_network(ways,entrances,buildings,obstacles=()):
     flags_out=defaultdict(list)
     for a,b,w,f,source in edges:
         flags_out[source].append(1)
-    network={'format':'authored-network/1','nodes':nodes,'edges':edges,
+    network={'format':'authored-network/2','nodes':nodes,'edges':edges,
              'targets':{k:sorted(v) for k,v in sorted(targets.items())},
              'entrances':{k:ent_nodes[k] for k in sorted(ent_nodes)},
              'stats':{'nodes':len(nodes),'edges':len(edges),'connector_edges':sum(len(v) for v in flags_out.values())-len(ways)}}
@@ -148,7 +176,8 @@ def build_network(ways,entrances,buildings,obstacles=()):
 
 def shortest(network,nodes_m,start,flag):
     edges=network['edges']; adj=defaultdict(list)
-    for a,b,w,f,_ in edges:
+    for edge in edges:
+        a,b,w,f=edge[:4]
         if f&flag: adj[a].append((b,w)); adj[b].append((a,w))
     d={start:0.0}; q=[(0.0,start)]
     while q:
@@ -195,49 +224,50 @@ def check_geometry(features):
     errors=[]
     for f in features:
         g=shape(f['geometry']) if f.get('geometry') else None
-        if g is not None and (g.is_empty or not g.is_valid): errors.append({'id':f['id'],'reason':explain_validity(g)})
+        if g is not None and (g.is_empty or not g.is_valid): errors.append({'id':feature_id(f),'reason':explain_validity(g)})
     return errors
 
 def authored_errors(layers):
     errors=[]
-    byid={f['id']:f for fs in layers.values() for f in fs}
-    buildings={f['id']:shape(f['geometry']) for f in layers['buildings'] if f.get('geometry')}
+    byid={feature_id(f):f for fs in layers.values() for f in fs}
+    buildings={feature_id(f):shape(f['geometry']) for f in layers['buildings'] if f.get('geometry')}
     seen_names=set()
     bad_suffix=re.compile(r'~\d+|\-\d+$')
     provider_qualifier=re.compile(r'\((?:[^)]*(?:校区|南邮店|暂停营业|南京邮电大学)[^)]*)\)')
     for layer, fs in layers.items():
         for f in fs:
-            text=f.get('id','')+' '+str(f.get('properties',{}).get('name',''))
-            if '~' in text and layer != 'rooms': errors.append({'id':f['id'],'reason':'counter suffix'})
-            if bad_suffix.search(f.get('id','')) and layer in {'buildings','places'}: errors.append({'id':f['id'],'reason':'trailing counter'})
-            if provider_qualifier.search(text): errors.append({'id':f['id'],'reason':'provider qualifier'})
-            if '未命名' in text or '暂停营业' in text: errors.append({'id':f['id'],'reason':'placeholder or closed entity'})
+            text=feature_id(f)+' '+str(f.get('properties',{}).get('name',''))
+            if '~' in text and layer != 'rooms': errors.append({'id':feature_id(f),'reason':'counter suffix'})
+            if bad_suffix.search(feature_id(f)) and layer in {'buildings','places'}: errors.append({'id':feature_id(f),'reason':'trailing counter'})
+            if provider_qualifier.search(text): errors.append({'id':feature_id(f),'reason':'provider qualifier'})
+            if '未命名' in text or '暂停营业' in text: errors.append({'id':feature_id(f),'reason':'placeholder or closed entity'})
     for f in layers['places']:
         p=f['properties']; category=p.get('category')
-        if category not in CATEGORY_VOCAB: errors.append({'id':f['id'],'reason':f'category outside vocabulary: {category}'})
-        parent=p.get('parent') or p.get('parent_id')
-        if parent and parent not in buildings: errors.append({'id':f['id'],'reason':'orphan parent'})
+        if category not in CATEGORY_VOCAB: errors.append({'id':feature_id(f),'reason':f'category outside vocabulary: {category}'})
+        parent=p.get('parent')
+        if parent and parent not in buildings: errors.append({'id':feature_id(f),'reason':'orphan parent'})
         if parent and f.get('geometry') and shape(f['geometry']).geom_type=='Point' and not buildings[parent].covers(shape(f['geometry'])):
-            errors.append({'id':f['id'],'reason':'place point outside parent building'})
+            errors.append({'id':feature_id(f),'reason':'place point outside parent building'})
         key=(parent,p.get('name'))
-        if key in seen_names: errors.append({'id':f['id'],'reason':'duplicate (parent,name)'})
+        if key in seen_names: errors.append({'id':feature_id(f),'reason':'duplicate (parent,name)'})
         seen_names.add(key)
-        if any(seg in CATEGORY_VOCAB for seg in f['id'].split('/')[1:]): errors.append({'id':f['id'],'reason':'category segment in id'})
+        if any(seg in CATEGORY_VOCAB for seg in feature_id(f).split('/')[1:]): errors.append({'id':feature_id(f),'reason':'category segment in id'})
     return errors
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--output',type=Path,default=OUT); args=ap.parse_args(); out=args.output
-    layers={n:load_layer(n) for n in ('campuses','buildings','floors','rooms','places','entrances','ways','greens','waters','sports','surfaces','context_buildings','landscape_exclusions')}
-    all_features=[f for fs in layers.values() for f in fs]; ids=[f['id'] for f in all_features]
+    layers={n:load_layer(n) for n in LAYER_NAMES}
+    layers['floors']=derive_floors(layers['buildings'])
+    all_features=[f for fs in layers.values() for f in fs]; ids=[feature_id(f) for f in all_features]
     id_errors=[]; seen=set()
     for i in ids:
         if i in seen:id_errors.append(i)
         seen.add(i)
-    byid={f['id']:f for f in all_features}
+    byid={feature_id(f):f for f in all_features}
     parent_errors=[]
-    for f in layers['floors']+layers['rooms']+layers['entrances']:
-        p=f['properties'].get('parent_id')
-        if p and p not in byid: parent_errors.append({'id':f['id'],'parent':p})
+    for f in layers['rooms']+layers['entrances']:
+        p=f['properties'].get('parent')
+        if p and p not in byid: parent_errors.append({'id':feature_id(f),'parent':p})
     geom_errors=[e for fs in layers.values() for e in check_geometry(fs)]
     authored_name_errors=authored_errors(layers)
     network,nodes_m=build_network(layers['ways'],layers['entrances'],layers['buildings'], [f['geometry'] for f in layers['buildings']+layers['waters']])
@@ -251,7 +281,7 @@ def main():
             x=q.popleft()
             if x in seen:continue
             seen.add(x);q.extend(y for y in adj[x] if y not in seen)
-        missing=[f['id'] for f in layers['entrances'] if network['entrances'][f['id']] not in seen]
+        missing=[feature_id(f) for f in layers['entrances'] if network['entrances'][feature_id(f)] not in seen]
         reachable[name]={'nodes':len(seen),'missing_entrances':missing}
         if missing: raise ValueError(f'{name} unreachable entrances: {missing[:3]}')
     gate=route_gate(network,nodes_m)
@@ -259,20 +289,45 @@ def main():
         dump(ROOT/'bindings'/'route-gates.json',gate)
     # Derived places/entities: map only.
     places=[]
-    for f in layers['campuses']+layers['buildings']+layers['floors']+layers['rooms']+layers['places']:
-        p=f['properties']; item={'id':f['id'],'kind':p.get('kind'),'name':p.get('name'),'parent':p.get('parent') or p.get('parent_id'),
+    entity_layers=(('campuses','campus'),('buildings','building'),('floors','floor'),('rooms','room'),('places','place'))
+    for layer,kind in entity_layers:
+      for f in layers[layer]:
+        p=f['properties']; item={'id':feature_id(f),'kind':kind,'name':p.get('name'),'parent':p.get('parent'),
                                   'level':p.get('level'),'category':p.get('category'),'group':p.get('group'),'aliases':p.get('aliases'),
-                                  'geometry':f.get('geometry')}
+                                  'geometry':None if kind=='floor' else f.get('geometry')}
         places.append({k:v for k,v in item.items() if v is not None})
     entities={'schema_version':'space/1','campus':'仙林','items':sorted(places,key=lambda x:x['id'])}
     # Authored basemap is a deterministic view of authored layers only.
     rendered_ways=[f for f in layers['ways'] if f['properties'].get('kind')!='crossing' and f['properties'].get('render',True)]
-    base=layers['campuses']+layers['buildings']+layers['greens']+layers['waters']+layers['sports']+layers['surfaces']+layers['context_buildings']+rendered_ways
+    def materialize(layer, feature):
+        out=copy.deepcopy(feature); p=out['properties']; kind=LAYER_KINDS.get(layer)
+        if kind and 'kind' not in p: p['kind']=kind
+        if layer=='buildings' and 'style_hint' not in p:
+            default=STYLE_DEFAULTS.get(p.get('category'))
+            if default: p['style_hint']=default
+        if layer=='ways':
+            p.setdefault('walk',True); p.setdefault('bike',True); p.setdefault('steps',False)
+        return out
+    rendered_ways=[materialize('ways',f) for f in rendered_ways]
+    base=[materialize(layer,f) for layer,fs in (
+        ('campuses',layers['campuses']),('buildings',layers['buildings']),('greens',layers['greens']),
+        ('waters',layers['waters']),('sports',layers['sports']),('surfaces',layers['surfaces']),
+        ('context_buildings',layers['context_buildings'])) for f in fs]+rendered_ways
+    for f in base: f.pop('id',None)
+    base=sorted(base,key=feature_id)
+    # The source way id is an authoring aid repeated on every segment; topology
+    # clients only need endpoints, distance and modal flags.
+    network['edges']=[edge[:4] for edge in network['edges']]
     dump(out/'places.json',places); dump(out/'network.json',network); dump(out/'entities'/'space.json',entities)
-    dump(out/'basemap.geojson',{'type':'FeatureCollection','name':'authored-basemap','features':sorted(base,key=lambda f:f['id'])})
-    tile_layers={'campus':layers['campuses'],'buildings':layers['buildings'],'ways':rendered_ways,
-                 'greens':layers['greens'],'waters':layers['waters'],'sports':layers['sports'],
-                 'surfaces':layers['surfaces'],'context_buildings':layers['context_buildings']}
+    dump(out/'basemap.geojson',{'type':'FeatureCollection','name':'authored-basemap','features':base})
+    tile_layers={'campus':[materialize('campuses',f) for f in layers['campuses']],
+                 'buildings':[materialize('buildings',f) for f in layers['buildings']],
+                 'ways':rendered_ways,
+                 'greens':[materialize('greens',f) for f in layers['greens']],
+                 'waters':[materialize('waters',f) for f in layers['waters']],
+                 'sports':[materialize('sports',f) for f in layers['sports']],
+                 'surfaces':[materialize('surfaces',f) for f in layers['surfaces']],
+                 'context_buildings':[materialize('context_buildings',f) for f in layers['context_buildings']]}
     tile_report=write_pmtiles(out/'basemap.pmtiles',tile_layers)
     preview=render_preview(out/'basemap-preview.png',tile_layers)
     campus_geom=shape(layers['campuses'][0]['geometry'])
