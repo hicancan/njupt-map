@@ -16,7 +16,7 @@ from .store import ROOT, SOURCE, LAYERS, connect, load_campus, read_geometry, re
 
 
 def validate(source: Path = SOURCE, catalog_path: Path = ROOT / "observations/catalog.json",
-             bindings_path: Path = ROOT / "observations/bindings/assets.json"):
+             bindings_path: Path = ROOT / "bindings/assets.json"):
     errors = []
     checks = Counter()
     notes = []
