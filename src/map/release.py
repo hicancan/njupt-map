@@ -16,7 +16,7 @@ def main():
     for p in sorted(out.rglob('*')):
         if p.is_file(): manifest['artifacts'][p.relative_to(out).as_posix()]={'sha256':sha(p),'bytes':p.stat().st_size}
     args.output.mkdir(parents=True,exist_ok=True); m=args.output/'manifest.json'; m.write_text(json.dumps(manifest,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n',encoding='utf8')
-    archive=args.output/f'njupt-map-{version}.tar.gz'
+    archive=args.output/f'njupt-map-{version.removeprefix("map-")}.tar.gz'
     with tarfile.open(archive,'w:gz') as t:
         t.add(ROOT/'map',arcname='map'); t.add(out,arcname='space/仙林'); t.add(m,arcname='manifest.json')
     print(json.dumps({'version':version,'archive':str(archive),'manifest':str(m)},ensure_ascii=False))
