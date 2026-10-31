@@ -31,9 +31,13 @@ class AuthoredMapTest(unittest.TestCase):
             if parent:
                 self.assertIn(parent,buildings)
                 self.assertTrue(buildings[parent].covers(Point(f['geometry']['coordinates'])))
+                self.assertNotEqual(f['properties'].get('name'), next(
+                    b['properties'].get('name') for layer,b in features
+                    if layer=='buildings' and b['id']==parent
+                ))
         self.assertIn('仙林/一食堂', {f['id'] for _,f in features})
-        self.assertIn('仙林/建筑/103', {f['id'] for _,f in features})
-        self.assertTrue(any('地理与生物信息学院' in f['properties'].get('aliases',[]) for _,f in features if f['id']=='仙林/建筑/103'))
+        self.assertIn('仙林/地理与生物信息学院', {f['id'] for _,f in features})
+        self.assertTrue(any('地理与生物信息学院' in f['properties'].get('aliases',[]) for _,f in features if f['id']=='仙林/地理与生物信息学院'))
 
     def test_build_without_references_or_bindings(self):
         old_obs,old_out=build_authored.OBS,build_authored.OUT
