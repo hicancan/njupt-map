@@ -6,6 +6,11 @@ from typing import Any
 from pyproj import Transformer
 from shapely.geometry import shape, mapping, Point, LineString
 from shapely.validation import explain_validity
+from shapely.ops import unary_union, transform
+try:
+    from .tiles import write_pmtiles, render_preview, WGS_TO_M
+except ImportError:
+    from tiles import write_pmtiles, render_preview, WGS_TO_M
 
 ROOT=Path(__file__).resolve().parents[2]
 AUTHOR=ROOT/'map'/'layers'
@@ -225,17 +230,32 @@ def main():
     places=[]
     for f in layers['campuses']+layers['buildings']+layers['floors']+layers['rooms']+layers['places']:
         p=f['properties']; item={'id':f['id'],'kind':p.get('kind'),'name':p.get('name'),'parent':p.get('parent_id'),
-                                  'level':p.get('level'),'geometry':f.get('geometry')}
+                                  'level':p.get('level'),'category':p.get('category'),'group':p.get('group'),
+                                  'geometry':f.get('geometry')}
         places.append({k:v for k,v in item.items() if v is not None})
     entities={'schema_version':'space/1','campus':'仙林','items':sorted(places,key=lambda x:x['id'])}
     # Authored basemap is a deterministic view of authored layers only.
     base=layers['campuses']+layers['buildings']+layers['greens']+layers['waters']+layers['sports']+layers['surfaces']+layers['context_buildings']+layers['ways']
     dump(out/'places.json',places); dump(out/'network.json',network); dump(out/'entities'/'space.json',entities)
     dump(out/'basemap.geojson',{'type':'FeatureCollection','name':'authored-basemap','features':sorted(base,key=lambda f:f['id'])})
-    checks={'passed':not(id_errors or parent_errors or geom_errors),'id_uniqueness':{'passed':not id_errors,'duplicates':id_errors},
+    tile_layers={'campus':layers['campuses'],'buildings':layers['buildings'],'ways':layers['ways'],
+                 'greens':layers['greens'],'waters':layers['waters'],'sports':layers['sports'],
+                 'surfaces':layers['surfaces'],'context_buildings':layers['context_buildings']}
+    tile_report=write_pmtiles(out/'basemap.pmtiles',tile_layers)
+    preview=render_preview(out/'basemap-preview.png',tile_layers)
+    campus_geom=shape(layers['campuses'][0]['geometry'])
+    context=unary_union([shape(f['geometry']) for fs in tile_layers.values() for f in fs if f.get('geometry')])
+    cb=transform(WGS_TO_M,campus_geom).bounds; xb=transform(WGS_TO_M,context).bounds
+    margins=[cb[0]-xb[0],cb[1]-xb[1],xb[2]-cb[2],xb[3]-cb[3]]
+    context_ok=min(margins)>=300
+    checks={'passed':not(id_errors or parent_errors or geom_errors or not context_ok),'id_uniqueness':{'passed':not id_errors,'duplicates':id_errors},
             'geometry_validity':{'passed':not geom_errors,'errors':geom_errors},'parent_chains':{'passed':not parent_errors,'errors':parent_errors},
             'reachability':reachable,'route_gate':gate,'counts':{k:len(v) for k,v in layers.items()},
-            'artifacts':{'places':str(out/'places.json'),'network':str(out/'network.json'),'entities':str(out/'entities'/'space.json'),'basemap':str(out/'basemap.geojson')}}
+            'basemap_context':{'passed':context_ok,'margins_m':[round(x,1) for x in margins],
+                               'preview':preview,'tiles':tile_report},
+            'artifacts':{'places':str(out/'places.json'),'network':str(out/'network.json'),'entities':str(out/'entities'/'space.json'),
+                         'basemap_geojson':str(out/'basemap.geojson'),'basemap_pmtiles':str(out/'basemap.pmtiles'),
+                         'basemap_preview':str(out/'basemap-preview.png')}}
     dump(out/'checks.json',checks)
     if not checks['passed']: raise SystemExit(1)
     print(json.dumps({'output':str(out),'counts':checks['counts'],'route_gate':gate['status']},ensure_ascii=False))

@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -18,6 +19,17 @@ class AuthoredMapTest(unittest.TestCase):
         rooms=json.loads(Path('map/layers/rooms.geojson').read_text(encoding='utf-8'))['features']
         self.assertEqual(len(rooms),642)
         self.assertTrue(all(f['id'].startswith('仙林/') for f in rooms))
+        buildings=json.loads(Path('map/layers/buildings.geojson').read_text(encoding='utf-8'))['features']
+        self.assertTrue(all(not re.fullmatch(r'\d+', f['properties']['name']) for f in buildings))
+        dorms=[f for f in buildings if f['properties'].get('style_hint')=='dormitory' and re.search(r'苑\d+栋',f['properties']['name'])]
+        self.assertTrue(dorms)
+        self.assertTrue(all(f['properties'].get('group') for f in dorms))
+        allowed={'食堂','图书馆','教学楼','超市','快递','打印','体育','校医院','公交站','宿舍','学院','停车场','道路','校园服务'}
+        places=json.loads(Path('map/layers/places.geojson').read_text(encoding='utf-8'))['features']
+        self.assertTrue(all(f['properties']['category'] in allowed for f in places))
+        self.assertTrue(all('/place/' not in f['id'] for f in places))
+        provenance=json.loads(Path('bindings/provenance-places.json').read_text(encoding='utf-8'))
+        self.assertTrue(all('provider_name' in row and 'provider_category' in row for row in provenance))
 
     def test_build_without_references_or_bindings(self):
         old_obs,old_out=build_authored.OBS,build_authored.OUT
@@ -30,6 +42,9 @@ class AuthoredMapTest(unittest.TestCase):
             self.assertTrue(checks['passed'])
             self.assertEqual(checks['route_gate']['status'],'skipped')
             self.assertTrue((build_authored.OUT/'basemap.geojson').is_file())
+            self.assertTrue((build_authored.OUT/'basemap.pmtiles').is_file())
+            self.assertTrue((build_authored.OUT/'basemap-preview.png').is_file())
+            self.assertEqual((build_authored.OUT/'basemap.pmtiles').read_bytes()[:7], b'PMTiles')
             self.assertTrue((build_authored.OUT/'network.json').is_file())
             self.assertTrue((build_authored.OUT/'entities'/'space.json').is_file())
         finally:
