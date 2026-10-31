@@ -164,7 +164,7 @@ def main():
         if args.source_id and annotation["source_id"] != args.source_id:
             continue
         from .video_review import validate_annotation, _map_ids
-        topology = read(ROOT / "observations/bindings/topology.json")
+        topology = read(ROOT / "bindings/topology.json")
         errors = validate_annotation(annotation, catalog["sources"],
                                      _map_ids("asset_id"), _map_ids("map_feature_id"), set(topology["places"]))
         if errors:
@@ -178,3 +178,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

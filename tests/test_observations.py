@@ -26,7 +26,7 @@ class ObservationPipelineTest(unittest.TestCase):
         self.stack = ExitStack()
         self.stack.enter_context(redirect_stdout(io.StringIO()))
         catalog = self.root / "observations/catalog.json"
-        bindings = self.root / "observations/bindings/assets.json"
+        bindings = self.root / "bindings/assets.json"
         for module in (common, cli, validator):
             for name, value in (("ROOT", self.root), ("CATALOG", catalog), ("BINDINGS", bindings)):
                 if hasattr(module, name):
@@ -35,7 +35,7 @@ class ObservationPipelineTest(unittest.TestCase):
         common.write(bindings, {"schema_version":1,"bindings":[{"asset_id":"building-a","observation_group":None,
                             "source_ids":[],"floorplans":[],"assertions":[],
                             "spatial_binding":{"coordinate_frame":"campus_local_m"}}]})
-        common.write(self.root / "observations/bindings/groups.json", {"schema_version":1,"groups":[]})
+        common.write(self.root / "bindings/groups.json", {"schema_version":1,"groups":[]})
 
     def tearDown(self):
         self.stack.close()
@@ -85,3 +85,4 @@ class ObservationPipelineTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

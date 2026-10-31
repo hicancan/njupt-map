@@ -14,7 +14,7 @@ class RepositoryContracts(unittest.TestCase):
     def test_common_building_identity(self):
         map_ids = {item['id'] for item in load_campus()['buildings']}
         assets = json.loads((ROOT / 'projects/blender/buildings/catalog.json').read_text(encoding='utf-8'))
-        observations = json.loads((ROOT / 'observations/bindings/assets.json').read_text(encoding='utf-8'))
+        observations = json.loads((ROOT / 'bindings/assets.json').read_text(encoding='utf-8'))
         binding_ids = [item['asset_id'] for item in observations['bindings']]
         self.assertEqual(len(binding_ids), len(set(binding_ids)))
         self.assertEqual(map_ids, set(assets))
@@ -51,3 +51,4 @@ class RepositoryContracts(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

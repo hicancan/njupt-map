@@ -13,7 +13,7 @@ class DesignSourceTests(unittest.TestCase):
     def test_registered_rooms_keep_their_source_and_identity(self):
         design = json.loads((ROOT/'projects/blender/design/interiors.json').read_text(encoding='utf8'))
         sources = json.loads((ROOT/'observations/catalog.json').read_text(encoding='utf8'))['sources']
-        bindings = {b['asset_id']: b for b in json.loads((ROOT/'observations/bindings/assets.json').read_text(encoding='utf8'))['bindings']}
+        bindings = {b['asset_id']: b for b in json.loads((ROOT/'bindings/assets.json').read_text(encoding='utf8'))['bindings']}
         map_ids = {b['id'] for b in load_campus()['buildings']}
         room_ids = set()
         floors = set()
@@ -48,3 +48,4 @@ class DesignSourceTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

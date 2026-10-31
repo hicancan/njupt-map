@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CATALOG = ROOT / "observations/catalog.json"
-BINDINGS = ROOT / "observations/bindings/assets.json"
+BINDINGS = ROOT / "bindings/assets.json"
 KINDS = ("images", "videos", "plans", "maps", "spatial", "documents")
 PUBLIC_LICENSES = {"CC0-1.0", "CC-BY-4.0", "CC-BY-SA-4.0", "ODbL-1.0"}
 
@@ -64,3 +64,4 @@ def source_record(identifier: str, path: Path, kind: str, license_name: str, **f
         "redistribution": redistribution(license_name),
         **fields,
     }
+

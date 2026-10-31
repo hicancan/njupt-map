@@ -81,7 +81,7 @@ def validate(*, hashes: bool = False, strict_local: bool = False, public: bool =
                 errors.append(f"Floorplan registration status missing: {aid}: {floor['floor']}")
         if binding.get("spatial_binding", {}).get("coordinate_frame") != "campus_local_m":
             errors.append(f"Unrecognized coordinate frame: {aid}")
-    groups_path = ROOT / "observations/bindings/groups.json"
+    groups_path = ROOT / "bindings/groups.json"
     groups = read(groups_path)["groups"]
     group_ids = {g["id"] for g in groups}
     for binding in bindings:
@@ -113,3 +113,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

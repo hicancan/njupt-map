@@ -20,7 +20,7 @@ from .common import ROOT, read, write
 from .video_review import validate_annotation
 
 ANNOTATIONS = "observations/annotations/video-review"
-TOPOLOGY = "observations/bindings/topology.json"
+TOPOLOGY = "bindings/topology.json"
 
 
 def map_records(campus: dict) -> list[dict]:
@@ -340,3 +340,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
