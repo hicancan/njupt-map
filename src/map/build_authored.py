@@ -230,7 +230,7 @@ def main():
     places=[]
     for f in layers['campuses']+layers['buildings']+layers['floors']+layers['rooms']+layers['places']:
         p=f['properties']; item={'id':f['id'],'kind':p.get('kind'),'name':p.get('name'),'parent':p.get('parent_id'),
-                                  'level':p.get('level'),'category':p.get('category'),'group':p.get('group'),
+                                  'level':p.get('level'),'category':p.get('category'),'group':p.get('group'),'aliases':p.get('aliases'),
                                   'geometry':f.get('geometry')}
         places.append({k:v for k,v in item.items() if v is not None})
     entities={'schema_version':'space/1','campus':'仙林','items':sorted(places,key=lambda x:x['id'])}
@@ -262,6 +262,7 @@ def main():
     if not checks['passed']: raise SystemExit(1)
     print(json.dumps({'output':str(out),'counts':checks['counts'],'route_gate':gate['status']},ensure_ascii=False))
 if __name__=='__main__': main()
+
 
 
 

@@ -49,3 +49,8 @@ Building process labels and legacy model names stay in `bindings/provenance.json
 and never enter an authored id or name. Ways with `kind: crossing` remain in
 the network for routing but are omitted from PMTiles and the preview so
 carriageway connectors do not render as ladder rungs.
+
+The first release is intentionally manual: from a checkout with `gh` release
+credentials, run `uv run python src/map/release.py` (defaults to
+`map-v0.1.0`). It formats, builds, verifies, writes the manifest and archive,
+then calls `gh release create`; this command is prepared but has not been run.

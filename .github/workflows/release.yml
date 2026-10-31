@@ -18,11 +18,7 @@ jobs:
           python-version: '3.12'
       - run: uv venv --python 3.12
       - run: uv sync --locked
-      - run: uv run python src/map/format_geojson.py --check
-      - run: uv run python src/map/build_authored.py
       - run: uv run python src/map/release.py "${GITHUB_REF_NAME#map-v}"
-      - name: Create immutable GitHub release
-        run: gh release create "$GITHUB_REF_NAME" build/release/njupt-map-*.tar.gz build/release/manifest.json --title "$GITHUB_REF_NAME" --notes "Authored campus map"
       - name: Notify studev with map version only
         if: env.STUDEV_DISPATCH_TOKEN != ''
         env:

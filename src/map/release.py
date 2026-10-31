@@ -1,16 +1,26 @@
 from __future__ import annotations
-import argparse, hashlib, json, tarfile
+import argparse, hashlib, json, subprocess, sys, tarfile
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
 
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def run_check(*args):
+    subprocess.run([sys.executable,*args],cwd=ROOT,check=True)
+
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('version',help='X.Y.Z'); ap.add_argument('--output',type=Path,default=ROOT/'build'/'release'); args=ap.parse_args()
+    ap=argparse.ArgumentParser(description='Build, verify, package and publish one immutable authored-map release.')
+    ap.add_argument('version',nargs='?',default='map-v0.1.0',help='map-vX.Y.Z (default: map-v0.1.0)')
+    ap.add_argument('--output',type=Path,default=ROOT/'build'/'release')
+    ap.add_argument('--dry-run',action='store_true',help='build and package without calling gh release create')
+    args=ap.parse_args()
     version=args.version if args.version.startswith('map-v') else 'map-v'+args.version
+    run_check('src/map/format_geojson.py','--check')
+    run_check('src/map/build_authored.py')
     out=ROOT/'build'/'space'/'仙林'
-    if not (out/'checks.json').is_file(): raise SystemExit('run src/map/build_authored.py first')
+    checks=json.loads((out/'checks.json').read_text(encoding='utf8'))
+    if not checks.get('passed'): raise SystemExit('authored map checks failed')
     manifest={'map_version':version,'built_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'crs':'EPSG:4326','coordinates':'7-decimal WGS84','layers':{},'artifacts':{}}
     for p in sorted((ROOT/'map'/'layers').glob('*.geojson')): manifest['layers'][p.name]={'sha256':sha(p),'bytes':p.stat().st_size}
     for p in sorted(out.rglob('*')):
@@ -19,5 +29,7 @@ def main():
     archive=args.output/f'njupt-map-{version.removeprefix("map-")}.tar.gz'
     with tarfile.open(archive,'w:gz') as t:
         t.add(ROOT/'map',arcname='map'); t.add(out,arcname='space/仙林'); t.add(m,arcname='manifest.json')
-    print(json.dumps({'version':version,'archive':str(archive),'manifest':str(m)},ensure_ascii=False))
+    if not args.dry_run:
+        subprocess.run(['gh','release','create',version,str(archive),str(m),'--title',version,'--notes','Authored NJUPT campus map','--latest'],cwd=ROOT,check=True)
+    print(json.dumps({'version':version,'archive':str(archive),'manifest':str(m),'published':not args.dry_run},ensure_ascii=False))
 if __name__=='__main__': main()

@@ -30,6 +30,14 @@ class AuthoredMapTest(unittest.TestCase):
         places=json.loads(Path('map/layers/places.geojson').read_text(encoding='utf-8'))['features']
         self.assertTrue(all(f['properties']['category'] in allowed for f in places))
         self.assertTrue(all('/place/' not in f['id'] for f in places))
+        aliases={'图书馆':['图馆','仙林图书馆'],'一食堂':['南一','南一食堂'],'二食堂':['南二','南二食堂'],'三食堂':['南三','南三食堂'],
+                 '门诊部':['校医院','仙林门诊部'],'教1':['教一','教学楼1'],'教2':['教二','教学楼2'],'教3':['教三','教学楼3'],
+                 '教4':['教四','教学楼4'],'教5':['教五','教学楼5']}
+        features=buildings+places
+        for name,expected in aliases.items():
+            found=[f for f in features if f['properties'].get('name','').split('~',1)[0]==name]
+            self.assertTrue(found, name)
+            self.assertTrue(all(f['properties'].get('aliases')==expected for f in found), name)
         ways=json.loads(Path('map/layers/ways.geojson').read_text(encoding='utf-8'))['features']
         self.assertEqual(sum(bool(f['properties'].get('render') is False) for f in ways), 5)
         provenance=json.loads(Path('bindings/provenance.json').read_text(encoding='utf-8'))['features']
@@ -50,6 +58,8 @@ class AuthoredMapTest(unittest.TestCase):
             self.assertTrue((build_authored.OUT/'basemap-preview.png').is_file())
             self.assertEqual((build_authored.OUT/'basemap.pmtiles').read_bytes()[:7], b'PMTiles')
             self.assertEqual(json.loads((build_authored.OUT/'checks.json').read_text(encoding='utf-8'))['basemap_context']['rendered_crossings'], 0)
+            entities=json.loads((build_authored.OUT/'entities'/'space.json').read_text(encoding='utf-8'))['items']
+            self.assertTrue(any(item.get('aliases')==['图馆','仙林图书馆'] for item in entities))
             self.assertTrue((build_authored.OUT/'network.json').is_file())
             self.assertTrue((build_authored.OUT/'entities'/'space.json').is_file())
         finally:
