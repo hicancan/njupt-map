@@ -44,3 +44,8 @@ to `bindings/route-gates.json`; it never changes the map.
 The 642 reviewed room outlines are authored `rooms` features. Unreviewed rooms
 are not invented here; later `njupt-data` releases may add null-geometry room
 nodes when a real teaching source lists them.
+
+Building process labels and legacy model names stay in `bindings/provenance.json`
+and never enter an authored id or name. Ways with `kind: crossing` remain in
+the network for routing but are omitted from PMTiles and the preview so
+carriageway connectors do not render as ladder rungs.

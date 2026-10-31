@@ -235,10 +235,11 @@ def main():
         places.append({k:v for k,v in item.items() if v is not None})
     entities={'schema_version':'space/1','campus':'仙林','items':sorted(places,key=lambda x:x['id'])}
     # Authored basemap is a deterministic view of authored layers only.
-    base=layers['campuses']+layers['buildings']+layers['greens']+layers['waters']+layers['sports']+layers['surfaces']+layers['context_buildings']+layers['ways']
+    rendered_ways=[f for f in layers['ways'] if f['properties'].get('kind')!='crossing' and f['properties'].get('render',True)]
+    base=layers['campuses']+layers['buildings']+layers['greens']+layers['waters']+layers['sports']+layers['surfaces']+layers['context_buildings']+rendered_ways
     dump(out/'places.json',places); dump(out/'network.json',network); dump(out/'entities'/'space.json',entities)
     dump(out/'basemap.geojson',{'type':'FeatureCollection','name':'authored-basemap','features':sorted(base,key=lambda f:f['id'])})
-    tile_layers={'campus':layers['campuses'],'buildings':layers['buildings'],'ways':layers['ways'],
+    tile_layers={'campus':layers['campuses'],'buildings':layers['buildings'],'ways':rendered_ways,
                  'greens':layers['greens'],'waters':layers['waters'],'sports':layers['sports'],
                  'surfaces':layers['surfaces'],'context_buildings':layers['context_buildings']}
     tile_report=write_pmtiles(out/'basemap.pmtiles',tile_layers)
@@ -252,6 +253,7 @@ def main():
             'geometry_validity':{'passed':not geom_errors,'errors':geom_errors},'parent_chains':{'passed':not parent_errors,'errors':parent_errors},
             'reachability':reachable,'route_gate':gate,'counts':{k:len(v) for k,v in layers.items()},
             'basemap_context':{'passed':context_ok,'margins_m':[round(x,1) for x in margins],
+                               'network_only_crossings':len(layers['ways'])-len(rendered_ways),'rendered_crossings':0,
                                'preview':preview,'tiles':tile_report},
             'artifacts':{'places':str(out/'places.json'),'network':str(out/'network.json'),'entities':str(out/'entities'/'space.json'),
                          'basemap_geojson':str(out/'basemap.geojson'),'basemap_pmtiles':str(out/'basemap.pmtiles'),
@@ -260,6 +262,7 @@ def main():
     if not checks['passed']: raise SystemExit(1)
     print(json.dumps({'output':str(out),'counts':checks['counts'],'route_gate':gate['status']},ensure_ascii=False))
 if __name__=='__main__': main()
+
 
 
 
