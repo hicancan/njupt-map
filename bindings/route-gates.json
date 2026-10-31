@@ -1,0 +1,1 @@
+{"failures":[],"modes":{"bicycling":{"max_ratio":1.2484,"median_ratio":0.8827,"samples":1170},"walking":{"max_ratio":1.2484,"median_ratio":0.8955,"samples":1170}},"samples":2340,"status":"passed"}

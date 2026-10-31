@@ -11,11 +11,11 @@ uv sync --locked
 
 ## 地图与观测
 
-打开 projects/map/campus.qgs，编辑同目录的 GeoPackage。保存后导出和检查：
+打开 `map/campus.qgs`，编辑 `map/layers/*.geojson`。保存后格式化和检查：
 
 ```powershell
-uv run python -m src.map.export
-uv run python -m src.map.validate
+uv run python src/map/format_geojson.py --check
+uv run python src/map/build_authored.py
 uv run python -m src.observations.validate --hashes
 uv run python -m src.sync
 ```
@@ -61,8 +61,9 @@ uv run python -m src.sync
 ## 提交与发布
 
 ```powershell
-uv run python -m src.map.export
-uv run python -m src.map.validate
+uv run python src/map/format_geojson.py --check
+uv run python src/map/build_authored.py
+
 uv run python -m src.observations.validate --public
 uv run python -m unittest discover -s tests -p 'test_*.py'
 ```
@@ -70,3 +71,4 @@ uv run python -m unittest discover -s tests -p 'test_*.py'
 检查 Git 暂存内容与来源许可。正式二进制使用 LFS，build 和环境忽略。受限资料只保留本地，来源元数据和绑定可以提交。不要加入 API 凭据或含敏感内容的原始疏散图。
 
 完成迁移后删除旧实现。回溯用 Git，不在当前工程留旧格式或备份。发布图、视频和便携导出是附属下载，不构成第二套作者工程。
+

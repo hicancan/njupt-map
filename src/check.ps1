@@ -36,8 +36,8 @@ try {
     }
     Invoke-Check 'dependencies' 'uv' @('sync', '--locked')
     Invoke-Check 'tests' 'uv' @('run', 'python', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_*.py', '-v')
-    Invoke-Check 'map-export' 'uv' @('run', 'python', '-m', 'src.map.export')
-    Invoke-Check 'map-validation' 'uv' @('run', 'python', '-m', 'src.map.validate')
+    Invoke-Check 'geojson-format' 'uv' @('run', 'python', 'src/map/format_geojson.py', '--check')
+    Invoke-Check 'authored-map-build' 'uv' @('run', 'python', 'src/map/build_authored.py')
     Invoke-Check 'public-observations' 'uv' @('run', 'python', '-m', 'src.observations.validate', '--public')
     Invoke-Check 'scene-sync' 'uv' @('run', 'python', '-m', 'src.sync', '--blender', $Blender)
     $nativeArgs = @('--background', '--factory-startup', '--python-exit-code', '1', '--python', 'src/blender/checks/validate_native.py')

@@ -39,7 +39,7 @@ uv run python -m src.observations.video_review --source-id bilibili-BV1aj411m7PU
 `observed_connections` 使用 `{from_place_id, to_place_id, relation, basis, confidence, notes}`。依据可以是 `continuous_shot/plan/cross_reference/inferred`。剪辑切换不能单独证明空间连接，`inferred` 关系不能当作已核验连接。相邻、可见和实际可通行是不同关系。
 
 ```powershell
-uv run python -m src.observations.video_review --validate observations/annotations/video-review/BV1jD4y1z7Zu.json --places observations/bindings/topology.json
+uv run python -m src.observations.video_review --validate observations/annotations/video-review/BV1jD4y1z7Zu.json --places bindings/topology.json
 ```
 
 验证只检查身份、时间覆盖和引用合法性，不能自动证明人工地理判断准确。未知地点是明确记录的覆盖缺口；不能用臆测标签填满来宣称校园已经全部理解。
@@ -53,7 +53,7 @@ uv run python -m src.observations.review_export
 
 总体验证检查全部已登记 B 站视频都有完整审查、每段时间覆盖和对象引用合法、拓扑节点和关系均有具体来源/分段依据、正式精选帧的源 PTS 与审查精选点一致。推断连接不能标作已核验。可在其他验证代码中调用 `validate_review_sources(root)` 获取错误列表。
 
-导出写入 `build/review/index.html`、`summary.json`、`coverage.json`、`summary.md`。浏览器支持校区、状态和时态过滤，保留完整时间条，点击时间段播放本地原视频，点击地点高亮相应父地图对象，并查看正式精选帧与拓扑依据。地图形状来自本次读取的 `projects/map/campus.gpkg`；地点的父对象绑定不等于入口测量坐标，更不等于重建相机姿态。
+导出写入 `build/review/index.html`、`summary.json`、`coverage.json`、`summary.md`。浏览器支持校区、状态和时态过滤，保留完整时间条，点击时间段播放本地原视频，点击地点高亮相应父地图对象，并查看正式精选帧与拓扑依据。地图形状来自本次读取的 `map/layers/*.geojson`；地点的父对象绑定不等于入口测量坐标，更不等于重建相机姿态。
 
 此页面只用于本地审查，包含指向受限原视频/精选帧的相对链接，不应作为公开网站发布。源资料不依赖导出的浏览器、报表或覆盖统计；后者随当前正式数据重建。
 
@@ -71,8 +71,10 @@ uv run python -m src.observations.review_export
 
 重复运行不会替换已有图像。审查的段 ID 或空间绑定演进时，应同时更新正式图像元数据、段内引用和资产绑定；不一致会明确报错，不能默默保留过期关系或覆盖已校准观测。新增精选点只生成新增图像。清晰立面帧与运动过渡帧用途不同，模糊过渡帧可支持路径判读，不应作为精细纹理来源。
 
-`observations/bindings/topology.json` 持续维护带具体片段来源的地点及关系。一个场所可在不同视频重复出现；尚未确认同一实体的观测节点不强行合并。`semantic_parent_only` 只说明关联的父建筑或地图对象，`unregistered` 表示几何尚未配准；二者均不提供测得房间坐标、门口坐标或相机姿态。模型差异由 `observations/annotations/model-findings.json` 记录，明确区分已存在、已发现差异和待核对项。
+`bindings/topology.json` 持续维护带具体片段来源的地点及关系。一个场所可在不同视频重复出现；尚未确认同一实体的观测节点不强行合并。`semantic_parent_only` 只说明关联的父建筑或地图对象，`unregistered` 表示几何尚未配准；二者均不提供测得房间坐标、门口坐标或相机姿态。模型差异由 `observations/annotations/model-findings.json` 记录，明确区分已存在、已发现差异和待核对项。
 
 本批完成 16 个视频的全时长候选审查，共 7,108 个候选帧、118 页、373 段，91 张正式精选帧。历史与非仙林资料排除当前输入；2025 现状未核实；当前候选仍需部件级核验。23 张既有教学楼平面图没有因为本批视频完成而自动获得几何配准。
 
 长导览的机器语音转写保留在 `build/`，仅用于辅助辨认讲述地名；30 秒分块没有词级时间对齐，讲述地点可能与插入画面不同。可选的 `src/observations/transcribe_video.py` 使用已有隔离 Qwen3-ASR 环境和 GPU；输入散列、模型与分块长度共同约束中断恢复，不加入地图/Blender 的运行依赖。
+
+

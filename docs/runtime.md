@@ -25,7 +25,7 @@ Short-lived files use a dedicated directory under `D:\Temp\codex` on Windows
 and are removed after the check; `-TempRoot` supports another host's temporary
 root. The project `.venv` and reproducible `build/` products remain local.
 
-Only `projects/map/campus.gpkg` must be hydrated from LFS for geometry export. The pipeline also reads the existing textual `projects/blender/design/interiors.json` to audit region identity. It does not need the 621 MB authoring collection. An unwritable default uv cache can be redirected with `UV_CACHE_DIR` to an allowed cache directory.
+Only `map/layers/*.geojson` must be hydrated from LFS for geometry export. The pipeline also reads the existing textual `projects/blender/design/interiors.json` to audit region identity. It does not need the 621 MB authoring collection. An unwritable default uv cache can be redirected with `UV_CACHE_DIR` to an allowed cache directory.
 
 ## Published contract, version 1
 
@@ -169,3 +169,4 @@ the geometry package. A missing observation remains unknown. The manifest's
 its complete contents. Historical state queries must use their own time and
 binding history; this static catalog does not infer occupancy, device locations,
 energy consumption or electrical topology.
+
