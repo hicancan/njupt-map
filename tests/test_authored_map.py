@@ -63,7 +63,7 @@ class AuthoredMapTest(unittest.TestCase):
             self.assertTrue((build_authored.OUT/'basemap-preview.png').is_file())
             self.assertEqual((build_authored.OUT/'basemap.pmtiles').read_bytes()[:7],b'PMTiles')
             self.assertEqual(checks['basemap_context']['rendered_crossings'],0)
-            entities=json.loads((build_authored.OUT/'entities'/'space.json').read_text(encoding='utf8'))['items']
+            entities=json.loads((build_authored.OUT/'entities.json').read_text(encoding='utf8'))
             self.assertTrue(any(item.get('aliases')==['图馆','仙林图书馆'] for item in entities))
             floors=[item for item in entities if item['kind']=='floor']
             self.assertEqual(len(floors),sum(int(f['properties']['levels']) for f in json.loads(Path('map/layers/buildings.geojson').read_text(encoding='utf8'))['features']))

@@ -1,5 +1,5 @@
 from __future__ import annotations
-import argparse, copy, heapq, json, math, re
+import argparse, copy, heapq, json, math, re, shutil
 from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any
@@ -164,11 +164,20 @@ def build_network(ways,entrances,buildings,obstacles=()):
                     near=min(reachable,key=lambda x:dist(nodes_m[n],nodes_m[x]))
                     edges.append([n,near,round(dist(nodes_m[n],nodes_m[near]),3),mode,'authored/entrance-access'])
                     reachable.add(n)
-    # compact edge list and graph stats
+    # Materialize the single wayfind graph contract. Each edge carries a small
+    # two-point shape, so the router can return authored geometry without a
+    # second linework file.
+    names=[]; name_ids={}; compact=[]; shapes=[]
+    for a,b,w,f,source in edges:
+        if source not in name_ids:
+            name_ids[source]=len(names); names.append(source)
+        compact.append([a,b,w,f|(8 if source.startswith('authored/') else 0),name_ids[source]])
+        shapes.append([nodes[a],nodes[b]])
     flags_out=defaultdict(list)
     for a,b,w,f,source in edges:
         flags_out[source].append(1)
-    network={'format':'authored-network/2','nodes':nodes,'edges':edges,
+    network={'format':'wayfind-graph/1','nodes':nodes,'edges':compact,'shapes':shapes,'names':names,
+             'flags':{'walk':WALK,'bike':BIKE,'steps':STEPS,'connector':8},
              'targets':{k:sorted(v) for k,v in sorted(targets.items())},
              'entrances':{k:ent_nodes[k] for k in sorted(ent_nodes)},
              'stats':{'nodes':len(nodes),'edges':len(edges),'connector_edges':sum(len(v) for v in flags_out.values())-len(ways)}}
@@ -256,6 +265,9 @@ def authored_errors(layers):
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--output',type=Path,default=OUT); args=ap.parse_args(); out=args.output
+    out.mkdir(parents=True, exist_ok=True)
+    (out/'places.json').unlink(missing_ok=True)
+    shutil.rmtree(out/'entities', ignore_errors=True)
     layers={n:load_layer(n) for n in LAYER_NAMES}
     layers['floors']=derive_floors(layers['buildings'])
     all_features=[f for fs in layers.values() for f in fs]; ids=[feature_id(f) for f in all_features]
@@ -296,7 +308,7 @@ def main():
                                   'level':p.get('level'),'category':p.get('category'),'group':p.get('group'),'aliases':p.get('aliases'),
                                   'geometry':None if kind=='floor' else f.get('geometry')}
         places.append({k:v for k,v in item.items() if v is not None})
-    entities={'schema_version':'space/1','campus':'仙林','items':sorted(places,key=lambda x:x['id'])}
+    entities=sorted(places,key=lambda x:x['id'])
     # Authored basemap is a deterministic view of authored layers only.
     rendered_ways=[f for f in layers['ways'] if f['properties'].get('kind')!='crossing' and f['properties'].get('render',True)]
     def materialize(layer, feature):
@@ -307,18 +319,19 @@ def main():
             if default: p['style_hint']=default
         if layer=='ways':
             p.setdefault('walk',True); p.setdefault('bike',True); p.setdefault('steps',False)
+        if layer in {'buildings','places','waters','sports','context_buildings'} and p.get('name'):
+            p.setdefault('label',p['name'])
         return out
     rendered_ways=[materialize('ways',f) for f in rendered_ways]
     base=[materialize(layer,f) for layer,fs in (
         ('campuses',layers['campuses']),('buildings',layers['buildings']),('greens',layers['greens']),
         ('waters',layers['waters']),('sports',layers['sports']),('surfaces',layers['surfaces']),
-        ('context_buildings',layers['context_buildings'])) for f in fs]+rendered_ways
+        ('context_buildings',layers['context_buildings']),('places',layers['places'])) for f in fs]+rendered_ways
     for f in base: f.pop('id',None)
     base=sorted(base,key=feature_id)
     # The source way id is an authoring aid repeated on every segment; topology
     # clients only need endpoints, distance and modal flags.
-    network['edges']=[edge[:4] for edge in network['edges']]
-    dump(out/'places.json',places); dump(out/'network.json',network); dump(out/'entities'/'space.json',entities)
+    dump(out/'entities.json',entities); dump(out/'network.json',network)
     dump(out/'basemap.geojson',{'type':'FeatureCollection','name':'authored-basemap','features':base})
     tile_layers={'campus':[materialize('campuses',f) for f in layers['campuses']],
                  'buildings':[materialize('buildings',f) for f in layers['buildings']],
@@ -327,7 +340,8 @@ def main():
                  'waters':[materialize('waters',f) for f in layers['waters']],
                  'sports':[materialize('sports',f) for f in layers['sports']],
                  'surfaces':[materialize('surfaces',f) for f in layers['surfaces']],
-                 'context_buildings':[materialize('context_buildings',f) for f in layers['context_buildings']]}
+                 'context_buildings':[materialize('context_buildings',f) for f in layers['context_buildings']],
+                 'places':[materialize('places',f) for f in layers['places']]}
     tile_report=write_pmtiles(out/'basemap.pmtiles',tile_layers)
     preview=render_preview(out/'basemap-preview.png',tile_layers)
     campus_geom=shape(layers['campuses'][0]['geometry'])
@@ -341,7 +355,7 @@ def main():
             'basemap_context':{'passed':context_ok,'margins_m':[round(x,1) for x in margins],
                                'network_only_crossings':len(layers['ways'])-len(rendered_ways),'rendered_crossings':0,
                                'preview':preview,'tiles':tile_report},
-            'artifacts':{'places':str(out/'places.json'),'network':str(out/'network.json'),'entities':str(out/'entities'/'space.json'),
+            'artifacts':{'entities':str(out/'entities.json'),'network':str(out/'network.json'),
                          'basemap_geojson':str(out/'basemap.geojson'),'basemap_pmtiles':str(out/'basemap.pmtiles'),
                          'basemap_preview':str(out/'basemap-preview.png')}}
     dump(out/'checks.json',checks)

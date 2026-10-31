@@ -23,12 +23,18 @@ def main():
     if not checks.get('passed'): raise SystemExit('authored map checks failed')
     manifest={'map_version':version,'built_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'crs':'EPSG:4326','coordinates':'7-decimal WGS84','layers':{},'artifacts':{}}
     for p in sorted((ROOT/'map'/'layers').glob('*.geojson')): manifest['layers'][p.name]={'sha256':sha(p),'bytes':p.stat().st_size}
-    for p in sorted(out.rglob('*')):
-        if p.is_file(): manifest['artifacts'][p.relative_to(out).as_posix()]={'sha256':sha(p),'bytes':p.stat().st_size}
+    release_files = ('entities.json', 'network.json', 'basemap.pmtiles', 'checks.json')
+    release_space = args.output / 'space' / '仙林'
+    release_space.mkdir(parents=True, exist_ok=True)
+    for name in release_files:
+        source = out / name
+        target = release_space / name
+        target.write_bytes(source.read_bytes())
+        manifest['artifacts'][name] = {'sha256': sha(target), 'bytes': target.stat().st_size}
     args.output.mkdir(parents=True,exist_ok=True); m=args.output/'manifest.json'; m.write_text(json.dumps(manifest,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n',encoding='utf8')
     archive=args.output/f'njupt-map-{version.removeprefix("map-")}.tar.gz'
     with tarfile.open(archive,'w:gz') as t:
-        t.add(ROOT/'map',arcname='map'); t.add(out,arcname='space/仙林'); t.add(m,arcname='manifest.json')
+        t.add(ROOT/'map',arcname='map'); t.add(release_space,arcname='space/仙林'); t.add(m,arcname='manifest.json')
     if not args.dry_run:
         subprocess.run(['gh','release','create',version,str(archive),str(m),'--title',version,'--notes','Authored NJUPT campus map','--latest'],cwd=ROOT,check=True)
     print(json.dumps({'version':version,'archive':str(archive),'manifest':str(m),'published':not args.dry_run},ensure_ascii=False))
