@@ -111,5 +111,14 @@ class AuthoredMapTest(unittest.TestCase):
                         layers = mapbox_vector_tile.decode(tile)
                         self.assertTrue(layers.get('campus', {}).get('features'), f'missing campus layer z{z}/{x}/{y}')
                         self.assertTrue(any(layers.get(name, {}).get('features') for name in ('greens', 'surfaces', 'ways', 'buildings')), f'missing ground layers z{z}/{x}/{y}')
+                        screen_layers = mapbox_vector_tile.decode(tile, default_options={'y_coord_down': True})
+                        for feature in screen_layers.get('buildings', {}).get('features', []):
+                            bid = feature.get('properties', {}).get('id')
+                            if bid == '仙林/三食堂' and z == 14 and (x, y) == (13604, 6647):
+                                cy = shape(feature['geometry']).centroid.y
+                                self.assertLess(cy, 512, f'north building must sit near top of tile (got y={cy})')
+                            if bid == '仙林/教1' and z == 14 and (x, y) == (13604, 6647):
+                                cy = shape(feature['geometry']).centroid.y
+                                self.assertGreater(cy, 2000, f'south building must sit in lower half of tile (got y={cy})')
 
 if __name__=='__main__': unittest.main()

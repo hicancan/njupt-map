@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw
 from pmtiles.tile import Compression, TileType, zxy_to_tileid
 from pmtiles.writer import Writer
 from pyproj import Transformer
-from shapely.geometry import box, shape
+from shapely.geometry import Point, box, shape
 from shapely.ops import unary_union
 
 WGS_TO_M = Transformer.from_crs("EPSG:4326", "EPSG:32650", always_xy=True).transform
@@ -52,6 +52,28 @@ def tile_range(geometry: Any, z: int):
     )
 
 
+def _keep_dimension(geometry: Any, source_type: str) -> Any:
+    if geometry.is_empty:
+        return geometry
+    if source_type in ("Polygon", "MultiPolygon"):
+        if geometry.geom_type in ("Polygon", "MultiPolygon"):
+            return geometry
+        if geometry.geom_type == "GeometryCollection":
+            polys = [g for g in geometry.geoms if g.geom_type in ("Polygon", "MultiPolygon") and not g.is_empty]
+            return unary_union(polys) if polys else Point()
+        return Point()
+    if source_type in ("LineString", "MultiLineString"):
+        if geometry.geom_type == "LineString":
+            return geometry if len(geometry.coords) >= 2 else Point()
+        if geometry.geom_type == "MultiLineString":
+            return geometry if any(len(line.coords) >= 2 for line in geometry.geoms) else Point()
+        if geometry.geom_type == "GeometryCollection":
+            lines = [g for g in geometry.geoms if g.geom_type in ("LineString", "MultiLineString") and not g.is_empty]
+            return unary_union(lines) if lines else Point()
+        return Point()
+    return geometry
+
+
 def tile_bytes(tile_layers: dict[str, list[dict]], z: int, x: int, y: int) -> bytes:
     bounds = tile_bounds(z, x, y)
     clip = box(*tile_bounds(z, x, y, BUFFER))
@@ -59,15 +81,11 @@ def tile_bytes(tile_layers: dict[str, list[dict]], z: int, x: int, y: int) -> by
     for name, features in sorted(tile_layers.items()):
         clipped = []
         for feature in features:
-            geometry = shape(feature["geometry"])
+            raw = shape(feature["geometry"])
+            if raw.is_empty:
+                continue
+            geometry = _keep_dimension(raw.intersection(clip), raw.geom_type)
             if geometry.is_empty:
-                continue
-            geometry = geometry.intersection(clip)
-            if geometry.is_empty:
-                continue
-            if geometry.geom_type == "LineString" and len(geometry.coords) < 2:
-                continue
-            if geometry.geom_type == "MultiLineString" and not any(len(line.coords) > 1 for line in geometry.geoms):
                 continue
             clipped.append({"id": feature.get("id"), "properties": feature.get("properties") or {}, "geometry": geometry})
         if clipped:
@@ -77,7 +95,7 @@ def tile_bytes(tile_layers: dict[str, list[dict]], z: int, x: int, y: int) -> by
         default_options={
             "quantize_bounds": bounds,
             "extents": EXTENT,
-            "y_coord_down": True,
+            "y_coord_down": False,
             "check_winding_order": True,
             "on_invalid_geometry": mapbox_vector_tile.encoder.on_invalid_geometry_make_valid,
         },
@@ -146,7 +164,7 @@ def render_preview(path: Path, layers: dict[str, list[dict]], width: int = 1600,
 
     image = Image.new("RGB", (width, height), "#f4f1e9")
     draw = ImageDraw.Draw(image)
-    colors = {"greens": "#b8cda5", "waters": "#9cced8", "sports": "#d69a87", "surfaces": "#ddd7ca", "context_buildings": "#cfc9bd", "buildings": "#b9956d", "ways": "#a99f91", "campuses": "#f0eee5"}
+    colors = {"campus": "#f0eee5", "greens": "#b8cda5", "waters": "#9cced8", "sports": "#d69a87", "surfaces": "#ddd7ca", "context_buildings": "#cfc9bd", "buildings": "#b9956d", "ways": "#a99f91"}
 
     def draw_geom(geometry, color):
         if geometry.geom_type == "Polygon":
@@ -154,7 +172,7 @@ def render_preview(path: Path, layers: dict[str, list[dict]], width: int = 1600,
         elif geometry.geom_type == "LineString":
             draw.line([px(c) for c in geometry.coords], fill=color, width=2)
 
-    for name in ("greens", "waters", "sports", "surfaces", "context_buildings", "campuses", "buildings", "ways"):
+    for name in ("campus", "greens", "waters", "sports", "surfaces", "context_buildings", "buildings", "ways"):
         for feature in layers.get(name, []):
             draw_geom(shape(feature["geometry"]), colors.get(name, "#888"))
     image.save(path, "PNG")
