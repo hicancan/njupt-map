@@ -107,10 +107,10 @@ uv run python src/map/format_geojson.py --check
 uv run python src/map/build_authored.py
 uv run python -m src.observations.validate --public
 uv run python -m unittest discover -s tests -p 'test_*.py'
-uv run python -m src.sync
+uv run python -m src.blender.sync
 ```
 
-地图导出写入 `build/map/`，检查写入 `build/checks/`。`src.sync` 调用 Blender，只读检查校园和影片两个原生场景；确认差异后以 `--apply` 同步位置与名称。轮廓或高度变化会阻止自动应用，留给原生模型精修。已有资产、灯光、相机和动画不会被默认重新生成覆盖。
+地图导出写入 `build/map/`，检查写入 `build/checks/`。`src.blender.sync` 调用 Blender，只读检查校园和影片两个原生场景；确认差异后以 `--apply` 同步位置与名称。轮廓或高度变化会阻止自动应用，留给原生模型精修。已有资产、灯光、相机和动画不会被默认重新生成覆盖。
 
 新照片、视频、平面图和已发布地图进入观测目录。精选视频帧是正式观测，保留原视频来源、时间点、筛选原因与对象绑定；候选帧属于临时处理输出。
 
@@ -177,4 +177,3 @@ uv run python -m src.observations.review_export
 - 第三方照片、地图、楼层图和学校标识保留各自权利。未明确允许再分发的原件保留本地，公共仓库提供来源和绑定；Blender 文件不内嵌受限楼层原图。
 
 独立校园重建项目，无学校官方背书。完整范围见 [许可与署名](LICENSES.md)。
-

@@ -8,7 +8,7 @@ import math
 import re
 from pathlib import Path
 
-from src.map.store import ROOT, SOURCE, load_campus
+from src.map.authored import ROOT, SOURCE, load_authored, source_digest
 
 CATALOG = ROOT / "projects/blender/buildings/catalog.json"
 
@@ -70,11 +70,11 @@ def main():
     parser.add_argument("--instances", type=Path, help="Actual scene placements exported by Blender")
     parser.add_argument("--output", type=Path, default=ROOT / "build/checks/sync/plan.json")
     args = parser.parse_args()
-    campus = load_campus(args.source)
+    campus = load_authored(args.source)
     catalog = json.loads(args.catalog.read_text(encoding="utf-8"))
     actual = json.loads(args.instances.read_text(encoding="utf-8")) if args.instances else None
     plan = make_plan(campus, catalog, actual)
-    plan["source_file_sha256"] = hashlib.sha256(args.source.read_bytes()).hexdigest()
+    plan["source_file_sha256"] = source_digest(args.source)
     plan["catalog_file_sha256"] = hashlib.sha256(args.catalog.read_bytes()).hexdigest()
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -84,3 +84,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

@@ -1,1 +1,1 @@
-"""Operations on the editable campus GeoPackage."""
+"""Authored campus map layers and deterministic derived contracts."""

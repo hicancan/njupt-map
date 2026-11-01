@@ -15,7 +15,7 @@ from shapely.geometry import GeometryCollection, LineString, Polygon
 from shapely.ops import unary_union
 
 from src.map.precision import WGS84_DECIMAL_PLACES, wgs84_coordinates
-from src.map.store import ROOT, load_campus
+from src.map.authored import ROOT, load_authored
 from src.runtime.context import surface_triangles
 from src.runtime.mesh import MeshWriter
 from src.runtime.provenance import canonical_json_sha256, pipeline_source_hashes, toolchain
@@ -67,7 +67,7 @@ class ReproducibilityContracts(unittest.TestCase):
             self.assertEqual(surface_triangles(shape), expected)
 
     def test_every_road_surface_preserves_buffer_footprint_and_vertices(self):
-        for road in load_campus()['roads']:
+        for road in load_authored()['roads']:
             geometry = LineString(road['points']).buffer(road['width']/2, cap_style='flat', join_style='mitre')
             triangles = surface_triangles(geometry)
             rebuilt = unary_union([Polygon(t) for t in triangles])

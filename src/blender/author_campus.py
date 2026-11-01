@@ -292,7 +292,7 @@ def main():
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
     data = json.loads((ROOT / 'build/map/campus.json').read_text(encoding='utf8'))
     exported = json.loads((ROOT/'build/map/export.json').read_text(encoding='utf8'))
-    if (exported['source_file_sha256'] != digest(ROOT / 'projects/map/campus.gpkg') or
+    if (exported['source_file_sha256'] != digest(ROOT / 'projects/blender/map/campus.gpkg') or
             exported['campus_json_sha256'] != digest(ROOT/'build/map/campus.json')):
         raise ValueError('Export is stale; export the current map before authoring')
     catalog = json.loads(CATALOG.read_text(encoding='utf8'))
@@ -312,7 +312,7 @@ def main():
     if args.replace_interiors and not args.assets:parser.error('--replace-interiors requires --assets')
     path = ROOT / 'build/checks/authoring.json'
     report = json.loads(path.read_text(encoding='utf8')) if path.exists() else {'assets': {}}
-    report.update(status='running', map_sha256=digest(ROOT / 'projects/map/campus.gpkg'))
+    report.update(status='running', map_sha256=digest(ROOT / 'projects/blender/map/campus.gpkg'))
     started = time.time()
     if args.assets or args.exteriors or args.interior_materials:
         author_assets(data, catalog, ids, report,args.replace_interiors,args.interior_materials,args.exteriors)

@@ -1,7 +1,7 @@
 """Blender-side spatial instance synchronization, with authored asset protection.
 
-blender --background projects/blender/campus.blend --python src/sync/apply.py -- --apply
-Without --apply, export actual placements only. Supply a current plan from src.sync.plan.
+blender --background projects/blender/campus.blend --python src/blender/sync/apply.py -- --apply
+Without --apply, export actual placements only. Supply a current plan from src.blender.sync.plan.
 """
 from __future__ import annotations
 
@@ -12,8 +12,9 @@ import sys
 from pathlib import Path
 
 import bpy
+from src.map.authored import source_digest
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 
 
 def protected_state(linked):
@@ -71,9 +72,10 @@ def main():
         plan = json.loads(args.plan.read_text(encoding="utf-8"))
         if not plan["ready_to_apply"] or plan["issues"]:
             raise ValueError("Resolve proposed geometry/identity changes before applying this plan")
-        for path, key in ((ROOT / "projects/map/campus.gpkg", "source_file_sha256"),
+        for path, key in ((ROOT / "map/layers", "source_file_sha256"),
                           (ROOT / "projects/blender/buildings/catalog.json", "catalog_file_sha256")):
-            if hashlib.sha256(path.read_bytes()).hexdigest() != plan[key]:
+            actual = source_digest(path) if path.is_dir() else hashlib.sha256(path.read_bytes()).hexdigest()
+            if actual != plan[key]:
                 raise ValueError(f"Source changed since this plan was prepared: {path}")
         catalog_path = ROOT / "projects/blender/buildings/catalog.json"
         catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
@@ -112,3 +114,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+

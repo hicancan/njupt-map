@@ -113,7 +113,7 @@ def extract(request):
         'extras': {'asset_id': aid, 'source_namespace':'njupt-map',
                   'geometry_status':'authored_exterior_lod2', 'measured':False,
                   'source_blend_sha256':source_hash}})
-    # Collection instance offsets are applied once, then the GPKG anchor once.
+    # Collection instance offsets are applied once, then the authored-map anchor once.
     offset = Matrix.Translation(-collection.instance_offset)
     matrices = {}
     def local_matrix(ob):

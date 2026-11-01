@@ -18,7 +18,7 @@ import tempfile
 import time
 import psutil
 from .export import bounds, canonical, sha, write_json
-from ..map.store import ROOT, SOURCE, load_campus
+from ..map.authored import ROOT, SOURCE, load_authored
 
 FORMAT = 'njupt-map-native-exteriors'
 CATALOG = ROOT/'projects/blender/buildings/catalog.json'
@@ -177,7 +177,7 @@ def export_native(blender, output, source=SOURCE, asset_ids=None, timeout_s=180,
     source_hash = sha(source)
     catalog_hash = sha(CATALOG)
     catalog = json.loads(CATALOG.read_text(encoding='utf-8'))
-    campus = load_campus(source)
+    campus = load_authored(source)
     buildings = {b['asset_id']:b for b in campus['buildings']}
     selected = sorted(asset_ids if asset_ids else buildings)
     if not selected or len(selected) != len(set(selected)) or not set(selected) <= set(buildings):
@@ -222,7 +222,7 @@ def export_native(blender, output, source=SOURCE, asset_ids=None, timeout_s=180,
                      for p in sorted(stage.rglob('*')) if p.is_file()}
         producer_hash = hashlib.sha256(b''.join((ROOT/'src/runtime'/p).read_bytes()
             for p in ('native.py','native_worker.py','mesh.py'))).hexdigest()
-        manifest = {'schema_version':1, 'format':FORMAT, 'source_gpkg_sha256':source_hash,
+        manifest = {'schema_version':1, 'format':FORMAT, 'source_geojson_sha256':source_hash,
             'source_catalog_sha256':catalog_hash, 'producer_sha256':producer_hash,
             'buildings':descriptors, 'artifacts':artifacts,
             'policy':'Read-only base exterior meshes, no interior/scene evaluation, no textures, no native save'}
@@ -238,7 +238,7 @@ def export_native(blender, output, source=SOURCE, asset_ids=None, timeout_s=180,
 def integrate_native(root, output, descriptors, source_hash):
     root = Path(root).resolve()
     manifest = verify_bundle(root)
-    if manifest['source_gpkg_sha256'] != source_hash or manifest['source_catalog_sha256'] != sha(CATALOG):
+    if manifest['source_geojson_sha256'] != source_hash or manifest['source_catalog_sha256'] != sha(CATALOG):
         raise ValueError('Native detail was generated from different canonical sources')
     by_id = {b['asset_id']:b for b in descriptors}
     catalog = json.loads(CATALOG.read_text(encoding='utf-8'))

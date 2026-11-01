@@ -1,4 +1,4 @@
-"""Publish deterministic versioned lightweight campus artifacts from the GPKG.
+"""Publish deterministic versioned lightweight campus artifacts from authored GeoJSON.
 
 This publishes files only under the requested local output directory. It does
 not upload, deploy, modify native Blender, or infer new physical rooms/devices.
@@ -19,9 +19,9 @@ from .glb import write_glb, triangles
 from .semantics import audit_regions, public_regions
 from .context import context_products
 from .provenance import canonical_json_sha256, toolchain
-from ..map.export import export as map_export
+from ..map.authored import load_authored, source_digest
 from ..map.precision import WGS84_DECIMAL_PLACES, wgs84_coordinates
-from ..map.store import ROOT,SOURCE
+from ..map.authored import ROOT,SOURCE
 
 
 def canonical(value):
@@ -31,7 +31,9 @@ def write_json(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_bytes(canonical(value)+b'\n')
 
-def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def sha(path):
+    path=Path(path)
+    return source_digest(path) if path.is_dir() else hashlib.sha256(path.read_bytes()).hexdigest()
 
 def source_revision():
     result=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,text=True,capture_output=True)
@@ -48,20 +50,16 @@ def _export_runtime(source, output, native_detail=None):
         if output==protected.resolve() or protected.resolve() in output.parents:
             raise ValueError(f'Refusing runtime output inside authored source: {protected.name}')
     source=Path(source)
-    before=sha(source)
+    before=source_digest(source)
     producer=toolchain(ROOT)
     output.mkdir(parents=True,exist_ok=True)
-    # Reuse the existing GIS exporter without bundling its Blender-oriented JSON.
-    with tempfile.TemporaryDirectory(prefix='njupt-gis-export-') as tmp:
-        exported=Path(tmp)
-        data=map_export(source,exported)
-        for geo in sorted(exported.glob('*.geojson')):
-            target=output/geo.name if geo.name=='buildings.geojson' else output/'layers'/geo.name
-            write_json(target,json.loads(geo.read_text(encoding='utf8')))
+    data=load_authored(ROOT)
     buildings=sorted(data['buildings'],key=lambda b:b['asset_id'])
     ids=[b['asset_id'] for b in buildings]
-    if len(set(ids))!=len(ids) or any(not re.fullmatch(r'[A-Za-z0-9_-]+',aid) for aid in ids):
-        raise ValueError('Building IDs must be unique safe artifact identities')
+    safe_ids=[f'building-{index:03d}' for index, _ in enumerate(ids)]
+    if len(set(ids))!=len(ids):
+        raise ValueError('Building IDs must be unique')
+    write_json(output/'buildings.geojson',json.loads((ROOT/'map/layers/buildings.geojson').read_text(encoding='utf-8')))
     write_json(output/'buildings.local.geojson',{'type':'FeatureCollection','name':'buildings',
        'coordinate_frame':'campus_local_east_north_m','source_crs':data['metadata']['crs'],
        'origin_easting_northing':data['metadata']['origin_easting_northing'],
@@ -81,8 +79,8 @@ def _export_runtime(source, output, native_detail=None):
     descriptors=[]
     inverse=Transformer.from_crs(data['metadata']['crs'],'EPSG:4326',always_xy=True)
     ox,oy=data['metadata']['origin_easting_northing']
-    for b in buildings:
-        relative=f"buildings/{b['asset_id']}.glb"
+    for index, b in enumerate(buildings):
+        relative=f"buildings/{safe_ids[index]}.glb"
         path=output/relative
         path.parent.mkdir(parents=True,exist_ok=True)
         path.write_bytes(write_glb([b]))
@@ -107,7 +105,7 @@ def _export_runtime(source, output, native_detail=None):
     write_json(output/'source-regions.json',public_regions(region_audit))
     provenance={'source_namespace':'njupt-map','source_git_commit':source_revision(),
        'source_git_commit_role':'Checkout base revision; exact source bytes are identified by the accompanying hashes',
-       'source_gpkg_sha256':before,'dataset_sha256':data['metadata']['dataset_sha256'],
+       'source_geojson_sha256':before,'dataset_sha256':data['metadata']['dataset_sha256'],
        'source_interiors_sha256':design_before,
        'source_interiors_canonical_json_sha256':canonical_json_sha256(design.read_bytes()),
        'source_url':'https://github.com/hicancan/njupt-map',
@@ -147,7 +145,7 @@ def _export_runtime(source, output, native_detail=None):
           'LOD1 is a lightweight extrusion, not a high-detail export of authored Blender',
           'No registered indoor metric coordinates, equipment installation or occupancy']}
     manifest['version']=hashlib.sha256(canonical(manifest)).hexdigest()
-    if sha(source)!=before or sha(design)!=design_before or toolchain(ROOT)!=producer:
+    if source_digest(source)!=before or sha(design)!=design_before or toolchain(ROOT)!=producer:
         raise RuntimeError('Source or toolchain changed during runtime export')
     write_json(output/'manifest.json',manifest)
     return manifest

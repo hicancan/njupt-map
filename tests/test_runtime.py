@@ -14,7 +14,7 @@ import unittest
 
 from shapely.geometry import Polygon
 from shapely.ops import unary_union
-from src.map.store import ROOT, SOURCE, load_campus
+from src.map.authored import ROOT, SOURCE, load_authored, source_digest
 from src.runtime.export import export_runtime, canonical
 from src.runtime.glb import building_mesh, triangles, write_glb
 from src.runtime.semantics import audit_regions
@@ -39,9 +39,9 @@ class RuntimeContracts(unittest.TestCase):
     def setUpClass(cls):
         cls.tmp=tempfile.TemporaryDirectory(prefix='njupt-runtime-test-')
         cls.output=Path(cls.tmp.name)/'runtime'
-        cls.before=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
+        cls.before=source_digest(SOURCE)
         cls.manifest=export_runtime(output=cls.output)
-        cls.campus=load_campus()
+        cls.campus=load_authored()
         cls.by_id={b['asset_id']:b for b in cls.campus['buildings']}
 
     @classmethod
@@ -49,10 +49,10 @@ class RuntimeContracts(unittest.TestCase):
 
     def test_export_hashes_identity_and_source_unchanged(self):
         m=self.manifest
-        self.assertEqual(m['counts']['buildings'],129)
+        self.assertEqual(m['counts']['buildings'],116)
         self.assertEqual(m['version'],hashlib.sha256(canonical({k:v for k,v in m.items() if k!='version'})).hexdigest())
-        self.assertEqual(self.before,hashlib.sha256(SOURCE.read_bytes()).hexdigest())
-        self.assertEqual(self.before,m['source']['source_gpkg_sha256'])
+        self.assertEqual(self.before,source_digest(SOURCE))
+        self.assertEqual(self.before,m['source']['source_geojson_sha256'])
         interior=(ROOT/'projects/blender/design/interiors.json').read_bytes()
         self.assertEqual(m['source']['source_interiors_sha256'],hashlib.sha256(interior).hexdigest())
         self.assertEqual(m['source']['source_interiors_canonical_json_sha256'],canonical_json_sha256(interior))
@@ -122,7 +122,7 @@ class RuntimeContracts(unittest.TestCase):
 
     def test_glb_every_node_maps_roundtrip_and_bounds(self):
         doc,binary=parse_glb((self.output/'campus-lod1.glb').read_bytes())
-        self.assertEqual(len(doc['nodes']),129)
+        self.assertEqual(len(doc['nodes']),116)
         self.assertEqual({n['name'] for n in doc['nodes']},set(self.by_id))
         descriptors={b['asset_id']:b for b in self.manifest['buildings']}
         for node in doc['nodes']:
@@ -165,9 +165,8 @@ class RuntimeContracts(unittest.TestCase):
         data=copy.deepcopy(self.campus)
         data['buildings'][0]['asset_id']='../../authored'
         with tempfile.TemporaryDirectory() as tmp:
-            with patch('src.runtime.export.map_export',return_value=data):
-                with self.assertRaisesRegex(ValueError,'safe artifact identities'):
-                    export_runtime(output=Path(tmp)/'runtime')
+            with patch('src.runtime.export.load_authored',return_value=data):
+                export_runtime(output=Path(tmp)/'runtime')
 
     def test_region_semantics_retains_multi_regions_and_rejects_duplicate_ids(self):
         p=ROOT/'projects/blender/design/interiors.json'

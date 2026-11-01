@@ -39,7 +39,7 @@ try {
     Invoke-Check 'geojson-format' 'uv' @('run', 'python', 'src/map/format_geojson.py', '--check')
     Invoke-Check 'authored-map-build' 'uv' @('run', 'python', 'src/map/build_authored.py')
     Invoke-Check 'public-observations' 'uv' @('run', 'python', '-m', 'src.observations.validate', '--public')
-    Invoke-Check 'scene-sync' 'uv' @('run', 'python', '-m', 'src.sync', '--blender', $Blender)
+    Invoke-Check 'scene-sync' 'uv' @('run', 'python', '-m', 'src.blender.sync', '--blender', $Blender)
     $nativeArgs = @('--background', '--factory-startup', '--python-exit-code', '1', '--python', 'src/blender/checks/validate_native.py')
     if ($Render) { $nativeArgs += @('--', '--render') }
     Invoke-Check 'native-sources' $Blender $nativeArgs

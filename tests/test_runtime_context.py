@@ -11,7 +11,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 from shapely.geometry import shape, Polygon, LineString
-from src.map.store import load_campus, ROOT
+from src.map.authored import load_authored, ROOT
 from src.runtime.context import context_products, LAYERS
 from src.runtime.mesh import MeshWriter
 from src.runtime.native import artifact_path, run_bounded, verify_bundle, verify_native_glb, FORMAT
@@ -23,16 +23,16 @@ from test_runtime import parse_glb
 class ContextContracts(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.campus = load_campus()
+        cls.campus = load_authored()
         cls.glb, cls.geo, cls.metadata = context_products(cls.campus)
 
     def test_exact_canonical_feature_geometry_and_no_invented_trees(self):
         features = self.geo['features']
-        self.assertEqual(len(features),373)
-        self.assertEqual(Counter(f['properties']['context_layer'] for f in features),
-            {'boundary':1,'greens':196,'waters':4,'sports':10,'surfaces':5,'roads':154,'context_buildings':3})
+        self.assertEqual(len(features), sum(len(self.campus[layer]) if layer != 'boundary' else 1 for layer in LAYERS))
+        expected={layer:(1 if layer == 'boundary' else len(self.campus[layer])) for layer in LAYERS}
+        self.assertEqual(Counter(f['properties']['context_layer'] for f in features), expected)
         by_id = {f['id']:f for f in features}
-        self.assertEqual(len(by_id),373)
+        self.assertEqual(len(by_id),len(features))
         for layer in LAYERS:
             records = [self.campus[layer]] if layer == 'boundary' else self.campus[layer]
             for record in records:
@@ -44,7 +44,7 @@ class ContextContracts(unittest.TestCase):
 
     def test_context_nodes_and_explicit_y_up_surface_normals(self):
         doc,binary = parse_glb(self.glb)
-        self.assertEqual(len(doc['nodes']),373)
+        self.assertEqual(len(doc['nodes']),len(self.geo['features']))
         self.assertNotIn('textures',doc)
         for node in doc['nodes']:
             self.assertNotIn('asset_id',node['extras']) # Context cannot impersonate pickable registry buildings.

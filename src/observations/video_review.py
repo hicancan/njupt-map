@@ -10,7 +10,6 @@ import json
 import math
 import re
 import shutil
-import sqlite3
 import subprocess
 from fractions import Fraction
 from pathlib import Path
@@ -18,6 +17,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 from .common import CATALOG, ROOT, checksum, read, resolve, write
+from src.map.authored import load_layers
 
 OUTPUT = ROOT / "build/processing/observations/video-review"
 PTS = re.compile(r"\bn:\s*\d+\s+pts:\s*(-?\d+)\s+pts_time:\s*([\d.eE+-]+)")
@@ -281,14 +281,7 @@ def validate_annotation(annotation: dict, sources: dict, asset_ids: set[str],
 def _map_ids(column: str) -> set[str]:
     if column not in {"asset_id", "map_feature_id"}:
         raise ValueError("Unsupported map identity column")
-    database = ROOT / "projects/map/campus.gpkg"
-    with sqlite3.connect(database.resolve().as_uri() + "?mode=ro", uri=True) as connection:
-        result = set()
-        for table, in connection.execute("SELECT table_name FROM gpkg_contents"):
-            columns = [r[1] for r in connection.execute(f'PRAGMA table_info("{table}")')]
-            if column in columns:
-                result.update(r[0] for r in connection.execute(f'SELECT {column} FROM "{table}"') if r[0])
-        return result
+    return {feature['properties']['id'] for features in load_layers(ROOT).values() for feature in features}
 
 
 def main() -> None:

@@ -6,7 +6,7 @@
 flowchart LR
   O[observations<br/>来源、原件、精选帧、绑定] --> M[projects/map<br/>QGIS + GeoPackage]
   O --> B[projects/blender<br/>建筑、材质、场景、影片]
-  M --> S[src/sync<br/>共同ID、坐标转换、变化检查]
+  M --> S[src/blender/sync<br/>共同ID、坐标转换、变化检查]
   S --> B
   M --> G[build<br/>地图发布数据]
   B --> R[build<br/>渲染图、视频、便携场景]
@@ -53,5 +53,3 @@ flowchart LR
 替换旧实现后删除并迁移调用。Git/LFS 保留历史，活动目录不保存兼容壳、旧版本或时间戳备份。仍有用途的现实观测原件继续保存，不属于软件兼容留存。
 
 公共原件由来源许可决定。未明确许可的原图与受限疏散图留在本地；公共工程只有可选外部参考，没有内嵌原件。
-
-

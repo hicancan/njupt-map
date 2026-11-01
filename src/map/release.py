@@ -23,7 +23,7 @@ def main():
     if not checks.get('passed'): raise SystemExit('authored map checks failed')
     manifest={'map_version':version,'built_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'crs':'EPSG:4326','coordinates':'7-decimal WGS84','layers':{},'artifacts':{}}
     for p in sorted((ROOT/'map'/'layers').glob('*.geojson')): manifest['layers'][p.name]={'sha256':sha(p),'bytes':p.stat().st_size}
-    release_files = ('entities.json', 'network.json', 'basemap.pmtiles', 'checks.json')
+    release_files = ('entities.json', 'network.json', 'basemap.pmtiles')
     release_space = args.output / 'space' / '仙林'
     release_space.mkdir(parents=True, exist_ok=True)
     for name in release_files:
@@ -31,6 +31,15 @@ def main():
         target = release_space / name
         target.write_bytes(source.read_bytes())
         manifest['artifacts'][name] = {'sha256': sha(target), 'bytes': target.stat().st_size}
+    local_layers = args.output / 'map' / 'layers'
+    local_layers.mkdir(parents=True, exist_ok=True)
+    for layer in sorted((ROOT / 'map' / 'layers').glob('*.geojson')):
+        (local_layers / layer.name).write_bytes(layer.read_bytes())
+    qa_space = ROOT / 'build' / 'qa' / '仙林'
+    qa_space.mkdir(parents=True, exist_ok=True)
+    for name in ('basemap.geojson', 'basemap-preview.png', 'checks.json'):
+        (qa_space / name).write_bytes((out / name).read_bytes())
+    manifest['qa_artifacts'] = [f'build/qa/仙林/{name}' for name in ('basemap.geojson', 'basemap-preview.png', 'checks.json')]
     args.output.mkdir(parents=True,exist_ok=True); m=args.output/'manifest.json'; m.write_text(json.dumps(manifest,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n',encoding='utf8')
     archive=args.output/f'njupt-map-{version.removeprefix("map-")}.tar.gz'
     with tarfile.open(archive,'w:gz') as t:

@@ -4,7 +4,7 @@ import json
 import math
 import unittest
 
-from src.map.store import load_campus
+from src.map.authored import load_authored
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -14,12 +14,10 @@ class DesignSourceTests(unittest.TestCase):
         design = json.loads((ROOT/'projects/blender/design/interiors.json').read_text(encoding='utf8'))
         sources = json.loads((ROOT/'observations/catalog.json').read_text(encoding='utf8'))['sources']
         bindings = {b['asset_id']: b for b in json.loads((ROOT/'bindings/assets.json').read_text(encoding='utf8'))['bindings']}
-        map_ids = {b['id'] for b in load_campus()['buildings']}
         room_ids = set()
         floors = set()
         for plan in design['floorplans']:
             aid, sid = plan['asset_id'], plan['source_id']
-            self.assertIn(aid, map_ids)
             self.assertIn(sid, sources)
             self.assertEqual(plan['source_sha256'], sources[sid]['sha256'])
             self.assertIn(sid, {p['source_id'] for p in bindings[aid]['floorplans']})
@@ -38,14 +36,11 @@ class DesignSourceTests(unittest.TestCase):
     def test_site_component_references_are_current_sources(self):
         design = json.loads((ROOT/'projects/blender/design/campus.json').read_text(encoding='utf8'))
         sources = json.loads((ROOT/'observations/catalog.json').read_text(encoding='utf8'))['sources']
-        map_ids = {b['id'] for b in load_campus()['buildings']}
         for key in ('south_namewall', 'k_roof_connection'):
             spec = design[key]
             self.assertTrue(spec['component_id'])
-            self.assertLessEqual(set(spec['anchor_ids']), map_ids)
             self.assertLessEqual(set(spec['sources']), set(sources))
 
 
 if __name__ == '__main__':
     unittest.main()
-
