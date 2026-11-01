@@ -24,7 +24,7 @@ LAYER_NAMES=('campuses','buildings','rooms','places','entrances','ways','greens'
              'sports','surfaces','context_buildings','landscape_exclusions')
 STYLE_DEFAULTS={'宿舍':'dormitory','食堂':'dining','图书馆':'library','教学':'academic',
                 '学院':'academic','服务':'service'}
-LAYER_KINDS={'campuses':'campus','buildings':'building','rooms':'room','places':'place',
+LAYER_KINDS={'campuses':'campus','buildings':'building','floors':'floor','rooms':'room','places':'place',
              'entrances':'entrance','greens':'greens','waters':'waters','sports':'sports',
              'surfaces':'surfaces','context_buildings':'context_buildings',
              'landscape_exclusions':'landscape_exclusions'}
@@ -121,7 +121,7 @@ def connect_all(nodes,nodes_m,edges,flag):
         d,a,b=best; edges.append([a,b,round(d,3),flag,'authored/component-connector']); main.update(group); added+=1
     return added
 
-def build_network(ways,entrances,buildings,obstacles=()):
+def build_network(ways,entrances,buildings,obstacles=(),entities=()):
     coord_to_node={}; nodes=[]; nodes_m={}; edges=[]
     def node(c):
         key=(round(c[0],7),round(c[1],7))
@@ -164,6 +164,63 @@ def build_network(ways,entrances,buildings,obstacles=()):
                     near=min(reachable,key=lambda x:dist(nodes_m[n],nodes_m[x]))
                     edges.append([n,near,round(dist(nodes_m[n],nodes_m[near]),3),mode,'authored/entrance-access'])
                     reachable.add(n)
+
+    route_nodes_m=dict(nodes_m)
+    # Every published space entity gets a target in the same graph.  Contained
+    # entities use the entrances of their ancestor building; independent
+    # outdoor places get an authored point node connected to the nearest road.
+    # This is deliberately a build-time fact rather than a client fallback.
+    entity_by_id={feature_id(f):f for f in entities}
+    building_ids={feature_id(f) for f in buildings}
+    point_connector_pairs=set()
+
+    def ancestor_building(entity_id):
+        current=entity_by_id.get(entity_id)
+        seen=set()
+        while current is not None:
+            current_id=feature_id(current)
+            if current_id in building_ids:
+                return current_id
+            if current_id in seen:
+                raise ValueError(f'entity parent cycle: {current_id}')
+            seen.add(current_id)
+            parent=current['properties'].get('parent')
+            current=entity_by_id.get(parent) if parent else None
+        return None
+
+    def point_target(feature):
+        geometry=shape(feature.get('geometry')) if feature.get('geometry') else None
+        if geometry is None or geometry.is_empty:
+            raise ValueError(f'entity has no routable geometry: {feature_id(feature)}')
+        point=geometry if geometry.geom_type=='Point' else geometry.representative_point()
+        coordinate=(float(point.x),float(point.y))
+        road=nearest_node(coordinate,nodes_m)
+        target=node(coordinate)
+        if target!=road and (target,road) not in point_connector_pairs:
+            gap=dist(nodes_m[target],nodes_m[road])
+            edges.append([target,road,round(gap,3),WALK|BIKE,'authored/entity-connector'])
+            point_connector_pairs.add((target,road))
+        return target
+
+    all_entrance_nodes=sorted({n for ns in targets.values() for n in ns})
+    for feature in entities:
+        entity_id=feature_id(feature)
+        kind=feature['properties'].get('kind')
+        if kind=='entrance':
+            target_nodes=[ent_nodes[entity_id]] if entity_id in ent_nodes else []
+        elif kind=='campus':
+            target_nodes=all_entrance_nodes
+        else:
+            building=ancestor_building(entity_id)
+            if building is not None:
+                target_nodes=targets.get(building,[])
+            elif kind=='place':
+                target_nodes=[point_target(feature)]
+            else:
+                target_nodes=[]
+        if not target_nodes:
+            raise ValueError(f'entity has no routable target: {entity_id}')
+        targets[entity_id]=sorted(set(target_nodes))
     # Materialize the single wayfind graph contract. Each edge carries a small
     # two-point shape, so the router can return authored geometry without a
     # second linework file.
@@ -181,7 +238,7 @@ def build_network(ways,entrances,buildings,obstacles=()):
              'targets':{k:sorted(v) for k,v in sorted(targets.items())},
              'entrances':{k:ent_nodes[k] for k in sorted(ent_nodes)},
              'stats':{'nodes':len(nodes),'edges':len(edges),'connector_edges':sum(len(v) for v in flags_out.values())-len(ways)}}
-    return network,nodes_m
+    return network,nodes_m,route_nodes_m
 
 def shortest(network,nodes_m,start,flag):
     edges=network['edges']; adj=defaultdict(list)
@@ -282,7 +339,18 @@ def main():
         if p and p not in byid: parent_errors.append({'id':feature_id(f),'parent':p})
     geom_errors=[e for fs in layers.values() for e in check_geometry(fs)]
     authored_name_errors=authored_errors(layers)
-    network,nodes_m=build_network(layers['ways'],layers['entrances'],layers['buildings'], [f['geometry'] for f in layers['buildings']+layers['waters']])
+    entity_features=[]
+    for layer in ('campuses','buildings','floors','rooms','places','entrances'):
+        for feature in layers[layer]:
+            routed=copy.deepcopy(feature)
+            routed['properties']=dict(routed.get('properties') or {})
+            routed['properties']['kind']=LAYER_KINDS[layer]
+            entity_features.append(routed)
+    network,nodes_m,route_nodes_m=build_network(
+        layers['ways'],layers['entrances'],layers['buildings'],
+        [f['geometry'] for f in layers['buildings']+layers['waters']],
+        entities=entity_features,
+    )
     reachable={}
     for mode,name in ((WALK,'walking'),(BIKE,'bicycling')):
         seen=set(); q=deque([0])
@@ -296,7 +364,7 @@ def main():
         missing=[feature_id(f) for f in layers['entrances'] if network['entrances'][feature_id(f)] not in seen]
         reachable[name]={'nodes':len(seen),'missing_entrances':missing}
         if missing: raise ValueError(f'{name} unreachable entrances: {missing[:3]}')
-    gate=route_gate(network,nodes_m)
+    gate=route_gate(network,route_nodes_m)
     if OBS.exists():
         dump(ROOT/'bindings'/'route-gates.json',gate)
     # Derived places/entities: map only.
@@ -307,6 +375,7 @@ def main():
         p=f['properties']; item={'id':feature_id(f),'kind':kind,'name':p.get('name'),'parent':p.get('parent'),
                                   'level':p.get('level'),'category':p.get('category'),'group':p.get('group'),'aliases':p.get('aliases'),
                                   'geometry':None if kind=='floor' else f.get('geometry')}
+        item['routing']={'type':'target','id':feature_id(f)}
         places.append({k:v for k,v in item.items() if v is not None})
     entities=sorted(places,key=lambda x:x['id'])
     # Authored basemap is a deterministic view of authored layers only.
@@ -349,8 +418,12 @@ def main():
     cb=transform(WGS_TO_M,campus_geom).bounds; xb=transform(WGS_TO_M,context).bounds
     margins=[cb[0]-xb[0],cb[1]-xb[1],xb[2]-cb[2],xb[3]-cb[3]]
     context_ok=min(margins)>=300
-    checks={'passed':not(id_errors or parent_errors or geom_errors or authored_name_errors or not context_ok),'id_uniqueness':{'passed':not id_errors,'duplicates':id_errors},
+    entity_ids={item['id'] for item in entities}
+    missing_targets=sorted(entity_ids-set(network['targets']))
+    invalid_targets=sorted(entity_ids-{item['id'] for item in entities if item.get('routing',{}).get('id') in network['targets']})
+    checks={'passed':not(id_errors or parent_errors or geom_errors or authored_name_errors or not context_ok or missing_targets or invalid_targets),'id_uniqueness':{'passed':not id_errors,'duplicates':id_errors},
             'geometry_validity':{'passed':not geom_errors,'errors':geom_errors},'parent_chains':{'passed':not parent_errors,'errors':parent_errors},'authored_invariants':{'passed':not authored_name_errors,'errors':authored_name_errors},
+            'routing_targets':{'passed':not (missing_targets or invalid_targets),'missing':missing_targets,'invalid':invalid_targets},
             'reachability':reachable,'route_gate':gate,'counts':{k:len(v) for k,v in layers.items()},
             'basemap_context':{'passed':context_ok,'margins_m':[round(x,1) for x in margins],
                                'network_only_crossings':len(layers['ways'])-len(rendered_ways),'rendered_crossings':0,

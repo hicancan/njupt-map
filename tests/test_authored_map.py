@@ -85,6 +85,15 @@ class AuthoredMapTest(unittest.TestCase):
             self.assertEqual((build_authored.OUT/'basemap.pmtiles').read_bytes()[:7],b'PMTiles')
             self.assertEqual(checks['basemap_context']['rendered_crossings'],0)
             entities=json.loads((build_authored.OUT/'entities.json').read_text(encoding='utf8'))
+            network=json.loads((build_authored.OUT/'network.json').read_text(encoding='utf8'))
+            entity_ids={item['id'] for item in entities}
+            entrance_ids={feature['properties']['id'] for feature in json.loads(Path('map/layers/entrances.geojson').read_text(encoding='utf8'))['features']}
+            self.assertEqual(entity_ids|entrance_ids,set(network['targets']))
+            self.assertTrue(all(item['routing']=={'type':'target','id':item['id']} for item in entities))
+            self.assertTrue(all(network['targets'][item['id']] for item in entities))
+            self.assertEqual(network['targets']['仙林/教3-601'],network['targets']['仙林/教3'])
+            self.assertEqual(network['targets']['仙林/教3/6'],network['targets']['仙林/教3'])
+            self.assertEqual(network['targets']['仙林/一食堂库迪咖啡'],network['targets']['仙林/一食堂'])
             self.assertTrue(any(item.get('aliases')==['图馆','仙林图书馆'] for item in entities))
             floors=[item for item in entities if item['kind']=='floor']
             self.assertEqual(len(floors),sum(int(f['properties']['levels']) for f in json.loads(Path('map/layers/buildings.geojson').read_text(encoding='utf8'))['features']))
