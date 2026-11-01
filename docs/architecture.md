@@ -6,7 +6,7 @@
 flowchart LR
   O[observations<br/>来源、原件、精选帧、绑定] --> M[projects/map<br/>QGIS + GeoPackage]
   O --> B[projects/blender<br/>建筑、材质、场景、影片]
-  M --> S[src/sync<br/>共同ID、坐标转换、变化检查]
+  M --> S[src/blender/sync<br/>共同ID、坐标转换、变化检查]
   S --> B
   M --> G[build<br/>地图发布数据]
   B --> R[build<br/>渲染图、视频、便携场景]
@@ -14,11 +14,11 @@ flowchart LR
 
 ## 各层维护什么
 
-`observations/catalog.json` 维护来源身份、取得时间、许可、原件路径与散列。`observations/bindings/assets.json` 关联建筑、部件和楼层。拍摄时间、网页发布日期与下载时间分别记录；未知值保持未知。失败下载不能计为已取得的原件。
+`observations/catalog.json` 维护来源身份、取得时间、许可、原件路径与散列。`bindings/assets.json` 关联建筑、部件和楼层。拍摄时间、网页发布日期与下载时间分别记录；未知值保持未知。失败下载不能计为已取得的原件。
 
 精选视频帧、筛选原因、标注与配准控制点是正式来源工作。连续帧是相关观测，不能凭帧数提高独立来源的可信度。模型渲染不是现实观测。
 
-`projects/map/campus.gpkg` 是唯一可编辑的当前校园空间源。样式与布局属于 QGIS 项目；导出的 JSON/GeoJSON 属于 build。不能同时维护另一份 canonical JSON、覆盖清单或脚本中的建筑高度。
+`map/layers/*.geojson` 是唯一可编辑的当前校园空间源；`map/campus.qgs` 只提供 QGIS 工程。作者层本身包含渲染、地点属性和网络规则，构建生成 JSON/GeoJSON 派生物。`observations/` 与 `bindings/` 永远不是作者层输入。
 
 `projects/blender/` 保存三维作者成果。单栋资产、校园装配、材质、景观、相机、动画和影片均在这里维护。程序生成后经过精修的模型同样是正式源稿。
 
@@ -30,7 +30,7 @@ flowchart LR
 | `design/` | 外观细节参数、校园部件解释、已审阅的房间轮廓与特定室内设计 |
 | `presentation/` | 已保存的影片场景、相机计划、标题和音频母带 |
 
-`design/` 的房间轮廓使用来源图像的归一化坐标，米制注册读取 `observations/bindings/assets.json`；主建筑高度、基底与位置从地图读取。它可以维护细部设计尺寸，但不能成为第二份校园空间数据库。推定的空间安排是当前作者决定，后续发现错误时修改这一套工程。
+`design/` 的房间轮廓使用来源图像的归一化坐标，米制注册读取 `bindings/assets.json`；主建筑高度、基底与位置从地图读取。它可以维护细部设计尺寸，但不能成为第二份校园空间数据库。推定的空间安排是当前作者决定，后续发现错误时修改这一套工程。
 
 `src/` 按操作对象划分。必要配置跟随原生工程；检查报告不充当生成器的领域输入。`build/` 保存派生地图、检查、候选帧、渲染、成片和便携场景。README.assets 中少量精选展示图是文档资源。
 

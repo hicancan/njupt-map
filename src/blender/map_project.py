@@ -212,8 +212,8 @@ def make_project(source: Path, project_path: Path, preview: Path | None = None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", type=Path, default=ROOT / "projects/map/campus.gpkg")
-    parser.add_argument("--project", type=Path, default=ROOT / "projects/map/campus.qgs")
+    parser.add_argument("--source", type=Path, default=ROOT / "projects/blender/map/campus.gpkg")
+    parser.add_argument("--project", type=Path, default=ROOT / "projects/blender/map/campus.qgs")
     parser.add_argument("--preview", type=Path)
     parser.add_argument("--qgis-root", type=Path, default=Path(os.environ.get("QGIS_ROOT", "D:/Dev/QGIS-4.2.0")))
     parser.add_argument("--native", action="store_true", help=argparse.SUPPRESS)
@@ -233,3 +233,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

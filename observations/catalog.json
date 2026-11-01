@@ -12776,6 +12776,24 @@
       "asset_id": "osm_way_223859810",
       "selection_reason": "Official floor layout supplements current interior video; publication and drawing currency are unknown.",
       "observation_type": "floor_plan"
+    },
+    "cmc-xianlin-sketch": {
+      "id": "cmc-xianlin-sketch",
+      "title": "南京邮电大学仙林校区校内地形简图",
+      "producer": "南京邮电大学融媒体中心（CMC）",
+      "local_path": "observations/maps/cmc/xianlin-terrain-sketch.jpg",
+      "kind": "club_illustrated_campus_map",
+      "bytes": 237949,
+      "sha256": "af3f20afd874f3428c5aed490edf5af9f2605c1981f87723b85864196bfe3ed5",
+      "retrieved_at": "2026-10-31",
+      "photo_taken_at": null,
+      "published_at": null,
+      "facts": "手绘风格校内地形简图：道路名称、楼栋与苑区布局、食堂、运动场、门、景观点名称",
+      "redistribution": {
+        "license": "owner's club work",
+        "status": "public",
+        "reason": "Provided by the club lead (repository owner)"
+      }
     }
   }
 }

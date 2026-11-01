@@ -12,7 +12,7 @@
 
 | 工程 | 正式源稿 | 负责什么 |
 | --- | --- | --- |
-| 地图 | `projects/map/campus.qgs`、`campus.gpkg` | 地理坐标、校园边界、建筑基底、道路、水面与共同空间参数 |
+| 地图 | `map/campus.qgs`、`map/layers/*.geojson` | 完整作者空间、上下文、网络规则与地点属性 |
 | 三维校园 | `projects/blender/campus.blend`、`buildings/` | 129 个建筑资产、外观与室内、材质、景观、灯光与相机；`presentation/` 维护影片源稿 |
 
 ![仙林校园二维地图](README.assets/map.png)
@@ -42,6 +42,18 @@
 
 两个工程使用共同对象 ID。GeoPackage 保存投影坐标，Blender 使用校园局部米制坐标；位置变化通过显式转换同步，轮廓变化先检查差异，保留精修模型。
 
+## 浏览器轻量运行时
+
+使用 `uv run python -m src.runtime.export` 从唯一 GeoPackage 派生全校 129 个建筑的米制轮廓、轻量 GLB、分栋加载资产和带来源/散列的语义清单。它保留原生 Blender 作者源，不将推定高度、示意室内或未知占用当作实测事实。详见 [运行时发布合同](docs/runtime.md)。
+
+本机完整检查使用 Python 3.12、uv 与已安装的 Blender 5.2，不再单独安装 `bpy` 或依赖 Linux `/proc`：
+
+```powershell
+./src/check.ps1 -Blender 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -Full -Render
+```
+
+公开室内目录保留 564 个区域的身份与来源，未审查授权的参考平面图描摹坐标不随运行时发布。当前本机验证记录见 [本机验证](docs/local-validation.md)。
+
 ## 获取与打开
 
 正式 `.blend`、`.gpkg`、贴图和媒体使用 Git LFS。安装 Git LFS 后获取完整工程：
@@ -53,7 +65,7 @@ Set-Location njupt-map
 git lfs pull
 ```
 
-- **QGIS**：打开 `projects/map/campus.qgs`，直接编辑同目录的 `campus.gpkg`。当前工程在 QGIS 4.2 验证。
+- **QGIS**：打开 `map/campus.qgs`，编辑 `map/layers/*.geojson`。GeoJSON 是唯一地图源；坐标为 WGS84、七位小数。
 - **Blender**：用 Blender 5.2 LTS 打开 `projects/blender/campus.blend`。单栋建筑位于 `projects/blender/buildings/`；主场景链接它们。室内按楼层组织，查看方式见 [室内与剖切](docs/blender.md#查看室内与剖切)。
 - **影片**：打开 `projects/blender/presentation/film.blend`。已有成片可从上方直接获取。
 
@@ -63,13 +75,15 @@ git lfs pull
 
 ```text
 njupt-map/
-├── observations/          原始观测、精选图像、来源目录与对象绑定
+├── map/                   唯一作者地图（GeoJSON 图层与 QGIS 工程）
+├── observations/          原始观测、精选图像与来源目录
+├── bindings/              外部 ID、来源和路线比较关系
 ├── projects/
-│   ├── map/               QGIS 工程与唯一可编辑的校园空间数据库
 │   └── blender/           校园源稿、分栋资产、材质、设计输入与影片源稿
 ├── src/
 │   ├── observations/      采集、视频候选预览、正式选帧与观测检查
 │   ├── map/               空间读取、导出与检查
+│   ├── runtime/           可重建浏览器资产与语义发布
 │   ├── sync/              共同 ID、坐标与变化检查
 │   └── blender/           建模工具、渲染、影片与便携导出
 ├── tests/                 必要的不变量和同步测试
@@ -89,14 +103,14 @@ Python 3.12 与 uv：
 ```powershell
 uv venv --python 3.12
 uv sync --locked
-uv run python -m src.map.export
-uv run python -m src.map.validate
+uv run python src/map/format_geojson.py --check
+uv run python src/map/build_authored.py
 uv run python -m src.observations.validate --public
 uv run python -m unittest discover -s tests -p 'test_*.py'
-uv run python -m src.sync
+uv run python -m src.blender.sync
 ```
 
-地图导出写入 `build/map/`，检查写入 `build/checks/`。`src.sync` 调用 Blender，只读检查校园和影片两个原生场景；确认差异后以 `--apply` 同步位置与名称。轮廓或高度变化会阻止自动应用，留给原生模型精修。已有资产、灯光、相机和动画不会被默认重新生成覆盖。
+地图导出写入 `build/map/`，检查写入 `build/checks/`。`src.blender.sync` 调用 Blender，只读检查校园和影片两个原生场景；确认差异后以 `--apply` 同步位置与名称。轮廓或高度变化会阻止自动应用，留给原生模型精修。已有资产、灯光、相机和动画不会被默认重新生成覆盖。
 
 新照片、视频、平面图和已发布地图进入观测目录。精选视频帧是正式观测，保留原视频来源、时间点、筛选原因与对象绑定；候选帧属于临时处理输出。
 
@@ -116,7 +130,7 @@ uv run python -m src.sync
 
 三牌楼、锁金村和历史施工画面已分别标记。2025 素材的当前状态未核实；2026 发表日期也不当作拍摄日期。图书馆和第二食堂新增内部空间标签；没有拍到的上下楼、房间号和精确入口位置保留未知。视频标签关联到 26 个现有建筑对象，其中 16 个有当前候选片段；组团共现不能代表各栋完整外观覆盖。
 
-正式记录在 `observations/annotations/video-review/`，空间关系在 `observations/bindings/topology.json`，模型差异在 `observations/annotations/model-findings.json`。地点节点包含来源特定的待定位空间；父对象对应不等于相机标定、房间坐标或测绘精度。原视频与权限未明的精选帧保持本地，公共仓库提供元数据和引用。
+正式记录在 `observations/annotations/video-review/`，空间关系在 `bindings/topology.json`，模型差异在 `observations/annotations/model-findings.json`。地点节点包含来源特定的待定位空间；父对象对应不等于相机标定、房间坐标或测绘精度。原视频与权限未明的精选帧保持本地，公共仓库提供元数据和引用。
 
 ```powershell
 uv run python -m src.observations.review_export --validate

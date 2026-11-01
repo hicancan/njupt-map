@@ -11,18 +11,18 @@ uv sync --locked
 
 ## 地图与观测
 
-打开 projects/map/campus.qgs，编辑同目录的 GeoPackage。保存后导出和检查：
+打开 `map/campus.qgs`，编辑 `map/layers/*.geojson`。保存后格式化和检查：
 
 ```powershell
-uv run python -m src.map.export
-uv run python -m src.map.validate
+uv run python src/map/format_geojson.py --check
+uv run python src/map/build_authored.py
 uv run python -m src.observations.validate --hashes
-uv run python -m src.sync
+uv run python -m src.blender.sync
 ```
 
 不要直接编辑 build/map/campus.json。建筑高度、楼层和共同位置在正式 GeoPackage 中维护，不在建模脚本中重复覆盖。占地轮廓、上层体块分别有明确几何角色。
 
-`src.sync` 通过 Blender 同时检查校园与影片两个原生场景，默认只读，输出各自计划及汇总到 `build/checks/sync/`。检查通过后执行 `uv run python -m src.sync --apply`，只对共同 ID 匹配的实例同步位置与名称；无法安全处理的轮廓或高度变化保持源稿并报告，随后人工精修。相机、动画、景观和分栋网格保持不变。Blender 不在 PATH 时指定 `--blender 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe'`。参见 [架构](architecture.md)。
+`src.blender.sync` 通过 Blender 同时检查校园与影片两个原生场景，默认只读，输出各自计划及汇总到 `build/checks/sync/`。检查通过后执行 `uv run python -m src.blender.sync --apply`，只对共同 ID 匹配的实例同步位置与名称；无法安全处理的轮廓或高度变化保持源稿并报告，随后人工精修。相机、动画、景观和分栋网格保持不变。Blender 不在 PATH 时指定 `--blender 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe'`。参见 [架构](architecture.md)。
 
 ## 三维编辑与渲染
 
@@ -45,7 +45,7 @@ $blenderExe = 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe'
 ```powershell
 & $blenderExe --background --factory-startup --python-exit-code 1 --python src/blender/checks/validate_native.py
 & $blenderExe --background --factory-startup --python-exit-code 1 --python src/blender/checks/validate_interiors.py -- --authored
-uv run python -m src.sync
+uv run python -m src.blender.sync
 ```
 
 便携导出验证重新打开后的建筑身份、引用和受限原图保护，同时检查导出没有改写作者工程。任务临时目录仅用于导出过程中间文件；验证路径位于 `D:/Temp/codex/` 后清理。正式便携成果保存在 `build/`，发布为 Release 附件。
@@ -61,8 +61,9 @@ uv run python -m src.sync
 ## 提交与发布
 
 ```powershell
-uv run python -m src.map.export
-uv run python -m src.map.validate
+uv run python src/map/format_geojson.py --check
+uv run python src/map/build_authored.py
+
 uv run python -m src.observations.validate --public
 uv run python -m unittest discover -s tests -p 'test_*.py'
 ```

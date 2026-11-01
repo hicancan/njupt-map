@@ -1,6 +1,6 @@
 """Validate formal video reviews and export a local, read-only review browser.
 
-Spatial anchors are read afresh from the GeoPackage. Parent-building anchors
+Spatial anchors are read afresh from authored GeoJSON. Parent-building anchors
 are never represented as measured entrances or reconstructed camera poses.
 """
 from __future__ import annotations
@@ -14,13 +14,13 @@ from fractions import Fraction
 from pathlib import Path
 from urllib.parse import quote
 
-from src.map.store import load_campus
+from src.map.authored import load_authored
 
 from .common import ROOT, read, write
 from .video_review import validate_annotation
 
 ANNOTATIONS = "observations/annotations/video-review"
-TOPOLOGY = "observations/bindings/topology.json"
+TOPOLOGY = "bindings/topology.json"
 
 
 def map_records(campus: dict) -> list[dict]:
@@ -38,7 +38,7 @@ def inputs(root: Path = ROOT) -> tuple[dict, list[dict], dict, dict]:
     annotations = [read(path) for path in sorted((root / ANNOTATIONS).glob("*.json"))]
     topology_path = root / TOPOLOGY
     topology = read(topology_path) if topology_path.is_file() else {"places": {}, "edges": []}
-    campus = load_campus(root / "projects/map/campus.gpkg")
+    campus = load_authored(root)
     return catalog, annotations, topology, campus
 
 
@@ -278,7 +278,7 @@ def build_payload(catalog: dict, annotations: list[dict], topology: dict, campus
                "seconds_by_space_type": seconds_by_space_type,
                "places": len(topology.get("places", {})), "relations": len(topology.get("edges", [])),
                "map_dataset_sha256": campus["metadata"].get("dataset_sha256"),
-               "spatial_binding": "GeoPackage parent geometry read at export time; no measured entrance or camera poses"}
+               "spatial_binding": "Authored GeoJSON parent geometry read at export time; no measured entrance or camera poses"}
     payload = {"summary": summary, "videos": videos, "topology": topology,
                "map": {"records": feature_records, "bounds": [min(xs), min(ys), max(xs), max(ys)]}}
     return payload, coverage
@@ -287,7 +287,7 @@ def build_payload(catalog: dict, annotations: list[dict], topology: dict, campus
 PAGE = r'''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>njupt-map · 视频观测审查</title>
 <style>
 :root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#101720;color:#e6edf5}*{box-sizing:border-box}body{margin:0}header{padding:22px 28px;border-bottom:1px solid #334158}h1{margin:0 0 8px;font-size:26px}small,.muted{color:#a6b5c8}.warning{color:#ffca71}main{display:grid;grid-template-columns:minmax(350px,1fr) minmax(400px,1fr);gap:18px;padding:20px}section,.card{background:#182331;border:1px solid #30425a;border-radius:10px;padding:16px}.card{margin:12px 0}.controls{display:flex;gap:12px;position:sticky;top:0;background:#101720;padding:10px;z-index:2}select,button{background:#26364a;color:white;border:1px solid #53667f;border-radius:6px;padding:7px;cursor:pointer}.timeline{height:20px;display:flex;gap:1px;margin:10px 0}.segment{padding:0;border:0;border-radius:0;min-width:1px}.accepted{background:#52b89c}.excluded{background:#67768a}.unknown{background:#e9b45a}.selected{outline:2px solid #fff}.segment-list{max-height:270px;overflow:auto}.row{padding:7px;border-bottom:1px solid #2e3d50;cursor:pointer}.row:hover{background:#27394e}.row .unknown{background:none;color:#ffca71}.row .excluded{background:none;color:#bbc5d0}#map{width:100%;height:420px;background:#102a2a}#map path,#map circle{vector-effect:non-scaling-stroke;stroke:#668b94;stroke-width:1;fill:#355463;cursor:pointer}#map .active{stroke:#ffcc66;fill:#db9f3e;stroke-width:3}video{width:100%;max-height:380px;margin-top:12px;background:black}.photos{display:flex;overflow-x:auto;gap:8px}.photos img{height:95px}.tag{border:1px solid #587089;padding:2px 5px;border-radius:4px;margin:3px;display:inline-block;font-size:12px}#detail{white-space:pre-wrap;font-size:14px;line-height:1.7}#relations{max-height:300px;overflow:auto}.stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}.stats b{font-size:22px}.dimmed{opacity:.12}@media(max-width:950px){main{grid-template-columns:1fr}}
-</style><header><h1>njupt-map · 全视频观测审查</h1><div class="muted">来源 → 连续时间段 → 地点 / 部件 → 当前模型候选</div><div class="warning">本地资料浏览器。历史片段明确排除当前；未知显著保留。地图高亮表示父对象对应，不代表测得入口或相机位置。</div><div class="stats" id="stats"></div></header><main><div><div class="controls"><select id="campus"><option value="">全部校区</option><option>xianlin</option><option>sanpailou</option><option>other</option><option>unknown</option></select><select id="status"><option value="">全部状态</option><option>accepted</option><option>excluded</option><option>unknown</option></select><select id="eligibility"><option value="">全部时态</option><option>current_candidate</option><option>excluded_historical</option><option>excluded_other_campus</option><option>unresolved</option></select></div><div id="videos"></div></div><div><section><svg id="map" role="img" aria-label="地图对象语义对应"></svg><div class="muted">地图源：projects/map/campus.gpkg；局部米制坐标，父对象形状。</div><video id="player" controls preload="metadata"></video><div id="detail">点击时间段查看依据，点击地点或对象查看其来源。</div></section><section style="margin-top:18px"><h3>地点和连接关系</h3><div class="warning">只展示来源支持的关系；推断关系单独标记，不生成导航路径。</div><div id="places"></div><div id="relations"></div></section></div></main><script id="data" type="application/json">__DATA__</script><script>
+</style><header><h1>njupt-map · 全视频观测审查</h1><div class="muted">来源 → 连续时间段 → 地点 / 部件 → 当前模型候选</div><div class="warning">本地资料浏览器。历史片段明确排除当前；未知显著保留。地图高亮表示父对象对应，不代表测得入口或相机位置。</div><div class="stats" id="stats"></div></header><main><div><div class="controls"><select id="campus"><option value="">全部校区</option><option>xianlin</option><option>sanpailou</option><option>other</option><option>unknown</option></select><select id="status"><option value="">全部状态</option><option>accepted</option><option>excluded</option><option>unknown</option></select><select id="eligibility"><option value="">全部时态</option><option>current_candidate</option><option>excluded_historical</option><option>excluded_other_campus</option><option>unresolved</option></select></div><div id="videos"></div></div><div><section><svg id="map" role="img" aria-label="地图对象语义对应"></svg><div class="muted">地图源：map/layers/*.geojson；局部米制坐标，父对象形状。</div><video id="player" controls preload="metadata"></video><div id="detail">点击时间段查看依据，点击地点或对象查看其来源。</div></section><section style="margin-top:18px"><h3>地点和连接关系</h3><div class="warning">只展示来源支持的关系；推断关系单独标记，不生成导航路径。</div><div id="places"></div><div id="relations"></div></section></div></main><script id="data" type="application/json">__DATA__</script><script>
 const D=JSON.parse(document.querySelector('#data').textContent), $=s=>document.querySelector(s), escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const time=t=>Math.floor(t/60)+':'+(t%60).toFixed(2).padStart(5,'0');
 $('#stats').innerHTML=[['视频',D.summary.videos],['时间段',D.summary.segments],['分钟',(D.summary.duration_seconds/60).toFixed(1)],['精选帧',D.summary.selected_frames],['地点',D.summary.places]].map(([s,n])=>`<span><b>${n}</b> ${s}</span>`).join('');

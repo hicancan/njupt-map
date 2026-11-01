@@ -2,6 +2,8 @@
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+*.geojson text eol=lf
+*.jsonl text eol=lf
 *.toml text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf

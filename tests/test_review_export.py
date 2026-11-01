@@ -85,7 +85,7 @@ class ReviewExportTests(unittest.TestCase):
         self.assertTrue(any("Frame ID ticks differ" in e for e in errors))
 
     def test_export_reads_sources_but_writes_only_build_and_escapes_script(self):
-        task_root = Path("D:/Temp/codex/njupt-map-review-export-test") if os.name == "nt" else Path(tempfile.gettempdir())
+        task_root = Path(tempfile.gettempdir())
         task_root.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=task_root) as directory:
             root = Path(directory)

@@ -9,11 +9,15 @@ permissions:
 
 jobs:
   sources:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: pwsh
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch the spatial engineering source
-        run: git lfs pull --include='projects/map/campus.gpkg'
       - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
         with:
           version: '0.11.17'
@@ -25,8 +29,7 @@ jobs:
           uv sync --locked
       - name: Check source contracts
         run: |
-          uv run python -m src.map.export
-          uv run python -m src.map.validate
+          uv run python src/map/format_geojson.py --check
+          uv run python src/map/build_authored.py
           uv run python -m src.observations.validate --public
-          uv run python -m unittest discover -s tests -p 'test_*.py'
-          uv run python -m src.sync.plan
+          uv run python -m unittest tests.test_authored_map

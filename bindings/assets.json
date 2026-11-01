@@ -285,7 +285,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_155434036",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -560,7 +560,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223699451",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -879,7 +879,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223699452",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -970,7 +970,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223699454",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -1279,7 +1279,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223699456",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -1357,7 +1357,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859783",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -1428,7 +1428,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859784",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -1726,7 +1726,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859786",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -1762,7 +1762,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859787",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -1798,7 +1798,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859790",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -1834,7 +1834,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859791",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -1870,7 +1870,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859792",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -1906,7 +1906,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859794",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -1942,7 +1942,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859796",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -1978,7 +1978,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859797",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2014,7 +2014,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859798",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2050,7 +2050,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859801",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2074,7 +2074,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859802",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2097,7 +2097,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859807",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2133,7 +2133,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859809",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2265,7 +2265,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859810",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -2540,7 +2540,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859811",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2576,7 +2576,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859813",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2612,7 +2612,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859814",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2648,7 +2648,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859815",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2684,7 +2684,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859816",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2707,7 +2707,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859820",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2743,7 +2743,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859824",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2766,7 +2766,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859826",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2790,7 +2790,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859827",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2813,7 +2813,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859828",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2849,7 +2849,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859829",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2885,7 +2885,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859832",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2921,7 +2921,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859840",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2957,7 +2957,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859843",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -2993,7 +2993,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859846",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3016,7 +3016,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223859852",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3042,7 +3042,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223944205",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -3090,7 +3090,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223944209",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -3159,7 +3159,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224896131",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -3208,7 +3208,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224938858",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -3267,7 +3267,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224938894",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -3322,7 +3322,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224940517",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3346,7 +3346,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224940881",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3401,7 +3401,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224950590",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -3496,7 +3496,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224953835",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3519,7 +3519,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224954737",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3542,7 +3542,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224990427",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3565,7 +3565,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224990428",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3588,7 +3588,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_224996787",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3611,7 +3611,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225092103",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3634,7 +3634,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225109136",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3670,7 +3670,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225198908",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3706,7 +3706,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225198909",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3742,7 +3742,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225198910",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3778,7 +3778,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225198911",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3814,7 +3814,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225198912",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3850,7 +3850,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225198913",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3886,7 +3886,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225242507",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3922,7 +3922,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225242509",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3958,7 +3958,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225242511",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -3994,7 +3994,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225242513",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4030,7 +4030,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225242515",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4066,7 +4066,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225242517",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4102,7 +4102,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225250615",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4138,7 +4138,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225250617",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4174,7 +4174,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225250618",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4210,7 +4210,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225250619",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4246,7 +4246,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225250620",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4282,7 +4282,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225251648",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4318,7 +4318,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225253706",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4354,7 +4354,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225253707",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4390,7 +4390,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225253711",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4426,7 +4426,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225253712",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4462,7 +4462,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225255192",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4498,7 +4498,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225255194",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4534,7 +4534,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225255196",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4570,7 +4570,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225255198",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4606,7 +4606,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225255200",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4642,7 +4642,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225255202",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4678,7 +4678,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265324",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4714,7 +4714,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265327",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4750,7 +4750,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265329",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4786,7 +4786,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265332",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4822,7 +4822,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265335",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4858,7 +4858,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265337",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4894,7 +4894,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265339",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4930,7 +4930,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265342",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -4966,7 +4966,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265344",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5002,7 +5002,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265346",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5038,7 +5038,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265348",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5074,7 +5074,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225265351",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5110,7 +5110,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_225267146",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5133,7 +5133,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_962566084",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5169,7 +5169,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057023",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5205,7 +5205,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057024",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5241,7 +5241,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057025",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5277,7 +5277,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057026",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5313,7 +5313,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057027",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5349,7 +5349,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057028",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5385,7 +5385,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057029",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5421,7 +5421,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057030",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5479,7 +5479,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057031",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5537,7 +5537,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057032",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5595,7 +5595,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057033",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5653,7 +5653,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057034",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5710,7 +5710,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057035",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5767,7 +5767,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057036",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5825,7 +5825,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057050",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5883,7 +5883,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057051",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5941,7 +5941,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057052",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -5999,7 +5999,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057053",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6057,7 +6057,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057054",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6115,7 +6115,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057055",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6173,7 +6173,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173057056",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6227,7 +6227,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1173059720",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -6334,7 +6334,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1281082570",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -6401,7 +6401,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1390009973",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6446,7 +6446,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1390009974",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6491,7 +6491,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1390009975",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6558,7 +6558,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_1454085437",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       },
       "components": [
         {
@@ -6662,7 +6662,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "njupt_k_dormitory_01",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6734,7 +6734,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "njupt_k_dormitory_02",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6806,7 +6806,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "njupt_k_dormitory_03",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6878,7 +6878,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "njupt_k_dormitory_04",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -6950,7 +6950,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "njupt_k_dormitory_05",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -7022,7 +7022,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "njupt_k_dormitory_06",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -7093,7 +7093,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "njupt_k_dining_04",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     },
     {
@@ -7150,7 +7150,7 @@
         "control_points": [],
         "camera_pose": null,
         "target_entity_id": "osm_way_223944208",
-        "position_source": "projects/map/campus.gpkg:buildings"
+        "position_source": "map/layers/buildings.geojson:buildings"
       }
     }
   ]

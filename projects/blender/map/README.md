@@ -50,7 +50,7 @@ K 组团设计图的近似屋顶块，以及局部上层楼板分别保留不同
 ```powershell
 uv run python -m src.map.export
 uv run python -m src.map.validate
-uv run python -m src.sync.plan
+uv run python -m src.blender.sync.plan
 ```
 
 前两项使用普通 CPython，不需要 QGIS。输出在 `build/map/` 与 `build/checks/map/`。
@@ -69,8 +69,8 @@ uv run python -m src.map.project --qgis-root D:/Dev/QGIS-4.2.0 --preview build/m
 高层入口会检查主校园和宣传片两个场景的实际实例。默认只读：
 
 ```powershell
-uv run python -m src.sync
-uv run python -m src.sync --apply
+uv run python -m src.blender.sync
+uv run python -m src.blender.sync --apply
 ```
 
 仅轮廓局部形状与共同高度未变时，计划才允许更新链接实例的位置与名称。
@@ -83,3 +83,4 @@ uv run python -m src.sync --apply
 主校园场景与宣传片场景分别保存实例放置，因此每次都以各自的真实放置检查，
 不会因为目录已经记录新位置就跳过尚未更新的宣传片。
 使用非 PATH 中的 Blender 时，追加 `--blender <可执行文件路径>`。
+

@@ -159,8 +159,8 @@
       "operation": "LOD1 decimate ratio 0.12",
       "vertices": 509357,
       "polygons": 221320,
-      "size": 16918753,
-      "sha256": "3401adb00ed435d42a1448a4b9aa8cee9c2c65ee789c8b0dd3889ffa4176d96f",
+      "size": 16915445,
+      "sha256": "b0faefa374a7a14527b9179995480370dfc3126130eade1dc873229673765083",
       "license": "CC0-1.0"
     }
   ]

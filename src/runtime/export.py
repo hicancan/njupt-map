@@ -1,0 +1,185 @@
+"""Publish deterministic versioned lightweight campus artifacts from authored GeoJSON.
+
+This publishes files only under the requested local output directory. It does
+not upload, deploy, modify native Blender, or infer new physical rooms/devices.
+"""
+from __future__ import annotations
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import tempfile
+import shutil
+import re
+
+from shapely.geometry import Polygon,mapping
+from pyproj import Transformer
+from .glb import write_glb, triangles
+from .semantics import audit_regions, public_regions
+from .context import context_products
+from .provenance import canonical_json_sha256, toolchain
+from ..map.authored import load_authored, source_digest
+from ..map.precision import WGS84_DECIMAL_PLACES, wgs84_coordinates
+from ..map.authored import ROOT,SOURCE
+
+
+def canonical(value):
+    return json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False).encode('utf8')
+
+def write_json(path,value):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    path.write_bytes(canonical(value)+b'\n')
+
+def sha(path):
+    path=Path(path)
+    return source_digest(path) if path.is_dir() else hashlib.sha256(path.read_bytes()).hexdigest()
+
+def source_revision():
+    result=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,text=True,capture_output=True)
+    return result.stdout.strip() if result.returncode==0 else None
+
+def bounds(building):
+    vertices=[p for t in triangles(building) for p in t]
+    return [round(min(p[i] for p in vertices),6) for i in range(3)]+[round(max(p[i] for p in vertices),6) for i in range(3)]
+
+def _export_runtime(source, output, native_detail=None):
+    output=Path(output).resolve()
+    # Never generate inside native source directories, even through symlinks.
+    for protected in (ROOT/'projects', ROOT/'observations', ROOT/'src', ROOT/'tests'):
+        if output==protected.resolve() or protected.resolve() in output.parents:
+            raise ValueError(f'Refusing runtime output inside authored source: {protected.name}')
+    source=Path(source)
+    before=source_digest(source)
+    producer=toolchain(ROOT)
+    output.mkdir(parents=True,exist_ok=True)
+    data=load_authored(ROOT)
+    buildings=sorted(data['buildings'],key=lambda b:b['asset_id'])
+    ids=[b['asset_id'] for b in buildings]
+    safe_ids=[f'building-{index:03d}' for index, _ in enumerate(ids)]
+    if len(set(ids))!=len(ids):
+        raise ValueError('Building IDs must be unique')
+    write_json(output/'buildings.geojson',json.loads((ROOT/'map/layers/buildings.geojson').read_text(encoding='utf-8')))
+    write_json(output/'buildings.local.geojson',{'type':'FeatureCollection','name':'buildings',
+       'coordinate_frame':'campus_local_east_north_m','source_crs':data['metadata']['crs'],
+       'origin_easting_northing':data['metadata']['origin_easting_northing'],
+       'features':[{'type':'Feature','id':b['asset_id'],
+                    'geometry':mapping(Polygon(b['outer'],b['holes'])),
+                    'properties':{'asset_id':b['asset_id'],'name':b['name'],
+                        'search_building_id':b.get('space_id'),'height_m':b['height'],
+                        'base_z_m':b.get('base_z',0),'min_height_m':b.get('min_height',0),
+                        'height_source':b.get('height_source'),'levels':b.get('levels'),
+                        'geometry_role':b['geometry_role'],'source_url':b.get('source_url'),
+                        'geometry_status':'derived_footprint','measured_height':False}}
+                   for b in buildings]})
+    (output/'campus-lod1.glb').write_bytes(write_glb(buildings))
+    context_glb,context_geojson,context_metadata=context_products(data)
+    (output/'campus-context.glb').write_bytes(context_glb)
+    write_json(output/'context.local.geojson',context_geojson)
+    descriptors=[]
+    inverse=Transformer.from_crs(data['metadata']['crs'],'EPSG:4326',always_xy=True)
+    ox,oy=data['metadata']['origin_easting_northing']
+    for index, b in enumerate(buildings):
+        relative=f"buildings/{safe_ids[index]}.glb"
+        path=output/relative
+        path.parent.mkdir(parents=True,exist_ok=True)
+        path.write_bytes(write_glb([b]))
+        descriptors.append({'asset_id':b['asset_id'],'name':b['name'],'search_building_id':b.get('space_id'),
+           'map_feature_id':b.get('map_feature_id'),'center_local_m':[*b['center'],b.get('base_z',0)],
+           'anchor_wgs84':wgs84_coordinates(inverse.transform(b['center'][0]+ox,b['center'][1]+oy)),
+           'centroid_wgs84':wgs84_coordinates(inverse.transform(Polygon(b['outer'],b['holes']).centroid.x+ox,Polygon(b['outer'],b['holes']).centroid.y+oy)),
+           'bounds_local_m':bounds(b),'base_z_m':b.get('base_z',0),'min_height_m':b.get('min_height',0),'height_m':b['height'],'height_source':b.get('height_source'),
+           'levels':b.get('levels'),'levels_source':b.get('levels_source'),
+           'geometry_role':b['geometry_role'],'geometry_status':'derived_footprint_extrusion',
+           'confidence':'source_community_mapping_not_surveyed','measured_height':False,
+           'source_url':b.get('source_url'),'spatial_signature':b['spatial_signature'],
+           'node_name':b['asset_id'],'mesh_url':relative,'mesh_sha256':sha(path)})
+    native_metadata=None
+    if native_detail is not None:
+        from .native import integrate_native
+        native_metadata=integrate_native(native_detail,output,descriptors,before)
+    design=ROOT/'projects/blender/design/interiors.json'
+    design_before=sha(design)
+    region_audit=audit_regions(design)
+    if sha(design)!=design_before:raise RuntimeError('Interior source changed during runtime export')
+    write_json(output/'source-regions.json',public_regions(region_audit))
+    provenance={'source_namespace':'njupt-map','source_git_commit':source_revision(),
+       'source_git_commit_role':'Checkout base revision; exact source bytes are identified by the accompanying hashes',
+       'source_geojson_sha256':before,'dataset_sha256':data['metadata']['dataset_sha256'],
+       'source_interiors_sha256':design_before,
+       'source_interiors_canonical_json_sha256':canonical_json_sha256(design.read_bytes()),
+       'source_url':'https://github.com/hicancan/njupt-map',
+       'toolchain':producer,
+       'native_blender':native_metadata or {'status':'not_requested','note':'Native assets preserved; this publication contains no authored exterior detail'},
+       'accuracy_note':data['metadata']['evidence_note'],
+       'source_geometry_snapshot':data['metadata']['source_geometry_snapshot']}
+    write_json(output/'ATTRIBUTION.json',{'materials':[
+       {'scope':'map spatial database and footprint-derived GLB','license':'ODbL-1.0','attribution':'© OpenStreetMap contributors','url':'https://www.openstreetmap.org/copyright'},
+       {'scope':'original authored source and region metadata','license':'CC-BY-4.0','attribution':'hicancan / njupt-map','url':'https://github.com/hicancan/njupt-map'},
+       {'scope':'exporter source code','license':'AGPL-3.0-or-later','url':'https://github.com/hicancan/njupt-map'}],
+       'excluded':'No native .blend, school marks, photographs, restricted floorplan originals or traced reference polygons, textures or Poly Haven assets are embedded.',
+       'notice':'Preserve database obligations and attribution when distributing derivatives. Institutional endorsement and survey/BIM accuracy are not claimed.'})
+    files={p.relative_to(output).as_posix():{'sha256':sha(p),'bytes':p.stat().st_size}
+           for p in sorted(output.rglob('*')) if p.is_file() and p!=output/'manifest.json'}
+    manifest={'schema_version':1,'format':'njupt-map-runtime','source':provenance,
+       'serialization':{'wgs84_decimal_places':WGS84_DECIMAL_PLACES,
+           'json_encoding':'UTF-8, LF, sorted keys, compact separators, finite numbers',
+           'context_mesh':'float32 bounds and positive zero; canonical face order and convex-quad diagonal',
+           'reproducibility':'Exact package identity requires identical raw inputs and recorded toolchain; arbitrary cross-host GEOS/PROJ equivalence is not asserted'},
+       'coordinate_frame':{'source_crs':data['metadata']['crs'],'units':'m',
+           'origin_easting_northing':data['metadata']['origin_easting_northing'],
+           'origin_lonlat':data['metadata']['origin_lonlat'],'local_axes':['east','north','up'],
+           'ground_elevation':data['metadata']['ground_elevation'],
+           'local_to_projected':'[E+originE,N+originN,Z]',
+           'local_to_gltf_matrix_column_major':[1,0,0,0,0,0,-1,0,0,1,0,0,0,0,0,1],
+           'gltf_to_local':'[x,-z,y]'},
+       'counts':{'buildings':len(buildings),'source_floorplans':region_audit['floorplan_count'],'observed_occupancy':0},
+       'buildings':descriptors,'artifacts':files,
+       'indoor_regions_url':'source-regions.json',
+       'campus_mesh_url':'campus-lod1.glb','local_geojson_url':'buildings.local.geojson',
+       'wgs84_geojson_url':'buildings.geojson',
+       'context_mesh_url':'campus-context.glb','context_local_geojson_url':'context.local.geojson',
+       'context':context_metadata,
+       'limitations':['Footprints are source-derived, not survey measurements',
+          'Height and storey count inherit source inference; no measured heights are asserted',
+          'LOD1 is a lightweight extrusion, not a high-detail export of authored Blender',
+          'No registered indoor metric coordinates, equipment installation or occupancy']}
+    manifest['version']=hashlib.sha256(canonical(manifest)).hexdigest()
+    if source_digest(source)!=before or sha(design)!=design_before or toolchain(ROOT)!=producer:
+        raise RuntimeError('Source or toolchain changed during runtime export')
+    write_json(output/'manifest.json',manifest)
+    return manifest
+
+
+def export_runtime(source=SOURCE, output=ROOT/'build/runtime', native_detail=None):
+    """Build in staging; replace only a recognized generated output package."""
+    output=Path(output).resolve()
+    source=Path(source).resolve()
+    if (ROOT in output.parents or output==ROOT) and not (ROOT/'build').resolve() in output.parents:
+        raise ValueError('Runtime output inside the repository must be under build/')
+    if native_detail is not None:
+        native_detail=Path(native_detail).resolve()
+        if output==native_detail or output in native_detail.parents or native_detail in output.parents:
+            raise ValueError('Runtime output must not overlap native detail inputs')
+    if output==source or output in source.parents:
+        raise ValueError('Runtime output cannot contain the source file')
+    if output.exists() and any(output.iterdir()):
+        manifest=output/'manifest.json'
+        if not manifest.exists() or json.loads(manifest.read_text(encoding='utf-8')).get('format')!='njupt-map-runtime':
+            raise ValueError('Refusing to replace an unrecognized output directory')
+    output.parent.mkdir(parents=True,exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='.runtime-build-',dir=output.parent) as tmp:
+        stage=Path(tmp)/'runtime'
+        manifest=_export_runtime(source,stage,native_detail)
+        if output.exists():shutil.rmtree(output)
+        shutil.move(str(stage),str(output))
+    return manifest
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--source',type=Path,default=SOURCE)
+    p.add_argument('--output',type=Path,default=ROOT/'build/runtime')
+    p.add_argument('--native-detail',type=Path,help='Verified output from src.runtime.native; no Blender evaluation occurs here')
+    a=p.parse_args()
+    m=export_runtime(a.source,a.output,a.native_detail)
+    print(json.dumps({'version':m['version'],'buildings':len(m['buildings']),'output':str(a.output)}))

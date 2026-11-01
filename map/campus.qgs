@@ -1,0 +1,33 @@
+<!DOCTYPE qgis PUBLIC "http://mrcc.com/qgis.dtd" "SYSTEM">
+<qgis projectname="njupt-map-authored" version="3.40">
+ <title>njupt-map authored campus</title>
+ <projectCrs><spatialrefsys><authid>EPSG:4326</authid><description>WGS 84</description></spatialrefsys></projectCrs>
+ <layer-tree-group name="Author map" expanded="1">
+  <layer-tree-layer name="campuses" id="campuses" checked="1"/>
+  <layer-tree-layer name="buildings" id="buildings" checked="1"/>
+  <layer-tree-layer name="rooms" id="rooms" checked="0"/>
+  <layer-tree-layer name="places" id="places" checked="1"/>
+  <layer-tree-layer name="entrances" id="entrances" checked="1"/>
+  <layer-tree-layer name="ways" id="ways" checked="1"/>
+  <layer-tree-layer name="greens" id="greens" checked="1"/>
+  <layer-tree-layer name="waters" id="waters" checked="1"/>
+  <layer-tree-layer name="sports" id="sports" checked="1"/>
+  <layer-tree-layer name="surfaces" id="surfaces" checked="1"/>
+  <layer-tree-layer name="context_buildings" id="context_buildings" checked="1"/>
+  <layer-tree-layer name="landscape_exclusions" id="landscape_exclusions" checked="0"/>
+ </layer-tree-group>
+ <projectlayers>
+  <maplayer type="vector" name="campuses" id="campuses"><datasource>layers/campuses.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="buildings" id="buildings"><datasource>layers/buildings.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="rooms" id="rooms"><datasource>layers/rooms.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="places" id="places"><datasource>layers/places.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="entrances" id="entrances"><datasource>layers/entrances.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="ways" id="ways"><datasource>layers/ways.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="greens" id="greens"><datasource>layers/greens.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="waters" id="waters"><datasource>layers/waters.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="sports" id="sports"><datasource>layers/sports.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="surfaces" id="surfaces"><datasource>layers/surfaces.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="context_buildings" id="context_buildings"><datasource>layers/context_buildings.geojson</datasource><provider>ogr</provider></maplayer>
+  <maplayer type="vector" name="landscape_exclusions" id="landscape_exclusions"><datasource>layers/landscape_exclusions.geojson</datasource><provider>ogr</provider></maplayer>
+ </projectlayers>
+</qgis>
