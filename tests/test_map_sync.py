@@ -7,7 +7,7 @@ from src.map.validate import validate
 
 def test_authored_layers_are_the_only_map_input():
     campus = load_authored()
-    assert len(campus['buildings']) == 116
+    assert len(campus['buildings']) == 117
     assert len(source_digest()) == 64
     assert validate()['passed']
 

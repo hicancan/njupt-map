@@ -319,7 +319,7 @@ def main():
             if default: p['style_hint']=default
         if layer=='ways':
             p.setdefault('walk',True); p.setdefault('bike',True); p.setdefault('steps',False)
-        if layer in {'buildings','places','waters','sports','context_buildings'} and p.get('name'):
+        if layer in {'buildings','places','waters','sports','context_buildings','ways','greens','surfaces'} and p.get('name'):
             p.setdefault('label',p['name'])
         return out
     rendered_ways=[materialize('ways',f) for f in rendered_ways]

@@ -172,7 +172,7 @@ def render_preview(path: Path, layers: dict[str, list[dict]], width: int = 1600,
         elif geometry.geom_type == "LineString":
             draw.line([px(c) for c in geometry.coords], fill=color, width=2)
 
-    for name in ("campus", "greens", "waters", "sports", "surfaces", "context_buildings", "buildings", "ways"):
+    for name in ("campus", "surfaces", "greens", "waters", "sports", "context_buildings", "buildings", "ways"):
         for feature in layers.get(name, []):
             draw_geom(shape(feature["geometry"]), colors.get(name, "#888"))
     image.save(path, "PNG")

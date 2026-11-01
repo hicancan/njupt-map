@@ -49,7 +49,7 @@ class RuntimeContracts(unittest.TestCase):
 
     def test_export_hashes_identity_and_source_unchanged(self):
         m=self.manifest
-        self.assertEqual(m['counts']['buildings'],116)
+        self.assertEqual(m['counts']['buildings'],117)
         self.assertEqual(m['version'],hashlib.sha256(canonical({k:v for k,v in m.items() if k!='version'})).hexdigest())
         self.assertEqual(self.before,source_digest(SOURCE))
         self.assertEqual(self.before,m['source']['source_geojson_sha256'])
@@ -122,7 +122,7 @@ class RuntimeContracts(unittest.TestCase):
 
     def test_glb_every_node_maps_roundtrip_and_bounds(self):
         doc,binary=parse_glb((self.output/'campus-lod1.glb').read_bytes())
-        self.assertEqual(len(doc['nodes']),116)
+        self.assertEqual(len(doc['nodes']),117)
         self.assertEqual({n['name'] for n in doc['nodes']},set(self.by_id))
         descriptors={b['asset_id']:b for b in self.manifest['buildings']}
         for node in doc['nodes']:

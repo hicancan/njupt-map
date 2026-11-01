@@ -10,10 +10,10 @@ LAYERS = ('boundary', 'greens', 'waters', 'sports', 'surfaces', 'roads', 'contex
 # Display-only palette/elevation offsets; these are not source spatial facts.
 DISPLAY = {
     'boundary': ([.78, .81, .74, 1], -.12),
+    'surfaces': ([.66, .64, .58, 1], -.08),
     'greens': ([.29, .48, .25, 1], -.06),
     'waters': ([.20, .47, .58, 1], -.035),
     'sports': ([.54, .34, .26, 1], -.025),
-    'surfaces': ([.66, .64, .58, 1], -.015),
     'roads': ([.48, .50, .49, 1], -.005),
     'context_buildings': ([.64, .65, .62, 1], 0),
 }
