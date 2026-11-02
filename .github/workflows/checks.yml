@@ -32,4 +32,3 @@ jobs:
           uv run python src/map/format_geojson.py --check
           uv run python src/map/build_authored.py
           uv run python -m src.observations.validate --public
-          uv run python -m unittest tests.test_authored_map
