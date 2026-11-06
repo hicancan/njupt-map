@@ -6,7 +6,7 @@ from typing import Any
 from pyproj import Transformer
 from shapely.geometry import shape, mapping, Point, LineString, MultiPoint
 from shapely.validation import explain_validity
-from shapely.ops import unary_union, transform, split
+from shapely.ops import unary_union, transform
 from shapely.strtree import STRtree
 try:
     from .tiles import write_pmtiles, render_preview, WGS_TO_M
@@ -69,6 +69,41 @@ def nearest_node(pt,nodes_m):
     xy=metric_point(pt)
     return min(nodes_m,key=lambda n: dist(xy,nodes_m[n]))
 
+SNAP_M=1.0
+SNAP_DEG=1.2e-5
+
+def metric_gap(line,point):
+    near=line.interpolate(line.project(point))
+    return dist(metric_point(near.coords[0]),metric_point(point.coords[0]))
+
+def merge_points(points):
+    """Map every point to one coordinate per junction drawn within SNAP_M."""
+    unique=sorted(set(points)); geoms=[Point(c) for c in unique]
+    tree=STRtree(geoms); parent=list(range(len(unique)))
+    def root(i):
+        while parent[i]!=i: parent[i]=parent[parent[i]]; i=parent[i]
+        return i
+    for i,p in enumerate(geoms):
+        for j in tree.query(p,predicate='dwithin',distance=SNAP_DEG):
+            j=int(j)
+            if j>i and dist(metric_point(unique[i]),metric_point(unique[j]))<=SNAP_M: parent[root(j)]=root(i)
+    return {c:unique[root(i)] for i,c in enumerate(unique)}
+
+def cut_way(line,stops):
+    """Split a way at its stops, passing through each stop's exact coordinate."""
+    inner=sorted({(d,c) for d,c in stops if 1e-7<d<line.length-1e-7})
+    if not inner: return [line]
+    pieces=[]; current=[line.coords[0]]; along=0.0; coords=list(line.coords); at=0
+    for a,b in zip(coords,coords[1:]):
+        seg=dist(a,b)
+        while at<len(inner) and inner[at][0]<=along+seg:
+            stop=inner[at][1]; at+=1
+            if stop!=current[-1]: current.append(stop); pieces.append(LineString(current)); current=[stop]
+        if b!=current[-1]: current.append(b)
+        along+=seg
+    if len(current)>1: pieces.append(LineString(current))
+    return pieces
+
 def build_network(ways,entrances,buildings,obstacles=(),entities=()):
     coord_to_node={}; nodes=[]; nodes_m={}; edges=[]
     def node(c):
@@ -76,14 +111,16 @@ def build_network(ways,entrances,buildings,obstacles=(),entities=()):
         if key not in coord_to_node:
             i=len(nodes); coord_to_node[key]=i; nodes.append([key[0],key[1]]); nodes_m[i]=metric_point(key)
         return coord_to_node[key]
-    # OSM-derived linework often crosses at an interior point without sharing
-    # an endpoint.  Node those real geometric intersections once at build
-    # time; this is topology normalization, not a proximity shortcut.
+    # Linework meets at crossings and at T-junctions whose end sits a hair off the
+    # other way.  Node both once at build time, so a junction is never lost to
+    # coordinate rounding; anything wider than SNAP_M is authored as a way.
     geometries=[shape(f['geometry']) for f in ways]
     tree=STRtree(geometries)
+    ends=[Point(c) for g in geometries for c in (g.coords[0],g.coords[-1])]
+    end_tree=STRtree(ends)
     way_segments=[]
     for index,(f,g) in enumerate(zip(ways,geometries)):
-        points=[]
+        stops=[]
         for candidate_index in tree.query(g):
             if int(candidate_index)==index: continue
             intersection=g.intersection(geometries[int(candidate_index)])
@@ -91,25 +128,25 @@ def build_network(ways,entrances,buildings,obstacles=(),entities=()):
             stack=[intersection]
             while stack:
                 item=stack.pop()
-                if item.geom_type=='Point': points.append(item)
+                if item.geom_type=='Point': stops.append((g.project(item),g.interpolate(g.project(item)).coords[0]))
                 elif item.geom_type in {'MultiPoint','GeometryCollection'}: stack.extend(item.geoms)
                 elif item.geom_type in {'LineString','MultiLineString'}:
                     stack.extend(item.boundary.geoms if hasattr(item.boundary,'geoms') else [item.boundary])
-        interior=[]
-        for point in points:
-            distance=g.project(point)
-            if distance>1e-7 and distance<g.length-1e-7:
-                interior.append(g.interpolate(distance))
-        pieces=split(g,MultiPoint(interior)).geoms if interior else (g,)
-        way_segments.extend((piece,f['properties']) for piece in pieces)
+        for end_index in end_tree.query(g,predicate='dwithin',distance=SNAP_DEG):
+            end=ends[int(end_index)]
+            if int(end_index)//2!=index and metric_gap(g,end)<=SNAP_M: stops.append((g.project(end),end.coords[0]))
+        way_segments.extend((piece,f['properties']) for piece in cut_way(g,stops))
+    junction=merge_points([c for g,_ in way_segments for c in (g.coords[0],g.coords[-1])])
+    drawn=set()
     for g,p in way_segments:
-        coords=list(g.coords)
+        coords=list(g.coords); coords[0]=junction[coords[0]]; coords[-1]=junction[coords[-1]]
         flags=(WALK if p.get('walk',True) else 0)|(BIKE if p.get('bike',True) else 0)|(STEPS if p.get('steps',False) else 0)
         if p.get('kind') in {'connector','access_connector'}: flags |= 8
         source=p.get('name') or None
         for a,b in zip(coords,coords[1:]):
             ia,ib=node(a),node(b); d=dist(nodes_m[ia],nodes_m[ib])
-            if d>0: edges.append([ia,ib,round(d,3),flags,source])
+            pair=(min(ia,ib),max(ia,ib),flags)
+            if ia!=ib and d>0 and pair not in drawn: drawn.add(pair); edges.append([ia,ib,round(d,3),flags,source])
     targets=defaultdict(list); ent_nodes={}
     for f in entrances:
         p=f['properties']; c=f['geometry']['coordinates']; n=nearest_node(c,nodes_m)
@@ -256,6 +293,9 @@ def authored_errors(layers):
     seen_names=set()
     bad_suffix=re.compile(r'~\d+|\-\d+$')
     provider_qualifier=re.compile(r'\((?:[^)]*(?:校区|南邮店|暂停营业|南京邮电大学)[^)]*)\)')
+    for f in layers['ways']:
+        if f['properties'].get('kind')=='crossing' and any(b.contains(shape(f['geometry']).interpolate(.5,normalized=True)) for b in buildings.values()):
+            errors.append({'id':feature_id(f),'reason':'crossing through a building'})
     for layer, fs in layers.items():
         for f in fs:
             text=feature_id(f)+' '+str(f.get('properties',{}).get('name',''))
