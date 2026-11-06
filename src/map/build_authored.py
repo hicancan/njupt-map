@@ -70,6 +70,9 @@ def nearest_node(pt,nodes_m):
     return min(nodes_m,key=lambda n: dist(xy,nodes_m[n]))
 
 SNAP_M=1.0
+WALL_INSET_M=15.0
+GATE_REACH_M=90.0
+PUBLIC_KINDS={'secondary','tertiary','residential','unclassified'}
 SNAP_DEG=1.2e-5
 
 def metric_gap(line,point):
@@ -104,7 +107,29 @@ def cut_way(line,stops):
     if len(current)>1: pieces.append(LineString(current))
     return pieces
 
-def build_network(ways,entrances,buildings,obstacles=(),entities=()):
+def campus_wall(way_segments,junction,campus,gates):
+    """A campus is walled from the public roads around it: nothing joins one except at a gate.
+    Returns the test for one edge, given its way and the junction coordinates of its ends."""
+    if campus is None:
+        def open_ground(*_): return False
+        open_ground.public=open_ground
+        return open_ground
+    campus_m=transform(WGS_TO_M,campus)
+    inner=campus_m.buffer(-WALL_INSET_M)
+    gate_points=[metric_point(c) for c in gates]
+    def public(p,g): return p.get('kind') in PUBLIC_KINDS and not inner.contains(Point(metric_point(g.interpolate(.5,normalized=True).coords[0])))
+    on_road=set()
+    for g,p in way_segments:
+        if public(p,g): on_road.update(junction[c] for c in (g.coords[0],g.coords[-1]))
+    def at_gate(c): return any(dist(metric_point(c),gate)<=GATE_REACH_M for gate in gate_points)
+    def walled(p,g,a,b):
+        if public(p,g) or (a in on_road)==(b in on_road): return False
+        road,other=(a,b) if a in on_road else (b,a)
+        return campus_m.contains(Point(metric_point(other))) and not at_gate(road)
+    walled.public=public
+    return walled
+
+def build_network(ways,entrances,buildings,obstacles=(),entities=(),campus=None,gates=()):
     coord_to_node={}; nodes=[]; nodes_m={}; edges=[]
     def node(c):
         key=(round(c[0],7),round(c[1],7))
@@ -138,14 +163,17 @@ def build_network(ways,entrances,buildings,obstacles=(),entities=()):
         way_segments.extend((piece,f['properties']) for piece in cut_way(g,stops))
     junction=merge_points([c for g,_ in way_segments for c in (g.coords[0],g.coords[-1])])
     drawn=set()
+    wall=campus_wall(way_segments,junction,campus,gates)
     for g,p in way_segments:
         coords=list(g.coords); coords[0]=junction[coords[0]]; coords[-1]=junction[coords[-1]]
         flags=(WALK if p.get('walk',True) else 0)|(BIKE if p.get('bike',True) else 0)|(STEPS if p.get('steps',False) else 0)
         if p.get('kind') in {'connector','access_connector'}: flags |= 8
+        if wall.public(p,g): flags |= 16
         source=p.get('name') or None
         for a,b in zip(coords,coords[1:]):
             ia,ib=node(a),node(b); d=dist(nodes_m[ia],nodes_m[ib])
             pair=(min(ia,ib),max(ia,ib),flags)
+            if wall(p,g,a,b): continue
             if ia!=ib and d>0 and pair not in drawn: drawn.add(pair); edges.append([ia,ib,round(d,3),flags,source])
     targets=defaultdict(list); ent_nodes={}
     for f in entrances:
@@ -224,7 +252,7 @@ def build_network(ways,entrances,buildings,obstacles=(),entities=()):
         point=geometry if geometry.geom_type=='Point' else geometry.representative_point()
         landmarks.append({'name':label,'at':[float(point.x),float(point.y)]}); seen_landmarks.add(label)
     network={'format':'wayfind-graph/1','nodes':nodes,'edges':compact,'shapes':shapes,'names':names,
-             'flags':{'walk':WALK,'bike':BIKE,'steps':STEPS,'connector':8},
+             'flags':{'walk':WALK,'bike':BIKE,'steps':STEPS,'connector':8,'public':16},
              'targets':{k:sorted(v) for k,v in sorted(targets.items())},
              'entrances':{k:ent_nodes[k] for k in sorted(ent_nodes)},
              'landmarks':landmarks,
@@ -346,6 +374,8 @@ def main():
         layers['ways'],layers['entrances'],layers['buildings'],
         [f['geometry'] for f in layers['buildings']+layers['waters']],
         entities=entity_features,
+        campus=shape(layers['campuses'][0]['geometry']),
+        gates=[f['geometry']['coordinates'] for f in layers['places'] if f['properties'].get('name') in ('东门','西门','南门','北门')],
     )
     reachable={}
     for mode,name in ((WALK,'walking'),(BIKE,'bicycling')):
