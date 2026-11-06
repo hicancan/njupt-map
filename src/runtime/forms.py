@@ -14,10 +14,11 @@ from pathlib import Path
 
 import numpy as np
 from shapely import box, union_all
+from shapely.affinity import rotate, translate
 from shapely.geometry import mapping, shape
 from shapely.ops import transform
 
-from ..map.authored import M_TO_WGS, ROOT, load_authored
+from ..map.authored import M_TO_WGS, ROOT, WGS_TO_M
 
 CELL = .6
 CAP = .35
@@ -28,6 +29,7 @@ GLASS_ALPHA = .75
 WINDOW_FROM = 1.05
 WINDOW_HEIGHT = 1.45
 FLOOR = 3.6
+FIT = .45
 WALL_LIFT = .68
 ROOF_LIFT = .8
 GLASS_LIFT = .3
@@ -150,6 +152,34 @@ def parts_of(path):
     return path.stem, parts, wall.tolist(), window.tolist() if window is not None and glazing > .02 else None
 
 
+def fitted(model, footprint):
+    """The turn and shift that best lay a model on its footprint, or None when it is not this building."""
+    cx, cy = _middle(footprint)
+    mx, my = _middle(model)
+    best, best_overlap = None, 0.
+    for angle in [0, *range(5, 360, 5)]:
+        turned = rotate(model, angle, origin=(mx, my))
+        tx, ty = _middle(turned)
+        placed = translate(turned, cx - tx, cy - ty)
+        overlap = placed.intersection(footprint).area / max(1., placed.union(footprint).area)
+        if overlap > best_overlap + (.02 if angle else 0):
+            best, best_overlap = (angle, cx - tx, cy - ty), overlap
+    if best_overlap < FIT:
+        return None
+    theta = np.radians(best[0])
+    cos, sin = np.cos(theta), np.sin(theta)
+
+    def apply(x, y):
+        x, y = np.asarray(x) - mx, np.asarray(y) - my
+        return cos * x - sin * y + mx + best[1], sin * x + cos * y + my + best[2]
+    return apply
+
+
+def _middle(geometry):
+    minx, miny, maxx, maxy = geometry.bounds
+    return (minx + maxx) / 2, (miny + maxy) / 2
+
+
 def _area(ring):
     xy = np.array(ring.coords)
     return .5 * np.sum(xy[:-1, 0] * xy[1:, 1] - xy[1:, 0] * xy[:-1, 1])
@@ -168,8 +198,6 @@ def main():
     parser.add_argument('--blender', type=Path)
     parser.add_argument('--output', type=Path, default=ROOT / 'map/layers/building_forms.geojson')
     args = parser.parse_args()
-    data = load_authored(ROOT)
-    origin = data['metadata']['origin_easting_northing']
     catalog = json.loads((ROOT / 'projects/blender/buildings/catalog.json').read_text(encoding='utf-8'))
     ids = {row['legacy_asset_id']: row['map_id'] for row in json.loads((ROOT / 'bindings/ids.json').read_text(encoding='utf-8')) if row.get('legacy_asset_id') and row.get('map_id')}
     authored = {f['properties']['id']: f for f in json.loads((ROOT / 'map/layers/buildings.geojson').read_text(encoding='utf-8'))['features']}
@@ -179,15 +207,22 @@ def main():
             list(pool.map(lambda asset: extract(args.blender, asset, catalog[asset]['collection'], args.triangles), catalog))
     with ProcessPoolExecutor() as pool:
         results = list(pool.map(parts_of, sorted(args.triangles.glob('*.npz'))))
-    features, bands, placed = [], [], set()
+    features, bands, placed, mismatched = [], [], set(), []
     for asset, parts, wall, window in results:
         map_id = ids.get(asset)
         if map_id not in authored:
             continue
         placed.add(map_id)
-        cx, cy = catalog[asset]['map_center_m']
-        def lonlat(x, y, z=None):
-            return M_TO_WGS(np.asarray(x) + cx + origin[0], np.asarray(y) + cy + origin[1])
+        # The authored footprint says where the building stands; the model only says what it looks like.
+        footprint = transform(WGS_TO_M, shape(authored[map_id]['geometry']))
+        fit = fitted(union_all([part[0] for part in parts]), footprint) if parts else None
+        if fit is None:
+            placed.discard(map_id)
+            if parts:
+                mismatched.append(map_id)
+            continue
+        def lonlat(x, y, z=None, fit=fit):
+            return M_TO_WGS(*fit(x, y))
         for polygon, top, roof in parts:
             geometry = mapping(transform(lonlat, polygon))
             features.append((map_id, 0.0, round(top - CAP, 1), hex_colour(wall, WALL_LIFT), geometry))
@@ -216,7 +251,7 @@ def main():
 
     write(args.output, features, 'form')
     write(args.output.with_name('building_bands.geojson'), bands, 'band')
-    print(json.dumps({'features': len(features), 'bands': len(bands), 'buildings': len(placed), 'without_model': sorted(set(authored) - placed), 'bytes': args.output.stat().st_size}, ensure_ascii=False))
+    print(json.dumps({'features': len(features), 'bands': len(bands), 'buildings': len(placed), 'without_model': sorted(set(authored) - placed), 'mismatched': mismatched, 'bytes': args.output.stat().st_size}, ensure_ascii=False))
 
 
 if __name__ == '__main__':

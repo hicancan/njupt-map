@@ -433,14 +433,26 @@ def main():
     for f in layers['cores']: indoor.setdefault(f['properties']['parent'],{'cores':[]})['cores'].append({'kind':f['properties']['kind'],'geometry':f['geometry']})
     dump(out/'indoor.json',indoor)
     dump(out/'basemap.geojson',{'type':'FeatureCollection','name':'authored-basemap','features':base})
+    def one_label(features):
+        # Many pieces can share a name; the largest speaks for them.
+        largest={}
+        for feature in features:
+            name=feature['properties'].get('label')
+            if name:
+                area=transform(WGS_TO_M,shape(feature['geometry'])).area
+                if area>largest.get(name,(0,))[0]: largest[name]=(area,feature['properties']['id'])
+        keep={item[1] for item in largest.values()}
+        for feature in features:
+            if feature['properties'].get('label') and feature['properties']['id'] not in keep: feature['properties'].pop('label')
+        return features
     tile_layers={'campus':[materialize('campuses',f) for f in layers['campuses']],
                  'buildings':[materialize('buildings',f) for f in layers['buildings']],
                  'ways':rendered_ways,
-                 'greens':[materialize('greens',f) for f in layers['greens']],
-                 'waters':[materialize('waters',f) for f in layers['waters']],
-                 'sports':[materialize('sports',f) for f in layers['sports']],
-                 'surfaces':[materialize('surfaces',f) for f in layers['surfaces']],
-                 'context_buildings':[materialize('context_buildings',f) for f in layers['context_buildings']],
+                 'greens':one_label([materialize('greens',f) for f in layers['greens']]),
+                 'waters':one_label([materialize('waters',f) for f in layers['waters']]),
+                 'sports':one_label([materialize('sports',f) for f in layers['sports']]),
+                 'surfaces':one_label([materialize('surfaces',f) for f in layers['surfaces']]),
+                 'context_buildings':one_label([materialize('context_buildings',f) for f in layers['context_buildings']]),
                  'places':[materialize('places',f) for f in layers['places']],
                  'nearby':layers['nearby'],
                  'building_forms':layers['building_forms'],
