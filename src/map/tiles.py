@@ -102,11 +102,13 @@ def tile_bytes(tile_layers: dict[str, list[dict]], z: int, x: int, y: int) -> by
     )
 
 
-def write_pmtiles(path: Path, layers: dict[str, list[dict]], minzoom: int = 12, maxzoom: int = 18):
+def write_pmtiles(path: Path, layers: dict[str, list[dict]], minzoom: int = 12, maxzoom: int = 18, starts: dict[str, int] | None = None):
     tiles: dict[int, bytes] = {}
     for z in range(minzoom, maxzoom + 1):
         by_tile: dict[tuple[int, int], dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
         for name, features in layers.items():
+            if z < (starts or {}).get(name, minzoom):
+                continue
             for feature in features:
                 if not feature.get("geometry"):
                     continue

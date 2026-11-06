@@ -21,7 +21,7 @@ WGS_TO_M=Transformer.from_crs('EPSG:4326','EPSG:32650',always_xy=True).transform
 M_TO_WGS=Transformer.from_crs('EPSG:32650','EPSG:4326',always_xy=True).transform
 WALK=1; BIKE=2; STEPS=4
 
-LAYER_NAMES=('campuses','buildings','rooms','floor_plates','cores','places','entrances','ways','greens','waters',
+LAYER_NAMES=('nearby','building_forms','building_bands','campuses','buildings','rooms','floor_plates','cores','places','entrances','ways','greens','waters',
              'sports','surfaces','context_buildings','landscape_exclusions')
 STYLE_DEFAULTS={'宿舍':'dormitory','食堂':'dining','图书馆':'library','教学':'academic',
                 '学院':'academic','服务':'service'}
@@ -441,8 +441,11 @@ def main():
                  'sports':[materialize('sports',f) for f in layers['sports']],
                  'surfaces':[materialize('surfaces',f) for f in layers['surfaces']],
                  'context_buildings':[materialize('context_buildings',f) for f in layers['context_buildings']],
-                 'places':[materialize('places',f) for f in layers['places']]}
-    tile_report=write_pmtiles(out/'basemap.pmtiles',tile_layers)
+                 'places':[materialize('places',f) for f in layers['places']],
+                 'nearby':layers['nearby'],
+                 'building_forms':layers['building_forms'],
+                 'building_bands':layers['building_bands']}
+    tile_report=write_pmtiles(out/'basemap.pmtiles',tile_layers,starts={'building_bands':16,'nearby':16})
     preview=render_preview(out/'basemap-preview.png',tile_layers)
     campus_geom=shape(layers['campuses'][0]['geometry'])
     context=unary_union([shape(f['geometry']) for fs in tile_layers.values() for f in fs if f.get('geometry')])
