@@ -8,7 +8,7 @@ from shapely.ops import transform
 from pyproj import Transformer
 ROOT=Path(__file__).resolve().parents[2]
 SOURCE=ROOT/'map'/'layers'
-LAYER_NAMES=('campuses','buildings','rooms','places','entrances','ways','greens','waters','sports','surfaces','context_buildings','landscape_exclusions')
+LAYER_NAMES=('campuses','buildings','rooms','floor_plates','cores','places','entrances','ways','greens','waters','sports','surfaces','context_buildings','landscape_exclusions')
 WGS_TO_M=Transformer.from_crs('EPSG:4326','EPSG:32650',always_xy=True).transform
 M_TO_WGS=Transformer.from_crs('EPSG:32650','EPSG:4326',always_xy=True).transform
 def source_digest(path:Path=SOURCE):

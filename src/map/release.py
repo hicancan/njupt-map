@@ -23,7 +23,7 @@ def main():
     if not checks.get('passed'): raise SystemExit('authored map checks failed')
     manifest={'map_version':version,'built_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'crs':'EPSG:4326','coordinates':'7-decimal WGS84','layers':{},'artifacts':{}}
     for p in sorted((ROOT/'map'/'layers').glob('*.geojson')): manifest['layers'][p.name]={'sha256':sha(p),'bytes':p.stat().st_size}
-    release_files = ('entities.json', 'network.json', 'basemap.pmtiles')
+    release_files = ('entities.json', 'network.json', 'indoor.json', 'basemap.pmtiles')
     release_space = args.output / 'space' / '仙林'
     release_space.mkdir(parents=True, exist_ok=True)
     for name in release_files:

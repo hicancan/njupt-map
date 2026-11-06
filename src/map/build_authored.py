@@ -21,7 +21,7 @@ WGS_TO_M=Transformer.from_crs('EPSG:4326','EPSG:32650',always_xy=True).transform
 M_TO_WGS=Transformer.from_crs('EPSG:32650','EPSG:4326',always_xy=True).transform
 WALK=1; BIKE=2; STEPS=4
 
-LAYER_NAMES=('campuses','buildings','rooms','places','entrances','ways','greens','waters',
+LAYER_NAMES=('campuses','buildings','rooms','floor_plates','cores','places','entrances','ways','greens','waters',
              'sports','surfaces','context_buildings','landscape_exclusions')
 STYLE_DEFAULTS={'宿舍':'dormitory','食堂':'dining','图书馆':'library','教学':'academic',
                 '学院':'academic','服务':'service'}
@@ -290,7 +290,7 @@ def main():
         seen.add(i)
     byid={feature_id(f):f for f in all_features}
     parent_errors=[]
-    for f in layers['rooms']+layers['entrances']:
+    for f in layers['rooms']+layers['floor_plates']+layers['cores']+layers['entrances']:
         p=f['properties'].get('parent')
         if p and p not in byid: parent_errors.append({'id':feature_id(f),'parent':p})
     geom_errors=[e for fs in layers.values() for e in check_geometry(fs)]
@@ -329,7 +329,7 @@ def main():
     for layer,kind in entity_layers:
       for f in layers[layer]:
         p=f['properties']; item={'id':feature_id(f),'kind':kind,'name':p.get('name'),'parent':p.get('parent'),
-                                  'level':p.get('level'),'category':p.get('category'),'group':p.get('group'),'aliases':p.get('aliases'),
+                                  'level':p.get('level'),'title':p.get('title'),'category':p.get('category'),'group':p.get('group'),'aliases':p.get('aliases'),
                                   'geometry':None if kind=='floor' else f.get('geometry')}
         item['routing']={'type':'target','id':feature_id(f)}
         places.append({k:v for k,v in item.items() if v is not None})
@@ -357,6 +357,11 @@ def main():
     # The source way id is an authoring aid repeated on every segment; topology
     # clients only need endpoints, distance and modal flags.
     dump(out/'entities.json',entities); dump(out/'network.json',network)
+    # Indoor shape of each floor: what is floor, and where the stairs, lifts and toilets are.
+    indoor={}
+    for f in layers['floor_plates']: indoor.setdefault(f['properties']['parent'],{'cores':[]})['plate']=f['geometry']
+    for f in layers['cores']: indoor.setdefault(f['properties']['parent'],{'cores':[]})['cores'].append({'kind':f['properties']['kind'],'geometry':f['geometry']})
+    dump(out/'indoor.json',indoor)
     dump(out/'basemap.geojson',{'type':'FeatureCollection','name':'authored-basemap','features':base})
     tile_layers={'campus':[materialize('campuses',f) for f in layers['campuses']],
                  'buildings':[materialize('buildings',f) for f in layers['buildings']],

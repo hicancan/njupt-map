@@ -10,6 +10,7 @@ map/
 ├─ campus.qgs
 └─ layers/
    ├─ campuses.geojson buildings.geojson rooms.geojson
+   ├─ floor_plates.geojson cores.geojson
    ├─ places.geojson entrances.geojson ways.geojson
    └─ greens.geojson waters.geojson sports.geojson surfaces.geojson
       context_buildings.geojson landscape_exclusions.geojson
@@ -50,8 +51,9 @@ attributes of the authored layers. The high德 route gate is optional evidence:
 when `observations/providers/amap/仙林/routes.jsonl` exists its report is written
 to `bindings/route-gates.json`; it never changes the map.
 
-The 642 reviewed room outlines are authored `rooms` features. Unreviewed rooms
-are not invented here; later `njupt-data` releases may add null-geometry room
+Rooms, floor plates and cores (stairs, lifts, toilets) are authored from the 23
+teaching-building evacuation plans and the four official library plans. A floor
+plate's `parent` is its derived floor. Unlisted rooms are not invented here; later `njupt-data` releases may add null-geometry room
 nodes when a real teaching source lists them.
 
 Building process labels and legacy model names stay in `bindings/provenance.json`
