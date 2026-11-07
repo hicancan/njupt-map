@@ -27,7 +27,7 @@ from .forms import fitted, parts_of
 SCALE = .05
 MIN_AREA = .5
 WALL_LIFT = .22
-ROOF_LIFT = .52
+ROOF_LIFT = .36
 
 
 def lean(triangles, colours, min_area=MIN_AREA):
@@ -36,6 +36,15 @@ def lean(triangles, colours, min_area=MIN_AREA):
     area = np.linalg.norm(edge, axis=1) / 2
     keep = area >= min_area
     return triangles[keep], colours[keep], edge[keep] / (area[keep, None] * 2)
+
+
+def outward(triangles, normals):
+    """Models wind their faces any way: roofs look up, walls look away from the building's middle."""
+    middle = triangles[..., :2].reshape(-1, 2).mean(axis=0)
+    away = triangles[..., :2].mean(axis=1) - middle
+    flat = np.abs(normals[:, 2]) > .7
+    flip = np.where(flat, normals[:, 2] < 0, (normals[:, :2] * away).sum(axis=1) < 0)
+    return np.where(flip[:, None], -normals, normals)
 
 
 def placed(args):
@@ -49,6 +58,7 @@ def placed(args):
     if fit is None:
         return map_id, None
     tris, tones, normals = lean(triangles, colours, min_area)
+    normals = outward(tris, normals)
     x, y = fit(tris[..., 0].ravel(), tris[..., 1].ravel())
     lon, lat = M_TO_WGS(x, y)
     east = (np.asarray(lon) - origin[0]) * 111320 * np.cos(np.radians(origin[1]))
