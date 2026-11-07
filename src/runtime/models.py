@@ -20,6 +20,7 @@ from pathlib import Path
 
 import numpy as np
 from shapely import union_all
+from shapely.affinity import rotate
 from shapely.geometry import shape
 from shapely.ops import transform
 
@@ -30,6 +31,7 @@ SCALE = .05
 MIN_AREA = .5
 WALL_LIFT = .22
 ROOF_LIFT = .36
+MAX_TURN = 3.
 
 
 def lean(triangles, colours, min_area=MIN_AREA):
@@ -38,6 +40,35 @@ def lean(triangles, colours, min_area=MIN_AREA):
     area = np.linalg.norm(edge, axis=1) / 2
     keep = area >= min_area
     return triangles[keep], colours[keep], edge[keep] / (area[keep, None] * 2)
+
+
+def dominant(angles, weights):
+    """The direction most of a length or area lies along, in degrees modulo a right angle."""
+    bins = np.bincount((np.mod(angles, 90) * 20).astype(int) % 1800, weights, 1800)
+    return float(np.argmax(np.convolve(np.r_[bins, bins, bins], np.ones(9), 'same')[1800:3600]) / 20)
+
+
+def footprint_axis(geometry):
+    angles, lengths = [], []
+    for polygon in getattr(geometry, 'geoms', [geometry]):
+        step = np.diff(np.array(polygon.exterior.coords), axis=0)
+        angles.append(np.degrees(np.arctan2(step[:, 1], step[:, 0])))
+        lengths.append(np.hypot(step[:, 0], step[:, 1]))
+    return dominant(np.concatenate(angles), np.concatenate(lengths))
+
+
+def squared(triangles, footprint):
+    """The small turn that sets a model's walls along its footprint's. The footprint is the authored truth; a
+    model built off a rough outline can be a degree or two out, and the eye catches that next to a neighbour.
+    Anything further than MAX_TURN is a different shape, not an error, and stays as it is."""
+    edge = np.cross(triangles[:, 1] - triangles[:, 0], triangles[:, 2] - triangles[:, 0])
+    area = np.linalg.norm(edge, axis=1) / 2
+    upright = np.abs(edge[:, 2]) < .1 * area * 2
+    if not upright.any():
+        return 0.
+    model = dominant(np.degrees(np.arctan2(edge[upright, 1], edge[upright, 0])), area[upright])
+    turn = (footprint_axis(footprint) - model + 45) % 90 - 45
+    return float(turn) if abs(turn) <= MAX_TURN else 0.
 
 
 def hex_rgb(value):
@@ -60,11 +91,20 @@ def placed(args):
     triangles, colours = data['triangles'], data['colours']
     parts = parts_of(Path(asset))[1]
     footprint = transform(WGS_TO_M, shape(geometry))
-    fit = fitted(union_all([part[0] for part in parts]), footprint) if parts else None
+    if not parts:
+        return map_id, None
+    model = union_all([part[0] for part in parts])
+    turn = squared(triangles, footprint)
+    cx, cy = model.envelope.centroid.x, model.envelope.centroid.y
+    cos, sin = np.cos(np.radians(turn)), np.sin(np.radians(turn))
+    fit = fitted(rotate(model, turn, origin=(cx, cy)), footprint)
     if fit is None:
         return map_id, None
     tris, tones, normals = lean(triangles, colours, min_area)
     normals = outward(tris, normals)
+    tx, ty = tris[..., 0] - cx, tris[..., 1] - cy
+    tris = np.stack([cos * tx - sin * ty + cx, sin * tx + cos * ty + cy, tris[..., 2]], axis=-1)
+    normals = np.stack([cos * normals[:, 0] - sin * normals[:, 1], sin * normals[:, 0] + cos * normals[:, 1], normals[:, 2]], axis=1)
     x, y = fit(tris[..., 0].ravel(), tris[..., 1].ravel())
     lon, lat = M_TO_WGS(x, y)
     east = (np.asarray(lon) - origin[0]) * 111320 * np.cos(np.radians(origin[1]))
