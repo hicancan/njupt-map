@@ -1,9 +1,9 @@
 """The shape of every building as stacked prisms, read from the Blender models from above.
 
 Each building's roofline becomes plates of equal height, each a body in its facade colour with a
-thin cap in its roof colour, and a ribbon of glass at each floor for close views. Prisms are all a
-tile renderer needs, so the form costs almost nothing to draw. Writes map/layers/building_forms.geojson
-and building_bands.geojson, which then build alone without Blender.
+thin cap in its roof colour. A tap lands on these prisms, and they stand in where no model fits. Writes
+map/layers/building_forms.geojson, which then builds alone without Blender. Triangles it extracts feed
+src.runtime.models.
 """
 from __future__ import annotations
 import argparse
@@ -25,14 +25,9 @@ CAP = .35
 GROUND = 1.2
 STEP = .8
 MIN_AREA = 5.0
-GLASS_ALPHA = .75
-WINDOW_FROM = 1.05
-WINDOW_HEIGHT = 1.45
-FLOOR = 3.6
 FIT = .45
 WALL_LIFT = .68
 ROOF_LIFT = .8
-GLASS_LIFT = .3
 
 
 def hex_colour(rgb, lift=0.) -> str:
@@ -115,19 +110,13 @@ def region(mask, lo):
 
 
 def facade(triangles, colours):
-    """What the walls read as from a distance, and their glass: the area-weighted colour of each."""
+    """What the walls read as from a distance: the area-weighted colour of upright faces."""
     edge = np.cross(triangles[:, 1] - triangles[:, 0], triangles[:, 2] - triangles[:, 0])
     area = np.linalg.norm(edge, axis=1) / 2
-    upright = np.abs(edge[:, 2]) / np.maximum(1e-9, area * 2) < .3
-    lightness = colours[:, :3].mean(axis=1)
-    glass = upright & ((colours[:, 3] < GLASS_ALPHA) | (colours[:, 2] > colours[:, 0] * 1.25) & (lightness < .55))
-    walls = upright & ~glass
+    walls = np.abs(edge[:, 2]) / np.maximum(1e-9, area * 2) < .3
     if not walls.any():
         walls = np.ones(len(triangles), bool)
-    wall = np.average(colours[walls, :3], axis=0, weights=area[walls] + 1e-6)
-    window = np.average(colours[glass, :3], axis=0, weights=area[glass] + 1e-6) if glass.any() else None
-    share = area[glass].sum() / max(1e-6, area[upright].sum())
-    return wall, window, float(share)
+    return np.average(colours[walls, :3], axis=0, weights=area[walls] + 1e-6)
 
 
 def parts_of(path):
@@ -136,7 +125,7 @@ def parts_of(path):
     triangles, colours = data['triangles'], data['colours']
     lo, height, tone = roofline(triangles, colours)
     flat = smooth(height)
-    wall, window, glazing = facade(triangles, colours)
+    wall = facade(triangles, colours)
     labels = plates(flat)
     parts = []
     for label in np.unique(labels[labels >= 0]):
@@ -149,7 +138,7 @@ def parts_of(path):
                 continue
             piece = type(piece)(piece.exterior, [hole for hole in piece.interiors if abs(_area(hole)) > 4])
             parts.append((piece, float(np.percentile(flat[mask], 85)), np.median(tone[mask], axis=0).tolist()))
-    return path.stem, parts, wall.tolist(), window.tolist() if window is not None and glazing > .02 else None
+    return path.stem, parts, wall.tolist()
 
 
 def fitted(model, footprint):
@@ -207,8 +196,8 @@ def main():
             list(pool.map(lambda asset: extract(args.blender, asset, catalog[asset]['collection'], args.triangles), catalog))
     with ProcessPoolExecutor() as pool:
         results = list(pool.map(parts_of, sorted(args.triangles.glob('*.npz'))))
-    features, bands, placed, mismatched = [], [], set(), []
-    for asset, parts, wall, window in results:
+    features, placed, mismatched = [], set(), []
+    for asset, parts, wall in results:
         map_id = ids.get(asset)
         if map_id not in authored:
             continue
@@ -227,12 +216,6 @@ def main():
             geometry = mapping(transform(lonlat, polygon))
             features.append((map_id, 0.0, round(top - CAP, 1), hex_colour(wall, WALL_LIFT), geometry))
             features.append((map_id, round(top - CAP, 1), round(top, 1), hex_colour(roof, ROOF_LIFT), geometry))
-            if window is None or top < FLOOR or polygon.area < 40:
-                continue
-            ribbon = mapping(transform(lonlat, polygon.buffer(.12, join_style=2)))
-            for floor in range(int(top // FLOOR)):
-                base = floor * FLOOR + WINDOW_FROM
-                bands.append((map_id, round(base, 1), round(base + WINDOW_HEIGHT, 1), hex_colour(window, GLASS_LIFT), ribbon))
     # A building no model covers still stands: its footprint, at its height, in plain colours.
     for map_id, feature in authored.items():
         if map_id in placed:
@@ -250,8 +233,7 @@ def main():
             for index, (map_id, base, top, colour, geometry) in enumerate(rows)]}, ensure_ascii=False, indent=0, separators=(',', ':')) + '\n', encoding='utf-8')
 
     write(args.output, features, 'form')
-    write(args.output.with_name('building_bands.geojson'), bands, 'band')
-    print(json.dumps({'features': len(features), 'bands': len(bands), 'buildings': len(placed), 'without_model': sorted(set(authored) - placed), 'mismatched': mismatched, 'bytes': args.output.stat().st_size}, ensure_ascii=False))
+    print(json.dumps({'features': len(features), 'buildings': len(placed), 'without_model': sorted(set(authored) - placed), 'mismatched': mismatched, 'bytes': args.output.stat().st_size}, ensure_ascii=False))
 
 
 if __name__ == '__main__':

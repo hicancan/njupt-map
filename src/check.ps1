@@ -45,10 +45,6 @@ try {
     Invoke-Check 'native-sources' $Blender $nativeArgs
     if ($Full) {
         Invoke-Check 'interiors' $Blender @('--background', '--factory-startup', '--python-exit-code', '1', '--python', 'src/blender/checks/validate_interiors.py', '--', '--authored')
-        Invoke-Check 'native-exteriors' 'uv' @('run', 'python', '-m', 'src.runtime.native', '--blender', $Blender)
-        Invoke-Check 'runtime' 'uv' @('run', 'python', '-m', 'src.runtime.export', '--native-detail', 'build/native-exteriors')
-    } else {
-        Invoke-Check 'runtime' 'uv' @('run', 'python', '-m', 'src.runtime.export')
     }
 } finally {
     $env:TEMP, $env:TMP = $oldTemp, $oldTmp

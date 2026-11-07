@@ -31,6 +31,11 @@ def main():
         target = release_space / name
         target.write_bytes(source.read_bytes())
         manifest['artifacts'][name] = {'sha256': sha(target), 'bytes': target.stat().st_size}
+    # The baked buildings come from Blender on a machine that has it and ship as they are.
+    for source_name, name in (('campus.bin', 'models.bin'), ('campus.json', 'models.json')):
+        target = release_space / name
+        target.write_bytes((ROOT / 'map' / 'models' / source_name).read_bytes())
+        manifest['artifacts'][name] = {'sha256': sha(target), 'bytes': target.stat().st_size}
     local_layers = args.output / 'map' / 'layers'
     local_layers.mkdir(parents=True, exist_ok=True)
     for layer in sorted((ROOT / 'map' / 'layers').glob('*.geojson')):

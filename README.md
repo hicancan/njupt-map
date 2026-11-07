@@ -42,17 +42,15 @@
 
 两个工程使用共同对象 ID。GeoPackage 保存投影坐标，Blender 使用校园局部米制坐标；位置变化通过显式转换同步，轮廓变化先检查差异，保留精修模型。
 
-## 浏览器轻量运行时
+## 实时模型
 
-使用 `uv run python -m src.runtime.export` 从唯一 GeoPackage 派生全校 129 个建筑的米制轮廓、轻量 GLB、分栋加载资产和带来源/散列的语义清单。它保留原生 Blender 作者源，不将推定高度、示意室内或未知占用当作实测事实。详见 [运行时发布合同](docs/runtime.md)。
+`uv run python -m src.runtime.forms <目录> --blender <blender.exe>` 从 Blender 提取外观三角形，并写出点选用的 `building_forms.geojson`；`uv run python -m src.runtime.models <目录>` 把它们放到作者轮廓上，烘焙成 `map/models/campus.bin` 和 `campus.json`。网页和安卓画同一份缓冲区，地图发布直接带上它。
 
-本机完整检查使用 Python 3.12、uv 与已安装的 Blender 5.2，不再单独安装 `bpy` 或依赖 Linux `/proc`：
+本机完整检查使用 Python 3.12、uv 与已安装的 Blender 5.2：
 
 ```powershell
 ./src/check.ps1 -Blender 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -Full -Render
 ```
-
-公开室内目录保留 564 个区域的身份与来源，未审查授权的参考平面图描摹坐标不随运行时发布。当前本机验证记录见 [本机验证](docs/local-validation.md)。
 
 ## 获取与打开
 
@@ -83,7 +81,7 @@ njupt-map/
 ├── src/
 │   ├── observations/      采集、视频候选预览、正式选帧与观测检查
 │   ├── map/               空间读取、导出与检查
-│   ├── runtime/           可重建浏览器资产与语义发布
+│   ├── runtime/           从 Blender 烘焙地图用的实时模型
 │   ├── sync/              共同 ID、坐标与变化检查
 │   └── blender/           建模工具、渲染、影片与便携导出
 ├── tests/                 必要的不变量和同步测试
