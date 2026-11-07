@@ -9,7 +9,6 @@ clients draw the same thing and neither needs a model loader:
     map/models/campus.json   {"origin": [lon, lat], "scale": .05, "buildings": {id: [first, count]}}
 
 A building's bindings/appearance.json entry overrides what its model guessed, with the photo that says so.
-map/models/trees.json places the trees of the Blender scene; each is a few faces, so the campus reads green.
 
 Run after src.runtime.forms has extracted the triangles.
 """
@@ -43,37 +42,6 @@ def lean(triangles, colours, min_area=MIN_AREA):
 
 def hex_rgb(value):
     return np.array([int(value[i:i + 2], 16) / 255 for i in (1, 3, 5)], dtype=np.float32)
-
-
-def trees(rows, origin):
-    """Each tree a six-sided crown of 24 faces, darker underneath, in a green of its own."""
-    out = np.empty(len(rows) * 72, dtype=[('p', '<i2', 3), ('n', 'i1', 3), ('c', 'u1', 3)])
-    angles = np.radians(np.arange(6) * 60)
-    for index, (lon, lat, radius, height) in enumerate(rows):
-        east = (lon - origin[0]) * 111320 * np.cos(np.radians(origin[1]))
-        north = (lat - origin[1]) * 110574
-        turn = (index * 137.5) % 60
-        ring = np.stack([np.cos(angles + np.radians(turn)), np.sin(angles + np.radians(turn))], axis=1)
-        low, mid, top = height * .3, height * .62, height
-        def at(xy, r, z):
-            return [east + xy[0] * r, north + xy[1] * r, z]
-        faces = []
-        for a in range(6):
-            b = (a + 1) % 6
-            pa, pb = ring[a], ring[b]
-            faces += [(at(pa, radius * .72, low), pa, -.5), (at(pb, radius * .72, low), pb, -.5), ([east, north, low * .8], (0, 0), -1.)]
-            faces += [(at(pa, radius * .72, low), pa, -.2), (at(pa, radius, mid), pa, .3), (at(pb, radius, mid), pb, .3)]
-            faces += [(at(pa, radius * .72, low), pa, -.2), (at(pb, radius, mid), pb, .3), (at(pb, radius * .72, low), pb, -.2)]
-            faces += [(at(pa, radius, mid), pa, .3), ([east, north, top], (0, 0), 1.), (at(pb, radius, mid), pb, .3)]
-        tone = np.array([.50, .62, .46]) * (.9 + (index * 2654435761 % 100) / 100 * .2)
-        tone[0] += ((index * 40503) % 100) / 100 * .05
-        for corner, (position, side, up) in enumerate(faces):
-            row = index * 72 + corner
-            shade = .84 + .16 * (up + 1) / 2
-            out['p'][row] = np.round(np.array(position) / SCALE).astype(np.int16)
-            out['n'][row] = np.round(np.array([side[0] * .8, side[1] * .8, up]) / max(1e-6, np.linalg.norm([side[0] * .8, side[1] * .8, up])) * 127).astype(np.int8)
-            out['c'][row] = np.round(np.clip(tone * shade, 0, 1) * 255).astype(np.uint8)
-    return out
 
 
 def outward(triangles, normals):
@@ -142,10 +110,6 @@ def main():
         buildings[map_id] = [first, len(vertex)]
         first += len(vertex)
         chunks.append(vertex)
-    forest = trees(json.loads((ROOT / 'map/models/trees.json').read_text(encoding='utf-8')), origin)
-    buildings['trees'] = [first, len(forest)]
-    first += len(forest)
-    chunks.append(forest)
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / 'campus.bin').write_bytes(b''.join(chunk.tobytes() for chunk in chunks))
     (args.output / 'campus.json').write_text(json.dumps({'origin': origin, 'scale': SCALE, 'buildings': buildings}, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
