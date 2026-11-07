@@ -68,16 +68,11 @@ def placed(args):
     x, y = fit(tris[..., 0].ravel(), tris[..., 1].ravel())
     lon, lat = M_TO_WGS(x, y)
     east = (np.asarray(lon) - origin[0]) * 111320 * np.cos(np.radians(origin[1]))
-    north = (np.asarray(lat) - origin[1]) * 110574
+    north = (np.asarray(lat) - origin[1]) * 111320
     z = tris[..., 2].ravel()
-    # The same turn applied to the normals: two nearby points give its angle.
-    px, py = fit(np.array([0., 1.]), np.array([0., 0.]))
-    cos, sin = (px[1] - px[0]), (py[1] - py[0])
-    nx = normals[:, 0] * cos - normals[:, 1] * sin
-    ny = normals[:, 0] * sin + normals[:, 1] * cos
     vertex = np.empty(len(z), dtype=[('p', '<i2', 3), ('n', 'i1', 3), ('c', 'u1', 3)])
     vertex['p'] = np.round(np.stack([east, north, z], axis=1) / SCALE).astype(np.int16)
-    vertex['n'] = np.repeat(np.round(np.stack([nx, ny, normals[:, 2]], axis=1) * 127).astype(np.int8), 3, axis=0)
+    vertex['n'] = np.repeat(np.round(normals * 127).astype(np.int8), 3, axis=0)
     # Models are lit for a render; the map has one soft light, so colours rise toward white, roofs most.
     lift = np.where(np.abs(normals[:, 2]) > .7, ROOF_LIFT, WALL_LIFT)[:, None]
     rgb = tones[:, :3] + (1 - tones[:, :3]) * lift

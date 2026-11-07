@@ -14,7 +14,7 @@ from pathlib import Path
 
 import numpy as np
 from shapely import box, union_all
-from shapely.affinity import rotate, translate
+from shapely.affinity import translate
 from shapely.geometry import mapping, shape
 from shapely.ops import transform
 
@@ -142,26 +142,20 @@ def parts_of(path):
 
 
 def fitted(model, footprint):
-    """The turn and shift that best lay a model on its footprint, or None when it is not this building."""
+    """The shift that best lays a model on its footprint, or None when it is not this building. The scene
+    stands every model in its true orientation, so a model is never turned to fit better."""
     cx, cy = _middle(footprint)
     mx, my = _middle(model)
-    best, best_overlap = None, 0.
-    for angle in [0, *range(5, 360, 5)]:
-        turned = rotate(model, angle, origin=(mx, my))
-        tx, ty = _middle(turned)
-        placed = translate(turned, cx - tx, cy - ty)
-        overlap = placed.intersection(footprint).area / max(1., placed.union(footprint).area)
-        if overlap > best_overlap + (.02 if angle else 0):
-            best, best_overlap = (angle, cx - tx, cy - ty), overlap
-    if best_overlap < FIT:
-        return None
-    theta = np.radians(best[0])
-    cos, sin = np.cos(theta), np.sin(theta)
 
-    def apply(x, y):
-        x, y = np.asarray(x) - mx, np.asarray(y) - my
-        return cos * x - sin * y + mx + best[1], sin * x + cos * y + my + best[2]
-    return apply
+    def overlap(dx, dy):
+        placed = translate(model, dx, dy)
+        return placed.intersection(footprint).area / max(1., placed.union(footprint).area)
+    best = (cx - mx, cy - my)
+    if overlap(*best) < .85:
+        best = max(((cx - mx + x, cy - my + y) for x in range(-30, 31, 2) for y in range(-30, 31, 2)), key=lambda shift: overlap(*shift))
+    if overlap(*best) < FIT:
+        return None
+    return lambda x, y: (np.asarray(x) + best[0], np.asarray(y) + best[1])
 
 
 def _middle(geometry):
