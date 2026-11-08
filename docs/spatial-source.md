@@ -53,7 +53,7 @@ to `bindings/route-gates.json`; it never changes the map.
 
 Rooms, floor plates and cores (stairs, lifts, toilets) are authored from the 23
 teaching-building evacuation plans and the four official library plans. A floor
-plate's `parent` is its derived floor. Unlisted rooms are not invented here; later `njupt-data` releases may add null-geometry room
+plate's `parent` is its derived floor. Unlisted rooms are not invented here; downstream campus facts releases may add null-geometry room
 nodes when a real teaching source lists them.
 
 Building process labels and legacy model names stay in `bindings/provenance.json`

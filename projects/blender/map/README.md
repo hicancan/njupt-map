@@ -10,7 +10,7 @@ GeoPackage 是当前空间事实的唯一编辑入口，JSON、GeoJSON 和图片
 - Blender：局部米制，X 向网格东，Y 向网格北，Z 向上。
 - 原点：WGS84 `(118.925, 32.115)`，投影坐标与地面基准存于 `map_metadata`。
 - `asset_id`：地图、观测绑定和 Blender 资产共同使用的稳定 ID；改名不换 ID。
-- `space_id`、`map_feature_id`：已知的 njupt-search 外部关联，可空，不根据猜测创建。
+- `space_id`、`map_feature_id`：已知的下游空间外部关联，可空，不根据猜测创建。
 - `anchor_offset_e_m/n_m`：资产锚点相对轮廓质心的偏移，保住既有精修资产的局部原点。
   平移地图几何会平移锚点；改变形状会产生需要处理的三维差异。
 
