@@ -10,8 +10,10 @@ from shapely.ops import unary_union, transform
 from shapely.strtree import STRtree
 try:
     from .tiles import write_pmtiles, render_preview, WGS_TO_M
+    from .vocabulary import CATEGORIES, STYLE_DEFAULTS, group, tier
 except ImportError:
     from tiles import write_pmtiles, render_preview, WGS_TO_M
+    from vocabulary import CATEGORIES, STYLE_DEFAULTS, group, tier
 
 ROOT=Path(__file__).resolve().parents[2]
 AUTHOR=ROOT/'map'/'layers'
@@ -21,17 +23,28 @@ WGS_TO_M=Transformer.from_crs('EPSG:4326','EPSG:32650',always_xy=True).transform
 M_TO_WGS=Transformer.from_crs('EPSG:32650','EPSG:4326',always_xy=True).transform
 WALK=1; BIKE=2; STEPS=4
 
-LAYER_NAMES=('nearby','building_forms','campuses','buildings','rooms','floor_plates','cores','places','entrances','ways','greens','waters',
+LAYER_NAMES=('building_forms','campuses','buildings','rooms','floor_plates','cores','places','entrances','ways','greens','waters',
              'sports','surfaces','context_buildings','landscape_exclusions')
-STYLE_DEFAULTS={'宿舍':'dormitory','食堂':'dining','图书馆':'library','教学':'academic',
-                '学院':'academic','服务':'service'}
 LAYER_KINDS={'campuses':'campus','buildings':'building','floors':'floor','rooms':'room','places':'place',
              'entrances':'entrance','greens':'greens','waters':'waters','sports':'sports',
              'surfaces':'surfaces','context_buildings':'context_buildings',
              'landscape_exclusions':'landscape_exclusions'}
 
-# Stable client-facing place categories; provider classifications never enter authored layers.
-CATEGORY_VOCAB=frozenset({'食堂','餐饮','咖啡茶饮','超市','快递','打印','体育','校医院','公交站','停车场','服务','营业厅','图书馆','宿舍','学院'})
+def contained(layers):
+    """Where each place stands, read from the geometry rather than authored: the building its point lies in, or none.
+    A place inside the campus has an id under the campus (仙林/…); one outside it, under 周边/."""
+    buildings=[(feature_id(f),shape(f['geometry'])) for f in layers['buildings']]
+    tree=STRtree([g for _,g in buildings])
+    parents={}
+    for f in layers['places']:
+        point=shape(f['geometry'])
+        inside=[buildings[int(i)][0] for i in tree.query(point,predicate='covered_by')]
+        if inside: parents[feature_id(f)]=sorted(inside)[0]
+    return parents
+
+def campus_of(layers):
+    campus=layers['campuses'][0]
+    return feature_id(campus),shape(campus['geometry'])
 
 def dump(path:Path,value:Any):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -331,17 +344,23 @@ def authored_errors(layers):
             if bad_suffix.search(feature_id(f)) and layer in {'buildings','places'}: errors.append({'id':feature_id(f),'reason':'trailing counter'})
             if provider_qualifier.search(text): errors.append({'id':feature_id(f),'reason':'provider qualifier'})
             if '未命名' in text or '暂停营业' in text: errors.append({'id':feature_id(f),'reason':'placeholder or closed entity'})
+    for f in layers['buildings']:
+        category=f['properties'].get('category')
+        if category is not None and category not in CATEGORIES: errors.append({'id':feature_id(f),'reason':f'category outside vocabulary: {category}'})
+    campus_id,campus=campus_of(layers); parents=contained(layers)
     for f in layers['places']:
-        p=f['properties']; category=p.get('category')
-        if category not in CATEGORY_VOCAB: errors.append({'id':feature_id(f),'reason':f'category outside vocabulary: {category}'})
-        parent=p.get('parent')
-        if parent and parent not in buildings: errors.append({'id':feature_id(f),'reason':'orphan parent'})
-        if parent and f.get('geometry') and shape(f['geometry']).geom_type=='Point' and not buildings[parent].covers(shape(f['geometry'])):
-            errors.append({'id':feature_id(f),'reason':'place point outside parent building'})
-        key=(parent,p.get('name'))
-        if key in seen_names: errors.append({'id':feature_id(f),'reason':'duplicate (parent,name)'})
-        seen_names.add(key)
-        if any(seg in CATEGORY_VOCAB for seg in feature_id(f).split('/')[1:]): errors.append({'id':feature_id(f),'reason':'category segment in id'})
+        p=f['properties']; category=p.get('category'); point=shape(f['geometry'])
+        if 'parent' in p: errors.append({'id':feature_id(f),'reason':'parent is derived from geometry, not authored'})
+        if point.geom_type!='Point': errors.append({'id':feature_id(f),'reason':'a place is a point'})
+        if category not in CATEGORIES: errors.append({'id':feature_id(f),'reason':f'category outside vocabulary: {category}'})
+        within=f'{campus_id}/' if campus.covers(point) else '周边/'
+        if not feature_id(f).startswith(within): errors.append({'id':feature_id(f),'reason':f'a place here is under {within}'})
+        parent=parents.get(feature_id(f))
+        if parent:
+            key=(parent,p.get('name'))
+            if key in seen_names: errors.append({'id':feature_id(f),'reason':'two places of one name in one building'})
+            seen_names.add(key)
+        if any(seg in CATEGORIES for seg in feature_id(f).split('/')[1:]): errors.append({'id':feature_id(f),'reason':'category segment in id'})
     return errors
 
 def main():
@@ -363,12 +382,13 @@ def main():
         if p and p not in byid: parent_errors.append({'id':feature_id(f),'parent':p})
     geom_errors=[e for fs in layers.values() for e in check_geometry(fs)]
     authored_name_errors=authored_errors(layers)
-    entity_features=[]
+    entity_features=[]; place_parents=contained(layers)
     for layer in ('campuses','buildings','floors','rooms','places','entrances'):
         for feature in layers[layer]:
             routed=copy.deepcopy(feature)
             routed['properties']=dict(routed.get('properties') or {})
             routed['properties']['kind']=LAYER_KINDS[layer]
+            if layer=='places' and feature_id(feature) in place_parents: routed['properties']['parent']=place_parents[feature_id(feature)]
             entity_features.append(routed)
     network,nodes_m,route_nodes_m=build_network(
         layers['ways'],layers['entrances'],layers['buildings'],
@@ -394,12 +414,14 @@ def main():
     if OBS.exists():
         dump(ROOT/'bindings'/'route-gates.json',gate)
     # Derived places/entities: map only.
-    places=[]
+    places=[]; parents=contained(layers)
     entity_layers=(('campuses','campus'),('buildings','building'),('floors','floor'),('rooms','room'),('places','place'))
     for layer,kind in entity_layers:
       for f in layers[layer]:
-        p=f['properties']; item={'id':feature_id(f),'kind':kind,'name':p.get('name'),'parent':p.get('parent'),
-                                  'level':p.get('level'),'title':p.get('title'),'category':p.get('category'),'group':p.get('group'),'aliases':p.get('aliases'),
+        p=f['properties']; category=p.get('category')
+        item={'id':feature_id(f),'kind':kind,'name':p.get('name'),'parent':parents.get(feature_id(f),p.get('parent')),
+                                  'level':p.get('level'),'title':p.get('title'),'category':category,
+                                  'group':group(category) if category else None,'tier':tier(category) if category else None,'aliases':p.get('aliases'),
                                   'geometry':None if kind=='floor' else f.get('geometry')}
         item['routing']={'type':'target','id':feature_id(f)}
         places.append({k:v for k,v in item.items() if v is not None})
@@ -414,6 +436,8 @@ def main():
             if default: p['style_hint']=default
         if layer=='ways':
             p.setdefault('walk',True); p.setdefault('bike',True); p.setdefault('steps',False)
+        if layer in {'buildings','places'} and p.get('category'):
+            p['group']=group(p['category']); p['tier']=tier(p['category'])
         if layer in {'buildings','places','waters','sports','context_buildings','ways','greens','surfaces'} and p.get('name'):
             p.setdefault('label',p['name'])
         return out
@@ -454,9 +478,8 @@ def main():
                  'surfaces':one_label([materialize('surfaces',f) for f in layers['surfaces']]),
                  'context_buildings':one_label([materialize('context_buildings',f) for f in layers['context_buildings']]),
                  'places':[materialize('places',f) for f in layers['places']],
-                 'nearby':layers['nearby'],
                  'building_forms':layers['building_forms']}
-    tile_report=write_pmtiles(out/'basemap.pmtiles',tile_layers,starts={'nearby':16})
+    tile_report=write_pmtiles(out/'basemap.pmtiles',tile_layers)
     preview=render_preview(out/'basemap-preview.png',tile_layers)
     campus_geom=shape(layers['campuses'][0]['geometry'])
     context=unary_union([shape(f['geometry']) for fs in tile_layers.values() for f in fs if f.get('geometry')])

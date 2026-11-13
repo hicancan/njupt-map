@@ -26,21 +26,35 @@ Floors are not an authored layer. The build derives `仙林/<building>/<n>` for
 implied by its id. Single-kind layers omit `kind`, and the build restores that
 layer kind for client outputs. `parent` is the only containment field.
 `walk=true`, `bike=true`, and `steps=false` are defaults and appear only for
-exceptions. Building `style_hint` follows the category defaults (`宿舍`
-dormitory, `食堂` dining, `图书馆` library, `教学`/`学院` academic, `服务`
-service) and is stored only for overrides.
+exceptions.
+
+Every building and place names one category from `src/map/vocabulary.py`, the
+one closed list; each category belongs to a group (教学科研, 生活, 餐饮, 购物,
+服务, 文体, 交通, 办公) and has a tier, the prominence a map gives it: 1 from
+afar, 2 closer, 3 close up. The entities and tiles carry `category`, `group`
+and `tier`; clients classify nothing themselves. Building `style_hint` follows
+the category defaults in the same file and is stored only for overrides.
+
+`places.geojson` is one layer of points, on campus and around it. A place's
+containment is read from its geometry, never authored: its `parent` is the
+building its point lies in, if any, and its id is under `仙林/` inside the
+campus wall and under `周边/` outside it. Every place 高德 lists nearby is
+authored here unless it is a road name, an address or a closed business;
+`bindings/amap.json` says which authored id answers each 高德 place, and
+`python -m src.bindings.amap --check` fails if one is left out.
 
 `observations/` contains provider answers and other references. `bindings/`
 contains only external id mappings, provenance and route-gate reports. Neither
-is read by the authored build. Delete both directories and this still works:
+is read by the authored build. Delete both directories and this still works
+(`tests/test_isolation.py` builds a copy without them and compares the bytes):
 
 ```powershell
 uv run python src/map/format_geojson.py --check
 uv run python src/map/build_authored.py
 ```
 
-The build reads only `map/layers/` and emits `build/space/仙林/places.json`,
-`network.json`, `entities/space.json`, `basemap.pmtiles`,
+The build reads only `map/layers/` and emits `build/space/仙林/entities.json`,
+`network.json`, `indoor.json`, `basemap.pmtiles`,
 `basemap-preview.png`, `basemap.geojson` and `checks.json`. The PMTiles archive
 is a deterministic vector-tile rendering of authored campus/context geometry;
 no external tile package is copied or consulted. The preview and context-margin
@@ -56,8 +70,8 @@ teaching-building evacuation plans and the four official library plans. A floor
 plate's `parent` is its derived floor. Unlisted rooms are not invented here; downstream campus facts releases may add null-geometry room
 nodes when a real teaching source lists them.
 
-Building process labels and legacy model names stay in `bindings/provenance.json`
-and never enter an authored id or name. Ways with `kind: crossing` remain in
+Provider names, branch qualifiers and ids never enter an authored id or name.
+Ways with `kind: crossing` remain in
 the network for routing but are omitted from PMTiles and the preview so
 carriageway connectors do not render as ladder rungs.
 

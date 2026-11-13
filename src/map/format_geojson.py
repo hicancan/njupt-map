@@ -2,11 +2,13 @@ from __future__ import annotations
 import argparse, json
 from pathlib import Path
 from shapely.geometry import shape
+try:
+    from .vocabulary import STYLE_DEFAULTS
+except ImportError:
+    from vocabulary import STYLE_DEFAULTS
 
 ROOT=Path(__file__).resolve().parents[2]
 DECIMALS=7
-STYLE_DEFAULTS={'宿舍':'dormitory','食堂':'dining','图书馆':'library','教学':'academic',
-                '学院':'academic','服务':'service'}
 
 def round_coords(value):
     if isinstance(value,float): return round(value,DECIMALS)
@@ -38,7 +40,7 @@ def schema_errors(path:Path, data:dict):
         if p.get('walk') is True: errors.append(f'{fid}: walk=true is the default and must be omitted')
         if p.get('bike') is True: errors.append(f'{fid}: bike=true is the default and must be omitted')
         if p.get('steps') is False: errors.append(f'{fid}: steps=false is the default and must be omitted')
-        if layer=='buildings' and p.get('style_hint')==STYLE_DEFAULTS.get(p.get('category')):
+        if layer=='buildings' and 'style_hint' in p and p['style_hint']==STYLE_DEFAULTS.get(p.get('category')):
             errors.append(f'{fid}: style_hint repeats the category default')
     if len(ids)!=len(set(ids)): errors.append(f'{path}: duplicate properties.id')
     kinds={f.get('properties',{}).get('kind') for f in features if 'kind' in (f.get('properties') or {})}
