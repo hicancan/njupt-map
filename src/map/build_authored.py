@@ -48,7 +48,7 @@ def campus_of(layers):
 
 def dump(path:Path,value:Any):
     path.parent.mkdir(parents=True,exist_ok=True)
-    path.write_text(json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n',encoding='utf-8')
+    path.write_text(json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')
 
 def load_layer(name):
     p=AUTHOR/f'{name}.geojson'
