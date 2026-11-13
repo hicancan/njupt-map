@@ -92,7 +92,8 @@ def relate(rows: list[dict], layers: dict[str, list[dict]]) -> list[dict]:
         else:
             near = [ids[i] for i in tree.query(at.buffer(0.00004))]  # about 4 m: authored from this observation
             same = [i for i in near if alike(name, i.split('/', 1)[1])]
-            named = [f for f in names.get(name, []) + names.get(row['name'], []) if shape(f['geometry']).distance(at) < 0.0012]
+            joined = re.sub(r'[()（）]', '', row['name'])  # 1号楼(公交站) is the stop 1号楼公交站
+            named = [f for n in dict.fromkeys((name, row['name'], joined)) for f in names.get(n, []) if shape(f['geometry']).distance(at) < 0.0012]
             inside = [f for f, g in areas if g.covers(at) and f in named]
             if same: record['map'] = same[0]
             elif inside: record['map'] = inside[0]['properties']['id']
