@@ -64,6 +64,28 @@ def load_layer(name):
 def feature_id(feature):
     return feature['properties']['id']
 
+def routing_target_id(entity_id, entities):
+    """The road network reaches buildings; rooms retain their indoor identity."""
+    current=entities[entity_id]
+    if current['properties'].get('kind')=='entrance':
+        return entity_id
+    seen=set()
+    while current is not None:
+        current_id=feature_id(current)
+        if current_id in seen:
+            raise ValueError(f'entity parent cycle: {current_id}')
+        seen.add(current_id)
+        if current['properties'].get('kind')=='building':
+            return current_id
+        parent=current['properties'].get('parent')
+        if parent and parent not in entities:
+            raise ValueError(f'unknown entity parent: {parent}')
+        current=entities.get(parent) if parent else None
+    if entities[entity_id]['properties'].get('kind') in {'floor','room'}:
+        raise ValueError(f'indoor entity has no building: {entity_id}')
+    return entity_id
+
+
 def derive_floors(buildings):
     floors=[]
     for building in buildings:
@@ -194,25 +216,9 @@ def build_network(ways,entrances,buildings,obstacles=(),entities=(),campus=None,
         ent_nodes[p['id']]=n; targets[p['parent']].append(n)
 
     route_nodes_m=dict(nodes_m)
-    # Every published space entity gets a target in the same graph.  Contained
-    # entities use the entrances of their ancestor building; independent
-    # outdoor places get an authored point node connected to the nearest road.
-    # This is deliberately a build-time fact rather than a client fallback.
+    # Only actual road access has a graph target. Contained entities refer to
+    # their building's target instead of claiming an independent indoor route.
     entity_by_id={feature_id(f):f for f in entities}
-    building_ids={feature_id(f) for f in buildings}
-    def ancestor_building(entity_id):
-        current=entity_by_id.get(entity_id)
-        seen=set()
-        while current is not None:
-            current_id=feature_id(current)
-            if current_id in building_ids:
-                return current_id
-            if current_id in seen:
-                raise ValueError(f'entity parent cycle: {current_id}')
-            seen.add(current_id)
-            parent=current['properties'].get('parent')
-            current=entity_by_id.get(parent) if parent else None
-        return None
 
     def point_target(feature):
         geometry=shape(feature.get('geometry')) if feature.get('geometry') else None
@@ -230,18 +236,18 @@ def build_network(ways,entrances,buildings,obstacles=(),entities=(),campus=None,
     for feature in entities:
         entity_id=feature_id(feature)
         kind=feature['properties'].get('kind')
+        if routing_target_id(entity_id,entity_by_id)!=entity_id:
+            continue
         if kind=='entrance':
             target_nodes=[ent_nodes[entity_id]] if entity_id in ent_nodes else []
         elif kind=='campus':
             target_nodes=all_entrance_nodes
+        elif kind=='building':
+            target_nodes=targets.get(entity_id,[])
+        elif kind=='place':
+            target_nodes=[point_target(feature)]
         else:
-            building=ancestor_building(entity_id)
-            if building is not None:
-                target_nodes=targets.get(building,[])
-            elif kind=='place':
-                target_nodes=[point_target(feature)]
-            else:
-                target_nodes=[]
+            target_nodes=[]
         if not target_nodes:
             raise ValueError(f'entity has no routable target: {entity_id}')
         targets[entity_id]=sorted(set(target_nodes))
@@ -390,6 +396,7 @@ def main():
             routed['properties']['kind']=LAYER_KINDS[layer]
             if layer=='places' and feature_id(feature) in place_parents: routed['properties']['parent']=place_parents[feature_id(feature)]
             entity_features.append(routed)
+    routing_entities={feature_id(f):f for f in entity_features}
     network,nodes_m,route_nodes_m=build_network(
         layers['ways'],layers['entrances'],layers['buildings'],
         [f['geometry'] for f in layers['buildings']+layers['waters']],
@@ -423,7 +430,7 @@ def main():
                                   'level':p.get('level'),'title':p.get('title'),'category':category,
                                   'group':group(category) if category else None,'tier':tier(category) if category else None,'aliases':p.get('aliases'),
                                   'geometry':None if kind=='floor' else f.get('geometry')}
-        item['routing']={'type':'target','id':feature_id(f)}
+        item['routing']={'type':'target','id':routing_target_id(feature_id(f),routing_entities)}
         places.append({k:v for k,v in item.items() if v is not None})
     entities=sorted(places,key=lambda x:x['id'])
     # Authored basemap is a deterministic view of authored layers only.
@@ -487,8 +494,8 @@ def main():
     margins=[cb[0]-xb[0],cb[1]-xb[1],xb[2]-cb[2],xb[3]-cb[3]]
     context_ok=min(margins)>=300
     entity_ids={item['id'] for item in entities}
-    missing_targets=sorted(entity_ids-set(network['targets']))
-    invalid_targets=sorted(entity_ids-{item['id'] for item in entities if item.get('routing',{}).get('id') in network['targets']})
+    missing_targets=sorted({item['routing']['id'] for item in entities}-set(network['targets']))
+    invalid_targets=sorted(item['id'] for item in entities if item['routing']['id'] not in entity_ids)
     checks={'passed':not(id_errors or parent_errors or geom_errors or authored_name_errors or not context_ok or missing_targets or invalid_targets),'id_uniqueness':{'passed':not id_errors,'duplicates':id_errors},
             'geometry_validity':{'passed':not geom_errors,'errors':geom_errors},'parent_chains':{'passed':not parent_errors,'errors':parent_errors},'authored_invariants':{'passed':not authored_name_errors,'errors':authored_name_errors},
             'routing_targets':{'passed':not (missing_targets or invalid_targets),'missing':missing_targets,'invalid':invalid_targets},

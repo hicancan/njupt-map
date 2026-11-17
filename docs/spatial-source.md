@@ -70,6 +70,13 @@ teaching-building evacuation plans and the four official library plans. A floor
 plate's `parent` is its derived floor. Unlisted rooms are not invented here; downstream campus facts releases may add null-geometry room
 nodes when a real teaching source lists them.
 
+An entity's `id` identifies the requested place; its `routing.id` identifies
+the road-network target. Rooms, floors and places inside a building keep their
+own geometry and parent chain, but route to that building's entrances. They do
+not have duplicate entries in `network.targets`: the current road network does
+not claim to measure travel between indoor rooms. Clients retain the requested
+room and floor for indoor positioning and distinguish them from road arrival.
+
 Provider names, branch qualifiers and ids never enter an authored id or name.
 Ways with `kind: crossing` remain in
 the network for routing but are omitted from PMTiles and the preview so

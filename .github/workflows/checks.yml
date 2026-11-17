@@ -33,3 +33,4 @@ jobs:
         run: |
           uv run python src/map/format_geojson.py --check
           uv run python src/map/build_authored.py
+          uv run python -m unittest tests.test_routing_targets tests.test_authored_map -v
